@@ -1,35 +1,200 @@
 # Learning Graph Viewer
 
-This interactive viewer allows you to explore the learning graph for this course.
+[Open Learning Graph Viewer Fullscreen (recommended)](./main.html){ .md-button .md-button--primary }
 
-## Features
+<iframe src="./main.html" width="100%" height="600px" frameborder="0"></iframe>
 
-- **Search**: Type in the search box to find specific concepts
-- **Category Filtering**: Use checkboxes to show/hide concept categories
-- **Interactive Navigation**: Click and drag to explore, scroll to zoom
-- **Statistics**: View real-time counts of visible nodes and edges
+## What This Viewer Shows
+
+The picture above is the **learning graph** for *Information Systems* —
+all 580 concepts in the book and the prerequisite relationships between
+them, drawn as one connected diagram you can pan, zoom, search, and
+filter. Before you start dragging things around, it's worth knowing
+what each piece of the graph actually means.
+
+## What Is a Learning Graph?
+
+A **learning graph** is a structured map of everything a course teaches
+and the order in which a student needs to learn it. Formally, it has
+two ingredients:
+
+1. **Nodes** — one node per *concept* (a single discrete idea, term, or
+   skill the book wants you to learn).
+2. **Edges** — directed arrows from one concept to another that record
+   "you have to understand A before B will make sense."
+
+You can think of it as a wiring diagram for a curriculum. The chapters
+are the surface; the learning graph is the circuitry underneath.
+
+## What Is a Concept?
+
+A **concept** is the smallest unit of knowledge the book treats as
+worth naming. In this book, concepts include things like:
+
+- *Primary key*
+- *Normalization*
+- *Retrieval-Augmented Generation (RAG)*
+- *Information Technology Infrastructure Library (ITIL)*
+- *Prompt injection*
+- *Enterprise Knowledge Graph*
+
+Every concept has a precise definition in the [Glossary](../../glossary.md),
+appears in at least one chapter, and shows up exactly once as a node in
+the learning graph. If you can't define a concept in one or two
+sentences without using the concept inside its own definition, it's
+either not a concept yet or it needs to be split into smaller ones.
+
+## What Are Concept Dependencies?
+
+A **concept dependency** is the rule that says *"to understand A, you
+must first understand B."* In the learning graph, it shows up as an
+arrow:
+
+```
+A ─────► B
+```
+
+In this book, that arrow is read as **"A depends on B"** — the *source*
+of the arrow is the concept you're trying to learn, and the *target* is
+its prerequisite. (Said another way: the arrow points from the concept
+*toward* the prerequisite it needs.) For example, *foreign key* depends
+on *primary key*, which depends on *table*, which depends on *row* and
+*column*, which depend on *relational model*. You can't responsibly
+teach foreign keys to a student who has never seen a row.
+
+A single concept usually has several prerequisites. *GraphRAG*, for
+example, depends on *retrieval-augmented generation*, *knowledge graph*,
+*embedding*, *vector database*, and a handful of others. The learning
+graph captures all of those dependencies so we can reason about them
+mechanically instead of guessing.
+
+## What Is Concept Enablement?
+
+**Concept enablement** is the inverse of dependency. If concept A is a
+prerequisite for B, then learning A *enables* you to learn B. The same
+arrow tells both stories — it just depends on which direction you're
+reading it:
+
+- Following the arrow (toward prerequisites): "What do I need to know
+  first?" → that's **dependency**.
+- Following the arrow *backward* (against the arrow): "What does
+  knowing this unlock?" → that's **enablement**.
+
+Enablement is the more motivating direction. It answers the student's
+question, *"Why am I learning this?"* — because it's the gateway to
+something else they want.
+
+## What Is a DAG?
+
+The learning graph is a **DAG**, short for **Directed Acyclic Graph**.
+That mouthful breaks down into three properties:
+
+- **Graph** — a collection of nodes connected by edges.
+- **Directed** — every edge has a direction (the arrow), so the
+  relationship is one-way.
+- **Acyclic** — there are no cycles. You cannot follow the arrows from
+  any concept and end up back where you started.
+
+The acyclic part matters more than it sounds. If concept A depends on
+B, and B depends on C, and C depends on A, then nothing in that loop
+can ever be the *first* thing you learn — and so none of the three can
+be learned at all. A cycle in the learning graph is a bug, full stop.
+Whenever this book's graph generator detects one, it refuses to ship
+until the cycle is broken.
+
+## What Is Learning Order?
+
+A **learning order** is any ordering of the concepts in which every
+concept appears *after* all of its prerequisites. Mathematicians call
+this a **topological sort** of the DAG.
+
+Because the graph is a DAG, at least one valid learning order always
+exists. Usually many do — for example, if *normalization* and
+*indexing* don't depend on each other, the graph doesn't care which
+one you teach first. The chapter outline you read in the book is one
+valid learning order; a personalized course that skipped concepts the
+student already knew would be another.
+
+The chapter sequence in this book was generated by topologically
+sorting the learning graph and then grouping nearby concepts into
+cohesive chapters and parts. That's why each chapter feels like it has
+"earned" the next: every concept it introduces has all of its
+prerequisites already on the board.
+
+## Why This Matters Now — and Why It Will Matter More
+
+Even at this book's current level, the learning graph is genuinely
+useful:
+
+- **Author hygiene.** It lets us prove that no chapter introduces a
+  concept before its prerequisites exist somewhere earlier in the book.
+- **Student navigation.** You can search for any concept, see its
+  upstream prerequisites, and jump to the chapter that introduces them
+  if you hit a wall.
+- **Curriculum mapping.** Programs adopting the book for ABET
+  accreditation can map specific student outcomes to specific subgraphs.
+
+The learning graph becomes *much* more powerful in **Level 3 (L3)
+intelligent textbooks** — the next step in our textbook taxonomy. An L3
+book treats the learning graph as a live structure the system reasons
+over, not just a static reference. In L3:
+
+- The book **knows what each student has and hasn't mastered** and
+  shows them the next concept whose prerequisites they have already
+  cleared.
+- **Adaptive review** kicks in automatically: if a quiz shows the
+  student is shaky on *normalization*, the system surfaces every
+  downstream concept that depends on it and offers a refresh before
+  moving on.
+- **Personalized learning paths** become possible — a student who
+  arrives already knowing relational databases gets a different
+  topological sort than one starting from scratch, but both end at the
+  same set of outcomes.
+- **AI tutors** use the graph as a grounding source so they never
+  invent prerequisites or skip them, and so they can explain *why* a
+  concept is being introduced now.
+
+What you're looking at on this page is the foundation those features
+will be built on. Every concept node, every dependency arrow, and every
+category tag is a hook that an L3 system will eventually grab onto.
+
+## Features of This Viewer
+
+- **Zoom and Pan** — use your mouse and scroll wheel to navigate.
+- **Search** — type a concept name to find and focus on it.
+- **Category Filtering** — checkboxes in the sidebar show or hide
+  groups of related concepts.
+- **Interactive Navigation** — drag to pan, scroll to zoom, click a
+  node to highlight its connections.
+- **Statistics** — real-time counts of visible nodes and edges.
+
+## Suggested Overview Steps
+
+1. Uncheck all the categories on the left side.
+2. Check only the **Foundations** category.
+3. Zoom in on the cluster you see — these are the concepts with no
+   prerequisites and are the entry points to the book.
+4. Re-enable one category at a time and watch the graph grow outward.
+   This is, more or less, the order in which the book teaches.
 
 ## Using the Viewer
 
-1. **Search for Concepts**: Start typing in the search box to find concepts. Click on a result to focus on that node.
+1. **Search for Concepts** — start typing in the search box. Click a
+   result to focus on that node.
+2. **Filter by Category** — use the category checkboxes in the sidebar.
+   "Check All" / "Uncheck All" do bulk operations.
+3. **Navigate the Graph** — drag to pan, scroll to zoom, click a node
+   to select it and highlight its dependencies and downstream concepts.
+4. **View Statistics** — the sidebar shows counts of visible nodes,
+   edges, and foundational concepts.
 
-2. **Filter by Category**: Use the category checkboxes in the sidebar to show or hide groups of related concepts. Use "Check All" or "Uncheck All" for bulk operations.
+## Graph Structure at a Glance
 
-3. **Navigate the Graph**:
-   - Drag to pan around the graph
-   - Scroll to zoom in and out
-   - Click on a node to select it and highlight its connections
-
-4. **View Statistics**: The sidebar shows counts of visible nodes, edges, and foundational concepts.
-
-## Graph Structure
-
-- **Foundational Concepts** (left side): Prerequisites with no dependencies
-- **Advanced Concepts** (right side): Topics that build on multiple prerequisites
-- **Edges**: Arrows point from a concept to its prerequisites
-
-## Launch the Viewer
-
-[Open Learning Graph Viewer](./main.html){ .md-button .md-button--primary }
-
-<iframe src="./main.html" width="100%" height="600px" frameborder="0"></iframe>
+- **Foundational concepts** (left side) — prerequisites with no
+  incoming dependencies. These are where any valid learning order has
+  to start.
+- **Advanced concepts** (right side) — topics that require many
+  prerequisites. The deeper into the right side you go, the more of
+  the book sits "underneath" that concept.
+- **Edges** — arrows point *from a concept to its prerequisites*.
+  Read them as "needs," not "leads to."

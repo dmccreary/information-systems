@@ -16,6 +16,7 @@ when you ship the parts that work. Information Systems is one of the
 most leverage-rich careers a person can pick right now — *especially*
 right now — and this book is built to prove it. Let's fly!
 
+<!-- We add this because we don't want one of the columns to be uneven --->
 <div style="clear: both;"></div>
 
 ## Why This Intelligent Textbook
@@ -27,7 +28,8 @@ up inside customer service, software development, healthcare, finance,
 supply chain, and every other place an IS graduate will work. The
 problem with most IS textbooks is simple: by the time they ship, the
 chapter on "emerging technology" is already a chapter on history. This
-book is built to fix that.
+book is built to fix that.  It will be continuously be updated as new
+technologies emerge.
 
 **In the United States (2025):**
 
