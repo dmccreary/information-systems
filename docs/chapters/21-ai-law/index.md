@@ -381,3 +381,8 @@ Those are the questions that separate IS professionals who *participate* in AI c
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just walked the global AI legal landscape: the EU AI Act and its four risk tiers, the U.S. executive-order regime, the Colorado AI Act and NYC AEDT, the HIPAA / ECOA / FERPA overlays, automated-decision-making and right-to-explanation, the unsettled copyright fight, cross-border transfer, disclosure stacking, the procurement-clause leverage point, system-card review, and the AI liability picture that ties everything together. Twenty concepts, one chapter, a compliance vocabulary sharper than most "AI Counsel" job postings. The next chapter pivots to AI security — adversarial inputs, prompt injection, model supply chain. The good news: most of the responsible-AI and legal machinery you just built is exactly the substrate AI security operates on top of. Onward.
+
+
+## References
+
+[See Annotated References](./references.md)

@@ -360,3 +360,8 @@ If that paragraph reads like a map of the field, that is because it is one. Ever
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just absorbed the architectural vocabulary that most working IS pros pick up across their first decade. From here on, when somebody says "let's just put it in the ESB" you will hear *we are about to leak business logic into integration middleware*; when somebody says "we should microservices-ify this" you will hear *operational complexity tax incoming, can we name the pain we are paying it for?*; and when somebody hands you an API without an OpenAPI spec you will hear *we are about to spend the rest of the quarter writing client code by hand*. Onward to Chapter 4, where we put this architectural map to work as we look at how applications get built on top of it.
+
+
+## References
+
+[See Annotated References](./references.md)

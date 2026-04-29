@@ -362,3 +362,8 @@ A graduate of this chapter walking onto an operations team for the first time sh
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned the working vocabulary of IT service management and operations — the ITIL service lifecycle, SLAs and OLAs and SLOs and SLIs and error budgets, incident and problem and change management, CMDBs, help desk tiering, observability's three pillars, on-call rotations, and the blameless culture that holds it all together. You can now read an ITIL diagram without flinching, defend an error budget to a frustrated PM, run a postmortem without naming a villain, and recognize pager fatigue as the warning sign it is. Operations used to have a reputation for being the unglamorous part of IS. That was before SRE made it one of the most intellectually rich corners of the field — full of leverage points, feedback loops, and elegant structural fixes for fights that used to last decades. The lights stay on because somebody decided to be deliberate about how they stay on. That somebody, increasingly, is going to be you. Onward to Chapter 18, where we step out of operations and into the broader strategic question of how IS organizations align themselves to the businesses they serve.
+
+
+## References
+
+[See Annotated References](./references.md)

@@ -325,3 +325,8 @@ A graduate of this chapter walking into their first enterprise-systems project s
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned the working vocabulary of enterprise systems — ERP, CRM, SCM, inventory, procurement, HRIS, payroll, talent management, configuration versus customization, big bang versus phased, best of breed versus suite, implementation partners, industry clouds, cutover plans, and post-ERP reviews. Next time somebody pitches a "small customization to fit our process," you will hear *upgrade tax for the next decade*. Next time somebody promises a "low-risk big-bang go-live," you will ask *what's the rollback criterion?* Next time somebody declares an implementation a success at go-live, you will ask *what does the post-ERP review say?* These are the questions that distinguish the IS professionals who get invited back from the ones who don't. Onward to Chapter 14, where we leave the packaged-system world and get into the rapidly evolving frontier of how AI is reshaping every one of these enterprise systems from the inside out.
+
+
+## References
+
+[See Annotated References](./references.md)

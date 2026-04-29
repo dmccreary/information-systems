@@ -314,3 +314,8 @@ A graduate of this chapter walking into their first BI engagement should be able
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned the working vocabulary of business intelligence and analytics — the four-rung analytics ladder, KPIs and metric definitions, the balanced scorecard, OLAP cubes and drilldowns, pivot tables, Power BI and Tableau, the principles of visualization and chart selection, dashboard design and its anti-patterns, the self-service BI tradeoff, embedded analytics, decision support systems, and data storytelling. Next time somebody shows you a "speedometer dashboard" with twelve gauges, you will hear *no clear primary KPI*. Next time somebody argues over whose "active users" number is right, you will hear *missing metric definition*. Next time a self-service BI program sprawls into chaos, you will recognize the missing semantic layer. And next time someone walks into a meeting with a single annotated chart and walks out with a budget approval, you will recognize what just happened: data storytelling, performed at the level of a real superpower. Onward to Chapter 10, where we trade dashboards for prediction models and start asking what the *future* looks like.
+
+
+## References
+
+[See Annotated References](./references.md)

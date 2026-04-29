@@ -419,3 +419,8 @@ A graduate of this chapter walking into their first software project should be a
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned the working vocabulary of modern application development — the same vocabulary that, ten years ago, took new hires their entire first year on the job to absorb. From here on out, when somebody mentions a "sprint retrospective" you will hear *team-level feedback loop*, when somebody complains about "merge week" you will hear *they have not adopted CI*, when somebody pitches "let's build it ourselves" you will hear *prove it is a differentiator*, and when somebody says "we will fix it in the next release" you will hear *technical debt accumulating with interest*. Onward to Chapter 5, where we take everything we just learned about building applications and ask the harder question of what data those applications should be built on top of.
+
+
+## References
+
+[See Annotated References](./references.md)

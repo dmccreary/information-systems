@@ -299,3 +299,8 @@ A graduate of this chapter walking into their first job should be able to ask, t
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned to think about networks the way an IS leader has to think about them — as a layered set of capacity, connectivity, cost, and contract decisions, rather than as a stack of routing protocols. You can now distinguish bandwidth from latency from throughput, you know why "five nines" costs an order of magnitude more than "four nines," you know why the second carrier has to be a *different company* and not a different product from the same parent, and you know that monitoring is the place every other network decision either gets validated or gets exposed. Most importantly, you know which questions to ask when a vendor tells you their SLA covers everything — because nothing covers everything, and the manager who knows that is the manager who designs around it. Onward to Chapter 12, where we leave telecom and step into the world of enterprise systems — the ERP, CRM, and SCM platforms that all this connectivity exists to serve.
+
+
+## References
+
+[See Annotated References](./references.md)

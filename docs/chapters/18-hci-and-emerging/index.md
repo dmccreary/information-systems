@@ -407,3 +407,8 @@ A reader walking out of this chapter should be able to: run a heuristic evaluati
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just covered an enormous amount of ground — twenty-four concepts spanning the entire interface between humans and information systems, plus the most important horizon topics of the next decade. Next time somebody complains that an enterprise system is "hard to use," you will hear *which Nielsen heuristic is it failing?* Next time somebody dismisses accessibility as a checkbox, you will hear *paradigm-level leverage point being misunderstood*. Next time somebody says "we'll worry about quantum-safe crypto later," you will hear *harvest now, decrypt later*. Next time somebody pitches a digital twin without naming the data pipeline that feeds it, you will hear *the seam is where the work is*. That is the disposition of a senior IS practitioner, and you developed it across one chapter. Onward to Chapter 19, where we shift from horizon-scanning to leadership and the business of running an IS function.
+
+
+## References
+
+[See Annotated References](./references.md)

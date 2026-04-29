@@ -322,3 +322,8 @@ A graduate of this chapter walking into their first AI-augmented job should be a
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned how AI is reshaping the IS profession across help desk, application development, IT operations, business analysis, and project management — twenty-five concepts, one chapter, and a more honest map of the next decade of IS work than most of the management consultants charging six-figure retainers will hand you. You can now talk fluently about ticket deflection and its quality-paired metrics, code completion and its productivity traps, AIOps signal-to-noise discipline, AI requirements drafting with grounding, baseline-and-stop-loss as a structural circuit breaker, and reskilling as the high-leverage alternative to layoffs. Most importantly: you have a framework for entering the workforce that treats AI as a leverage multiplier rather than a threat. That is the right framing, it is the optimistic framing, and it is also — fortunately — the accurate one. Take the win. The next chapter shifts gears entirely: emerging technologies and the future shape of information systems. Onward.
+
+
+## References
+
+[See Annotated References](./references.md)

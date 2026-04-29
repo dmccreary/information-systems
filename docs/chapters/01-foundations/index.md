@@ -324,3 +324,8 @@ If that sentence makes sense to you, you have all the foundation you need for th
 !!! mascot-celebration "You did it!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just installed the eighteen vocabulary primitives the entire textbook will use. From here on out, when I say "stakeholder," you will know I mean something more specific than "person who cares." When I say "transform," you will know I do not mean "automate harder." And when somebody at a future internship confidently mixes up *IT* and *IS*, you will catch it — quietly, kindly, and with the small private smile of a person who knows the difference. Onward to Chapter 2, where we look at how IS earns its seat at the strategy table.
+
+
+## References
+
+[See Annotated References](./references.md)

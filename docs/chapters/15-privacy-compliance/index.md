@@ -315,3 +315,8 @@ A graduate of this chapter walking into their first compliance conversation shou
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned the working vocabulary of privacy and compliance — GDPR's six lawful bases and seven data subject rights, CCPA/CPRA's opt-out-of-sale model, HIPAA's healthcare-sector regime, SOX's financial-reporting controls, PCI-DSS's scope-driven payment standards, the Privacy by Design philosophy, the PIA discipline, the DPA contract, the data-residency landscape, the SCCs, the lessons of Schrems II, the retention/destruction balance, the 72-hour breach clock, and the emerging discipline of privacy engineering. The next time a colleague calls a cookie banner "the GDPR thing," you will gently correct them. The next time a product manager says "let's collect everything and figure it out later," you will name the data-minimization principle and the breach liability it implies. And the next time a regulator's letter arrives at your company, you will not be the person hiding under the desk — you will be the person who can read it, scope it, and route it. Onward to Chapter 16, where we step into the world of AI and machine learning fundamentals — and meet a new generation of privacy questions the lawmakers are still scrambling to answer.
+
+
+## References
+
+[See Annotated References](./references.md)

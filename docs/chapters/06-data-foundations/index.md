@@ -458,3 +458,8 @@ A graduate of this chapter walking into their first data engagement should be ab
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned the working vocabulary of relational data — conceptual/logical/physical modeling, entities and attributes and relationships and cardinality, primary keys and foreign keys, constraints and indexes, the three normal forms and the deliberate art of denormalization, SELECT and JOIN and subquery and window function, views and stored procedures, transactions and ACID and isolation levels and concurrency control, and the discipline of versioned migrations. That is genuinely a lot, and you read it in one chapter. The next time somebody pitches a "quick schema change," you will hear *what's the migration script and what's the rollback?* The next time somebody complains the database is slow, you will hear *which query, with which plan, against which indexes?* And the next time somebody is mystified that two simultaneous users produced an inconsistent state, you will hear *write skew under Read Committed* — and you will know exactly how to fix it. Onward to Chapter 7, where we leave the relational world long enough to meet its modern cousins: data warehouses, lakes, and the distributed stores that picked up where ACID had to compromise.
+
+
+## References
+
+[See Annotated References](./references.md)

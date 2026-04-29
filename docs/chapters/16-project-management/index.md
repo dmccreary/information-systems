@@ -453,3 +453,8 @@ A graduate of this chapter walking into their first IS project should be able to
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned the working vocabulary of IS project management — charters, scope statements, stakeholder grids, WBS, estimation techniques, schedules, Gantt charts, critical paths, the iron triangle, risk registers, issue logs, change control, communication plans, PMBOK, PRINCE2, waterfall, agile, hybrid, burndown charts, velocity, earned value management, project closure, lessons learned, portfolio, program, PMO, and resource leveling. Next time somebody hands you a project plan with no critical path highlighted, you will know what's missing. Next time a sponsor insists on full scope, fixed deadline, and fixed budget, you will smile politely and pull up the project triangle. Next time a project ships on time and on budget and quietly on fire, you will recognize the missing change-control process. And next time a project closes cleanly, with lessons captured and read, with the team genuinely better than when it started — you will recognize the rare and valuable thing it is. Onward to Chapter 17, where we step back and ask the broader question of how IS work fits into the organization's strategy as a whole.
+
+
+## References
+
+[See Annotated References](./references.md)

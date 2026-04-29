@@ -287,3 +287,8 @@ A graduate of this chapter should be able to walk into any data conversation and
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just absorbed the working vocabulary of enterprise data governance — pipelines, MDM, the six quality dimensions, lineage, catalogs and dictionaries, the steward/owner/council triangle, the DMBOK, mesh, products, contracts, schema evolution, retention, and records management. That is more governance literacy than most analytics engineers pick up in their first three years on the job, and you can deploy it the next time someone says "let's just spin up a quick dashboard" — which, you now know, is the moment to ask whose data it is, how stale it is, who owns the definition, and what happens to the data when the project is over. Onward to Chapter 9, where we shift gears from how data is governed to how the *projects* that build information systems get planned, staffed, and delivered.
+
+
+## References
+
+[See Annotated References](./references.md)

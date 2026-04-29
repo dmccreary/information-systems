@@ -358,3 +358,8 @@ A graduate of this chapter walking into their first cloud conversation should be
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned the working vocabulary of modern cloud — the NIST five, the four service models and four deployment models, the CapEx/OpEx pivot, the cloud cost model, FinOps, reserved instances, containers, Docker, Kubernetes, the Six Rs, lift-and-shift, vendor lock-in, and the Cloud Center of Excellence. Next time someone says "we should move to the cloud," you will hear *which workloads, which Rs, what's the egress profile, and who owns FinOps?* Next time a cloud bill arrives 23% higher than expected, you will recognize the autoscale-feedback-loop signature. Next time someone wants to reserve three years of m5 capacity, you will ask about the m6 roadmap. And next time a cloud migration "completes" without saving any money, you will know exactly which conversation didn't happen at the start. Onward to Chapter 13, where we take this rentable infrastructure and confront the question of how to keep it — and the data on it — secure.
+
+
+## References
+
+[See Annotated References](./references.md)

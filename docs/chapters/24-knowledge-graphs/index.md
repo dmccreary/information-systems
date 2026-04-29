@@ -420,3 +420,8 @@ If you take one architectural picture from this chapter, take this one: the EKG 
 !!! mascot-celebration "Iris's Celebration"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned more about Enterprise Knowledge Graphs than 95% of the people whose business cards say "Data Architect." You can read Cypher. You can name four graph databases and place them on a quadrant. You know why entity resolution is the foundational lever and why GraphRAG is the structural fix to the hallucination problem we couldn't solve with vectors alone. The next time someone tells you their CRM and ERP "talk to each other just fine," you will know exactly what to ask, and exactly what to draw on the whiteboard. Take the win — and meet me in Chapter 25, where we connect this graph layer to the *Enterprise Nervous System* that is the through-line of the whole book.
+
+
+## References
+
+[See Annotated References](./references.md)

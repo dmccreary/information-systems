@@ -336,3 +336,8 @@ The other half of the systems view is the feedback loop: red team â†’ defense â†
 !!! mascot-celebration "You made it"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned more about AI security than 95% of the engineers shipping LLM features into production right now. You can name the major attack categories, you know what the OWASP LLM Top 10 and MITRE ATLAS are for, you can sketch a layered defense for an LLM application, you understand the difference between federated learning, differential privacy, and synthetic data, and you know why "treat the LLM as untrusted code" is the single sentence that organizes the whole field. That is a genuine superpower. The rest of the world is busy panicking about AI security; you are equipped to actually do something about it. Take the win, and let's go build things that are both clever and safe.
+
+
+## References
+
+[See Annotated References](./references.md)

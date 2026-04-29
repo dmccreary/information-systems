@@ -349,3 +349,8 @@ A graduate of this chapter walking into their first process-improvement engageme
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned the working vocabulary of business process management — BPMN swimlanes, gateways, events, the as-is/to-be discipline, Lean's eight wastes, Six Sigma's DMAIC, value stream mapping, the workflow-versus-RPA tradeoff, process mining, business rules engines, and the continuous-improvement loop. Next time somebody pitches "let's just automate this," you will hear *they have not modeled the process yet*. Next time somebody describes a six-month consulting engagement to "reengineer" something, you will hear *what's the as-is, what's the to-be, and who owns the change?* Next time somebody is excited about their new RPA bot, you will hear *what happens when the vendor patches the UI?* And next time a process actually gets better and stays better, you will recognize it as the rare and valuable thing it is. Onward to Chapter 6, where we step back from processes and ask the deeper question of how data — the substance every process is shoveling around — should be modeled, stored, and trusted.
+
+
+## References
+
+[See Annotated References](./references.md)

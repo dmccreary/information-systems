@@ -381,3 +381,8 @@ That is a more sophisticated set of governance questions than most organizations
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned the responsible-AI playbook used by serious organizations: the NIST AI RMF four functions, ISO/IEC 42001 as the management-system standard, the inventory-and-impact-assessment foundation, the human oversight tier ladder, the fairness metrics and the bias audit, the transparency-vs-explainability distinction, the AUP-and-sanctioned-list pair that keeps shadow AI in the light, the incident-management loop, the ethics committee with teeth, the data-provenance and datasheet discipline, and the sustainability and labor-impact lenses that round it out. Twenty-five concepts, one chapter, and a governance vocabulary sharper than most "Chief AI Ethics Officer" job postings. Chapter 21 is next, and it is where this operating discipline meets the law: the EU AI Act, U.S. executive orders, sectoral rules, and the global patchwork that is becoming the AI compliance baseline. The good news — you will recognize most of what the regulators are asking for, because you already met it here. Onward.
+
+
+## References
+
+[See Annotated References](./references.md)

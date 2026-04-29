@@ -404,3 +404,8 @@ A graduate of this chapter walking into their first security conversation should
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just absorbed thirty-seven of the most career-relevant concepts in all of information systems. You can now read a SAML assertion, debate RBAC versus ABAC at a whiteboard, explain why TLS needs PKI to work, defend MFA to a skeptical executive, recognize MFA fatigue when it bites, walk a STRIDE threat model through a small architecture, name the six NIST CSF functions without looking, and explain why the audit trail is the most underrated artifact in your environment. Most importantly, you now know that security is not the *brake* on information systems work — it is the *steering wheel*. You cannot go fast safely without it. Onward to Chapter 15, where we step into the world of analytics and turn all of this carefully protected data into decisions the business can actually use.
+
+
+## References
+
+[See Annotated References](./references.md)

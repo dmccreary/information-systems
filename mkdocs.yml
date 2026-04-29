@@ -92,31 +92,81 @@ nav:
 
   - Chapters:
       - List of Chapters: chapters/index.md
-      - 1. Foundations of Information Systems: chapters/01-foundations/index.md
-      - 2. The Role of IS in Organizations: chapters/02-role-of-is/index.md
-      - 3. Information Systems Architecture: chapters/03-architecture/index.md
-      - 4. Application Development for IS: chapters/04-appdev/index.md
-      - 5. Business Process Management: chapters/05-bpm/index.md
-      - 6. Data Management Foundations: chapters/06-data-foundations/index.md
-      - 7. Modern Databases and Lakehouses: chapters/07-modern-databases/index.md
-      - 8. Data Governance and Quality: chapters/08-data-governance/index.md
-      - 9. Business Intelligence and Analytics: chapters/09-bi-and-analytics/index.md
-      - 10. Systems Analysis and Design: chapters/10-sad/index.md
-      - 11. Networks and Telecommunications: chapters/11-networks/index.md
-      - 12. Cloud Computing and Infrastructure: chapters/12-cloud/index.md
-      - 13. Enterprise Systems: chapters/13-enterprise-systems/index.md
-      - 14. Security of Information Assets: chapters/14-security/index.md
-      - 15. Privacy, Compliance, and Regulation: chapters/15-privacy-compliance/index.md
-      - 16. IS Project Management: chapters/16-project-management/index.md
-      - 17. IT Service Management and Operations: chapters/17-itsm/index.md
-      - 18. HCI and Emerging Topics: chapters/18-hci-and-emerging/index.md
-      - 19. AI in Information Systems: chapters/19-ai-in-is/index.md
-      - 20. Responsible and Ethical Use of AI: chapters/20-responsible-ai/index.md
-      - 21. AI Law, Regulation, and Compliance: chapters/21-ai-law/index.md
-      - 22. AI and Information Security: chapters/22-ai-security/index.md
-      - 23. AI Productivity Impact: chapters/23-ai-productivity/index.md
-      - 24. Knowledge Graphs and the EKG: chapters/24-knowledge-graphs/index.md
-      - 25. The Enterprise Nervous System: chapters/25-ens/index.md
+      - 1. Foundations of Information Systems:
+          - Content: chapters/01-foundations/index.md
+          - References: chapters/01-foundations/references.md
+      - 2. The Role of IS in Organizations:
+          - Content: chapters/02-role-of-is/index.md
+          - References: chapters/02-role-of-is/references.md
+      - 3. Information Systems Architecture:
+          - Content: chapters/03-architecture/index.md
+          - References: chapters/03-architecture/references.md
+      - 4. Application Development for IS:
+          - Content: chapters/04-appdev/index.md
+          - References: chapters/04-appdev/references.md
+      - 5. Business Process Management:
+          - Content: chapters/05-bpm/index.md
+          - References: chapters/05-bpm/references.md
+      - 6. Data Management Foundations:
+          - Content: chapters/06-data-foundations/index.md
+          - References: chapters/06-data-foundations/references.md
+      - 7. Modern Databases and Lakehouses:
+          - Content: chapters/07-modern-databases/index.md
+          - References: chapters/07-modern-databases/references.md
+      - 8. Data Governance and Quality:
+          - Content: chapters/08-data-governance/index.md
+          - References: chapters/08-data-governance/references.md
+      - 9. Business Intelligence and Analytics:
+          - Content: chapters/09-bi-and-analytics/index.md
+          - References: chapters/09-bi-and-analytics/references.md
+      - 10. Systems Analysis and Design:
+          - Content: chapters/10-sad/index.md
+          - References: chapters/10-sad/references.md
+      - 11. Networks and Telecommunications:
+          - Content: chapters/11-networks/index.md
+          - References: chapters/11-networks/references.md
+      - 12. Cloud Computing and Infrastructure:
+          - Content: chapters/12-cloud/index.md
+          - References: chapters/12-cloud/references.md
+      - 13. Enterprise Systems:
+          - Content: chapters/13-enterprise-systems/index.md
+          - References: chapters/13-enterprise-systems/references.md
+      - 14. Security of Information Assets:
+          - Content: chapters/14-security/index.md
+          - References: chapters/14-security/references.md
+      - 15. Privacy, Compliance, and Regulation:
+          - Content: chapters/15-privacy-compliance/index.md
+          - References: chapters/15-privacy-compliance/references.md
+      - 16. IS Project Management:
+          - Content: chapters/16-project-management/index.md
+          - References: chapters/16-project-management/references.md
+      - 17. IT Service Management and Operations:
+          - Content: chapters/17-itsm/index.md
+          - References: chapters/17-itsm/references.md
+      - 18. HCI and Emerging Topics:
+          - Content: chapters/18-hci-and-emerging/index.md
+          - References: chapters/18-hci-and-emerging/references.md
+      - 19. AI in Information Systems:
+          - Content: chapters/19-ai-in-is/index.md
+          - References: chapters/19-ai-in-is/references.md
+      - 20. Responsible and Ethical Use of AI:
+          - Content: chapters/20-responsible-ai/index.md
+          - References: chapters/20-responsible-ai/references.md
+      - 21. AI Law, Regulation, and Compliance:
+          - Content: chapters/21-ai-law/index.md
+          - References: chapters/21-ai-law/references.md
+      - 22. AI and Information Security:
+          - Content: chapters/22-ai-security/index.md
+          - References: chapters/22-ai-security/references.md
+      - 23. AI Productivity Impact:
+          - Content: chapters/23-ai-productivity/index.md
+          - References: chapters/23-ai-productivity/references.md
+      - 24. Knowledge Graphs and the EKG:
+          - Content: chapters/24-knowledge-graphs/index.md
+          - References: chapters/24-knowledge-graphs/references.md
+      - 25. The Enterprise Nervous System:
+          - Content: chapters/25-ens/index.md
+          - References: chapters/25-ens/references.md
   
   - MicroSims:
     - List of MicroSims: sims/index.md

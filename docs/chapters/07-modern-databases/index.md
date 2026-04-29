@@ -478,3 +478,8 @@ A graduate of this chapter walking into a data architecture review should be abl
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned the modern database landscape — relational refresher with PostgreSQL/MySQL/SQL Server, the OLTP-vs-OLAP split that organizes the rest, columnar storage and analytical engines, the data warehouse with star and snowflake schemas and slowly changing dimensions, the cloud warehouse platforms (Snowflake, Redshift) that separated storage from compute, the four NoSQL shapes (key-value with Redis and DynamoDB, column-family with Cassandra and HBase, document with MongoDB and JSON and XML, and graph for later), the CAP theorem and the difference between CP and AP systems, the six-question database-selection discipline, polyglot persistence as the architectural pattern that emerges when you take selection seriously, and the lake-to-lakehouse evolution that is reshaping analytics in 2026. That is genuinely a lot of vocabulary, and you can now hold an informed conversation with any database engineer in the industry. Onward to Chapter 8, where we leave storage behind for a chapter and look at how data actually *moves* — pipelines, integration patterns, and the unsung plumbing that connects the seven databases your organization probably already has.
+
+
+## References
+
+[See Annotated References](./references.md)

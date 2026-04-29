@@ -523,3 +523,8 @@ A graduate of this chapter walking into their first analysis engagement should b
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned the working vocabulary of systems analysis and design — feasibility studies, cost-benefit analysis, use cases and use case diagrams, the five UML diagrams worth knowing, JAD workshops, the prototyping fidelity ladder, wireframes versus mockups, the functional specification, requirements traceability, gap analysis, the make-or-buy decision, the RFP process, vendor evaluation, the testing pyramid, UAT exit criteria, the test plan, and defect tracking. Next time somebody pitches a project without a feasibility study, you will hear *we don't yet know if this should exist.* Next time somebody hands you a 1,200-question RFP, you will hear *they have not asked which questions change the decision.* Next time somebody says "the system passed all the tests" without specifying which tests, you will hear *the level matters, and so do the exit criteria.* And next time a project ships on time, on budget, and actually works — you will recognize what good analysis looks like, because you will have seen most of it from the inside. Onward to Chapter 11, where we take the analyst's craft and apply it to the largest IS systems any organization runs: the enterprise applications.
+
+
+## References
+
+[See Annotated References](./references.md)

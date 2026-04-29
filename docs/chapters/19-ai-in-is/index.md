@@ -357,3 +357,8 @@ A graduate of this chapter walking into their first AI conversation should be ab
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned the working vocabulary of AI in information systems — predictive vs. generative, foundation models and LLMs, prompts and prompt engineering, embeddings and vector databases, RAG and grounding, hallucinations and guardrails, agents and agentic workflows, AI inside ERP/CRM/ITSM, the AI value chain, the build-vs-buy-vs-API decision, and the documentation discipline of model and system cards. Twenty-six concepts, one chapter, and a vocabulary sharper than most of the LinkedIn AI thought leaders you will meet in the wild. Chapter 20 picks up where this one leaves off: how to make all of this *responsible* — fair, transparent, accountable, and safe. The fun part is that you will recognize most of the structural fixes, because you already met them here. Onward.
+
+
+## References
+
+[See Annotated References](./references.md)

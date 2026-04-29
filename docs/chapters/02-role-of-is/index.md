@@ -297,3 +297,8 @@ If a meeting agenda includes any one of those concepts, you now have a model for
 !!! mascot-celebration "Nicely done"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
     You just learned the org chart, the operating frameworks, and the strategic vocabulary that most working IS professionals had to absorb piecemeal over their first three jobs. From here on out, when somebody mentions "strategic alignment" you will hear *leverage point*, when somebody mentions "COBIT" you will hear *auditable governance*, when somebody mentions "the CISO is concerned" you will hear *separation of duties earning its keep*, and when somebody hands you a vendor renewal email you will hear *the calendar alarm we should have set 90 days ago*. Onward to Chapter 3, where we look at the actual architecture these roles and frameworks are governing.
+
+
+## References
+
+[See Annotated References](./references.md)
