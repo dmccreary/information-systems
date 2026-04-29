@@ -1,0 +1,581 @@
+ConceptID,ConceptLabel,Dependencies,TaxonomyID
+1,Information System,,FOUND
+2,Data,,FOUND
+3,Information,2,FOUND
+4,Knowledge,3,FOUND
+5,DIKW Hierarchy,2|3|4,FOUND
+6,Hardware,,FOUND
+7,Software,,FOUND
+8,Network,6|7,FOUND
+9,User,1,FOUND
+10,Business Process,1,FOUND
+11,Organization,,FOUND
+12,Stakeholder,11,FOUND
+13,Business Value,11|12,FOUND
+14,Strategy,11|13,FOUND
+15,Digital Transformation,1|14,FOUND
+16,IT vs IS Distinction,1|7,FOUND
+17,Sociotechnical System,1|9|10,FOUND
+18,ABET CAC Criteria,1|16,FOUND
+19,Strategic Alignment,14|18,ROLE
+20,Value Chain,10|13,ROLE
+21,Porter Five Forces,14|20,ROLE
+22,Competitive Advantage,14|20|21,ROLE
+23,Business Capability,11|14,ROLE
+24,IT Governance,15|18|19,ROLE
+25,COBIT Framework,24,ROLE
+26,ITIL Framework,24,ROLE
+27,CIO Role,24,ROLE
+28,CTO Role,27,ROLE
+29,CDO Role,2|27,ROLE
+30,CISO Role,27,ROLE
+31,Enterprise Architect Role,27,ROLE
+32,Business Analyst Role,27,ROLE
+33,Data Steward Role,2|29,ROLE
+34,IS Ethics,1|11,ROLE
+35,Professional Responsibility,34,ROLE
+36,Vendor Management,11|26,ROLE
+37,Application Portfolio,1|31,ARCH
+38,Three-Tier Architecture,1|7,ARCH
+39,N-Tier Architecture,38,ARCH
+40,Presentation Tier,38,ARCH
+41,Application Tier,38,ARCH
+42,Data Tier,38,ARCH
+43,Enterprise Architecture,31|37,ARCH
+44,TOGAF Framework,43,ARCH
+45,Zachman Framework,43,ARCH
+46,Reference Architecture,43,ARCH
+47,Solution Architecture,43,ARCH
+48,Integration Pattern,38|43,ARCH
+49,Enterprise Service Bus,48,ARCH
+50,API Gateway,48|49,ARCH
+51,Service-Oriented Architecture,48,ARCH
+52,Microservices Architecture,38|51,ARCH
+53,Monolithic Architecture,38|52,ARCH
+54,Event-Driven Architecture,48|51,ARCH
+55,REST API,48|50,ARCH
+56,GraphQL API,55,ARCH
+57,Webhooks,48|54,ARCH
+58,OpenAPI Specification,55,ARCH
+59,API Versioning,55,ARCH
+60,SDLC,7|10,APPDEV
+61,Waterfall Model,60,APPDEV
+62,Agile Methodology,60|61,APPDEV
+63,Scrum Framework,62,APPDEV
+64,Kanban Method,62,APPDEV
+65,Extreme Programming,62,APPDEV
+66,Requirements Elicitation,60,APPDEV
+67,Functional Requirement,66,APPDEV
+68,Non-Functional Requirement,66,APPDEV
+69,User Story,62|66|67,APPDEV
+70,Acceptance Criteria,67|69,APPDEV
+71,Sprint,63,APPDEV
+72,Sprint Planning,63|71,APPDEV
+73,Sprint Review,71|72,APPDEV
+74,Sprint Retrospective,71|73,APPDEV
+75,Daily Standup,63|71,APPDEV
+76,Continuous Integration,7|60,APPDEV
+77,Continuous Delivery,76,APPDEV
+78,Version Control,7|60,APPDEV
+79,Git Workflow,78,APPDEV
+80,Code Review,78|79,APPDEV
+81,Build vs Buy vs SaaS,7|36,APPDEV
+82,Low-Code Platform,7|81,APPDEV
+83,Citizen Developer,82,APPDEV
+84,Technical Debt,7|60,APPDEV
+85,Data Modeling,2,DATA
+86,Conceptual Data Model,85,DATA
+87,Logical Data Model,86,DATA
+88,Physical Data Model,87,DATA
+89,Entity Relationship Diagram,85|86,DATA
+90,Entity,85,DATA
+91,Attribute,90,DATA
+92,Relationship,90,DATA
+93,Cardinality,89|92,DATA
+94,Primary Key,90|91,DATA
+95,Foreign Key,92|94,DATA
+96,Database Index,94,DATA
+97,Database Constraint,94|95,DATA
+98,Normalization,87|94|95,DATA
+99,First Normal Form,98,DATA
+100,Second Normal Form,99,DATA
+101,Third Normal Form,100,DATA
+102,Denormalization,98|101,DATA
+103,SQL Language,87|94,DATA
+104,SELECT Statement,103,DATA
+105,JOIN Operation,95|103|104,DATA
+106,Subquery,104|105,DATA
+107,Window Function,104,DATA
+108,Stored Procedure,103,DATA
+109,Database View,103|104,DATA
+110,Transaction,103,DATA
+111,ACID Properties,110,DATA
+112,Isolation Level,110|111,DATA
+113,Concurrency Control,110|112,DATA
+114,Database Migration,87|103,DATA
+115,Relational Database,98|103,DATA
+116,PostgreSQL,115,DATA
+117,MySQL,115,DATA
+118,SQL Server,115,DATA
+119,Analytical Database,115,DATA
+120,OLTP vs OLAP,110|115|119,DATA
+121,Data Warehouse,119|120,DATA
+122,Star Schema,121,DATA
+123,Snowflake Schema,122,DATA
+124,Fact Table,122,DATA
+125,Dimension Table,122,DATA
+126,Slowly Changing Dimension,125,DATA
+127,Columnar Storage,119,DATA
+128,Snowflake Platform,121|127,DATA
+129,Amazon Redshift,121|127,DATA
+130,Key-Value Store,2|115,DATA
+131,Redis,130,DATA
+132,DynamoDB,130,DATA
+133,Column-Family Store,127|130,DATA
+134,Apache Cassandra,133,DATA
+135,HBase,133,DATA
+136,Document Database,115|130,DATA
+137,MongoDB,136,DATA
+138,JSON Document,136,DATA
+139,XML Document,136,DATA
+140,Database Selection,115|119|130|133|136,DATA
+141,CAP Theorem,115|130,DATA
+142,Polyglot Persistence,140|141,DATA
+143,Data Lake,121|136|138,DATA
+144,Data Lakehouse,121|143,DATA
+145,ETL Process,121,DATAGOV
+146,ELT Process,121|144|145,DATAGOV
+147,Data Pipeline,145|146,DATAGOV
+148,Master Data Management,90|115,DATAGOV
+149,Data Quality,2|148,DATAGOV
+150,Data Lineage,147|149,DATAGOV
+151,Data Catalog,148|149,DATAGOV
+152,Data Dictionary,90|151,DATAGOV
+153,Metadata Management,151|152,DATAGOV
+154,Data Owner,33|151,DATAGOV
+155,Data Governance Council,24|33|154,DATAGOV
+156,DAMA DMBOK,155,DATAGOV
+157,Data Mesh,52|143|154,DATAGOV
+158,Data Product,157,DATAGOV
+159,Data Contract,157|158,DATAGOV
+160,Schema Evolution,87|114|159,DATAGOV
+161,Data Retention Policy,2|24,DATAGOV
+162,Records Management,161,DATAGOV
+163,Descriptive Analytics,2|121,BI
+164,Diagnostic Analytics,163,BI
+165,Predictive Analytics,164,BI
+166,Prescriptive Analytics,165,BI
+167,Key Performance Indicator,13|163,BI
+168,Metric Definition,167,BI
+169,Dashboard Design,163|167,BI
+170,Self-Service BI,121|169,BI
+171,OLAP Cube,120|121,BI
+172,Cube Drilldown,171,BI
+173,Pivot Table,171,BI
+174,Power BI,169|170,BI
+175,Tableau,169|170,BI
+176,Data Visualization,169,BI
+177,Chart Selection,176,BI
+178,Embedded Analytics,55|169,BI
+179,Balanced Scorecard,167,BI
+180,Decision Support System,1|166,BI
+181,Data Storytelling,176|177,BI
+182,Enterprise Resource Planning,1|10|11,ENT
+183,ERP Implementation,182,ENT
+184,CRM System,1|10,ENT
+185,Supply Chain Management,1|20,ENT
+186,Inventory Management,185,ENT
+187,Procurement System,185,ENT
+188,HRIS,1|11,ENT
+189,Payroll System,188,ENT
+190,Talent Management,188,ENT
+191,Configuration vs Customization,182|183,ENT
+192,Big Bang vs Phased Rollout,183,ENT
+193,Best of Breed vs Suite,182|184,ENT
+194,Implementation Partner,36|183,ENT
+195,Industry Cloud,182|214,ENT
+196,Post-ERP Review,183,ENT
+197,Local Area Network,8,NET
+198,Wide Area Network,8|197,NET
+199,Internet,8|198,NET
+200,Intranet,197|199,NET
+201,Extranet,200,NET
+202,VPN,199|201,NET
+203,SD-WAN,198|202,NET
+204,Bandwidth Capacity Planning,8,NET
+205,Latency,8|204,NET
+206,Throughput,8|204,NET
+207,Service Level Agreement,205|206,NET
+208,Cloud Connectivity,199|202|210,NET
+209,Network Redundancy,8|198,NET
+210,Network Monitoring,8|205|206,NET
+211,Telecom Procurement,36|198,NET
+212,Cloud Computing,7|199,CLOUD
+213,NIST Cloud Definition,212,CLOUD
+214,IaaS,212|213,CLOUD
+215,PaaS,212|213,CLOUD
+216,SaaS,212|213,CLOUD
+217,FaaS,213|215,CLOUD
+218,Public Cloud,212,CLOUD
+219,Private Cloud,212,CLOUD
+220,Hybrid Cloud,218|219,CLOUD
+221,Multi-Cloud,218,CLOUD
+222,CapEx vs OpEx,212|216,CLOUD
+223,Cloud Cost Model,212|222,CLOUD
+224,FinOps,222|223,CLOUD
+225,Reserved Instance,214|223,CLOUD
+226,Container,7|214,CLOUD
+227,Docker,226,CLOUD
+228,Kubernetes,226|227,CLOUD
+229,Cloud Migration,212|220,CLOUD
+230,Six Rs of Migration,229,CLOUD
+231,Lift and Shift,229|230,CLOUD
+232,Vendor Lock-In,36|216,CLOUD
+233,Cloud Center of Excellence,212|224,CLOUD
+234,CIA Triad,1,SEC
+235,Confidentiality,234,SEC
+236,Integrity,234,SEC
+237,Availability,234,SEC
+238,AAA Framework,234,SEC
+239,Authentication,9|238,SEC
+240,Authorization,239,SEC
+241,Multifactor Authentication,239,SEC
+242,Single Sign-On,239,SEC
+243,Identity Provider,239|242,SEC
+244,SAML,243,SEC
+245,OAuth 2.0,243,SEC
+246,OpenID Connect,245,SEC
+247,Role-Based Access Control,240,SEC
+248,Attribute-Based Access Control,240|247,SEC
+249,Least Privilege,240|247,SEC
+250,Zero Trust Architecture,247|249,SEC
+251,Encryption at Rest,235,SEC
+252,Encryption in Transit,235,SEC
+253,TLS Protocol,252|259,SEC
+254,Public Key Infrastructure,253|258,SEC
+255,Symmetric Encryption,235,SEC
+256,Asymmetric Encryption,235|255,SEC
+257,Key Management,255|256,SEC
+258,Hashing,236,SEC
+259,Digital Signature,256|258,SEC
+260,NIST CSF,234,SEC
+261,ISO 27001,234,SEC
+262,CIS Controls,234|260,SEC
+263,Threat Modeling,234|260,SEC
+264,STRIDE Method,263,SEC
+265,Vulnerability Management,234|263,SEC
+266,Penetration Testing,265,SEC
+267,SIEM,210|234,SEC
+268,Security Operations Center,267,SEC
+269,Incident Response,234|260,SEC
+270,Audit Trail,236|267,SEC
+271,GDPR,11|24,PRIV
+272,CCPA CPRA,271,PRIV
+273,HIPAA,11|24,PRIV
+274,SOX,11|24,PRIV
+275,PCI-DSS,24|234,PRIV
+276,Data Subject Rights,271,PRIV
+277,Right to Erasure,271|276,PRIV
+278,Data Portability,271|276,PRIV
+279,Privacy by Design,271|276,PRIV
+280,Privacy Impact Assessment,271|279,PRIV
+281,Data Processing Agreement,271,PRIV
+282,Data Residency,271|281,PRIV
+283,Cross-Border Transfer,271|282,PRIV
+284,Standard Contractual Clauses,283,PRIV
+285,Schrems II,283|284,PRIV
+286,Records Retention,162|271,PRIV
+287,Data Minimization,271|279,PRIV
+288,Purpose Limitation,271|287,PRIV
+289,Lawful Basis,271,PRIV
+290,Consent Management,271|289,PRIV
+291,Data Breach Notification,269|271,PRIV
+292,Privacy Engineering,279|280,PRIV
+293,Project Charter,11,PM
+294,Scope Statement,293,PM
+295,Stakeholder Analysis,12|293,PM
+296,Stakeholder Register,295,PM
+297,Work Breakdown Structure,294,PM
+298,Project Schedule,297,PM
+299,Gantt Chart,298,PM
+300,Critical Path Method,298,PM
+301,Project Triangle,294|298,PM
+302,Risk Register,293|301,PM
+303,Risk Mitigation,302,PM
+304,Issue Log,302,PM
+305,Change Control,294|302,PM
+306,Communication Plan,296,PM
+307,PMBOK Guide,293,PM
+308,PRINCE2,293|307,PM
+309,Agile Project Management,62|307,PM
+310,Waterfall Project Management,61|307,PM
+311,Hybrid Project Management,309|310,PM
+312,Burndown Chart,71|309,PM
+313,Velocity,71|312,PM
+314,Earned Value Management,298|301,PM
+315,Project Closure,293|301,PM
+316,Lessons Learned,74|315,PM
+317,Project Portfolio Management,37|307,PM
+318,Program Management,317,PM
+319,PMO,317,PM
+320,Resource Leveling,298,PM
+321,Estimation Techniques,297|298,PM
+322,Stakeholder Engagement,295|306,PM
+323,Process Modeling,10,BPM
+324,BPMN Notation,323,BPM
+325,Pool and Lane,324,BPM
+326,Process Activity,324,BPM
+327,Gateway,324|326,BPM
+328,Process Event,324,BPM
+329,As-Is Process,323,BPM
+330,To-Be Process,323|329,BPM
+331,Process Reengineering,329|330,BPM
+332,Lean Methodology,331,BPM
+333,Six Sigma,331,BPM
+334,DMAIC,333,BPM
+335,Workflow Automation,323|330,BPM
+336,Robotic Process Automation,335,BPM
+337,RPA Tools,336,BPM
+338,Process Mining,329|336,BPM
+339,Continuous Improvement,332|333,BPM
+340,Value Stream Mapping,323|332,BPM
+341,Business Rules Engine,326|327,BPM
+342,Feasibility Study,60|66,SAD
+343,Cost Benefit Analysis,342,SAD
+344,Use Case,66|67,SAD
+345,Use Case Diagram,344,SAD
+346,Activity Diagram,323,SAD
+347,Sequence Diagram,344,SAD
+348,Class Diagram,90|92,SAD
+349,State Diagram,344,SAD
+350,UML for IS,345|346|347|348|349,SAD
+351,Joint Application Design,66,SAD
+352,Prototyping,66|67,SAD
+353,Wireframe,352,SAD
+354,Mockup,353,SAD
+355,Functional Specification,67|352,SAD
+356,Requirements Traceability,66|70,SAD
+357,Gap Analysis,329|330,SAD
+358,Make or Buy Decision,81|343,SAD
+359,RFP Process,358,SAD
+360,Vendor Evaluation,36|359,SAD
+361,System Testing,7|76,SAD
+362,User Acceptance Testing,70|361,SAD
+363,Test Plan,361|362,SAD
+364,Defect Tracking,361,SAD
+365,Cutover Plan,183|362,SAD
+366,Usability Principle,9,HCI
+367,Nielsen Heuristics,366,HCI
+368,Accessibility WCAG,366,HCI
+369,User Research,9|366,HCI
+370,Persona,369,HCI
+371,Journey Map,370,HCI
+372,Information Architecture,366,HCI
+373,Interaction Design,366,HCI
+374,Visual Design,373,HCI
+375,Form Design,366|373,HCI
+376,Error Message Design,375,HCI
+377,Mobile First Design,366,HCI
+378,Responsive Design,377,HCI
+379,Inclusive Design,368,HCI
+380,ITIL Service Lifecycle,26,ITSM
+381,Service Strategy,380,ITSM
+382,Service Design,380,ITSM
+383,Service Transition,380,ITSM
+384,Service Operation,380,ITSM
+385,Continual Service Improvement,380|339,ITSM
+386,Incident Management,384,ITSM
+387,Problem Management,386,ITSM
+388,ITIL Change Management,305|383,ITSM
+389,Configuration Management,383,ITSM
+390,CMDB,389,ITSM
+391,Service Catalog,382,ITSM
+392,Service Level Management,207|382,ITSM
+393,SLA Metrics,207|392,ITSM
+394,OLA,392,ITSM
+395,Help Desk,386,ITSM
+396,Service Desk Tier,395,ITSM
+397,Ticket Lifecycle,386|395,ITSM
+398,Knowledge Management,4|395,ITSM
+399,Observability,210|384,ITSM
+400,SLO and SLI,392|399,ITSM
+401,Error Budget,400,ITSM
+402,On-Call Rotation,386,ITSM
+403,Postmortem,316|386|387,ITSM
+404,Blameless Culture,403,ITSM
+405,Artificial Intelligence,7,AIIS
+406,Machine Learning,2|405,AIIS
+407,Predictive ML,165|406,AIIS
+408,Generative AI,405|406,AIIS
+409,Large Language Model,408,AIIS
+410,Foundation Model,408|409,AIIS
+411,Prompt,409,AIIS
+412,Prompt Engineering,411,AIIS
+413,Retrieval Augmented Generation,408|409,AIIS
+414,Vector Embedding,406,AIIS
+415,Vector Database,130|413|414,AIIS
+416,AI Agent,408,AIIS
+417,Agentic Workflow,335|416,AIIS
+418,AI in ERP,182|405,AIIS
+419,AI in CRM,184|405,AIIS
+420,AI in ITSM,380|405,AIIS
+421,AI Value Chain,405|413,AIIS
+422,Build vs Buy AI,81|421,AIIS
+423,Model API,55|410,AIIS
+424,Model Card,410,AIIS
+425,System Card,410|424,AIIS
+426,Hallucination,408|409,AIIS
+427,Grounding,413|426,AIIS
+428,Guardrail,408|426,AIIS
+429,Human in the Loop,9|428,AIIS
+430,RAG Architecture,413|415,AIIS
+431,NIST AI RMF,260|405,RAI
+432,AI Govern Function,431,RAI
+433,AI Map Function,431,RAI
+434,AI Measure Function,431,RAI
+435,AI Manage Function,431,RAI
+436,ISO IEC 42001,261|431,RAI
+437,Bias Audit,406|434,RAI
+438,Algorithmic Fairness,437,RAI
+439,Explainability,406|431,RAI
+440,Transparency,431|439,RAI
+441,AI Acceptable Use Policy,432,RAI
+442,Sanctioned Model List,422|441,RAI
+443,Shadow AI,422|441,RAI
+444,AI Incident Management,269|431,RAI
+445,AI Inventory,432,RAI
+446,AI Impact Assessment,280|433,RAI
+447,Responsible AI Principles,431|438|440,RAI
+448,Trustworthy AI,447,RAI
+449,AI Ethics Committee,34|432,RAI
+450,Human Oversight Tier,429|447,RAI
+451,AI Data Provenance,150|432,RAI
+452,Training Data Documentation,406|451,RAI
+453,Datasheet for Datasets,452,RAI
+454,AI Sustainability,447,RAI
+455,AI Labor Impact,447,RAI
+456,EU AI Act,431,AILAW
+457,AI Risk Tier,456,AILAW
+458,Unacceptable Risk AI,457,AILAW
+459,High Risk AI,457,AILAW
+460,Limited Risk AI,457,AILAW
+461,Minimal Risk AI,457,AILAW
+462,US AI Executive Order,431,AILAW
+463,Colorado AI Act,456|462,AILAW
+464,NYC AEDT Law,462,AILAW
+465,AI in Healthcare HIPAA,273|405,AILAW
+466,AI in Lending ECOA,438|459,AILAW
+467,AI in Education FERPA,405|462,AILAW
+468,Copyright and Training Data,452,AILAW
+469,AI Procurement Clause,36|425|456,AILAW
+470,Vendor System Card Review,425|469,AILAW
+471,AI Cross-Border Transfer,283|456,AILAW
+472,Automated Decision-Making,165|459,AILAW
+473,Right to Explanation,439|472,AILAW
+474,AI Liability,455|472,AILAW
+475,AI Disclosure Requirement,440|459,AILAW
+476,AI Threat Landscape,234|405,AISEC
+477,Prompt Injection,411|476,AISEC
+478,Indirect Prompt Injection,413|477,AISEC
+479,Jailbreaking,477,AISEC
+480,Training Data Poisoning,452|476,AISEC
+481,Model Inversion,406|476,AISEC
+482,Membership Inference,406|476,AISEC
+483,Model Exfiltration,476,AISEC
+484,Adversarial Example,406|476,AISEC
+485,OWASP LLM Top 10,408|476,AISEC
+486,MITRE ATLAS,406|476,AISEC
+487,Secure AI SDLC,60|476,AISEC
+488,AI Red Teaming,266|485,AISEC
+489,AI Output Filtering,428|485,AISEC
+490,AI Input Sanitization,428|477,AISEC
+491,AI Logging and Audit,270|485,AISEC
+492,Defensive AI in SOC,268|405,AISEC
+493,AI Phishing Detection,165|492,AISEC
+494,AI Code Review Security,80|405,AISEC
+495,Data Loss Prevention for AI,443|476,AISEC
+496,AI Sandbox,476|487,AISEC
+497,Confidential Computing for AI,255|476,AISEC
+498,Federated Learning,406|497,AISEC
+499,Differential Privacy,287|406,AISEC
+500,Synthetic Data,452|499,AISEC
+501,AI in Help Desk,395|408,AIPROD
+502,Intelligent Ticket Routing,397|407,AIPROD
+503,Virtual Agent,408|501,AIPROD
+504,Knowledge Base Copilot,398|413,AIPROD
+505,Ticket Deflection,501|504,AIPROD
+506,AI in App Development,7|408,AIPROD
+507,Code Completion,506,AIPROD
+508,AI Pair Programmer,80|507,AIPROD
+509,AI Test Generation,361|506,AIPROD
+510,AI Code Review,80|506,AIPROD
+511,AI Documentation,506,AIPROD
+512,Developer Productivity Metrics,168|506,AIPROD
+513,AI in IT Operations,384|405,AIPROD
+514,AIOps,399|513,AIPROD
+515,Anomaly Detection in Ops,407|514,AIPROD
+516,Automated Remediation,388|514,AIPROD
+517,AI in Business Analysis,32|408,AIPROD
+518,AI Requirements Drafting,66|517,AIPROD
+519,AI Status Synthesis,306|517,AIPROD
+520,AI Risk Identification,302|517,AIPROD
+521,Productivity Measurement,168|512,AIPROD
+522,Baseline and Stop Loss,303|521,AIPROD
+523,AI Change Management,388|450|521,AIPROD
+524,Workforce Transition,455|523,AIPROD
+525,Reskilling Strategy,524,AIPROD
+526,Knowledge Graph,2|85|92,KGENS
+527,Property Graph Model,526,KGENS
+528,Node and Edge,526|527,KGENS
+529,Graph Schema,87|527,KGENS
+530,Ontology,4|529,KGENS
+531,Taxonomy in IS,530,KGENS
+532,Schema.org,530,KGENS
+533,Domain Vocabulary,530|531,KGENS
+534,Cypher Query Language,103|527,KGENS
+535,GQL Standard,534,KGENS
+536,Neo4j,527|534,KGENS
+537,Amazon Neptune,527|534,KGENS
+538,TigerGraph,527|534,KGENS
+539,Memgraph,527|534,KGENS
+540,Graph Traversal,528|534,KGENS
+541,Graph Algorithm,540,KGENS
+542,Shortest Path,541,KGENS
+543,Community Detection,541,KGENS
+544,Centrality,541,KGENS
+545,Entity Resolution,90|148,KGENS
+546,Identity Reconciliation,545,KGENS
+547,Record Linkage,545|546,KGENS
+548,Enterprise Knowledge Graph,43|526|530|545,KGENS
+549,Semantic Layer,530|548,KGENS
+550,Single Source of Meaning,148|549,KGENS
+551,GraphRAG,413|548,KGENS
+552,Vector and Graph Hybrid,415|551,KGENS
+553,KG Construction,526|530|545,KGENS
+554,KG from Unstructured Text,409|553,KGENS
+555,Enterprise Nervous System,54|548,KGENS
+556,Event Source,54|555,KGENS
+557,External Signal,21|556,KGENS
+558,Streaming Platform,54|556,KGENS
+559,Apache Kafka,558,KGENS
+560,Apache Flink,558,KGENS
+561,Complex Event Processing,558,KGENS
+562,Event Enrichment,548|556,KGENS
+563,Rule Engine,341|555,KGENS
+564,Policy Engine,24|563,KGENS
+565,ENS Actuator,335|555,KGENS
+566,Sense and Respond Loop,555|565,KGENS
+567,Real-Time Decisioning,180|566,KGENS
+568,Competitor Signal Monitoring,21|557|561,KGENS
+569,Sentiment Stream Ingestion,558|562,KGENS
+570,Sustainable IT,15,EMRG
+571,Green Computing,570,EMRG
+572,Circular IT,570,EMRG
+573,Data Mesh Principles,157|158,EMRG
+574,Federated Data Governance,155|573,EMRG
+575,Post-Quantum Cryptography,256,EMRG
+576,Crypto Agility,257|575,EMRG
+577,Edge Computing for IS,212,EMRG
+578,Digital Twin,1|577,EMRG
+579,Industry 4.0,15|578,EMRG
+580,AI-Native Organization,15|447|548,EMRG

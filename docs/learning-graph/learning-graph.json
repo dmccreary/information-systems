@@ -1,0 +1,6875 @@
+{
+  "metadata": {
+    "title": "Information Systems",
+    "description": "An ABET CAC-aligned intelligent textbook covering the foundations of information systems \u2014 application development, data management, IS project management, networks and telecommunications for business, security of information assets, the role of IS in organizations, the modern integration of AI throughout the IS function, and the rise of Enterprise Knowledge Graphs and the Enterprise Nervous System.",
+    "creator": "Dan McCreary",
+    "date": "2026-04-28",
+    "version": "1.0",
+    "format": "Learning Graph JSON v1.0",
+    "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+    "license": "CC BY-NC-SA 4.0 DEED"
+  },
+  "groups": {
+    "FOUND": {
+      "classifierName": "Foundation Concepts",
+      "color": "SteelBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "ROLE": {
+      "classifierName": "Role of IS in Organizations",
+      "color": "DarkSlateBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "ARCH": {
+      "classifierName": "Information Systems Architecture",
+      "color": "DarkGreen",
+      "font": {
+        "color": "white"
+      }
+    },
+    "APPDEV": {
+      "classifierName": "Application Development",
+      "color": "LimeGreen",
+      "font": {
+        "color": "black"
+      }
+    },
+    "DATA": {
+      "classifierName": "Data and Information Management",
+      "color": "Gold",
+      "font": {
+        "color": "black"
+      }
+    },
+    "DATAGOV": {
+      "classifierName": "Data Governance and Quality",
+      "color": "DarkGoldenrod",
+      "font": {
+        "color": "white"
+      }
+    },
+    "BI": {
+      "classifierName": "Business Intelligence and Analytics",
+      "color": "Khaki",
+      "font": {
+        "color": "black"
+      }
+    },
+    "ENT": {
+      "classifierName": "Enterprise Systems",
+      "color": "Teal",
+      "font": {
+        "color": "white"
+      }
+    },
+    "NET": {
+      "classifierName": "Networks and Telecommunications",
+      "color": "DodgerBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "CLOUD": {
+      "classifierName": "Cloud Computing",
+      "color": "LightSkyBlue",
+      "font": {
+        "color": "black"
+      }
+    },
+    "SEC": {
+      "classifierName": "Security of Information Assets",
+      "color": "Crimson",
+      "font": {
+        "color": "white"
+      }
+    },
+    "PRIV": {
+      "classifierName": "Privacy, Compliance, and Regulation",
+      "color": "DarkRed",
+      "font": {
+        "color": "white"
+      }
+    },
+    "PM": {
+      "classifierName": "IS Project Management",
+      "color": "MediumPurple",
+      "font": {
+        "color": "white"
+      }
+    },
+    "BPM": {
+      "classifierName": "Business Process Management",
+      "color": "Indigo",
+      "font": {
+        "color": "white"
+      }
+    },
+    "SAD": {
+      "classifierName": "Systems Analysis and Design",
+      "color": "DarkOrchid",
+      "font": {
+        "color": "white"
+      }
+    },
+    "HCI": {
+      "classifierName": "Human-Computer Interaction",
+      "color": "HotPink",
+      "font": {
+        "color": "black"
+      }
+    },
+    "ITSM": {
+      "classifierName": "IT Service Management",
+      "color": "OliveDrab",
+      "font": {
+        "color": "white"
+      }
+    },
+    "AIIS": {
+      "classifierName": "AI in Information Systems",
+      "color": "Orange",
+      "font": {
+        "color": "black"
+      }
+    },
+    "RAI": {
+      "classifierName": "Responsible and Ethical AI",
+      "color": "Coral",
+      "font": {
+        "color": "black"
+      }
+    },
+    "AILAW": {
+      "classifierName": "AI Law and Regulation",
+      "color": "Peru",
+      "font": {
+        "color": "black"
+      }
+    },
+    "AISEC": {
+      "classifierName": "AI and Information Security",
+      "color": "SaddleBrown",
+      "font": {
+        "color": "white"
+      }
+    },
+    "AIPROD": {
+      "classifierName": "AI Productivity Impact",
+      "color": "Tomato",
+      "font": {
+        "color": "white"
+      }
+    },
+    "KGENS": {
+      "classifierName": "Knowledge Graphs and Enterprise Nervous System",
+      "color": "DeepPink",
+      "font": {
+        "color": "white"
+      }
+    },
+    "EMRG": {
+      "classifierName": "Emerging Topics",
+      "color": "DimGray",
+      "font": {
+        "color": "white"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Information System",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 2,
+      "label": "Data",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 3,
+      "label": "Information",
+      "group": "FOUND"
+    },
+    {
+      "id": 4,
+      "label": "Knowledge",
+      "group": "FOUND"
+    },
+    {
+      "id": 5,
+      "label": "DIKW Hierarchy",
+      "group": "FOUND"
+    },
+    {
+      "id": 6,
+      "label": "Hardware",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 7,
+      "label": "Software",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 8,
+      "label": "Network",
+      "group": "FOUND"
+    },
+    {
+      "id": 9,
+      "label": "User",
+      "group": "FOUND"
+    },
+    {
+      "id": 10,
+      "label": "Business Process",
+      "group": "FOUND"
+    },
+    {
+      "id": 11,
+      "label": "Organization",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 12,
+      "label": "Stakeholder",
+      "group": "FOUND"
+    },
+    {
+      "id": 13,
+      "label": "Business Value",
+      "group": "FOUND"
+    },
+    {
+      "id": 14,
+      "label": "Strategy",
+      "group": "FOUND"
+    },
+    {
+      "id": 15,
+      "label": "Digital Transformation",
+      "group": "FOUND"
+    },
+    {
+      "id": 16,
+      "label": "IT vs IS Distinction",
+      "group": "FOUND"
+    },
+    {
+      "id": 17,
+      "label": "Sociotechnical System",
+      "group": "FOUND"
+    },
+    {
+      "id": 18,
+      "label": "ABET CAC Criteria",
+      "group": "FOUND"
+    },
+    {
+      "id": 19,
+      "label": "Strategic Alignment",
+      "group": "ROLE"
+    },
+    {
+      "id": 20,
+      "label": "Value Chain",
+      "group": "ROLE"
+    },
+    {
+      "id": 21,
+      "label": "Porter Five Forces",
+      "group": "ROLE"
+    },
+    {
+      "id": 22,
+      "label": "Competitive Advantage",
+      "group": "ROLE"
+    },
+    {
+      "id": 23,
+      "label": "Business Capability",
+      "group": "ROLE"
+    },
+    {
+      "id": 24,
+      "label": "IT Governance",
+      "group": "ROLE"
+    },
+    {
+      "id": 25,
+      "label": "COBIT Framework",
+      "group": "ROLE"
+    },
+    {
+      "id": 26,
+      "label": "ITIL Framework",
+      "group": "ROLE"
+    },
+    {
+      "id": 27,
+      "label": "CIO Role",
+      "group": "ROLE"
+    },
+    {
+      "id": 28,
+      "label": "CTO Role",
+      "group": "ROLE"
+    },
+    {
+      "id": 29,
+      "label": "CDO Role",
+      "group": "ROLE"
+    },
+    {
+      "id": 30,
+      "label": "CISO Role",
+      "group": "ROLE"
+    },
+    {
+      "id": 31,
+      "label": "Enterprise Architect Role",
+      "group": "ROLE"
+    },
+    {
+      "id": 32,
+      "label": "Business Analyst Role",
+      "group": "ROLE"
+    },
+    {
+      "id": 33,
+      "label": "Data Steward Role",
+      "group": "ROLE"
+    },
+    {
+      "id": 34,
+      "label": "IS Ethics",
+      "group": "ROLE"
+    },
+    {
+      "id": 35,
+      "label": "Professional Responsibility",
+      "group": "ROLE"
+    },
+    {
+      "id": 36,
+      "label": "Vendor Management",
+      "group": "ROLE"
+    },
+    {
+      "id": 37,
+      "label": "Application Portfolio",
+      "group": "ARCH"
+    },
+    {
+      "id": 38,
+      "label": "Three-Tier Architecture",
+      "group": "ARCH"
+    },
+    {
+      "id": 39,
+      "label": "N-Tier Architecture",
+      "group": "ARCH"
+    },
+    {
+      "id": 40,
+      "label": "Presentation Tier",
+      "group": "ARCH"
+    },
+    {
+      "id": 41,
+      "label": "Application Tier",
+      "group": "ARCH"
+    },
+    {
+      "id": 42,
+      "label": "Data Tier",
+      "group": "ARCH"
+    },
+    {
+      "id": 43,
+      "label": "Enterprise Architecture",
+      "group": "ARCH"
+    },
+    {
+      "id": 44,
+      "label": "TOGAF Framework",
+      "group": "ARCH"
+    },
+    {
+      "id": 45,
+      "label": "Zachman Framework",
+      "group": "ARCH"
+    },
+    {
+      "id": 46,
+      "label": "Reference Architecture",
+      "group": "ARCH"
+    },
+    {
+      "id": 47,
+      "label": "Solution Architecture",
+      "group": "ARCH"
+    },
+    {
+      "id": 48,
+      "label": "Integration Pattern",
+      "group": "ARCH"
+    },
+    {
+      "id": 49,
+      "label": "Enterprise Service Bus",
+      "group": "ARCH"
+    },
+    {
+      "id": 50,
+      "label": "API Gateway",
+      "group": "ARCH"
+    },
+    {
+      "id": 51,
+      "label": "Service-Oriented Architecture",
+      "group": "ARCH"
+    },
+    {
+      "id": 52,
+      "label": "Microservices Architecture",
+      "group": "ARCH"
+    },
+    {
+      "id": 53,
+      "label": "Monolithic Architecture",
+      "group": "ARCH"
+    },
+    {
+      "id": 54,
+      "label": "Event-Driven Architecture",
+      "group": "ARCH"
+    },
+    {
+      "id": 55,
+      "label": "REST API",
+      "group": "ARCH"
+    },
+    {
+      "id": 56,
+      "label": "GraphQL API",
+      "group": "ARCH"
+    },
+    {
+      "id": 57,
+      "label": "Webhooks",
+      "group": "ARCH"
+    },
+    {
+      "id": 58,
+      "label": "OpenAPI Specification",
+      "group": "ARCH"
+    },
+    {
+      "id": 59,
+      "label": "API Versioning",
+      "group": "ARCH"
+    },
+    {
+      "id": 60,
+      "label": "SDLC",
+      "group": "APPDEV"
+    },
+    {
+      "id": 61,
+      "label": "Waterfall Model",
+      "group": "APPDEV"
+    },
+    {
+      "id": 62,
+      "label": "Agile Methodology",
+      "group": "APPDEV"
+    },
+    {
+      "id": 63,
+      "label": "Scrum Framework",
+      "group": "APPDEV"
+    },
+    {
+      "id": 64,
+      "label": "Kanban Method",
+      "group": "APPDEV"
+    },
+    {
+      "id": 65,
+      "label": "Extreme Programming",
+      "group": "APPDEV"
+    },
+    {
+      "id": 66,
+      "label": "Requirements Elicitation",
+      "group": "APPDEV"
+    },
+    {
+      "id": 67,
+      "label": "Functional Requirement",
+      "group": "APPDEV"
+    },
+    {
+      "id": 68,
+      "label": "Non-Functional Requirement",
+      "group": "APPDEV"
+    },
+    {
+      "id": 69,
+      "label": "User Story",
+      "group": "APPDEV"
+    },
+    {
+      "id": 70,
+      "label": "Acceptance Criteria",
+      "group": "APPDEV"
+    },
+    {
+      "id": 71,
+      "label": "Sprint",
+      "group": "APPDEV"
+    },
+    {
+      "id": 72,
+      "label": "Sprint Planning",
+      "group": "APPDEV"
+    },
+    {
+      "id": 73,
+      "label": "Sprint Review",
+      "group": "APPDEV"
+    },
+    {
+      "id": 74,
+      "label": "Sprint Retrospective",
+      "group": "APPDEV"
+    },
+    {
+      "id": 75,
+      "label": "Daily Standup",
+      "group": "APPDEV"
+    },
+    {
+      "id": 76,
+      "label": "Continuous Integration",
+      "group": "APPDEV"
+    },
+    {
+      "id": 77,
+      "label": "Continuous Delivery",
+      "group": "APPDEV"
+    },
+    {
+      "id": 78,
+      "label": "Version Control",
+      "group": "APPDEV"
+    },
+    {
+      "id": 79,
+      "label": "Git Workflow",
+      "group": "APPDEV"
+    },
+    {
+      "id": 80,
+      "label": "Code Review",
+      "group": "APPDEV"
+    },
+    {
+      "id": 81,
+      "label": "Build vs Buy vs SaaS",
+      "group": "APPDEV"
+    },
+    {
+      "id": 82,
+      "label": "Low-Code Platform",
+      "group": "APPDEV"
+    },
+    {
+      "id": 83,
+      "label": "Citizen Developer",
+      "group": "APPDEV"
+    },
+    {
+      "id": 84,
+      "label": "Technical Debt",
+      "group": "APPDEV"
+    },
+    {
+      "id": 85,
+      "label": "Data Modeling",
+      "group": "DATA"
+    },
+    {
+      "id": 86,
+      "label": "Conceptual Data Model",
+      "group": "DATA"
+    },
+    {
+      "id": 87,
+      "label": "Logical Data Model",
+      "group": "DATA"
+    },
+    {
+      "id": 88,
+      "label": "Physical Data Model",
+      "group": "DATA"
+    },
+    {
+      "id": 89,
+      "label": "Entity Relationship Diagram",
+      "group": "DATA"
+    },
+    {
+      "id": 90,
+      "label": "Entity",
+      "group": "DATA"
+    },
+    {
+      "id": 91,
+      "label": "Attribute",
+      "group": "DATA"
+    },
+    {
+      "id": 92,
+      "label": "Relationship",
+      "group": "DATA"
+    },
+    {
+      "id": 93,
+      "label": "Cardinality",
+      "group": "DATA"
+    },
+    {
+      "id": 94,
+      "label": "Primary Key",
+      "group": "DATA"
+    },
+    {
+      "id": 95,
+      "label": "Foreign Key",
+      "group": "DATA"
+    },
+    {
+      "id": 96,
+      "label": "Database Index",
+      "group": "DATA"
+    },
+    {
+      "id": 97,
+      "label": "Database Constraint",
+      "group": "DATA"
+    },
+    {
+      "id": 98,
+      "label": "Normalization",
+      "group": "DATA"
+    },
+    {
+      "id": 99,
+      "label": "First Normal Form",
+      "group": "DATA"
+    },
+    {
+      "id": 100,
+      "label": "Second Normal Form",
+      "group": "DATA"
+    },
+    {
+      "id": 101,
+      "label": "Third Normal Form",
+      "group": "DATA"
+    },
+    {
+      "id": 102,
+      "label": "Denormalization",
+      "group": "DATA"
+    },
+    {
+      "id": 103,
+      "label": "SQL Language",
+      "group": "DATA"
+    },
+    {
+      "id": 104,
+      "label": "SELECT Statement",
+      "group": "DATA"
+    },
+    {
+      "id": 105,
+      "label": "JOIN Operation",
+      "group": "DATA"
+    },
+    {
+      "id": 106,
+      "label": "Subquery",
+      "group": "DATA"
+    },
+    {
+      "id": 107,
+      "label": "Window Function",
+      "group": "DATA"
+    },
+    {
+      "id": 108,
+      "label": "Stored Procedure",
+      "group": "DATA"
+    },
+    {
+      "id": 109,
+      "label": "Database View",
+      "group": "DATA"
+    },
+    {
+      "id": 110,
+      "label": "Transaction",
+      "group": "DATA"
+    },
+    {
+      "id": 111,
+      "label": "ACID Properties",
+      "group": "DATA"
+    },
+    {
+      "id": 112,
+      "label": "Isolation Level",
+      "group": "DATA"
+    },
+    {
+      "id": 113,
+      "label": "Concurrency Control",
+      "group": "DATA"
+    },
+    {
+      "id": 114,
+      "label": "Database Migration",
+      "group": "DATA"
+    },
+    {
+      "id": 115,
+      "label": "Relational Database",
+      "group": "DATA"
+    },
+    {
+      "id": 116,
+      "label": "PostgreSQL",
+      "group": "DATA"
+    },
+    {
+      "id": 117,
+      "label": "MySQL",
+      "group": "DATA"
+    },
+    {
+      "id": 118,
+      "label": "SQL Server",
+      "group": "DATA"
+    },
+    {
+      "id": 119,
+      "label": "Analytical Database",
+      "group": "DATA"
+    },
+    {
+      "id": 120,
+      "label": "OLTP vs OLAP",
+      "group": "DATA"
+    },
+    {
+      "id": 121,
+      "label": "Data Warehouse",
+      "group": "DATA"
+    },
+    {
+      "id": 122,
+      "label": "Star Schema",
+      "group": "DATA"
+    },
+    {
+      "id": 123,
+      "label": "Snowflake Schema",
+      "group": "DATA"
+    },
+    {
+      "id": 124,
+      "label": "Fact Table",
+      "group": "DATA"
+    },
+    {
+      "id": 125,
+      "label": "Dimension Table",
+      "group": "DATA"
+    },
+    {
+      "id": 126,
+      "label": "Slowly Changing Dimension",
+      "group": "DATA"
+    },
+    {
+      "id": 127,
+      "label": "Columnar Storage",
+      "group": "DATA"
+    },
+    {
+      "id": 128,
+      "label": "Snowflake Platform",
+      "group": "DATA"
+    },
+    {
+      "id": 129,
+      "label": "Amazon Redshift",
+      "group": "DATA"
+    },
+    {
+      "id": 130,
+      "label": "Key-Value Store",
+      "group": "DATA"
+    },
+    {
+      "id": 131,
+      "label": "Redis",
+      "group": "DATA"
+    },
+    {
+      "id": 132,
+      "label": "DynamoDB",
+      "group": "DATA"
+    },
+    {
+      "id": 133,
+      "label": "Column-Family Store",
+      "group": "DATA"
+    },
+    {
+      "id": 134,
+      "label": "Apache Cassandra",
+      "group": "DATA"
+    },
+    {
+      "id": 135,
+      "label": "HBase",
+      "group": "DATA"
+    },
+    {
+      "id": 136,
+      "label": "Document Database",
+      "group": "DATA"
+    },
+    {
+      "id": 137,
+      "label": "MongoDB",
+      "group": "DATA"
+    },
+    {
+      "id": 138,
+      "label": "JSON Document",
+      "group": "DATA"
+    },
+    {
+      "id": 139,
+      "label": "XML Document",
+      "group": "DATA"
+    },
+    {
+      "id": 140,
+      "label": "Database Selection",
+      "group": "DATA"
+    },
+    {
+      "id": 141,
+      "label": "CAP Theorem",
+      "group": "DATA"
+    },
+    {
+      "id": 142,
+      "label": "Polyglot Persistence",
+      "group": "DATA"
+    },
+    {
+      "id": 143,
+      "label": "Data Lake",
+      "group": "DATA"
+    },
+    {
+      "id": 144,
+      "label": "Data Lakehouse",
+      "group": "DATA"
+    },
+    {
+      "id": 145,
+      "label": "ETL Process",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 146,
+      "label": "ELT Process",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 147,
+      "label": "Data Pipeline",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 148,
+      "label": "Master Data Management",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 149,
+      "label": "Data Quality",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 150,
+      "label": "Data Lineage",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 151,
+      "label": "Data Catalog",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 152,
+      "label": "Data Dictionary",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 153,
+      "label": "Metadata Management",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 154,
+      "label": "Data Owner",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 155,
+      "label": "Data Governance Council",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 156,
+      "label": "DAMA DMBOK",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 157,
+      "label": "Data Mesh",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 158,
+      "label": "Data Product",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 159,
+      "label": "Data Contract",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 160,
+      "label": "Schema Evolution",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 161,
+      "label": "Data Retention Policy",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 162,
+      "label": "Records Management",
+      "group": "DATAGOV"
+    },
+    {
+      "id": 163,
+      "label": "Descriptive Analytics",
+      "group": "BI"
+    },
+    {
+      "id": 164,
+      "label": "Diagnostic Analytics",
+      "group": "BI"
+    },
+    {
+      "id": 165,
+      "label": "Predictive Analytics",
+      "group": "BI"
+    },
+    {
+      "id": 166,
+      "label": "Prescriptive Analytics",
+      "group": "BI"
+    },
+    {
+      "id": 167,
+      "label": "Key Performance Indicator",
+      "group": "BI"
+    },
+    {
+      "id": 168,
+      "label": "Metric Definition",
+      "group": "BI"
+    },
+    {
+      "id": 169,
+      "label": "Dashboard Design",
+      "group": "BI"
+    },
+    {
+      "id": 170,
+      "label": "Self-Service BI",
+      "group": "BI"
+    },
+    {
+      "id": 171,
+      "label": "OLAP Cube",
+      "group": "BI"
+    },
+    {
+      "id": 172,
+      "label": "Cube Drilldown",
+      "group": "BI"
+    },
+    {
+      "id": 173,
+      "label": "Pivot Table",
+      "group": "BI"
+    },
+    {
+      "id": 174,
+      "label": "Power BI",
+      "group": "BI"
+    },
+    {
+      "id": 175,
+      "label": "Tableau",
+      "group": "BI"
+    },
+    {
+      "id": 176,
+      "label": "Data Visualization",
+      "group": "BI"
+    },
+    {
+      "id": 177,
+      "label": "Chart Selection",
+      "group": "BI"
+    },
+    {
+      "id": 178,
+      "label": "Embedded Analytics",
+      "group": "BI"
+    },
+    {
+      "id": 179,
+      "label": "Balanced Scorecard",
+      "group": "BI"
+    },
+    {
+      "id": 180,
+      "label": "Decision Support System",
+      "group": "BI"
+    },
+    {
+      "id": 181,
+      "label": "Data Storytelling",
+      "group": "BI"
+    },
+    {
+      "id": 182,
+      "label": "Enterprise Resource Planning",
+      "group": "ENT"
+    },
+    {
+      "id": 183,
+      "label": "ERP Implementation",
+      "group": "ENT"
+    },
+    {
+      "id": 184,
+      "label": "CRM System",
+      "group": "ENT"
+    },
+    {
+      "id": 185,
+      "label": "Supply Chain Management",
+      "group": "ENT"
+    },
+    {
+      "id": 186,
+      "label": "Inventory Management",
+      "group": "ENT"
+    },
+    {
+      "id": 187,
+      "label": "Procurement System",
+      "group": "ENT"
+    },
+    {
+      "id": 188,
+      "label": "HRIS",
+      "group": "ENT"
+    },
+    {
+      "id": 189,
+      "label": "Payroll System",
+      "group": "ENT"
+    },
+    {
+      "id": 190,
+      "label": "Talent Management",
+      "group": "ENT"
+    },
+    {
+      "id": 191,
+      "label": "Configuration vs Customization",
+      "group": "ENT"
+    },
+    {
+      "id": 192,
+      "label": "Big Bang vs Phased Rollout",
+      "group": "ENT"
+    },
+    {
+      "id": 193,
+      "label": "Best of Breed vs Suite",
+      "group": "ENT"
+    },
+    {
+      "id": 194,
+      "label": "Implementation Partner",
+      "group": "ENT"
+    },
+    {
+      "id": 195,
+      "label": "Industry Cloud",
+      "group": "ENT"
+    },
+    {
+      "id": 196,
+      "label": "Post-ERP Review",
+      "group": "ENT"
+    },
+    {
+      "id": 197,
+      "label": "Local Area Network",
+      "group": "NET"
+    },
+    {
+      "id": 198,
+      "label": "Wide Area Network",
+      "group": "NET"
+    },
+    {
+      "id": 199,
+      "label": "Internet",
+      "group": "NET"
+    },
+    {
+      "id": 200,
+      "label": "Intranet",
+      "group": "NET"
+    },
+    {
+      "id": 201,
+      "label": "Extranet",
+      "group": "NET"
+    },
+    {
+      "id": 202,
+      "label": "VPN",
+      "group": "NET"
+    },
+    {
+      "id": 203,
+      "label": "SD-WAN",
+      "group": "NET"
+    },
+    {
+      "id": 204,
+      "label": "Bandwidth Capacity Planning",
+      "group": "NET"
+    },
+    {
+      "id": 205,
+      "label": "Latency",
+      "group": "NET"
+    },
+    {
+      "id": 206,
+      "label": "Throughput",
+      "group": "NET"
+    },
+    {
+      "id": 207,
+      "label": "Service Level Agreement",
+      "group": "NET"
+    },
+    {
+      "id": 208,
+      "label": "Cloud Connectivity",
+      "group": "NET"
+    },
+    {
+      "id": 209,
+      "label": "Network Redundancy",
+      "group": "NET"
+    },
+    {
+      "id": 210,
+      "label": "Network Monitoring",
+      "group": "NET"
+    },
+    {
+      "id": 211,
+      "label": "Telecom Procurement",
+      "group": "NET"
+    },
+    {
+      "id": 212,
+      "label": "Cloud Computing",
+      "group": "CLOUD"
+    },
+    {
+      "id": 213,
+      "label": "NIST Cloud Definition",
+      "group": "CLOUD"
+    },
+    {
+      "id": 214,
+      "label": "IaaS",
+      "group": "CLOUD"
+    },
+    {
+      "id": 215,
+      "label": "PaaS",
+      "group": "CLOUD"
+    },
+    {
+      "id": 216,
+      "label": "SaaS",
+      "group": "CLOUD"
+    },
+    {
+      "id": 217,
+      "label": "FaaS",
+      "group": "CLOUD"
+    },
+    {
+      "id": 218,
+      "label": "Public Cloud",
+      "group": "CLOUD"
+    },
+    {
+      "id": 219,
+      "label": "Private Cloud",
+      "group": "CLOUD"
+    },
+    {
+      "id": 220,
+      "label": "Hybrid Cloud",
+      "group": "CLOUD"
+    },
+    {
+      "id": 221,
+      "label": "Multi-Cloud",
+      "group": "CLOUD"
+    },
+    {
+      "id": 222,
+      "label": "CapEx vs OpEx",
+      "group": "CLOUD"
+    },
+    {
+      "id": 223,
+      "label": "Cloud Cost Model",
+      "group": "CLOUD"
+    },
+    {
+      "id": 224,
+      "label": "FinOps",
+      "group": "CLOUD"
+    },
+    {
+      "id": 225,
+      "label": "Reserved Instance",
+      "group": "CLOUD"
+    },
+    {
+      "id": 226,
+      "label": "Container",
+      "group": "CLOUD"
+    },
+    {
+      "id": 227,
+      "label": "Docker",
+      "group": "CLOUD"
+    },
+    {
+      "id": 228,
+      "label": "Kubernetes",
+      "group": "CLOUD"
+    },
+    {
+      "id": 229,
+      "label": "Cloud Migration",
+      "group": "CLOUD"
+    },
+    {
+      "id": 230,
+      "label": "Six Rs of Migration",
+      "group": "CLOUD"
+    },
+    {
+      "id": 231,
+      "label": "Lift and Shift",
+      "group": "CLOUD"
+    },
+    {
+      "id": 232,
+      "label": "Vendor Lock-In",
+      "group": "CLOUD"
+    },
+    {
+      "id": 233,
+      "label": "Cloud Center of Excellence",
+      "group": "CLOUD"
+    },
+    {
+      "id": 234,
+      "label": "CIA Triad",
+      "group": "SEC"
+    },
+    {
+      "id": 235,
+      "label": "Confidentiality",
+      "group": "SEC"
+    },
+    {
+      "id": 236,
+      "label": "Integrity",
+      "group": "SEC"
+    },
+    {
+      "id": 237,
+      "label": "Availability",
+      "group": "SEC"
+    },
+    {
+      "id": 238,
+      "label": "AAA Framework",
+      "group": "SEC"
+    },
+    {
+      "id": 239,
+      "label": "Authentication",
+      "group": "SEC"
+    },
+    {
+      "id": 240,
+      "label": "Authorization",
+      "group": "SEC"
+    },
+    {
+      "id": 241,
+      "label": "Multifactor Authentication",
+      "group": "SEC"
+    },
+    {
+      "id": 242,
+      "label": "Single Sign-On",
+      "group": "SEC"
+    },
+    {
+      "id": 243,
+      "label": "Identity Provider",
+      "group": "SEC"
+    },
+    {
+      "id": 244,
+      "label": "SAML",
+      "group": "SEC"
+    },
+    {
+      "id": 245,
+      "label": "OAuth 2.0",
+      "group": "SEC"
+    },
+    {
+      "id": 246,
+      "label": "OpenID Connect",
+      "group": "SEC"
+    },
+    {
+      "id": 247,
+      "label": "Role-Based Access Control",
+      "group": "SEC"
+    },
+    {
+      "id": 248,
+      "label": "Attribute-Based Access Control",
+      "group": "SEC"
+    },
+    {
+      "id": 249,
+      "label": "Least Privilege",
+      "group": "SEC"
+    },
+    {
+      "id": 250,
+      "label": "Zero Trust Architecture",
+      "group": "SEC"
+    },
+    {
+      "id": 251,
+      "label": "Encryption at Rest",
+      "group": "SEC"
+    },
+    {
+      "id": 252,
+      "label": "Encryption in Transit",
+      "group": "SEC"
+    },
+    {
+      "id": 253,
+      "label": "TLS Protocol",
+      "group": "SEC"
+    },
+    {
+      "id": 254,
+      "label": "Public Key Infrastructure",
+      "group": "SEC"
+    },
+    {
+      "id": 255,
+      "label": "Symmetric Encryption",
+      "group": "SEC"
+    },
+    {
+      "id": 256,
+      "label": "Asymmetric Encryption",
+      "group": "SEC"
+    },
+    {
+      "id": 257,
+      "label": "Key Management",
+      "group": "SEC"
+    },
+    {
+      "id": 258,
+      "label": "Hashing",
+      "group": "SEC"
+    },
+    {
+      "id": 259,
+      "label": "Digital Signature",
+      "group": "SEC"
+    },
+    {
+      "id": 260,
+      "label": "NIST CSF",
+      "group": "SEC"
+    },
+    {
+      "id": 261,
+      "label": "ISO 27001",
+      "group": "SEC"
+    },
+    {
+      "id": 262,
+      "label": "CIS Controls",
+      "group": "SEC"
+    },
+    {
+      "id": 263,
+      "label": "Threat Modeling",
+      "group": "SEC"
+    },
+    {
+      "id": 264,
+      "label": "STRIDE Method",
+      "group": "SEC"
+    },
+    {
+      "id": 265,
+      "label": "Vulnerability Management",
+      "group": "SEC"
+    },
+    {
+      "id": 266,
+      "label": "Penetration Testing",
+      "group": "SEC"
+    },
+    {
+      "id": 267,
+      "label": "SIEM",
+      "group": "SEC"
+    },
+    {
+      "id": 268,
+      "label": "Security Operations Center",
+      "group": "SEC"
+    },
+    {
+      "id": 269,
+      "label": "Incident Response",
+      "group": "SEC"
+    },
+    {
+      "id": 270,
+      "label": "Audit Trail",
+      "group": "SEC"
+    },
+    {
+      "id": 271,
+      "label": "GDPR",
+      "group": "PRIV"
+    },
+    {
+      "id": 272,
+      "label": "CCPA CPRA",
+      "group": "PRIV"
+    },
+    {
+      "id": 273,
+      "label": "HIPAA",
+      "group": "PRIV"
+    },
+    {
+      "id": 274,
+      "label": "SOX",
+      "group": "PRIV"
+    },
+    {
+      "id": 275,
+      "label": "PCI-DSS",
+      "group": "PRIV"
+    },
+    {
+      "id": 276,
+      "label": "Data Subject Rights",
+      "group": "PRIV"
+    },
+    {
+      "id": 277,
+      "label": "Right to Erasure",
+      "group": "PRIV"
+    },
+    {
+      "id": 278,
+      "label": "Data Portability",
+      "group": "PRIV"
+    },
+    {
+      "id": 279,
+      "label": "Privacy by Design",
+      "group": "PRIV"
+    },
+    {
+      "id": 280,
+      "label": "Privacy Impact Assessment",
+      "group": "PRIV"
+    },
+    {
+      "id": 281,
+      "label": "Data Processing Agreement",
+      "group": "PRIV"
+    },
+    {
+      "id": 282,
+      "label": "Data Residency",
+      "group": "PRIV"
+    },
+    {
+      "id": 283,
+      "label": "Cross-Border Transfer",
+      "group": "PRIV"
+    },
+    {
+      "id": 284,
+      "label": "Standard Contractual Clauses",
+      "group": "PRIV"
+    },
+    {
+      "id": 285,
+      "label": "Schrems II",
+      "group": "PRIV"
+    },
+    {
+      "id": 286,
+      "label": "Records Retention",
+      "group": "PRIV"
+    },
+    {
+      "id": 287,
+      "label": "Data Minimization",
+      "group": "PRIV"
+    },
+    {
+      "id": 288,
+      "label": "Purpose Limitation",
+      "group": "PRIV"
+    },
+    {
+      "id": 289,
+      "label": "Lawful Basis",
+      "group": "PRIV"
+    },
+    {
+      "id": 290,
+      "label": "Consent Management",
+      "group": "PRIV"
+    },
+    {
+      "id": 291,
+      "label": "Data Breach Notification",
+      "group": "PRIV"
+    },
+    {
+      "id": 292,
+      "label": "Privacy Engineering",
+      "group": "PRIV"
+    },
+    {
+      "id": 293,
+      "label": "Project Charter",
+      "group": "PM"
+    },
+    {
+      "id": 294,
+      "label": "Scope Statement",
+      "group": "PM"
+    },
+    {
+      "id": 295,
+      "label": "Stakeholder Analysis",
+      "group": "PM"
+    },
+    {
+      "id": 296,
+      "label": "Stakeholder Register",
+      "group": "PM"
+    },
+    {
+      "id": 297,
+      "label": "Work Breakdown Structure",
+      "group": "PM"
+    },
+    {
+      "id": 298,
+      "label": "Project Schedule",
+      "group": "PM"
+    },
+    {
+      "id": 299,
+      "label": "Gantt Chart",
+      "group": "PM"
+    },
+    {
+      "id": 300,
+      "label": "Critical Path Method",
+      "group": "PM"
+    },
+    {
+      "id": 301,
+      "label": "Project Triangle",
+      "group": "PM"
+    },
+    {
+      "id": 302,
+      "label": "Risk Register",
+      "group": "PM"
+    },
+    {
+      "id": 303,
+      "label": "Risk Mitigation",
+      "group": "PM"
+    },
+    {
+      "id": 304,
+      "label": "Issue Log",
+      "group": "PM"
+    },
+    {
+      "id": 305,
+      "label": "Change Control",
+      "group": "PM"
+    },
+    {
+      "id": 306,
+      "label": "Communication Plan",
+      "group": "PM"
+    },
+    {
+      "id": 307,
+      "label": "PMBOK Guide",
+      "group": "PM"
+    },
+    {
+      "id": 308,
+      "label": "PRINCE2",
+      "group": "PM"
+    },
+    {
+      "id": 309,
+      "label": "Agile Project Management",
+      "group": "PM"
+    },
+    {
+      "id": 310,
+      "label": "Waterfall Project Management",
+      "group": "PM"
+    },
+    {
+      "id": 311,
+      "label": "Hybrid Project Management",
+      "group": "PM"
+    },
+    {
+      "id": 312,
+      "label": "Burndown Chart",
+      "group": "PM"
+    },
+    {
+      "id": 313,
+      "label": "Velocity",
+      "group": "PM"
+    },
+    {
+      "id": 314,
+      "label": "Earned Value Management",
+      "group": "PM"
+    },
+    {
+      "id": 315,
+      "label": "Project Closure",
+      "group": "PM"
+    },
+    {
+      "id": 316,
+      "label": "Lessons Learned",
+      "group": "PM"
+    },
+    {
+      "id": 317,
+      "label": "Project Portfolio Management",
+      "group": "PM"
+    },
+    {
+      "id": 318,
+      "label": "Program Management",
+      "group": "PM"
+    },
+    {
+      "id": 319,
+      "label": "PMO",
+      "group": "PM"
+    },
+    {
+      "id": 320,
+      "label": "Resource Leveling",
+      "group": "PM"
+    },
+    {
+      "id": 321,
+      "label": "Estimation Techniques",
+      "group": "PM"
+    },
+    {
+      "id": 322,
+      "label": "Stakeholder Engagement",
+      "group": "PM"
+    },
+    {
+      "id": 323,
+      "label": "Process Modeling",
+      "group": "BPM"
+    },
+    {
+      "id": 324,
+      "label": "BPMN Notation",
+      "group": "BPM"
+    },
+    {
+      "id": 325,
+      "label": "Pool and Lane",
+      "group": "BPM"
+    },
+    {
+      "id": 326,
+      "label": "Process Activity",
+      "group": "BPM"
+    },
+    {
+      "id": 327,
+      "label": "Gateway",
+      "group": "BPM"
+    },
+    {
+      "id": 328,
+      "label": "Process Event",
+      "group": "BPM"
+    },
+    {
+      "id": 329,
+      "label": "As-Is Process",
+      "group": "BPM"
+    },
+    {
+      "id": 330,
+      "label": "To-Be Process",
+      "group": "BPM"
+    },
+    {
+      "id": 331,
+      "label": "Process Reengineering",
+      "group": "BPM"
+    },
+    {
+      "id": 332,
+      "label": "Lean Methodology",
+      "group": "BPM"
+    },
+    {
+      "id": 333,
+      "label": "Six Sigma",
+      "group": "BPM"
+    },
+    {
+      "id": 334,
+      "label": "DMAIC",
+      "group": "BPM"
+    },
+    {
+      "id": 335,
+      "label": "Workflow Automation",
+      "group": "BPM"
+    },
+    {
+      "id": 336,
+      "label": "Robotic Process Automation",
+      "group": "BPM"
+    },
+    {
+      "id": 337,
+      "label": "RPA Tools",
+      "group": "BPM"
+    },
+    {
+      "id": 338,
+      "label": "Process Mining",
+      "group": "BPM"
+    },
+    {
+      "id": 339,
+      "label": "Continuous Improvement",
+      "group": "BPM"
+    },
+    {
+      "id": 340,
+      "label": "Value Stream Mapping",
+      "group": "BPM"
+    },
+    {
+      "id": 341,
+      "label": "Business Rules Engine",
+      "group": "BPM"
+    },
+    {
+      "id": 342,
+      "label": "Feasibility Study",
+      "group": "SAD"
+    },
+    {
+      "id": 343,
+      "label": "Cost Benefit Analysis",
+      "group": "SAD"
+    },
+    {
+      "id": 344,
+      "label": "Use Case",
+      "group": "SAD"
+    },
+    {
+      "id": 345,
+      "label": "Use Case Diagram",
+      "group": "SAD"
+    },
+    {
+      "id": 346,
+      "label": "Activity Diagram",
+      "group": "SAD"
+    },
+    {
+      "id": 347,
+      "label": "Sequence Diagram",
+      "group": "SAD"
+    },
+    {
+      "id": 348,
+      "label": "Class Diagram",
+      "group": "SAD"
+    },
+    {
+      "id": 349,
+      "label": "State Diagram",
+      "group": "SAD"
+    },
+    {
+      "id": 350,
+      "label": "UML for IS",
+      "group": "SAD"
+    },
+    {
+      "id": 351,
+      "label": "Joint Application Design",
+      "group": "SAD"
+    },
+    {
+      "id": 352,
+      "label": "Prototyping",
+      "group": "SAD"
+    },
+    {
+      "id": 353,
+      "label": "Wireframe",
+      "group": "SAD"
+    },
+    {
+      "id": 354,
+      "label": "Mockup",
+      "group": "SAD"
+    },
+    {
+      "id": 355,
+      "label": "Functional Specification",
+      "group": "SAD"
+    },
+    {
+      "id": 356,
+      "label": "Requirements Traceability",
+      "group": "SAD"
+    },
+    {
+      "id": 357,
+      "label": "Gap Analysis",
+      "group": "SAD"
+    },
+    {
+      "id": 358,
+      "label": "Make or Buy Decision",
+      "group": "SAD"
+    },
+    {
+      "id": 359,
+      "label": "RFP Process",
+      "group": "SAD"
+    },
+    {
+      "id": 360,
+      "label": "Vendor Evaluation",
+      "group": "SAD"
+    },
+    {
+      "id": 361,
+      "label": "System Testing",
+      "group": "SAD"
+    },
+    {
+      "id": 362,
+      "label": "User Acceptance Testing",
+      "group": "SAD"
+    },
+    {
+      "id": 363,
+      "label": "Test Plan",
+      "group": "SAD"
+    },
+    {
+      "id": 364,
+      "label": "Defect Tracking",
+      "group": "SAD"
+    },
+    {
+      "id": 365,
+      "label": "Cutover Plan",
+      "group": "SAD"
+    },
+    {
+      "id": 366,
+      "label": "Usability Principle",
+      "group": "HCI"
+    },
+    {
+      "id": 367,
+      "label": "Nielsen Heuristics",
+      "group": "HCI"
+    },
+    {
+      "id": 368,
+      "label": "Accessibility WCAG",
+      "group": "HCI"
+    },
+    {
+      "id": 369,
+      "label": "User Research",
+      "group": "HCI"
+    },
+    {
+      "id": 370,
+      "label": "Persona",
+      "group": "HCI"
+    },
+    {
+      "id": 371,
+      "label": "Journey Map",
+      "group": "HCI"
+    },
+    {
+      "id": 372,
+      "label": "Information Architecture",
+      "group": "HCI"
+    },
+    {
+      "id": 373,
+      "label": "Interaction Design",
+      "group": "HCI"
+    },
+    {
+      "id": 374,
+      "label": "Visual Design",
+      "group": "HCI"
+    },
+    {
+      "id": 375,
+      "label": "Form Design",
+      "group": "HCI"
+    },
+    {
+      "id": 376,
+      "label": "Error Message Design",
+      "group": "HCI"
+    },
+    {
+      "id": 377,
+      "label": "Mobile First Design",
+      "group": "HCI"
+    },
+    {
+      "id": 378,
+      "label": "Responsive Design",
+      "group": "HCI"
+    },
+    {
+      "id": 379,
+      "label": "Inclusive Design",
+      "group": "HCI"
+    },
+    {
+      "id": 380,
+      "label": "ITIL Service Lifecycle",
+      "group": "ITSM"
+    },
+    {
+      "id": 381,
+      "label": "Service Strategy",
+      "group": "ITSM"
+    },
+    {
+      "id": 382,
+      "label": "Service Design",
+      "group": "ITSM"
+    },
+    {
+      "id": 383,
+      "label": "Service Transition",
+      "group": "ITSM"
+    },
+    {
+      "id": 384,
+      "label": "Service Operation",
+      "group": "ITSM"
+    },
+    {
+      "id": 385,
+      "label": "Continual Service Improvement",
+      "group": "ITSM"
+    },
+    {
+      "id": 386,
+      "label": "Incident Management",
+      "group": "ITSM"
+    },
+    {
+      "id": 387,
+      "label": "Problem Management",
+      "group": "ITSM"
+    },
+    {
+      "id": 388,
+      "label": "ITIL Change Management",
+      "group": "ITSM"
+    },
+    {
+      "id": 389,
+      "label": "Configuration Management",
+      "group": "ITSM"
+    },
+    {
+      "id": 390,
+      "label": "CMDB",
+      "group": "ITSM"
+    },
+    {
+      "id": 391,
+      "label": "Service Catalog",
+      "group": "ITSM"
+    },
+    {
+      "id": 392,
+      "label": "Service Level Management",
+      "group": "ITSM"
+    },
+    {
+      "id": 393,
+      "label": "SLA Metrics",
+      "group": "ITSM"
+    },
+    {
+      "id": 394,
+      "label": "OLA",
+      "group": "ITSM"
+    },
+    {
+      "id": 395,
+      "label": "Help Desk",
+      "group": "ITSM"
+    },
+    {
+      "id": 396,
+      "label": "Service Desk Tier",
+      "group": "ITSM"
+    },
+    {
+      "id": 397,
+      "label": "Ticket Lifecycle",
+      "group": "ITSM"
+    },
+    {
+      "id": 398,
+      "label": "Knowledge Management",
+      "group": "ITSM"
+    },
+    {
+      "id": 399,
+      "label": "Observability",
+      "group": "ITSM"
+    },
+    {
+      "id": 400,
+      "label": "SLO and SLI",
+      "group": "ITSM"
+    },
+    {
+      "id": 401,
+      "label": "Error Budget",
+      "group": "ITSM"
+    },
+    {
+      "id": 402,
+      "label": "On-Call Rotation",
+      "group": "ITSM"
+    },
+    {
+      "id": 403,
+      "label": "Postmortem",
+      "group": "ITSM"
+    },
+    {
+      "id": 404,
+      "label": "Blameless Culture",
+      "group": "ITSM"
+    },
+    {
+      "id": 405,
+      "label": "Artificial Intelligence",
+      "group": "AIIS"
+    },
+    {
+      "id": 406,
+      "label": "Machine Learning",
+      "group": "AIIS"
+    },
+    {
+      "id": 407,
+      "label": "Predictive ML",
+      "group": "AIIS"
+    },
+    {
+      "id": 408,
+      "label": "Generative AI",
+      "group": "AIIS"
+    },
+    {
+      "id": 409,
+      "label": "Large Language Model",
+      "group": "AIIS"
+    },
+    {
+      "id": 410,
+      "label": "Foundation Model",
+      "group": "AIIS"
+    },
+    {
+      "id": 411,
+      "label": "Prompt",
+      "group": "AIIS"
+    },
+    {
+      "id": 412,
+      "label": "Prompt Engineering",
+      "group": "AIIS"
+    },
+    {
+      "id": 413,
+      "label": "Retrieval Augmented Generation",
+      "group": "AIIS"
+    },
+    {
+      "id": 414,
+      "label": "Vector Embedding",
+      "group": "AIIS"
+    },
+    {
+      "id": 415,
+      "label": "Vector Database",
+      "group": "AIIS"
+    },
+    {
+      "id": 416,
+      "label": "AI Agent",
+      "group": "AIIS"
+    },
+    {
+      "id": 417,
+      "label": "Agentic Workflow",
+      "group": "AIIS"
+    },
+    {
+      "id": 418,
+      "label": "AI in ERP",
+      "group": "AIIS"
+    },
+    {
+      "id": 419,
+      "label": "AI in CRM",
+      "group": "AIIS"
+    },
+    {
+      "id": 420,
+      "label": "AI in ITSM",
+      "group": "AIIS"
+    },
+    {
+      "id": 421,
+      "label": "AI Value Chain",
+      "group": "AIIS"
+    },
+    {
+      "id": 422,
+      "label": "Build vs Buy AI",
+      "group": "AIIS"
+    },
+    {
+      "id": 423,
+      "label": "Model API",
+      "group": "AIIS"
+    },
+    {
+      "id": 424,
+      "label": "Model Card",
+      "group": "AIIS"
+    },
+    {
+      "id": 425,
+      "label": "System Card",
+      "group": "AIIS"
+    },
+    {
+      "id": 426,
+      "label": "Hallucination",
+      "group": "AIIS"
+    },
+    {
+      "id": 427,
+      "label": "Grounding",
+      "group": "AIIS"
+    },
+    {
+      "id": 428,
+      "label": "Guardrail",
+      "group": "AIIS"
+    },
+    {
+      "id": 429,
+      "label": "Human in the Loop",
+      "group": "AIIS"
+    },
+    {
+      "id": 430,
+      "label": "RAG Architecture",
+      "group": "AIIS"
+    },
+    {
+      "id": 431,
+      "label": "NIST AI RMF",
+      "group": "RAI"
+    },
+    {
+      "id": 432,
+      "label": "AI Govern Function",
+      "group": "RAI"
+    },
+    {
+      "id": 433,
+      "label": "AI Map Function",
+      "group": "RAI"
+    },
+    {
+      "id": 434,
+      "label": "AI Measure Function",
+      "group": "RAI"
+    },
+    {
+      "id": 435,
+      "label": "AI Manage Function",
+      "group": "RAI"
+    },
+    {
+      "id": 436,
+      "label": "ISO IEC 42001",
+      "group": "RAI"
+    },
+    {
+      "id": 437,
+      "label": "Bias Audit",
+      "group": "RAI"
+    },
+    {
+      "id": 438,
+      "label": "Algorithmic Fairness",
+      "group": "RAI"
+    },
+    {
+      "id": 439,
+      "label": "Explainability",
+      "group": "RAI"
+    },
+    {
+      "id": 440,
+      "label": "Transparency",
+      "group": "RAI"
+    },
+    {
+      "id": 441,
+      "label": "AI Acceptable Use Policy",
+      "group": "RAI"
+    },
+    {
+      "id": 442,
+      "label": "Sanctioned Model List",
+      "group": "RAI"
+    },
+    {
+      "id": 443,
+      "label": "Shadow AI",
+      "group": "RAI"
+    },
+    {
+      "id": 444,
+      "label": "AI Incident Management",
+      "group": "RAI"
+    },
+    {
+      "id": 445,
+      "label": "AI Inventory",
+      "group": "RAI"
+    },
+    {
+      "id": 446,
+      "label": "AI Impact Assessment",
+      "group": "RAI"
+    },
+    {
+      "id": 447,
+      "label": "Responsible AI Principles",
+      "group": "RAI"
+    },
+    {
+      "id": 448,
+      "label": "Trustworthy AI",
+      "group": "RAI"
+    },
+    {
+      "id": 449,
+      "label": "AI Ethics Committee",
+      "group": "RAI"
+    },
+    {
+      "id": 450,
+      "label": "Human Oversight Tier",
+      "group": "RAI"
+    },
+    {
+      "id": 451,
+      "label": "AI Data Provenance",
+      "group": "RAI"
+    },
+    {
+      "id": 452,
+      "label": "Training Data Documentation",
+      "group": "RAI"
+    },
+    {
+      "id": 453,
+      "label": "Datasheet for Datasets",
+      "group": "RAI"
+    },
+    {
+      "id": 454,
+      "label": "AI Sustainability",
+      "group": "RAI"
+    },
+    {
+      "id": 455,
+      "label": "AI Labor Impact",
+      "group": "RAI"
+    },
+    {
+      "id": 456,
+      "label": "EU AI Act",
+      "group": "AILAW"
+    },
+    {
+      "id": 457,
+      "label": "AI Risk Tier",
+      "group": "AILAW"
+    },
+    {
+      "id": 458,
+      "label": "Unacceptable Risk AI",
+      "group": "AILAW"
+    },
+    {
+      "id": 459,
+      "label": "High Risk AI",
+      "group": "AILAW"
+    },
+    {
+      "id": 460,
+      "label": "Limited Risk AI",
+      "group": "AILAW"
+    },
+    {
+      "id": 461,
+      "label": "Minimal Risk AI",
+      "group": "AILAW"
+    },
+    {
+      "id": 462,
+      "label": "US AI Executive Order",
+      "group": "AILAW"
+    },
+    {
+      "id": 463,
+      "label": "Colorado AI Act",
+      "group": "AILAW"
+    },
+    {
+      "id": 464,
+      "label": "NYC AEDT Law",
+      "group": "AILAW"
+    },
+    {
+      "id": 465,
+      "label": "AI in Healthcare HIPAA",
+      "group": "AILAW"
+    },
+    {
+      "id": 466,
+      "label": "AI in Lending ECOA",
+      "group": "AILAW"
+    },
+    {
+      "id": 467,
+      "label": "AI in Education FERPA",
+      "group": "AILAW"
+    },
+    {
+      "id": 468,
+      "label": "Copyright and Training Data",
+      "group": "AILAW"
+    },
+    {
+      "id": 469,
+      "label": "AI Procurement Clause",
+      "group": "AILAW"
+    },
+    {
+      "id": 470,
+      "label": "Vendor System Card Review",
+      "group": "AILAW"
+    },
+    {
+      "id": 471,
+      "label": "AI Cross-Border Transfer",
+      "group": "AILAW"
+    },
+    {
+      "id": 472,
+      "label": "Automated Decision-Making",
+      "group": "AILAW"
+    },
+    {
+      "id": 473,
+      "label": "Right to Explanation",
+      "group": "AILAW"
+    },
+    {
+      "id": 474,
+      "label": "AI Liability",
+      "group": "AILAW"
+    },
+    {
+      "id": 475,
+      "label": "AI Disclosure Requirement",
+      "group": "AILAW"
+    },
+    {
+      "id": 476,
+      "label": "AI Threat Landscape",
+      "group": "AISEC"
+    },
+    {
+      "id": 477,
+      "label": "Prompt Injection",
+      "group": "AISEC"
+    },
+    {
+      "id": 478,
+      "label": "Indirect Prompt Injection",
+      "group": "AISEC"
+    },
+    {
+      "id": 479,
+      "label": "Jailbreaking",
+      "group": "AISEC"
+    },
+    {
+      "id": 480,
+      "label": "Training Data Poisoning",
+      "group": "AISEC"
+    },
+    {
+      "id": 481,
+      "label": "Model Inversion",
+      "group": "AISEC"
+    },
+    {
+      "id": 482,
+      "label": "Membership Inference",
+      "group": "AISEC"
+    },
+    {
+      "id": 483,
+      "label": "Model Exfiltration",
+      "group": "AISEC"
+    },
+    {
+      "id": 484,
+      "label": "Adversarial Example",
+      "group": "AISEC"
+    },
+    {
+      "id": 485,
+      "label": "OWASP LLM Top 10",
+      "group": "AISEC"
+    },
+    {
+      "id": 486,
+      "label": "MITRE ATLAS",
+      "group": "AISEC"
+    },
+    {
+      "id": 487,
+      "label": "Secure AI SDLC",
+      "group": "AISEC"
+    },
+    {
+      "id": 488,
+      "label": "AI Red Teaming",
+      "group": "AISEC"
+    },
+    {
+      "id": 489,
+      "label": "AI Output Filtering",
+      "group": "AISEC"
+    },
+    {
+      "id": 490,
+      "label": "AI Input Sanitization",
+      "group": "AISEC"
+    },
+    {
+      "id": 491,
+      "label": "AI Logging and Audit",
+      "group": "AISEC"
+    },
+    {
+      "id": 492,
+      "label": "Defensive AI in SOC",
+      "group": "AISEC"
+    },
+    {
+      "id": 493,
+      "label": "AI Phishing Detection",
+      "group": "AISEC"
+    },
+    {
+      "id": 494,
+      "label": "AI Code Review Security",
+      "group": "AISEC"
+    },
+    {
+      "id": 495,
+      "label": "Data Loss Prevention for AI",
+      "group": "AISEC"
+    },
+    {
+      "id": 496,
+      "label": "AI Sandbox",
+      "group": "AISEC"
+    },
+    {
+      "id": 497,
+      "label": "Confidential Computing for AI",
+      "group": "AISEC"
+    },
+    {
+      "id": 498,
+      "label": "Federated Learning",
+      "group": "AISEC"
+    },
+    {
+      "id": 499,
+      "label": "Differential Privacy",
+      "group": "AISEC"
+    },
+    {
+      "id": 500,
+      "label": "Synthetic Data",
+      "group": "AISEC"
+    },
+    {
+      "id": 501,
+      "label": "AI in Help Desk",
+      "group": "AIPROD"
+    },
+    {
+      "id": 502,
+      "label": "Intelligent Ticket Routing",
+      "group": "AIPROD"
+    },
+    {
+      "id": 503,
+      "label": "Virtual Agent",
+      "group": "AIPROD"
+    },
+    {
+      "id": 504,
+      "label": "Knowledge Base Copilot",
+      "group": "AIPROD"
+    },
+    {
+      "id": 505,
+      "label": "Ticket Deflection",
+      "group": "AIPROD"
+    },
+    {
+      "id": 506,
+      "label": "AI in App Development",
+      "group": "AIPROD"
+    },
+    {
+      "id": 507,
+      "label": "Code Completion",
+      "group": "AIPROD"
+    },
+    {
+      "id": 508,
+      "label": "AI Pair Programmer",
+      "group": "AIPROD"
+    },
+    {
+      "id": 509,
+      "label": "AI Test Generation",
+      "group": "AIPROD"
+    },
+    {
+      "id": 510,
+      "label": "AI Code Review",
+      "group": "AIPROD"
+    },
+    {
+      "id": 511,
+      "label": "AI Documentation",
+      "group": "AIPROD"
+    },
+    {
+      "id": 512,
+      "label": "Developer Productivity Metrics",
+      "group": "AIPROD"
+    },
+    {
+      "id": 513,
+      "label": "AI in IT Operations",
+      "group": "AIPROD"
+    },
+    {
+      "id": 514,
+      "label": "AIOps",
+      "group": "AIPROD"
+    },
+    {
+      "id": 515,
+      "label": "Anomaly Detection in Ops",
+      "group": "AIPROD"
+    },
+    {
+      "id": 516,
+      "label": "Automated Remediation",
+      "group": "AIPROD"
+    },
+    {
+      "id": 517,
+      "label": "AI in Business Analysis",
+      "group": "AIPROD"
+    },
+    {
+      "id": 518,
+      "label": "AI Requirements Drafting",
+      "group": "AIPROD"
+    },
+    {
+      "id": 519,
+      "label": "AI Status Synthesis",
+      "group": "AIPROD"
+    },
+    {
+      "id": 520,
+      "label": "AI Risk Identification",
+      "group": "AIPROD"
+    },
+    {
+      "id": 521,
+      "label": "Productivity Measurement",
+      "group": "AIPROD"
+    },
+    {
+      "id": 522,
+      "label": "Baseline and Stop Loss",
+      "group": "AIPROD"
+    },
+    {
+      "id": 523,
+      "label": "AI Change Management",
+      "group": "AIPROD"
+    },
+    {
+      "id": 524,
+      "label": "Workforce Transition",
+      "group": "AIPROD"
+    },
+    {
+      "id": 525,
+      "label": "Reskilling Strategy",
+      "group": "AIPROD"
+    },
+    {
+      "id": 526,
+      "label": "Knowledge Graph",
+      "group": "KGENS"
+    },
+    {
+      "id": 527,
+      "label": "Property Graph Model",
+      "group": "KGENS"
+    },
+    {
+      "id": 528,
+      "label": "Node and Edge",
+      "group": "KGENS"
+    },
+    {
+      "id": 529,
+      "label": "Graph Schema",
+      "group": "KGENS"
+    },
+    {
+      "id": 530,
+      "label": "Ontology",
+      "group": "KGENS"
+    },
+    {
+      "id": 531,
+      "label": "Taxonomy in IS",
+      "group": "KGENS"
+    },
+    {
+      "id": 532,
+      "label": "Schema.org",
+      "group": "KGENS"
+    },
+    {
+      "id": 533,
+      "label": "Domain Vocabulary",
+      "group": "KGENS"
+    },
+    {
+      "id": 534,
+      "label": "Cypher Query Language",
+      "group": "KGENS"
+    },
+    {
+      "id": 535,
+      "label": "GQL Standard",
+      "group": "KGENS"
+    },
+    {
+      "id": 536,
+      "label": "Neo4j",
+      "group": "KGENS"
+    },
+    {
+      "id": 537,
+      "label": "Amazon Neptune",
+      "group": "KGENS"
+    },
+    {
+      "id": 538,
+      "label": "TigerGraph",
+      "group": "KGENS"
+    },
+    {
+      "id": 539,
+      "label": "Memgraph",
+      "group": "KGENS"
+    },
+    {
+      "id": 540,
+      "label": "Graph Traversal",
+      "group": "KGENS"
+    },
+    {
+      "id": 541,
+      "label": "Graph Algorithm",
+      "group": "KGENS"
+    },
+    {
+      "id": 542,
+      "label": "Shortest Path",
+      "group": "KGENS"
+    },
+    {
+      "id": 543,
+      "label": "Community Detection",
+      "group": "KGENS"
+    },
+    {
+      "id": 544,
+      "label": "Centrality",
+      "group": "KGENS"
+    },
+    {
+      "id": 545,
+      "label": "Entity Resolution",
+      "group": "KGENS"
+    },
+    {
+      "id": 546,
+      "label": "Identity Reconciliation",
+      "group": "KGENS"
+    },
+    {
+      "id": 547,
+      "label": "Record Linkage",
+      "group": "KGENS"
+    },
+    {
+      "id": 548,
+      "label": "Enterprise Knowledge Graph",
+      "group": "KGENS"
+    },
+    {
+      "id": 549,
+      "label": "Semantic Layer",
+      "group": "KGENS"
+    },
+    {
+      "id": 550,
+      "label": "Single Source of Meaning",
+      "group": "KGENS"
+    },
+    {
+      "id": 551,
+      "label": "GraphRAG",
+      "group": "KGENS"
+    },
+    {
+      "id": 552,
+      "label": "Vector and Graph Hybrid",
+      "group": "KGENS"
+    },
+    {
+      "id": 553,
+      "label": "KG Construction",
+      "group": "KGENS"
+    },
+    {
+      "id": 554,
+      "label": "KG from Unstructured Text",
+      "group": "KGENS"
+    },
+    {
+      "id": 555,
+      "label": "Enterprise Nervous System",
+      "group": "KGENS"
+    },
+    {
+      "id": 556,
+      "label": "Event Source",
+      "group": "KGENS"
+    },
+    {
+      "id": 557,
+      "label": "External Signal",
+      "group": "KGENS"
+    },
+    {
+      "id": 558,
+      "label": "Streaming Platform",
+      "group": "KGENS"
+    },
+    {
+      "id": 559,
+      "label": "Apache Kafka",
+      "group": "KGENS"
+    },
+    {
+      "id": 560,
+      "label": "Apache Flink",
+      "group": "KGENS"
+    },
+    {
+      "id": 561,
+      "label": "Complex Event Processing",
+      "group": "KGENS"
+    },
+    {
+      "id": 562,
+      "label": "Event Enrichment",
+      "group": "KGENS"
+    },
+    {
+      "id": 563,
+      "label": "Rule Engine",
+      "group": "KGENS"
+    },
+    {
+      "id": 564,
+      "label": "Policy Engine",
+      "group": "KGENS"
+    },
+    {
+      "id": 565,
+      "label": "ENS Actuator",
+      "group": "KGENS"
+    },
+    {
+      "id": 566,
+      "label": "Sense and Respond Loop",
+      "group": "KGENS"
+    },
+    {
+      "id": 567,
+      "label": "Real-Time Decisioning",
+      "group": "KGENS"
+    },
+    {
+      "id": 568,
+      "label": "Competitor Signal Monitoring",
+      "group": "KGENS"
+    },
+    {
+      "id": 569,
+      "label": "Sentiment Stream Ingestion",
+      "group": "KGENS"
+    },
+    {
+      "id": 570,
+      "label": "Sustainable IT",
+      "group": "EMRG"
+    },
+    {
+      "id": 571,
+      "label": "Green Computing",
+      "group": "EMRG"
+    },
+    {
+      "id": 572,
+      "label": "Circular IT",
+      "group": "EMRG"
+    },
+    {
+      "id": 573,
+      "label": "Data Mesh Principles",
+      "group": "EMRG"
+    },
+    {
+      "id": 574,
+      "label": "Federated Data Governance",
+      "group": "EMRG"
+    },
+    {
+      "id": 575,
+      "label": "Post-Quantum Cryptography",
+      "group": "EMRG"
+    },
+    {
+      "id": 576,
+      "label": "Crypto Agility",
+      "group": "EMRG"
+    },
+    {
+      "id": 577,
+      "label": "Edge Computing for IS",
+      "group": "EMRG"
+    },
+    {
+      "id": 578,
+      "label": "Digital Twin",
+      "group": "EMRG"
+    },
+    {
+      "id": 579,
+      "label": "Industry 4.0",
+      "group": "EMRG"
+    },
+    {
+      "id": 580,
+      "label": "AI-Native Organization",
+      "group": "EMRG"
+    }
+  ],
+  "edges": [
+    {
+      "from": 3,
+      "to": 2
+    },
+    {
+      "from": 4,
+      "to": 3
+    },
+    {
+      "from": 5,
+      "to": 2
+    },
+    {
+      "from": 5,
+      "to": 3
+    },
+    {
+      "from": 5,
+      "to": 4
+    },
+    {
+      "from": 8,
+      "to": 6
+    },
+    {
+      "from": 8,
+      "to": 7
+    },
+    {
+      "from": 9,
+      "to": 1
+    },
+    {
+      "from": 10,
+      "to": 1
+    },
+    {
+      "from": 12,
+      "to": 11
+    },
+    {
+      "from": 13,
+      "to": 11
+    },
+    {
+      "from": 13,
+      "to": 12
+    },
+    {
+      "from": 14,
+      "to": 11
+    },
+    {
+      "from": 14,
+      "to": 13
+    },
+    {
+      "from": 15,
+      "to": 1
+    },
+    {
+      "from": 15,
+      "to": 14
+    },
+    {
+      "from": 16,
+      "to": 1
+    },
+    {
+      "from": 16,
+      "to": 7
+    },
+    {
+      "from": 17,
+      "to": 1
+    },
+    {
+      "from": 17,
+      "to": 9
+    },
+    {
+      "from": 17,
+      "to": 10
+    },
+    {
+      "from": 18,
+      "to": 1
+    },
+    {
+      "from": 18,
+      "to": 16
+    },
+    {
+      "from": 19,
+      "to": 14
+    },
+    {
+      "from": 19,
+      "to": 18
+    },
+    {
+      "from": 20,
+      "to": 10
+    },
+    {
+      "from": 20,
+      "to": 13
+    },
+    {
+      "from": 21,
+      "to": 14
+    },
+    {
+      "from": 21,
+      "to": 20
+    },
+    {
+      "from": 22,
+      "to": 14
+    },
+    {
+      "from": 22,
+      "to": 20
+    },
+    {
+      "from": 22,
+      "to": 21
+    },
+    {
+      "from": 23,
+      "to": 11
+    },
+    {
+      "from": 23,
+      "to": 14
+    },
+    {
+      "from": 24,
+      "to": 15
+    },
+    {
+      "from": 24,
+      "to": 18
+    },
+    {
+      "from": 24,
+      "to": 19
+    },
+    {
+      "from": 25,
+      "to": 24
+    },
+    {
+      "from": 26,
+      "to": 24
+    },
+    {
+      "from": 27,
+      "to": 24
+    },
+    {
+      "from": 28,
+      "to": 27
+    },
+    {
+      "from": 29,
+      "to": 2
+    },
+    {
+      "from": 29,
+      "to": 27
+    },
+    {
+      "from": 30,
+      "to": 27
+    },
+    {
+      "from": 31,
+      "to": 27
+    },
+    {
+      "from": 32,
+      "to": 27
+    },
+    {
+      "from": 33,
+      "to": 2
+    },
+    {
+      "from": 33,
+      "to": 29
+    },
+    {
+      "from": 34,
+      "to": 1
+    },
+    {
+      "from": 34,
+      "to": 11
+    },
+    {
+      "from": 35,
+      "to": 34
+    },
+    {
+      "from": 36,
+      "to": 11
+    },
+    {
+      "from": 36,
+      "to": 26
+    },
+    {
+      "from": 37,
+      "to": 1
+    },
+    {
+      "from": 37,
+      "to": 31
+    },
+    {
+      "from": 38,
+      "to": 1
+    },
+    {
+      "from": 38,
+      "to": 7
+    },
+    {
+      "from": 39,
+      "to": 38
+    },
+    {
+      "from": 40,
+      "to": 38
+    },
+    {
+      "from": 41,
+      "to": 38
+    },
+    {
+      "from": 42,
+      "to": 38
+    },
+    {
+      "from": 43,
+      "to": 31
+    },
+    {
+      "from": 43,
+      "to": 37
+    },
+    {
+      "from": 44,
+      "to": 43
+    },
+    {
+      "from": 45,
+      "to": 43
+    },
+    {
+      "from": 46,
+      "to": 43
+    },
+    {
+      "from": 47,
+      "to": 43
+    },
+    {
+      "from": 48,
+      "to": 38
+    },
+    {
+      "from": 48,
+      "to": 43
+    },
+    {
+      "from": 49,
+      "to": 48
+    },
+    {
+      "from": 50,
+      "to": 48
+    },
+    {
+      "from": 50,
+      "to": 49
+    },
+    {
+      "from": 51,
+      "to": 48
+    },
+    {
+      "from": 52,
+      "to": 38
+    },
+    {
+      "from": 52,
+      "to": 51
+    },
+    {
+      "from": 53,
+      "to": 38
+    },
+    {
+      "from": 53,
+      "to": 52
+    },
+    {
+      "from": 54,
+      "to": 48
+    },
+    {
+      "from": 54,
+      "to": 51
+    },
+    {
+      "from": 55,
+      "to": 48
+    },
+    {
+      "from": 55,
+      "to": 50
+    },
+    {
+      "from": 56,
+      "to": 55
+    },
+    {
+      "from": 57,
+      "to": 48
+    },
+    {
+      "from": 57,
+      "to": 54
+    },
+    {
+      "from": 58,
+      "to": 55
+    },
+    {
+      "from": 59,
+      "to": 55
+    },
+    {
+      "from": 60,
+      "to": 7
+    },
+    {
+      "from": 60,
+      "to": 10
+    },
+    {
+      "from": 61,
+      "to": 60
+    },
+    {
+      "from": 62,
+      "to": 60
+    },
+    {
+      "from": 62,
+      "to": 61
+    },
+    {
+      "from": 63,
+      "to": 62
+    },
+    {
+      "from": 64,
+      "to": 62
+    },
+    {
+      "from": 65,
+      "to": 62
+    },
+    {
+      "from": 66,
+      "to": 60
+    },
+    {
+      "from": 67,
+      "to": 66
+    },
+    {
+      "from": 68,
+      "to": 66
+    },
+    {
+      "from": 69,
+      "to": 62
+    },
+    {
+      "from": 69,
+      "to": 66
+    },
+    {
+      "from": 69,
+      "to": 67
+    },
+    {
+      "from": 70,
+      "to": 67
+    },
+    {
+      "from": 70,
+      "to": 69
+    },
+    {
+      "from": 71,
+      "to": 63
+    },
+    {
+      "from": 72,
+      "to": 63
+    },
+    {
+      "from": 72,
+      "to": 71
+    },
+    {
+      "from": 73,
+      "to": 71
+    },
+    {
+      "from": 73,
+      "to": 72
+    },
+    {
+      "from": 74,
+      "to": 71
+    },
+    {
+      "from": 74,
+      "to": 73
+    },
+    {
+      "from": 75,
+      "to": 63
+    },
+    {
+      "from": 75,
+      "to": 71
+    },
+    {
+      "from": 76,
+      "to": 7
+    },
+    {
+      "from": 76,
+      "to": 60
+    },
+    {
+      "from": 77,
+      "to": 76
+    },
+    {
+      "from": 78,
+      "to": 7
+    },
+    {
+      "from": 78,
+      "to": 60
+    },
+    {
+      "from": 79,
+      "to": 78
+    },
+    {
+      "from": 80,
+      "to": 78
+    },
+    {
+      "from": 80,
+      "to": 79
+    },
+    {
+      "from": 81,
+      "to": 7
+    },
+    {
+      "from": 81,
+      "to": 36
+    },
+    {
+      "from": 82,
+      "to": 7
+    },
+    {
+      "from": 82,
+      "to": 81
+    },
+    {
+      "from": 83,
+      "to": 82
+    },
+    {
+      "from": 84,
+      "to": 7
+    },
+    {
+      "from": 84,
+      "to": 60
+    },
+    {
+      "from": 85,
+      "to": 2
+    },
+    {
+      "from": 86,
+      "to": 85
+    },
+    {
+      "from": 87,
+      "to": 86
+    },
+    {
+      "from": 88,
+      "to": 87
+    },
+    {
+      "from": 89,
+      "to": 85
+    },
+    {
+      "from": 89,
+      "to": 86
+    },
+    {
+      "from": 90,
+      "to": 85
+    },
+    {
+      "from": 91,
+      "to": 90
+    },
+    {
+      "from": 92,
+      "to": 90
+    },
+    {
+      "from": 93,
+      "to": 89
+    },
+    {
+      "from": 93,
+      "to": 92
+    },
+    {
+      "from": 94,
+      "to": 90
+    },
+    {
+      "from": 94,
+      "to": 91
+    },
+    {
+      "from": 95,
+      "to": 92
+    },
+    {
+      "from": 95,
+      "to": 94
+    },
+    {
+      "from": 96,
+      "to": 94
+    },
+    {
+      "from": 97,
+      "to": 94
+    },
+    {
+      "from": 97,
+      "to": 95
+    },
+    {
+      "from": 98,
+      "to": 87
+    },
+    {
+      "from": 98,
+      "to": 94
+    },
+    {
+      "from": 98,
+      "to": 95
+    },
+    {
+      "from": 99,
+      "to": 98
+    },
+    {
+      "from": 100,
+      "to": 99
+    },
+    {
+      "from": 101,
+      "to": 100
+    },
+    {
+      "from": 102,
+      "to": 98
+    },
+    {
+      "from": 102,
+      "to": 101
+    },
+    {
+      "from": 103,
+      "to": 87
+    },
+    {
+      "from": 103,
+      "to": 94
+    },
+    {
+      "from": 104,
+      "to": 103
+    },
+    {
+      "from": 105,
+      "to": 95
+    },
+    {
+      "from": 105,
+      "to": 103
+    },
+    {
+      "from": 105,
+      "to": 104
+    },
+    {
+      "from": 106,
+      "to": 104
+    },
+    {
+      "from": 106,
+      "to": 105
+    },
+    {
+      "from": 107,
+      "to": 104
+    },
+    {
+      "from": 108,
+      "to": 103
+    },
+    {
+      "from": 109,
+      "to": 103
+    },
+    {
+      "from": 109,
+      "to": 104
+    },
+    {
+      "from": 110,
+      "to": 103
+    },
+    {
+      "from": 111,
+      "to": 110
+    },
+    {
+      "from": 112,
+      "to": 110
+    },
+    {
+      "from": 112,
+      "to": 111
+    },
+    {
+      "from": 113,
+      "to": 110
+    },
+    {
+      "from": 113,
+      "to": 112
+    },
+    {
+      "from": 114,
+      "to": 87
+    },
+    {
+      "from": 114,
+      "to": 103
+    },
+    {
+      "from": 115,
+      "to": 98
+    },
+    {
+      "from": 115,
+      "to": 103
+    },
+    {
+      "from": 116,
+      "to": 115
+    },
+    {
+      "from": 117,
+      "to": 115
+    },
+    {
+      "from": 118,
+      "to": 115
+    },
+    {
+      "from": 119,
+      "to": 115
+    },
+    {
+      "from": 120,
+      "to": 110
+    },
+    {
+      "from": 120,
+      "to": 115
+    },
+    {
+      "from": 120,
+      "to": 119
+    },
+    {
+      "from": 121,
+      "to": 119
+    },
+    {
+      "from": 121,
+      "to": 120
+    },
+    {
+      "from": 122,
+      "to": 121
+    },
+    {
+      "from": 123,
+      "to": 122
+    },
+    {
+      "from": 124,
+      "to": 122
+    },
+    {
+      "from": 125,
+      "to": 122
+    },
+    {
+      "from": 126,
+      "to": 125
+    },
+    {
+      "from": 127,
+      "to": 119
+    },
+    {
+      "from": 128,
+      "to": 121
+    },
+    {
+      "from": 128,
+      "to": 127
+    },
+    {
+      "from": 129,
+      "to": 121
+    },
+    {
+      "from": 129,
+      "to": 127
+    },
+    {
+      "from": 130,
+      "to": 2
+    },
+    {
+      "from": 130,
+      "to": 115
+    },
+    {
+      "from": 131,
+      "to": 130
+    },
+    {
+      "from": 132,
+      "to": 130
+    },
+    {
+      "from": 133,
+      "to": 127
+    },
+    {
+      "from": 133,
+      "to": 130
+    },
+    {
+      "from": 134,
+      "to": 133
+    },
+    {
+      "from": 135,
+      "to": 133
+    },
+    {
+      "from": 136,
+      "to": 115
+    },
+    {
+      "from": 136,
+      "to": 130
+    },
+    {
+      "from": 137,
+      "to": 136
+    },
+    {
+      "from": 138,
+      "to": 136
+    },
+    {
+      "from": 139,
+      "to": 136
+    },
+    {
+      "from": 140,
+      "to": 115
+    },
+    {
+      "from": 140,
+      "to": 119
+    },
+    {
+      "from": 140,
+      "to": 130
+    },
+    {
+      "from": 140,
+      "to": 133
+    },
+    {
+      "from": 140,
+      "to": 136
+    },
+    {
+      "from": 141,
+      "to": 115
+    },
+    {
+      "from": 141,
+      "to": 130
+    },
+    {
+      "from": 142,
+      "to": 140
+    },
+    {
+      "from": 142,
+      "to": 141
+    },
+    {
+      "from": 143,
+      "to": 121
+    },
+    {
+      "from": 143,
+      "to": 136
+    },
+    {
+      "from": 143,
+      "to": 138
+    },
+    {
+      "from": 144,
+      "to": 121
+    },
+    {
+      "from": 144,
+      "to": 143
+    },
+    {
+      "from": 145,
+      "to": 121
+    },
+    {
+      "from": 146,
+      "to": 121
+    },
+    {
+      "from": 146,
+      "to": 144
+    },
+    {
+      "from": 146,
+      "to": 145
+    },
+    {
+      "from": 147,
+      "to": 145
+    },
+    {
+      "from": 147,
+      "to": 146
+    },
+    {
+      "from": 148,
+      "to": 90
+    },
+    {
+      "from": 148,
+      "to": 115
+    },
+    {
+      "from": 149,
+      "to": 2
+    },
+    {
+      "from": 149,
+      "to": 148
+    },
+    {
+      "from": 150,
+      "to": 147
+    },
+    {
+      "from": 150,
+      "to": 149
+    },
+    {
+      "from": 151,
+      "to": 148
+    },
+    {
+      "from": 151,
+      "to": 149
+    },
+    {
+      "from": 152,
+      "to": 90
+    },
+    {
+      "from": 152,
+      "to": 151
+    },
+    {
+      "from": 153,
+      "to": 151
+    },
+    {
+      "from": 153,
+      "to": 152
+    },
+    {
+      "from": 154,
+      "to": 33
+    },
+    {
+      "from": 154,
+      "to": 151
+    },
+    {
+      "from": 155,
+      "to": 24
+    },
+    {
+      "from": 155,
+      "to": 33
+    },
+    {
+      "from": 155,
+      "to": 154
+    },
+    {
+      "from": 156,
+      "to": 155
+    },
+    {
+      "from": 157,
+      "to": 52
+    },
+    {
+      "from": 157,
+      "to": 143
+    },
+    {
+      "from": 157,
+      "to": 154
+    },
+    {
+      "from": 158,
+      "to": 157
+    },
+    {
+      "from": 159,
+      "to": 157
+    },
+    {
+      "from": 159,
+      "to": 158
+    },
+    {
+      "from": 160,
+      "to": 87
+    },
+    {
+      "from": 160,
+      "to": 114
+    },
+    {
+      "from": 160,
+      "to": 159
+    },
+    {
+      "from": 161,
+      "to": 2
+    },
+    {
+      "from": 161,
+      "to": 24
+    },
+    {
+      "from": 162,
+      "to": 161
+    },
+    {
+      "from": 163,
+      "to": 2
+    },
+    {
+      "from": 163,
+      "to": 121
+    },
+    {
+      "from": 164,
+      "to": 163
+    },
+    {
+      "from": 165,
+      "to": 164
+    },
+    {
+      "from": 166,
+      "to": 165
+    },
+    {
+      "from": 167,
+      "to": 13
+    },
+    {
+      "from": 167,
+      "to": 163
+    },
+    {
+      "from": 168,
+      "to": 167
+    },
+    {
+      "from": 169,
+      "to": 163
+    },
+    {
+      "from": 169,
+      "to": 167
+    },
+    {
+      "from": 170,
+      "to": 121
+    },
+    {
+      "from": 170,
+      "to": 169
+    },
+    {
+      "from": 171,
+      "to": 120
+    },
+    {
+      "from": 171,
+      "to": 121
+    },
+    {
+      "from": 172,
+      "to": 171
+    },
+    {
+      "from": 173,
+      "to": 171
+    },
+    {
+      "from": 174,
+      "to": 169
+    },
+    {
+      "from": 174,
+      "to": 170
+    },
+    {
+      "from": 175,
+      "to": 169
+    },
+    {
+      "from": 175,
+      "to": 170
+    },
+    {
+      "from": 176,
+      "to": 169
+    },
+    {
+      "from": 177,
+      "to": 176
+    },
+    {
+      "from": 178,
+      "to": 55
+    },
+    {
+      "from": 178,
+      "to": 169
+    },
+    {
+      "from": 179,
+      "to": 167
+    },
+    {
+      "from": 180,
+      "to": 1
+    },
+    {
+      "from": 180,
+      "to": 166
+    },
+    {
+      "from": 181,
+      "to": 176
+    },
+    {
+      "from": 181,
+      "to": 177
+    },
+    {
+      "from": 182,
+      "to": 1
+    },
+    {
+      "from": 182,
+      "to": 10
+    },
+    {
+      "from": 182,
+      "to": 11
+    },
+    {
+      "from": 183,
+      "to": 182
+    },
+    {
+      "from": 184,
+      "to": 1
+    },
+    {
+      "from": 184,
+      "to": 10
+    },
+    {
+      "from": 185,
+      "to": 1
+    },
+    {
+      "from": 185,
+      "to": 20
+    },
+    {
+      "from": 186,
+      "to": 185
+    },
+    {
+      "from": 187,
+      "to": 185
+    },
+    {
+      "from": 188,
+      "to": 1
+    },
+    {
+      "from": 188,
+      "to": 11
+    },
+    {
+      "from": 189,
+      "to": 188
+    },
+    {
+      "from": 190,
+      "to": 188
+    },
+    {
+      "from": 191,
+      "to": 182
+    },
+    {
+      "from": 191,
+      "to": 183
+    },
+    {
+      "from": 192,
+      "to": 183
+    },
+    {
+      "from": 193,
+      "to": 182
+    },
+    {
+      "from": 193,
+      "to": 184
+    },
+    {
+      "from": 194,
+      "to": 36
+    },
+    {
+      "from": 194,
+      "to": 183
+    },
+    {
+      "from": 195,
+      "to": 182
+    },
+    {
+      "from": 195,
+      "to": 214
+    },
+    {
+      "from": 196,
+      "to": 183
+    },
+    {
+      "from": 197,
+      "to": 8
+    },
+    {
+      "from": 198,
+      "to": 8
+    },
+    {
+      "from": 198,
+      "to": 197
+    },
+    {
+      "from": 199,
+      "to": 8
+    },
+    {
+      "from": 199,
+      "to": 198
+    },
+    {
+      "from": 200,
+      "to": 197
+    },
+    {
+      "from": 200,
+      "to": 199
+    },
+    {
+      "from": 201,
+      "to": 200
+    },
+    {
+      "from": 202,
+      "to": 199
+    },
+    {
+      "from": 202,
+      "to": 201
+    },
+    {
+      "from": 203,
+      "to": 198
+    },
+    {
+      "from": 203,
+      "to": 202
+    },
+    {
+      "from": 204,
+      "to": 8
+    },
+    {
+      "from": 205,
+      "to": 8
+    },
+    {
+      "from": 205,
+      "to": 204
+    },
+    {
+      "from": 206,
+      "to": 8
+    },
+    {
+      "from": 206,
+      "to": 204
+    },
+    {
+      "from": 207,
+      "to": 205
+    },
+    {
+      "from": 207,
+      "to": 206
+    },
+    {
+      "from": 208,
+      "to": 199
+    },
+    {
+      "from": 208,
+      "to": 202
+    },
+    {
+      "from": 208,
+      "to": 210
+    },
+    {
+      "from": 209,
+      "to": 8
+    },
+    {
+      "from": 209,
+      "to": 198
+    },
+    {
+      "from": 210,
+      "to": 8
+    },
+    {
+      "from": 210,
+      "to": 205
+    },
+    {
+      "from": 210,
+      "to": 206
+    },
+    {
+      "from": 211,
+      "to": 36
+    },
+    {
+      "from": 211,
+      "to": 198
+    },
+    {
+      "from": 212,
+      "to": 7
+    },
+    {
+      "from": 212,
+      "to": 199
+    },
+    {
+      "from": 213,
+      "to": 212
+    },
+    {
+      "from": 214,
+      "to": 212
+    },
+    {
+      "from": 214,
+      "to": 213
+    },
+    {
+      "from": 215,
+      "to": 212
+    },
+    {
+      "from": 215,
+      "to": 213
+    },
+    {
+      "from": 216,
+      "to": 212
+    },
+    {
+      "from": 216,
+      "to": 213
+    },
+    {
+      "from": 217,
+      "to": 213
+    },
+    {
+      "from": 217,
+      "to": 215
+    },
+    {
+      "from": 218,
+      "to": 212
+    },
+    {
+      "from": 219,
+      "to": 212
+    },
+    {
+      "from": 220,
+      "to": 218
+    },
+    {
+      "from": 220,
+      "to": 219
+    },
+    {
+      "from": 221,
+      "to": 218
+    },
+    {
+      "from": 222,
+      "to": 212
+    },
+    {
+      "from": 222,
+      "to": 216
+    },
+    {
+      "from": 223,
+      "to": 212
+    },
+    {
+      "from": 223,
+      "to": 222
+    },
+    {
+      "from": 224,
+      "to": 222
+    },
+    {
+      "from": 224,
+      "to": 223
+    },
+    {
+      "from": 225,
+      "to": 214
+    },
+    {
+      "from": 225,
+      "to": 223
+    },
+    {
+      "from": 226,
+      "to": 7
+    },
+    {
+      "from": 226,
+      "to": 214
+    },
+    {
+      "from": 227,
+      "to": 226
+    },
+    {
+      "from": 228,
+      "to": 226
+    },
+    {
+      "from": 228,
+      "to": 227
+    },
+    {
+      "from": 229,
+      "to": 212
+    },
+    {
+      "from": 229,
+      "to": 220
+    },
+    {
+      "from": 230,
+      "to": 229
+    },
+    {
+      "from": 231,
+      "to": 229
+    },
+    {
+      "from": 231,
+      "to": 230
+    },
+    {
+      "from": 232,
+      "to": 36
+    },
+    {
+      "from": 232,
+      "to": 216
+    },
+    {
+      "from": 233,
+      "to": 212
+    },
+    {
+      "from": 233,
+      "to": 224
+    },
+    {
+      "from": 234,
+      "to": 1
+    },
+    {
+      "from": 235,
+      "to": 234
+    },
+    {
+      "from": 236,
+      "to": 234
+    },
+    {
+      "from": 237,
+      "to": 234
+    },
+    {
+      "from": 238,
+      "to": 234
+    },
+    {
+      "from": 239,
+      "to": 9
+    },
+    {
+      "from": 239,
+      "to": 238
+    },
+    {
+      "from": 240,
+      "to": 239
+    },
+    {
+      "from": 241,
+      "to": 239
+    },
+    {
+      "from": 242,
+      "to": 239
+    },
+    {
+      "from": 243,
+      "to": 239
+    },
+    {
+      "from": 243,
+      "to": 242
+    },
+    {
+      "from": 244,
+      "to": 243
+    },
+    {
+      "from": 245,
+      "to": 243
+    },
+    {
+      "from": 246,
+      "to": 245
+    },
+    {
+      "from": 247,
+      "to": 240
+    },
+    {
+      "from": 248,
+      "to": 240
+    },
+    {
+      "from": 248,
+      "to": 247
+    },
+    {
+      "from": 249,
+      "to": 240
+    },
+    {
+      "from": 249,
+      "to": 247
+    },
+    {
+      "from": 250,
+      "to": 247
+    },
+    {
+      "from": 250,
+      "to": 249
+    },
+    {
+      "from": 251,
+      "to": 235
+    },
+    {
+      "from": 252,
+      "to": 235
+    },
+    {
+      "from": 253,
+      "to": 252
+    },
+    {
+      "from": 253,
+      "to": 259
+    },
+    {
+      "from": 254,
+      "to": 253
+    },
+    {
+      "from": 254,
+      "to": 258
+    },
+    {
+      "from": 255,
+      "to": 235
+    },
+    {
+      "from": 256,
+      "to": 235
+    },
+    {
+      "from": 256,
+      "to": 255
+    },
+    {
+      "from": 257,
+      "to": 255
+    },
+    {
+      "from": 257,
+      "to": 256
+    },
+    {
+      "from": 258,
+      "to": 236
+    },
+    {
+      "from": 259,
+      "to": 256
+    },
+    {
+      "from": 259,
+      "to": 258
+    },
+    {
+      "from": 260,
+      "to": 234
+    },
+    {
+      "from": 261,
+      "to": 234
+    },
+    {
+      "from": 262,
+      "to": 234
+    },
+    {
+      "from": 262,
+      "to": 260
+    },
+    {
+      "from": 263,
+      "to": 234
+    },
+    {
+      "from": 263,
+      "to": 260
+    },
+    {
+      "from": 264,
+      "to": 263
+    },
+    {
+      "from": 265,
+      "to": 234
+    },
+    {
+      "from": 265,
+      "to": 263
+    },
+    {
+      "from": 266,
+      "to": 265
+    },
+    {
+      "from": 267,
+      "to": 210
+    },
+    {
+      "from": 267,
+      "to": 234
+    },
+    {
+      "from": 268,
+      "to": 267
+    },
+    {
+      "from": 269,
+      "to": 234
+    },
+    {
+      "from": 269,
+      "to": 260
+    },
+    {
+      "from": 270,
+      "to": 236
+    },
+    {
+      "from": 270,
+      "to": 267
+    },
+    {
+      "from": 271,
+      "to": 11
+    },
+    {
+      "from": 271,
+      "to": 24
+    },
+    {
+      "from": 272,
+      "to": 271
+    },
+    {
+      "from": 273,
+      "to": 11
+    },
+    {
+      "from": 273,
+      "to": 24
+    },
+    {
+      "from": 274,
+      "to": 11
+    },
+    {
+      "from": 274,
+      "to": 24
+    },
+    {
+      "from": 275,
+      "to": 24
+    },
+    {
+      "from": 275,
+      "to": 234
+    },
+    {
+      "from": 276,
+      "to": 271
+    },
+    {
+      "from": 277,
+      "to": 271
+    },
+    {
+      "from": 277,
+      "to": 276
+    },
+    {
+      "from": 278,
+      "to": 271
+    },
+    {
+      "from": 278,
+      "to": 276
+    },
+    {
+      "from": 279,
+      "to": 271
+    },
+    {
+      "from": 279,
+      "to": 276
+    },
+    {
+      "from": 280,
+      "to": 271
+    },
+    {
+      "from": 280,
+      "to": 279
+    },
+    {
+      "from": 281,
+      "to": 271
+    },
+    {
+      "from": 282,
+      "to": 271
+    },
+    {
+      "from": 282,
+      "to": 281
+    },
+    {
+      "from": 283,
+      "to": 271
+    },
+    {
+      "from": 283,
+      "to": 282
+    },
+    {
+      "from": 284,
+      "to": 283
+    },
+    {
+      "from": 285,
+      "to": 283
+    },
+    {
+      "from": 285,
+      "to": 284
+    },
+    {
+      "from": 286,
+      "to": 162
+    },
+    {
+      "from": 286,
+      "to": 271
+    },
+    {
+      "from": 287,
+      "to": 271
+    },
+    {
+      "from": 287,
+      "to": 279
+    },
+    {
+      "from": 288,
+      "to": 271
+    },
+    {
+      "from": 288,
+      "to": 287
+    },
+    {
+      "from": 289,
+      "to": 271
+    },
+    {
+      "from": 290,
+      "to": 271
+    },
+    {
+      "from": 290,
+      "to": 289
+    },
+    {
+      "from": 291,
+      "to": 269
+    },
+    {
+      "from": 291,
+      "to": 271
+    },
+    {
+      "from": 292,
+      "to": 279
+    },
+    {
+      "from": 292,
+      "to": 280
+    },
+    {
+      "from": 293,
+      "to": 11
+    },
+    {
+      "from": 294,
+      "to": 293
+    },
+    {
+      "from": 295,
+      "to": 12
+    },
+    {
+      "from": 295,
+      "to": 293
+    },
+    {
+      "from": 296,
+      "to": 295
+    },
+    {
+      "from": 297,
+      "to": 294
+    },
+    {
+      "from": 298,
+      "to": 297
+    },
+    {
+      "from": 299,
+      "to": 298
+    },
+    {
+      "from": 300,
+      "to": 298
+    },
+    {
+      "from": 301,
+      "to": 294
+    },
+    {
+      "from": 301,
+      "to": 298
+    },
+    {
+      "from": 302,
+      "to": 293
+    },
+    {
+      "from": 302,
+      "to": 301
+    },
+    {
+      "from": 303,
+      "to": 302
+    },
+    {
+      "from": 304,
+      "to": 302
+    },
+    {
+      "from": 305,
+      "to": 294
+    },
+    {
+      "from": 305,
+      "to": 302
+    },
+    {
+      "from": 306,
+      "to": 296
+    },
+    {
+      "from": 307,
+      "to": 293
+    },
+    {
+      "from": 308,
+      "to": 293
+    },
+    {
+      "from": 308,
+      "to": 307
+    },
+    {
+      "from": 309,
+      "to": 62
+    },
+    {
+      "from": 309,
+      "to": 307
+    },
+    {
+      "from": 310,
+      "to": 61
+    },
+    {
+      "from": 310,
+      "to": 307
+    },
+    {
+      "from": 311,
+      "to": 309
+    },
+    {
+      "from": 311,
+      "to": 310
+    },
+    {
+      "from": 312,
+      "to": 71
+    },
+    {
+      "from": 312,
+      "to": 309
+    },
+    {
+      "from": 313,
+      "to": 71
+    },
+    {
+      "from": 313,
+      "to": 312
+    },
+    {
+      "from": 314,
+      "to": 298
+    },
+    {
+      "from": 314,
+      "to": 301
+    },
+    {
+      "from": 315,
+      "to": 293
+    },
+    {
+      "from": 315,
+      "to": 301
+    },
+    {
+      "from": 316,
+      "to": 74
+    },
+    {
+      "from": 316,
+      "to": 315
+    },
+    {
+      "from": 317,
+      "to": 37
+    },
+    {
+      "from": 317,
+      "to": 307
+    },
+    {
+      "from": 318,
+      "to": 317
+    },
+    {
+      "from": 319,
+      "to": 317
+    },
+    {
+      "from": 320,
+      "to": 298
+    },
+    {
+      "from": 321,
+      "to": 297
+    },
+    {
+      "from": 321,
+      "to": 298
+    },
+    {
+      "from": 322,
+      "to": 295
+    },
+    {
+      "from": 322,
+      "to": 306
+    },
+    {
+      "from": 323,
+      "to": 10
+    },
+    {
+      "from": 324,
+      "to": 323
+    },
+    {
+      "from": 325,
+      "to": 324
+    },
+    {
+      "from": 326,
+      "to": 324
+    },
+    {
+      "from": 327,
+      "to": 324
+    },
+    {
+      "from": 327,
+      "to": 326
+    },
+    {
+      "from": 328,
+      "to": 324
+    },
+    {
+      "from": 329,
+      "to": 323
+    },
+    {
+      "from": 330,
+      "to": 323
+    },
+    {
+      "from": 330,
+      "to": 329
+    },
+    {
+      "from": 331,
+      "to": 329
+    },
+    {
+      "from": 331,
+      "to": 330
+    },
+    {
+      "from": 332,
+      "to": 331
+    },
+    {
+      "from": 333,
+      "to": 331
+    },
+    {
+      "from": 334,
+      "to": 333
+    },
+    {
+      "from": 335,
+      "to": 323
+    },
+    {
+      "from": 335,
+      "to": 330
+    },
+    {
+      "from": 336,
+      "to": 335
+    },
+    {
+      "from": 337,
+      "to": 336
+    },
+    {
+      "from": 338,
+      "to": 329
+    },
+    {
+      "from": 338,
+      "to": 336
+    },
+    {
+      "from": 339,
+      "to": 332
+    },
+    {
+      "from": 339,
+      "to": 333
+    },
+    {
+      "from": 340,
+      "to": 323
+    },
+    {
+      "from": 340,
+      "to": 332
+    },
+    {
+      "from": 341,
+      "to": 326
+    },
+    {
+      "from": 341,
+      "to": 327
+    },
+    {
+      "from": 342,
+      "to": 60
+    },
+    {
+      "from": 342,
+      "to": 66
+    },
+    {
+      "from": 343,
+      "to": 342
+    },
+    {
+      "from": 344,
+      "to": 66
+    },
+    {
+      "from": 344,
+      "to": 67
+    },
+    {
+      "from": 345,
+      "to": 344
+    },
+    {
+      "from": 346,
+      "to": 323
+    },
+    {
+      "from": 347,
+      "to": 344
+    },
+    {
+      "from": 348,
+      "to": 90
+    },
+    {
+      "from": 348,
+      "to": 92
+    },
+    {
+      "from": 349,
+      "to": 344
+    },
+    {
+      "from": 350,
+      "to": 345
+    },
+    {
+      "from": 350,
+      "to": 346
+    },
+    {
+      "from": 350,
+      "to": 347
+    },
+    {
+      "from": 350,
+      "to": 348
+    },
+    {
+      "from": 350,
+      "to": 349
+    },
+    {
+      "from": 351,
+      "to": 66
+    },
+    {
+      "from": 352,
+      "to": 66
+    },
+    {
+      "from": 352,
+      "to": 67
+    },
+    {
+      "from": 353,
+      "to": 352
+    },
+    {
+      "from": 354,
+      "to": 353
+    },
+    {
+      "from": 355,
+      "to": 67
+    },
+    {
+      "from": 355,
+      "to": 352
+    },
+    {
+      "from": 356,
+      "to": 66
+    },
+    {
+      "from": 356,
+      "to": 70
+    },
+    {
+      "from": 357,
+      "to": 329
+    },
+    {
+      "from": 357,
+      "to": 330
+    },
+    {
+      "from": 358,
+      "to": 81
+    },
+    {
+      "from": 358,
+      "to": 343
+    },
+    {
+      "from": 359,
+      "to": 358
+    },
+    {
+      "from": 360,
+      "to": 36
+    },
+    {
+      "from": 360,
+      "to": 359
+    },
+    {
+      "from": 361,
+      "to": 7
+    },
+    {
+      "from": 361,
+      "to": 76
+    },
+    {
+      "from": 362,
+      "to": 70
+    },
+    {
+      "from": 362,
+      "to": 361
+    },
+    {
+      "from": 363,
+      "to": 361
+    },
+    {
+      "from": 363,
+      "to": 362
+    },
+    {
+      "from": 364,
+      "to": 361
+    },
+    {
+      "from": 365,
+      "to": 183
+    },
+    {
+      "from": 365,
+      "to": 362
+    },
+    {
+      "from": 366,
+      "to": 9
+    },
+    {
+      "from": 367,
+      "to": 366
+    },
+    {
+      "from": 368,
+      "to": 366
+    },
+    {
+      "from": 369,
+      "to": 9
+    },
+    {
+      "from": 369,
+      "to": 366
+    },
+    {
+      "from": 370,
+      "to": 369
+    },
+    {
+      "from": 371,
+      "to": 370
+    },
+    {
+      "from": 372,
+      "to": 366
+    },
+    {
+      "from": 373,
+      "to": 366
+    },
+    {
+      "from": 374,
+      "to": 373
+    },
+    {
+      "from": 375,
+      "to": 366
+    },
+    {
+      "from": 375,
+      "to": 373
+    },
+    {
+      "from": 376,
+      "to": 375
+    },
+    {
+      "from": 377,
+      "to": 366
+    },
+    {
+      "from": 378,
+      "to": 377
+    },
+    {
+      "from": 379,
+      "to": 368
+    },
+    {
+      "from": 380,
+      "to": 26
+    },
+    {
+      "from": 381,
+      "to": 380
+    },
+    {
+      "from": 382,
+      "to": 380
+    },
+    {
+      "from": 383,
+      "to": 380
+    },
+    {
+      "from": 384,
+      "to": 380
+    },
+    {
+      "from": 385,
+      "to": 380
+    },
+    {
+      "from": 385,
+      "to": 339
+    },
+    {
+      "from": 386,
+      "to": 384
+    },
+    {
+      "from": 387,
+      "to": 386
+    },
+    {
+      "from": 388,
+      "to": 305
+    },
+    {
+      "from": 388,
+      "to": 383
+    },
+    {
+      "from": 389,
+      "to": 383
+    },
+    {
+      "from": 390,
+      "to": 389
+    },
+    {
+      "from": 391,
+      "to": 382
+    },
+    {
+      "from": 392,
+      "to": 207
+    },
+    {
+      "from": 392,
+      "to": 382
+    },
+    {
+      "from": 393,
+      "to": 207
+    },
+    {
+      "from": 393,
+      "to": 392
+    },
+    {
+      "from": 394,
+      "to": 392
+    },
+    {
+      "from": 395,
+      "to": 386
+    },
+    {
+      "from": 396,
+      "to": 395
+    },
+    {
+      "from": 397,
+      "to": 386
+    },
+    {
+      "from": 397,
+      "to": 395
+    },
+    {
+      "from": 398,
+      "to": 4
+    },
+    {
+      "from": 398,
+      "to": 395
+    },
+    {
+      "from": 399,
+      "to": 210
+    },
+    {
+      "from": 399,
+      "to": 384
+    },
+    {
+      "from": 400,
+      "to": 392
+    },
+    {
+      "from": 400,
+      "to": 399
+    },
+    {
+      "from": 401,
+      "to": 400
+    },
+    {
+      "from": 402,
+      "to": 386
+    },
+    {
+      "from": 403,
+      "to": 316
+    },
+    {
+      "from": 403,
+      "to": 386
+    },
+    {
+      "from": 403,
+      "to": 387
+    },
+    {
+      "from": 404,
+      "to": 403
+    },
+    {
+      "from": 405,
+      "to": 7
+    },
+    {
+      "from": 406,
+      "to": 2
+    },
+    {
+      "from": 406,
+      "to": 405
+    },
+    {
+      "from": 407,
+      "to": 165
+    },
+    {
+      "from": 407,
+      "to": 406
+    },
+    {
+      "from": 408,
+      "to": 405
+    },
+    {
+      "from": 408,
+      "to": 406
+    },
+    {
+      "from": 409,
+      "to": 408
+    },
+    {
+      "from": 410,
+      "to": 408
+    },
+    {
+      "from": 410,
+      "to": 409
+    },
+    {
+      "from": 411,
+      "to": 409
+    },
+    {
+      "from": 412,
+      "to": 411
+    },
+    {
+      "from": 413,
+      "to": 408
+    },
+    {
+      "from": 413,
+      "to": 409
+    },
+    {
+      "from": 414,
+      "to": 406
+    },
+    {
+      "from": 415,
+      "to": 130
+    },
+    {
+      "from": 415,
+      "to": 413
+    },
+    {
+      "from": 415,
+      "to": 414
+    },
+    {
+      "from": 416,
+      "to": 408
+    },
+    {
+      "from": 417,
+      "to": 335
+    },
+    {
+      "from": 417,
+      "to": 416
+    },
+    {
+      "from": 418,
+      "to": 182
+    },
+    {
+      "from": 418,
+      "to": 405
+    },
+    {
+      "from": 419,
+      "to": 184
+    },
+    {
+      "from": 419,
+      "to": 405
+    },
+    {
+      "from": 420,
+      "to": 380
+    },
+    {
+      "from": 420,
+      "to": 405
+    },
+    {
+      "from": 421,
+      "to": 405
+    },
+    {
+      "from": 421,
+      "to": 413
+    },
+    {
+      "from": 422,
+      "to": 81
+    },
+    {
+      "from": 422,
+      "to": 421
+    },
+    {
+      "from": 423,
+      "to": 55
+    },
+    {
+      "from": 423,
+      "to": 410
+    },
+    {
+      "from": 424,
+      "to": 410
+    },
+    {
+      "from": 425,
+      "to": 410
+    },
+    {
+      "from": 425,
+      "to": 424
+    },
+    {
+      "from": 426,
+      "to": 408
+    },
+    {
+      "from": 426,
+      "to": 409
+    },
+    {
+      "from": 427,
+      "to": 413
+    },
+    {
+      "from": 427,
+      "to": 426
+    },
+    {
+      "from": 428,
+      "to": 408
+    },
+    {
+      "from": 428,
+      "to": 426
+    },
+    {
+      "from": 429,
+      "to": 9
+    },
+    {
+      "from": 429,
+      "to": 428
+    },
+    {
+      "from": 430,
+      "to": 413
+    },
+    {
+      "from": 430,
+      "to": 415
+    },
+    {
+      "from": 431,
+      "to": 260
+    },
+    {
+      "from": 431,
+      "to": 405
+    },
+    {
+      "from": 432,
+      "to": 431
+    },
+    {
+      "from": 433,
+      "to": 431
+    },
+    {
+      "from": 434,
+      "to": 431
+    },
+    {
+      "from": 435,
+      "to": 431
+    },
+    {
+      "from": 436,
+      "to": 261
+    },
+    {
+      "from": 436,
+      "to": 431
+    },
+    {
+      "from": 437,
+      "to": 406
+    },
+    {
+      "from": 437,
+      "to": 434
+    },
+    {
+      "from": 438,
+      "to": 437
+    },
+    {
+      "from": 439,
+      "to": 406
+    },
+    {
+      "from": 439,
+      "to": 431
+    },
+    {
+      "from": 440,
+      "to": 431
+    },
+    {
+      "from": 440,
+      "to": 439
+    },
+    {
+      "from": 441,
+      "to": 432
+    },
+    {
+      "from": 442,
+      "to": 422
+    },
+    {
+      "from": 442,
+      "to": 441
+    },
+    {
+      "from": 443,
+      "to": 422
+    },
+    {
+      "from": 443,
+      "to": 441
+    },
+    {
+      "from": 444,
+      "to": 269
+    },
+    {
+      "from": 444,
+      "to": 431
+    },
+    {
+      "from": 445,
+      "to": 432
+    },
+    {
+      "from": 446,
+      "to": 280
+    },
+    {
+      "from": 446,
+      "to": 433
+    },
+    {
+      "from": 447,
+      "to": 431
+    },
+    {
+      "from": 447,
+      "to": 438
+    },
+    {
+      "from": 447,
+      "to": 440
+    },
+    {
+      "from": 448,
+      "to": 447
+    },
+    {
+      "from": 449,
+      "to": 34
+    },
+    {
+      "from": 449,
+      "to": 432
+    },
+    {
+      "from": 450,
+      "to": 429
+    },
+    {
+      "from": 450,
+      "to": 447
+    },
+    {
+      "from": 451,
+      "to": 150
+    },
+    {
+      "from": 451,
+      "to": 432
+    },
+    {
+      "from": 452,
+      "to": 406
+    },
+    {
+      "from": 452,
+      "to": 451
+    },
+    {
+      "from": 453,
+      "to": 452
+    },
+    {
+      "from": 454,
+      "to": 447
+    },
+    {
+      "from": 455,
+      "to": 447
+    },
+    {
+      "from": 456,
+      "to": 431
+    },
+    {
+      "from": 457,
+      "to": 456
+    },
+    {
+      "from": 458,
+      "to": 457
+    },
+    {
+      "from": 459,
+      "to": 457
+    },
+    {
+      "from": 460,
+      "to": 457
+    },
+    {
+      "from": 461,
+      "to": 457
+    },
+    {
+      "from": 462,
+      "to": 431
+    },
+    {
+      "from": 463,
+      "to": 456
+    },
+    {
+      "from": 463,
+      "to": 462
+    },
+    {
+      "from": 464,
+      "to": 462
+    },
+    {
+      "from": 465,
+      "to": 273
+    },
+    {
+      "from": 465,
+      "to": 405
+    },
+    {
+      "from": 466,
+      "to": 438
+    },
+    {
+      "from": 466,
+      "to": 459
+    },
+    {
+      "from": 467,
+      "to": 405
+    },
+    {
+      "from": 467,
+      "to": 462
+    },
+    {
+      "from": 468,
+      "to": 452
+    },
+    {
+      "from": 469,
+      "to": 36
+    },
+    {
+      "from": 469,
+      "to": 425
+    },
+    {
+      "from": 469,
+      "to": 456
+    },
+    {
+      "from": 470,
+      "to": 425
+    },
+    {
+      "from": 470,
+      "to": 469
+    },
+    {
+      "from": 471,
+      "to": 283
+    },
+    {
+      "from": 471,
+      "to": 456
+    },
+    {
+      "from": 472,
+      "to": 165
+    },
+    {
+      "from": 472,
+      "to": 459
+    },
+    {
+      "from": 473,
+      "to": 439
+    },
+    {
+      "from": 473,
+      "to": 472
+    },
+    {
+      "from": 474,
+      "to": 455
+    },
+    {
+      "from": 474,
+      "to": 472
+    },
+    {
+      "from": 475,
+      "to": 440
+    },
+    {
+      "from": 475,
+      "to": 459
+    },
+    {
+      "from": 476,
+      "to": 234
+    },
+    {
+      "from": 476,
+      "to": 405
+    },
+    {
+      "from": 477,
+      "to": 411
+    },
+    {
+      "from": 477,
+      "to": 476
+    },
+    {
+      "from": 478,
+      "to": 413
+    },
+    {
+      "from": 478,
+      "to": 477
+    },
+    {
+      "from": 479,
+      "to": 477
+    },
+    {
+      "from": 480,
+      "to": 452
+    },
+    {
+      "from": 480,
+      "to": 476
+    },
+    {
+      "from": 481,
+      "to": 406
+    },
+    {
+      "from": 481,
+      "to": 476
+    },
+    {
+      "from": 482,
+      "to": 406
+    },
+    {
+      "from": 482,
+      "to": 476
+    },
+    {
+      "from": 483,
+      "to": 476
+    },
+    {
+      "from": 484,
+      "to": 406
+    },
+    {
+      "from": 484,
+      "to": 476
+    },
+    {
+      "from": 485,
+      "to": 408
+    },
+    {
+      "from": 485,
+      "to": 476
+    },
+    {
+      "from": 486,
+      "to": 406
+    },
+    {
+      "from": 486,
+      "to": 476
+    },
+    {
+      "from": 487,
+      "to": 60
+    },
+    {
+      "from": 487,
+      "to": 476
+    },
+    {
+      "from": 488,
+      "to": 266
+    },
+    {
+      "from": 488,
+      "to": 485
+    },
+    {
+      "from": 489,
+      "to": 428
+    },
+    {
+      "from": 489,
+      "to": 485
+    },
+    {
+      "from": 490,
+      "to": 428
+    },
+    {
+      "from": 490,
+      "to": 477
+    },
+    {
+      "from": 491,
+      "to": 270
+    },
+    {
+      "from": 491,
+      "to": 485
+    },
+    {
+      "from": 492,
+      "to": 268
+    },
+    {
+      "from": 492,
+      "to": 405
+    },
+    {
+      "from": 493,
+      "to": 165
+    },
+    {
+      "from": 493,
+      "to": 492
+    },
+    {
+      "from": 494,
+      "to": 80
+    },
+    {
+      "from": 494,
+      "to": 405
+    },
+    {
+      "from": 495,
+      "to": 443
+    },
+    {
+      "from": 495,
+      "to": 476
+    },
+    {
+      "from": 496,
+      "to": 476
+    },
+    {
+      "from": 496,
+      "to": 487
+    },
+    {
+      "from": 497,
+      "to": 255
+    },
+    {
+      "from": 497,
+      "to": 476
+    },
+    {
+      "from": 498,
+      "to": 406
+    },
+    {
+      "from": 498,
+      "to": 497
+    },
+    {
+      "from": 499,
+      "to": 287
+    },
+    {
+      "from": 499,
+      "to": 406
+    },
+    {
+      "from": 500,
+      "to": 452
+    },
+    {
+      "from": 500,
+      "to": 499
+    },
+    {
+      "from": 501,
+      "to": 395
+    },
+    {
+      "from": 501,
+      "to": 408
+    },
+    {
+      "from": 502,
+      "to": 397
+    },
+    {
+      "from": 502,
+      "to": 407
+    },
+    {
+      "from": 503,
+      "to": 408
+    },
+    {
+      "from": 503,
+      "to": 501
+    },
+    {
+      "from": 504,
+      "to": 398
+    },
+    {
+      "from": 504,
+      "to": 413
+    },
+    {
+      "from": 505,
+      "to": 501
+    },
+    {
+      "from": 505,
+      "to": 504
+    },
+    {
+      "from": 506,
+      "to": 7
+    },
+    {
+      "from": 506,
+      "to": 408
+    },
+    {
+      "from": 507,
+      "to": 506
+    },
+    {
+      "from": 508,
+      "to": 80
+    },
+    {
+      "from": 508,
+      "to": 507
+    },
+    {
+      "from": 509,
+      "to": 361
+    },
+    {
+      "from": 509,
+      "to": 506
+    },
+    {
+      "from": 510,
+      "to": 80
+    },
+    {
+      "from": 510,
+      "to": 506
+    },
+    {
+      "from": 511,
+      "to": 506
+    },
+    {
+      "from": 512,
+      "to": 168
+    },
+    {
+      "from": 512,
+      "to": 506
+    },
+    {
+      "from": 513,
+      "to": 384
+    },
+    {
+      "from": 513,
+      "to": 405
+    },
+    {
+      "from": 514,
+      "to": 399
+    },
+    {
+      "from": 514,
+      "to": 513
+    },
+    {
+      "from": 515,
+      "to": 407
+    },
+    {
+      "from": 515,
+      "to": 514
+    },
+    {
+      "from": 516,
+      "to": 388
+    },
+    {
+      "from": 516,
+      "to": 514
+    },
+    {
+      "from": 517,
+      "to": 32
+    },
+    {
+      "from": 517,
+      "to": 408
+    },
+    {
+      "from": 518,
+      "to": 66
+    },
+    {
+      "from": 518,
+      "to": 517
+    },
+    {
+      "from": 519,
+      "to": 306
+    },
+    {
+      "from": 519,
+      "to": 517
+    },
+    {
+      "from": 520,
+      "to": 302
+    },
+    {
+      "from": 520,
+      "to": 517
+    },
+    {
+      "from": 521,
+      "to": 168
+    },
+    {
+      "from": 521,
+      "to": 512
+    },
+    {
+      "from": 522,
+      "to": 303
+    },
+    {
+      "from": 522,
+      "to": 521
+    },
+    {
+      "from": 523,
+      "to": 388
+    },
+    {
+      "from": 523,
+      "to": 450
+    },
+    {
+      "from": 523,
+      "to": 521
+    },
+    {
+      "from": 524,
+      "to": 455
+    },
+    {
+      "from": 524,
+      "to": 523
+    },
+    {
+      "from": 525,
+      "to": 524
+    },
+    {
+      "from": 526,
+      "to": 2
+    },
+    {
+      "from": 526,
+      "to": 85
+    },
+    {
+      "from": 526,
+      "to": 92
+    },
+    {
+      "from": 527,
+      "to": 526
+    },
+    {
+      "from": 528,
+      "to": 526
+    },
+    {
+      "from": 528,
+      "to": 527
+    },
+    {
+      "from": 529,
+      "to": 87
+    },
+    {
+      "from": 529,
+      "to": 527
+    },
+    {
+      "from": 530,
+      "to": 4
+    },
+    {
+      "from": 530,
+      "to": 529
+    },
+    {
+      "from": 531,
+      "to": 530
+    },
+    {
+      "from": 532,
+      "to": 530
+    },
+    {
+      "from": 533,
+      "to": 530
+    },
+    {
+      "from": 533,
+      "to": 531
+    },
+    {
+      "from": 534,
+      "to": 103
+    },
+    {
+      "from": 534,
+      "to": 527
+    },
+    {
+      "from": 535,
+      "to": 534
+    },
+    {
+      "from": 536,
+      "to": 527
+    },
+    {
+      "from": 536,
+      "to": 534
+    },
+    {
+      "from": 537,
+      "to": 527
+    },
+    {
+      "from": 537,
+      "to": 534
+    },
+    {
+      "from": 538,
+      "to": 527
+    },
+    {
+      "from": 538,
+      "to": 534
+    },
+    {
+      "from": 539,
+      "to": 527
+    },
+    {
+      "from": 539,
+      "to": 534
+    },
+    {
+      "from": 540,
+      "to": 528
+    },
+    {
+      "from": 540,
+      "to": 534
+    },
+    {
+      "from": 541,
+      "to": 540
+    },
+    {
+      "from": 542,
+      "to": 541
+    },
+    {
+      "from": 543,
+      "to": 541
+    },
+    {
+      "from": 544,
+      "to": 541
+    },
+    {
+      "from": 545,
+      "to": 90
+    },
+    {
+      "from": 545,
+      "to": 148
+    },
+    {
+      "from": 546,
+      "to": 545
+    },
+    {
+      "from": 547,
+      "to": 545
+    },
+    {
+      "from": 547,
+      "to": 546
+    },
+    {
+      "from": 548,
+      "to": 43
+    },
+    {
+      "from": 548,
+      "to": 526
+    },
+    {
+      "from": 548,
+      "to": 530
+    },
+    {
+      "from": 548,
+      "to": 545
+    },
+    {
+      "from": 549,
+      "to": 530
+    },
+    {
+      "from": 549,
+      "to": 548
+    },
+    {
+      "from": 550,
+      "to": 148
+    },
+    {
+      "from": 550,
+      "to": 549
+    },
+    {
+      "from": 551,
+      "to": 413
+    },
+    {
+      "from": 551,
+      "to": 548
+    },
+    {
+      "from": 552,
+      "to": 415
+    },
+    {
+      "from": 552,
+      "to": 551
+    },
+    {
+      "from": 553,
+      "to": 526
+    },
+    {
+      "from": 553,
+      "to": 530
+    },
+    {
+      "from": 553,
+      "to": 545
+    },
+    {
+      "from": 554,
+      "to": 409
+    },
+    {
+      "from": 554,
+      "to": 553
+    },
+    {
+      "from": 555,
+      "to": 54
+    },
+    {
+      "from": 555,
+      "to": 548
+    },
+    {
+      "from": 556,
+      "to": 54
+    },
+    {
+      "from": 556,
+      "to": 555
+    },
+    {
+      "from": 557,
+      "to": 21
+    },
+    {
+      "from": 557,
+      "to": 556
+    },
+    {
+      "from": 558,
+      "to": 54
+    },
+    {
+      "from": 558,
+      "to": 556
+    },
+    {
+      "from": 559,
+      "to": 558
+    },
+    {
+      "from": 560,
+      "to": 558
+    },
+    {
+      "from": 561,
+      "to": 558
+    },
+    {
+      "from": 562,
+      "to": 548
+    },
+    {
+      "from": 562,
+      "to": 556
+    },
+    {
+      "from": 563,
+      "to": 341
+    },
+    {
+      "from": 563,
+      "to": 555
+    },
+    {
+      "from": 564,
+      "to": 24
+    },
+    {
+      "from": 564,
+      "to": 563
+    },
+    {
+      "from": 565,
+      "to": 335
+    },
+    {
+      "from": 565,
+      "to": 555
+    },
+    {
+      "from": 566,
+      "to": 555
+    },
+    {
+      "from": 566,
+      "to": 565
+    },
+    {
+      "from": 567,
+      "to": 180
+    },
+    {
+      "from": 567,
+      "to": 566
+    },
+    {
+      "from": 568,
+      "to": 21
+    },
+    {
+      "from": 568,
+      "to": 557
+    },
+    {
+      "from": 568,
+      "to": 561
+    },
+    {
+      "from": 569,
+      "to": 558
+    },
+    {
+      "from": 569,
+      "to": 562
+    },
+    {
+      "from": 570,
+      "to": 15
+    },
+    {
+      "from": 571,
+      "to": 570
+    },
+    {
+      "from": 572,
+      "to": 570
+    },
+    {
+      "from": 573,
+      "to": 157
+    },
+    {
+      "from": 573,
+      "to": 158
+    },
+    {
+      "from": 574,
+      "to": 155
+    },
+    {
+      "from": 574,
+      "to": 573
+    },
+    {
+      "from": 575,
+      "to": 256
+    },
+    {
+      "from": 576,
+      "to": 257
+    },
+    {
+      "from": 576,
+      "to": 575
+    },
+    {
+      "from": 577,
+      "to": 212
+    },
+    {
+      "from": 578,
+      "to": 1
+    },
+    {
+      "from": 578,
+      "to": 577
+    },
+    {
+      "from": 579,
+      "to": 15
+    },
+    {
+      "from": 579,
+      "to": 578
+    },
+    {
+      "from": 580,
+      "to": 15
+    },
+    {
+      "from": 580,
+      "to": 447
+    },
+    {
+      "from": 580,
+      "to": 548
+    }
+  ]
+}
