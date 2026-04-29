@@ -1,5 +1,5 @@
 site_name: 'Information Systems'
-site_description: 'An ABET CAC-aligned intelligent textbook covering the foundations of information systems — application development, data management, IS project management, networks and telecommunications for business, security of information assets, and the role of IS in organizations.'
+site_description: 'An ABET CAC-aligned intelligent textbook covering the foundations of information systems in the age of AI — application development, data management, IS project management, networks and telecommunications for business, security of information assets, and the role of IS in organizations.'
 site_author: 'Dan McCreary'
 site_url: 'https://dmccreary.github.io/information-systems/'
 
@@ -14,7 +14,7 @@ copyright: 'Copyright &copy; 2026 Dan McCreary'
 # Theme configuration
 theme:
   name: material
-  logo: img/logo.png
+  logo: img/mascot/neutral.png
   favicon: img/favicon.ico
   palette:
     # Light mode
