@@ -120,14 +120,14 @@ nav:
   
   - MicroSims:
     - List of MicroSims: sims/index.md
-    - Data Flow Decision Tree: sims/cross-border-transfer-decision/index.md
-    - Digital Twin: sims/digital-twin-wind-turbine/index.md
+    - A Cross-Border Data Flow Decision Tree: sims/cross-border-transfer-decision/index.md
+    - A Digital Twin of a Wind Turbine: sims/digital-twin-wind-turbine/index.md
     - A Modern CI/CD Pipeline: sims/cicd-pipeline/index.md
-    - A Modern Enterprise Network: sims/enterprise-network-topology/index.md
+    - A Modern Enterprise Network — LAN, WAN, VPN, SD-WAN, Cloud: sims/enterprise-network-topology/index.md
     - A Simple Feature-Branch Git Workflow: sims/git-feature-branch-workflow/index.md
-    - Entity Relationship Diagram: sims/small-business-erd/index.md
-    - Gantt Chart: sims/gantt-with-critical-path/index.md
-    - A Sprint Burndown Chart: sims/sprint-burndown-chart/index.md
+    - A Small Business ERD — Customer, Order, Product, Supplier: sims/small-business-erd/index.md
+    - A Small Project's Gantt Chart with the Critical Path Highlighted: sims/gantt-with-critical-path/index.md
+    - A Sprint Burndown Chart (Ideal vs Actual): sims/sprint-burndown-chart/index.md
     - A Value Stream Map of an Invoice-Approval Process: sims/value-stream-map-invoice-approval/index.md
     - An Enterprise Journey Map for a Claims Process: sims/journey-map-claims-process/index.md
     - Anatomy of a BPMN Order-to-Cash Process: sims/bpmn-order-to-cash/index.md
@@ -145,24 +145,26 @@ nav:
     - Normalization Journey from 1NF to 3NF: sims/normalization-journey-1nf-to-3nf/index.md
     - Porter Value Chain with IS Overlay: sims/porter-value-chain/index.md
     - Sequence Diagram for "Place Order: sims/place-order-sequence-diagram/index.md
-    - Shared Responsibility: sims/cloud-shared-responsibility-stack/index.md
-    - Six-Component Model of an IS: sims/six-component-model/index.md
-    - State Diagram: sims/loan-application-state-diagram/index.md
-    - STRIDE Overlay Diagram: sims/stride-threat-model-overlay/index.md
-    - The Enterprise Systems Landscape: sims/enterprise-systems-landscape/index.md
-    - ERP Implementation Timeline: sims/erp-implementation-timeline/index.md
-    - Project Triangle: sims/project-triangle/index.md
-    - Regulatory Landscape Map: sims/privacy-regulatory-landscape/index.md
-    - Scrum Sprint Cycle: sims/scrum-sprint-cycle/index.md
-    - Six Rs Decision Tree: sims/six-rs-decision-tree/index.md
-    - Stakeholder Interest Diagram: sims/stakeholder-power-interest-grid/index.md
-    - Technical Debt Feedback Loop: sims/tech-debt-feedback-loop/index.md
-    - Waterfall Model: sims/waterfall-model/index.md
-    - Three-Tier Architecture: sims/three-tier-architecture/index.md
+    - Shared Responsibility Across IaaS, PaaS, SaaS, and FaaS: sims/cloud-shared-responsibility-stack/index.md
+    - Six-Component Model of an Information System: sims/six-component-model/index.md
+    - State Diagram for "Loan Application Status: sims/loan-application-state-diagram/index.md
+    - STRIDE Overlay on a Simple Web Application: sims/stride-threat-model-overlay/index.md
+    - The Enterprise Systems Landscape with ERP at the Center: sims/enterprise-systems-landscape/index.md
+    - The ERP Implementation Timeline with Cutover: sims/erp-implementation-timeline/index.md
+    - The Project Triangle (Scope, Time, Cost — and Quality in the Middle): sims/project-triangle/index.md
+    - The Regulatory Landscape Map: sims/privacy-regulatory-landscape/index.md
+    - The Scrum Sprint Cycle: sims/scrum-sprint-cycle/index.md
+    - The Six Rs Decision Tree: sims/six-rs-decision-tree/index.md
+    - The Stakeholder Power/Interest Grid: sims/stakeholder-power-interest-grid/index.md
+    - The Technical Debt Feedback Loop: sims/tech-debt-feedback-loop/index.md
+    - The Waterfall Model: sims/waterfall-model/index.md
+    - Three-Tier Architecture with Request Flow: sims/three-tier-architecture/index.md
     - TLS Handshake and the Chain of Trust: sims/tls-handshake-chain-of-trust/index.md
-    - Use Case Diagram: sims/library-use-case-diagram/index.md
+    - Use Case Diagram for a Small Library System: sims/library-use-case-diagram/index.md
     - Write Skew Under Read Committed Isolation: sims/write-skew-read-committed/index.md
     - Zero Trust Architecture vs Castle-and-Moat: sims/zero-trust-vs-castle-moat/index.md
+
+
 
   - Learning Graph:
     - Introduction: learning-graph/index.md
@@ -171,8 +173,10 @@ nav:
     - Graph Quality Analysis: learning-graph/quality-metrics.md
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
+    - FAQ Quality Report: learning-graph/faq-quality-report.md
     - Mascot Rendering Test: learning-graph/mascot-render-test.md
-  
+
+  - FAQ: faq.md
   - Glossary: glossary.md
   - References: references.md
   - License: license.md

@@ -185,15 +185,15 @@ Let's define each component:
 #### Diagram: Six-Component Model of an Information System
 
 
-<iframe src="../../sims/six-component-model<br/>/main.html" width="100%" height="450px" scrolling="no"></iframe>
-[Run Six-Component Model of an Information System Fullscreen](../../sims/six-component-model<br/>/main.html)
+<iframe src="../../sims/six-component-model/main.html" width="100%" height="602px" scrolling="no"></iframe>
+[Run Six-Component Model of an Information System Fullscreen](../../sims/six-component-model/main.html)
 
 <details markdown="1">
 <summary>Six-Component Model of an Information System</summary>
-Type: interactive-infographic
+Type: interactive-infographic<br/>
 **sim-id:** six-component-model<br/>
 **Library:** vis-network<br/>
-**Status:** Specified
+**Status:** Implemented
 
 A vis-network diagram with six labeled nodes arranged in a hexagon: **Hardware**, **Software**, **Network**, **Data**, **User**, **Business Process**. Each node is colored by category — Hardware (slate gray), Software (lime green), Network (steel blue), Data (gold), User (warm coral), Business Process (lavender). Each node has an icon (Material Design Icons): hardware = `mdi-server`, software = `mdi-application-braces`, network = `mdi-lan`, data = `mdi-database`, user = `mdi-account`, business process = `mdi-sitemap`.
 

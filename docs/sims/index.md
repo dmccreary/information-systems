@@ -24,6 +24,12 @@ on its <iframe> tag — typically CANVAS_HEIGHT + 2).
 
 <div class="grid cards" markdown>
 
+- **[Knowledge Triangle](./knowledge-triangle/index.md)**
+
+    ![](./knowledge-triangle/knowledge-triangle.png)
+
+    An interactive triangle with three layers for Data, Information and Knowledge.
+
 -   **[A Cross-Border Data Flow Decision Tree](./cross-border-transfer-decision/index.md)**
 
     <!-- ![A Cross-Border Data Flow Decision Tree](./cross-border-transfer-decision/cross-border-transfer-decision.png) -->

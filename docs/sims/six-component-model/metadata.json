@@ -1,10 +1,13 @@
 {
   "title": "Six-Component Model of an Information System",
-  "description": "Six-Component Model of an Information System",
-  "creator": "Dementia Education Project",
+  "description": "Interactive K6 graph of the six components of an information system (Hardware, Software, Network, Data, User, Business Process). Students click any component and toggle between three real-world scenarios — hospital admission, loan approval, and university course registration — to see how the same six roles map onto very different organizational tasks.",
+  "creator": "Information Systems Textbook Project",
   "date": "2026-04-29",
   "subject": [
-    "dementia"
+    "information systems",
+    "systems thinking",
+    "six-component model",
+    "IS foundations"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +15,29 @@
   "rights": "CC BY 4.0",
   "identifier": "six-component-model",
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "bloomLevel": "Apply",
+  "bloomVerb": "Identify",
+  "learningObjective": "Given a real-world organizational task, students can identify which entity in the scenario plays each of the six component roles (Hardware, Software, Network, Data, User, Business Process).",
+  "audience": "Undergraduate students (sophomore/junior) in an introductory Information Systems course.",
+  "duration": "5-10 minutes",
+  "prerequisites": "None beyond the chapter narrative introducing the six components.",
+  "completion_status": "implemented",
   "chapter_number": 1,
   "chapter_title": "Foundations of Information Systems",
-  "chapter_dir": "01-foundations"
+  "chapter_dir": "01-foundations",
+  "educational": {
+    "audience": "Undergraduate sophomores and juniors taking an introductory Information Systems course (CIS, MIS, or general-studies IS).",
+    "gradeLevel": "Undergraduate",
+    "duration": "5-10 minutes of in-class exploration plus a short writing exercise.",
+    "prerequisites": "Reading of Chapter 1 sections on the six components of an information system.",
+    "learningObjective": "Given a real-world organizational task, students can identify which entity in the scenario plays each of the six component roles.",
+    "bloomLevel": "Apply",
+    "bloomVerb": "Identify",
+    "assessment": "Students write one paragraph mapping each of the six roles to an organizational task drawn from their own life (e.g., ordering food delivery, returning a library book)."
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-to-reveal node exploration paired with a scenario toggle. The same six components remain on screen across scenarios; only the right-panel definitions, examples, and what-breaks-if-missing answers change.",
+    "designRationale": "Apply-level objectives demand transfer of an abstract model to concrete situations. Cycling the same six nodes through three scenarios forces students to recognize structural sameness underneath surface variation — the core Apply move.",
+    "systemsThinkingNotes": "The complete graph (K6) is itself a teaching device: every component is connected to every other component because in a working IS, every component depends on every other one. The 'what breaks if missing' framing surfaces second-order effects and discourages the rookie mistake of treating any one component in isolation."
+  }
 }
