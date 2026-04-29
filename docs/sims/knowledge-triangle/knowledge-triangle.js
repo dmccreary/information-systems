@@ -1,6 +1,7 @@
 // Knowledge Triangle MicroSim
 // Demonstrates the three layers of data transformation:
 // Data Layer -> Information Layer -> Knowledge Layer
+// CANVAS_HEIGHT: 500
 
 // Canvas dimensions - REQUIRED structure
 let canvasWidth = 600;

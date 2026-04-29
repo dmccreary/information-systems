@@ -66,16 +66,64 @@ We will not cover everything in one chapter. That would be cruel. What we *will*
 
 ## From Data to Insight: The DIKI Hierarchy
 
-Before we can define an *information system*, we have to define *information*. And to define information, we have to define what it is built from. The classical way to do this in IS is a four-level pyramid. Older textbooks call it the **DIKW Hierarchy** — Data, Information, Knowledge, **Wisdom** — and you will still see that name in management literature from the 1980s and 1990s. In modern data-science practice we replace the top rung with **Insight**, giving us the **DIKI Hierarchy**: Data, Information, Knowledge, Insight. The shift is more than cosmetic. "Wisdom" is a virtue; "Insight" is a deliverable. An insight is something you can put on a dashboard, attach to a Jira ticket, or feed back into the next model. That's what data-driven organizations actually produce, so that's the framing this book uses.
+Before we can define an *information system*, we have to define *information*. And to define information, we have to define what it is built from. Information Systems is a field that loves to use ordinary English words — *data*, *information*, *knowledge* — as if they were interchangeable. They are not. The difference among them is the entire point of this section, and the foundation of every chapter that follows.
 
-Let's walk up the pyramid one rung at a time:
+We will build the vocabulary in three deliberate steps:
+
+1. First we will look at a simple **three-layer mental model** — the Knowledge Triangle — that gives us a picture to point at.
+2. Then we will use that picture to **pin down three words precisely**: *Data*, *Information*, *Knowledge*.
+3. Finally we will **extend the model to four layers** by adding *Insight*, giving us the DIKI Hierarchy that the rest of the book uses.
+
+Take these in order. Each step earns the next.
+
+### Step 1: A Picture First — The Knowledge Triangle
+
+The **Knowledge Triangle** is the simplest version of the model we will use throughout the book. Three layers, each visually distinct, each one built on top of the layer beneath it:
+
+- The **bottom** layer is what a hard drive actually contains: a sea of 0s and 1s with no semantics. If you ran a raw byte dump and squinted, this is what you would see.
+- The **middle** layer is what those bits *become* once they are extracted into facts: isolated little circles, each labeled "Fact." A fact is a self-contained chunk of meaning, but on its own it is still disconnected from everything else.
+- The **top** layer is the smallest and the most valuable: a *graph* in which facts are linked to other facts. It is the connections among the facts, not the facts themselves, that produce knowledge.
+
+Hover over any layer in the MicroSim below to read its full working definition. Wherever this textbook says "data," "information," or "knowledge" — **these three definitions are what those words mean.** Not "data" the way a marketing slide deck means it. *These* ones.
+
+#### Diagram: Knowledge Triangle
+
+<iframe src="../../sims/knowledge-triangle/main.html" width="100%" height="502px" scrolling="no"></iframe>
+[Run Knowledge Triangle Fullscreen](../../sims/knowledge-triangle/main.html)
+
+<details markdown="1">
+<summary>Knowledge Triangle</summary>
+Type: interactive-infographic
+**sim-id:** knowledge-triangle<br/>
+**Library:** p5.js<br/>
+**Status:** Implemented
+
+A three-level triangle in p5.js. Bottom layer = Data (raw 0s and 1s on a black "disk dump" background). Middle layer = Information (isolated "Fact" circles in a gray field — disconnected facts). Top layer = Knowledge (a graph of connected nodes — facts joined by edges). Hovering any layer pops a callout with the working definition the rest of the book uses.
+
+Used in Chapter 1 to anchor the vocabulary before introducing the four-level DIKI Hierarchy below. Wherever this textbook says "data," "information," or "knowledge" — this is what those words mean.
+</details>
+
+### Step 2: The Three Words, Defined Precisely
+
+Now that you have seen the picture, here are the three definitions, written down once and used everywhere else in the book. We will use a hospital scenario — a patient named Marisol Chen — to make each one concrete.
 
 - **Data** is a raw fact or observation, recorded but not yet interpreted. The string `98.6`. The string `Marisol Chen`. The number `4.7`. None of these mean anything on their own.
 - **Information** is data placed in context so that it answers a question. `Body temperature 98.6°F at 14:32 for patient Marisol Chen` is information. The fact has been associated with a measurement type, a unit, a timestamp, and a subject — and now it can drive a decision.
 - **Knowledge** is information combined with experience and rules so that it can be acted on. *"Marisol's temperature has held within 0.4°F of normal for six straight readings, which is the pattern that means we can discharge her this afternoon"* is knowledge. It synthesizes many pieces of information against a rule the clinician learned over years.
-- **Insight** (the top rung) is an actionable, often non-obvious finding distilled from knowledge — usually surfaced by analytics, machine learning, or careful data exploration. *"Across our unit, patients matching Marisol's discharge profile have a 15% higher 72-hour readmission rate when transportation is not pre-confirmed before 3pm"* is an insight. It is the kind of statement that changes a process, retrains a model, or wins a budget meeting.
 
-The reason this hierarchy matters is that **most failed IS projects fail at a layer transition**. The system collected data but never turned it into information (a dashboard nobody can read). It produced information but never integrated it into knowledge (a report nobody acts on). Throughout this textbook we will keep returning to: *which layer are you actually serving here?*
+That is the entire vocabulary the rest of the book is built on. These three terms appear on nearly every page of this textbook, and they are also the three terms most often used loosely in industry — where "data" gets shouted into slide decks as a synonym for facts, information, knowledge, and sometimes even wisdom. We are not going to do that here. **We will use these three words precisely and consistently throughout the entire book**, with the definitions above. If you remember nothing else from this chapter, remember those three words and the way they nest inside one another.
+
+### Step 3: Adding a Fourth Layer — Insight, and the DIKI Pyramid
+
+Three layers gets you most of the way. But the modern AI and data-science era asks one more question: *what is the deliverable that comes out of all this work?* That gives us a fourth term, sitting on top of Knowledge: **Insight**.
+
+Older textbooks call the four-level version the **DIKW Hierarchy** — Data, Information, Knowledge, **Wisdom** — and you will still see that name in management literature from the 1980s and 1990s. Modern data-science practice replaces the top rung with **Insight**, giving us the **DIKI Hierarchy**: Data, Information, Knowledge, Insight. The shift is more than cosmetic. *Wisdom* is a virtue; *Insight* is a deliverable. An insight is something you can put on a dashboard, attach to a Jira ticket, or feed back into the next model. That is what data-driven organizations actually produce, so that is the framing this book uses.
+
+Here is the new fourth definition, again grounded in Marisol's case:
+
+- **Insight** is an actionable, often non-obvious finding distilled from knowledge — usually surfaced by analytics, machine learning, or careful data exploration. *"Across our unit, patients matching Marisol's discharge profile have a 15% higher 72-hour readmission rate when transportation is not pre-confirmed before 3pm"* is an insight. It is the kind of statement that changes a process, retrains a model, or wins a budget meeting.
+
+Now we have the full four-level pyramid the rest of the book uses. The reason this hierarchy matters — and the reason we belabor it — is that **most failed IS projects fail at a *layer transition***, not at a layer. The system collected data but never turned it into information (a dashboard nobody can read). It produced information but never integrated it into knowledge (a report nobody acts on). It accumulated knowledge but never distilled it into insight (a wiki page nobody opens). Throughout this textbook we will keep returning to one diagnostic question: *which layer are you actually serving, and which transition is silently breaking?*
 
 #### Diagram: DIKI Hierarchy Interactive Pyramid
 
