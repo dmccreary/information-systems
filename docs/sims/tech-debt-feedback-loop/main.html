@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Technical Debt Feedback Loop</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        #container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a3a6c;
+        }
+        .placeholder {
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .placeholder h2 {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .placeholder p {
+            font-size: 14px;
+            max-width: 480px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 12px;
+        }
+        .meta strong { color: #495057; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>The Technical Debt Feedback Loop</h1>
+        <div class="placeholder">
+            <span class="badge">SCAFFOLD</span>
+            <h2>MicroSim Not Yet Implemented</h2>
+            <p>This MicroSim has been scaffolded from its specification but the
+            interactive content has not been built yet. See the chapter source
+            and the <code>index.md</code> in this directory for the full spec.</p>
+        </div>
+        <div class="meta">
+            <p><strong>Sim ID:</strong> tech-debt-feedback-loop</p>
+            <p><strong>Library:</strong> vis-network</p>
+            <p><strong>Bloom Level:</strong> TBD</p>
+            <p><strong>Learning Objective:</strong> TBD</p>
+        </div>
+    </div>
+
+    <!--
+    SPECIFICATION (from chapter index.md):
+
+    Type: interactive-infographic
+    **sim-id:** tech-debt-feedback-loop<br/>
+    **Library:** vis-network<br/>
+    **Status:** Specified
+    
+    A causal-loop diagram in vis-network showing five nodes arranged in a circle: Technical Debt, Development Velocity, Schedule Pressure, Shortcut Rate, and Defect Rate. Edges between nodes carry polarity labels (+/-) indicating whether one variable increases or decreases another. The loop forms a clear reinforcing cycle: Technical Debt (+) → reduces Development Velocity (-) → which increases Schedule Pressure (+) → which increases Shortcut Rate (+) → which increases Technical Debt (+). A second loop shows Technical Debt → Defect Rate → Schedule Pressure feeding the same dynamic. Edges drawn with slight y-offset (480 to 490) to ensure label rendering on horizontal segments.
+    
+    Color palette: feedback edges in coral for reinforcing relationships, mascot-emerald for any balancing relationships introduced by the "leverage point" toggle. Node fill follows the standard book palette.
+    
+    Interactivity: a "leverage point" toggle introduces three dampening interventions — Protected Refactor Capacity, Debt Visibility, Engineering Leadership Cover — each adding a balancing edge that reduces the relevant flow. Watching the toggle turn the doom loop into a controlled system is the pedagogical payoff. A side panel explains each intervention.
+    
+    Layout: circular, height ~520px. Canvas resizes on window resize.
+    
+    Learning objective (Bloom: Analyzing): Students can identify a reinforcing feedback loop, articulate why it produces compounding cost, and name three structural interventions that break it.
+    
+    Implementation: vis-network, deployed at `/information-systems/sims/tech-debt-feedback-loop/`.
+    -->
+</body>
+</html>

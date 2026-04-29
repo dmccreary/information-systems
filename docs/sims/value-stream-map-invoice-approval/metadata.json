@@ -1,0 +1,21 @@
+{
+  "title": "A Value Stream Map of an Invoice-Approval Process",
+  "description": "A Value Stream Map of an Invoice-Approval Process",
+  "creator": "Dementia Education Project",
+  "date": "2026-04-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "value-stream-map-invoice-approval",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 5,
+  "chapter_title": "Business Process Management",
+  "chapter_dir": "05-bpm"
+}

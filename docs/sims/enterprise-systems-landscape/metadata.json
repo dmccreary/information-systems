@@ -1,0 +1,21 @@
+{
+  "title": "The Enterprise Systems Landscape with ERP at the Center",
+  "description": "The Enterprise Systems Landscape with ERP at the Center",
+  "creator": "Dementia Education Project",
+  "date": "2026-04-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "enterprise-systems-landscape",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 13,
+  "chapter_title": "'Enterprise Systems'",
+  "chapter_dir": "13-enterprise-systems"
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "small-business-erd",
+  "diagram_name": "A Small Business ERD — Customer, Order, Product, Supplier",
+  "chapter_number": 6,
+  "chapter_title": "'Data Management Foundations: Modeling, SQL, and Transactions'",
+  "chapter_dir": "06-data-foundations",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** small-business-erd<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nA vis-network entity-relationship diagram (Crow's Foot notation) showing four entities for a small e-commerce business: Customer, Order, Product, and Supplier. Each entity is rendered as a labeled box with two compartments: the upper compartment holds the entity name; the lower compartment lists the primary attributes (Customer: customer_id (PK), email, first_name, last_name, created_at; Order: order_id (PK), customer_id (FK), order_date, status, total; Product: product_id (PK), supplier_id (FK), name, price, in_stock; Supplier: supplier_id (PK), name, contact_email, country). Relationships connect the entities with Crow's Foot markers: Customer 1-to-many Order (\"places\"), Order many-to-many Product through an OrderLine join entity (\"contains\"), Supplier 1-to-many Product (\"supplies\"). The OrderLine join table is shown as a fifth box with order_id, product_id, quantity, unit_price.\n\nColor palette: entity boxes in mascot-emerald with white text for the entity name and pale-emerald for the attribute compartment, primary-key attributes underlined and in mascot-magenta, foreign-key attributes italicized in coral. Relationship lines in dark teal, with Crow's Foot markers rendered crisply.\n\nInteractivity: hovering an entity reveals (a) a plain-language description of what the entity represents in the business, (b) the rationale for each attribute, and (c) sample row values. Hovering a relationship line reveals its cardinality in plain English (\"each Customer places zero or more Orders; each Order is placed by exactly one Customer\"). A \"show normal forms\" toggle highlights which attributes would violate 1NF, 2NF, and 3NF if added carelessly. To work around the vis-network horizontal-edge label rendering bug, relationship lines use a slight y-offset so labels render correctly on initial load.\n\nLayout: hierarchical with manual positioning, full canvas width, height ~560px. Canvas resizes on window resize.\n\nLearning objective (Bloom: Applying): Students can read a Crow's Foot ERD, name each entity's primary key and foreign keys, identify cardinalities in plain English, and recognize where a join entity is required for a many-to-many relationship.\n\nImplementation: vis-network, deployed at `/information-systems/sims/small-business-erd/`."
+}

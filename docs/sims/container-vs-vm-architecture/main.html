@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container vs. Virtual Machine Architecture</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        #container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a3a6c;
+        }
+        .placeholder {
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .placeholder h2 {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .placeholder p {
+            font-size: 14px;
+            max-width: 480px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 12px;
+        }
+        .meta strong { color: #495057; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Container vs. Virtual Machine Architecture</h1>
+        <div class="placeholder">
+            <span class="badge">SCAFFOLD</span>
+            <h2>MicroSim Not Yet Implemented</h2>
+            <p>This MicroSim has been scaffolded from its specification but the
+            interactive content has not been built yet. See the chapter source
+            and the <code>index.md</code> in this directory for the full spec.</p>
+        </div>
+        <div class="meta">
+            <p><strong>Sim ID:</strong> container-vs-vm-architecture</p>
+            <p><strong>Library:</strong> p5.js</p>
+            <p><strong>Bloom Level:</strong> TBD</p>
+            <p><strong>Learning Objective:</strong> TBD</p>
+        </div>
+    </div>
+
+    <!--
+    SPECIFICATION (from chapter index.md):
+
+    Type: interactive-infographic
+    **sim-id:** container-vs-vm-architecture<br/>
+    **Library:** p5.js<br/>
+    **Status:** Specified
+    
+    A p5.js side-by-side architectural comparison. Left panel (VM architecture): hardware at the bottom, host OS layer, hypervisor layer, then three stacked virtual machines, each containing its own guest OS, its own libraries/binaries, and its own application. Right panel (Container architecture): hardware at the bottom, host OS layer, container runtime (Docker engine), then five containers each containing only libraries/binaries and an application — the guest OS layer is absent because containers share the host kernel.
+    
+    Color palette: hardware in slate-gray, host OS in deep teal, hypervisor in coral, guest OS in muted gray, container runtime in mascot-emerald, application layers in mascot-magenta. A small "size" badge at the top of each unit shows typical artifact size (VM: 2 GB+, Container: 50-300 MB). A "boot time" badge shows typical startup time (VM: 30-90s, Container: <1s).
+    
+    Interactivity: hovering any layer shows what it does in plain English. A "scale up" button animates adding three more units to each panel, illustrating how many more containers fit on the same host. A toggle adds a "shared kernel" highlight on the container side, showing the security tradeoff: weaker isolation than full VMs in exchange for density and speed.
+    
+    Layout: two side-by-side panels, full canvas width, height ~520px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.
+    
+    Learning objective (Bloom: Analyzing): Students can compare VM and container architectures, explain why containers are smaller and faster, and articulate the isolation/density tradeoff between the two.
+    
+    Implementation: p5.js, deployed at `/information-systems/sims/container-vs-vm-architecture/`.
+    -->
+</body>
+</html>

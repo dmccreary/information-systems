@@ -1,0 +1,21 @@
+{
+  "title": "STRIDE Overlay on a Simple Web Application",
+  "description": "STRIDE Overlay on a Simple Web Application",
+  "creator": "Dementia Education Project",
+  "date": "2026-04-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "stride-threat-model-overlay",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 14,
+  "chapter_title": "'Security of Information Assets'",
+  "chapter_dir": "14-security"
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "build-buy-saas-decision",
+  "diagram_name": "Build vs Buy vs SaaS Decision Flow",
+  "chapter_number": 4,
+  "chapter_title": "Application Development for IS",
+  "chapter_dir": "04-appdev",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** build-buy-saas-decision<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nA vis-network decision-tree diagram laid out top-to-bottom. The root question at the top is \"Is this capability a strategic differentiator?\" Branches lead to follow-up questions: \"Does a mature SaaS product cover 80%+ of the requirements?\", \"Is data sovereignty or regulation a constraint?\", \"Is the capability core to ongoing competitive advantage?\", \"Will the capability change frequently?\" Leaf nodes recommend Build, Buy, or SaaS, each with a brief rationale.\n\nColor palette: question nodes in slate-gray, decision branches in teal/amber, terminal Build leaves in mascot-emerald, Buy leaves in deep blue, SaaS leaves in coral. To work around the vis-network horizontal-edge label rendering bug, edges use a slight y-offset (e.g., 480 to 490) where labels are present.\n\nInteractivity: clicking any node opens a side panel showing (a) representative real-world examples for that path (e.g., \"Example: Netflix recommendation engine → Build\"), (b) the most common failure mode of choosing this path inappropriately (e.g., \"Building commodity capabilities you should have bought\"), and (c) the typical cost-curve shape over five years.\n\nLayout: hierarchical, top-down. Canvas resizes on window resize, height ~600px.\n\nLearning objective (Bloom: Evaluating): Given a capability description, students can walk the decision tree, justify their recommendation, and name the failure mode of the alternatives.\n\nImplementation: vis-network, deployed at `/information-systems/sims/build-buy-saas-decision/`."
+}

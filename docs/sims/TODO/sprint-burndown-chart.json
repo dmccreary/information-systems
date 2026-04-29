@@ -1,0 +1,14 @@
+{
+  "sim_id": "sprint-burndown-chart",
+  "diagram_name": "A Sprint Burndown Chart (Ideal vs Actual)",
+  "chapter_number": 16,
+  "chapter_title": "'IS Project Management'",
+  "chapter_dir": "16-project-management",
+  "library": "Chart.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** sprint-burndown-chart<br/>\n**Library:** Chart.js<br/>\n**Status:** Specified\n\nA Chart.js line chart showing a 10-day sprint with two lines: an ideal burndown (a straight diagonal from 50 story points on day 0 to 0 on day 10, in dashed slate-gray) and an actual burndown (a real-looking jagged line that plateaus on day 3 due to a blocked story, drops sharply on day 5 when it unblocks, ticks upward on day 7 when scope is added mid-sprint, and ends at 8 points remaining on day 10 — a missed sprint goal).\n\nColor palette: ideal line in slate-gray dashed, actual line in mascot-magenta solid, scope-added events marked with coral upward arrows, completed-story events marked with mascot-emerald downward steps.\n\nInteractivity: students can drag the actual line at each day to simulate different scenarios and see whether the sprint goal is met. A \"what-if\" toggle adds an overlay showing the velocity-based forecast for the next sprint based on the current sprint's outcome. A second chart shows team velocity over the last six sprints with a trendline.\n\nLayout: full canvas width, height ~480px. Canvas resizes on window resize.\n\nLearning objective (Bloom: Analyzing): Students can read a burndown chart, distinguish ideal from actual, identify scope-change events, and forecast the next sprint's likely outcome from velocity history.\n\nImplementation: Chart.js, deployed at `/information-systems/sims/sprint-burndown-chart/`."
+}

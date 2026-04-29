@@ -1,0 +1,14 @@
+{
+  "sim_id": "api-gateway-flow",
+  "diagram_name": "API Gateway Request Flow",
+  "chapter_number": 3,
+  "chapter_title": "Information Systems Architecture",
+  "chapter_dir": "03-architecture",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** api-gateway-flow<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nA vis-network diagram showing a left-to-right flow: a **Client** node (mobile phone or browser icon) on the left, an **API Gateway** node in the middle, and three backend service nodes on the right (**Orders Service**, **Inventory Service**, **Customer Service**). Each backend service has its own database node attached below it. Edges connect client to gateway and gateway to each backend. All edges use a slight y-offset (e.g., 480 → 490) to avoid the vis-network horizontal-edge label rendering bug.\n\nColor palette: Client = sky blue, API Gateway = teal, Orders = lime green, Inventory = gold, Customer = warm coral. Databases are slate gray cylinders.\n\nInteractivity: clicking the **Send Request** button animates a request token from the client to the gateway, where a side panel highlights the cross-cutting concerns the gateway applies in sequence (authenticate → rate limit → route → log). The token then continues to the appropriate backend service (chosen via a dropdown — orders, inventory, or customer). The response animates back along the same path, and the panel updates to show response-side concerns (caching, transformation, logging).\n\nA toggle reveals what the diagram looks like *without* a gateway — every backend service exposed directly, each one having to reimplement authentication, rate limiting, and logging. The clutter is the point.\n\nLayout: horizontal flow, full canvas width, height ~480px. Canvas resizes on window resize.\n\nLearning objective (Bloom: Analyzing): Students can articulate which cross-cutting concerns belong in the gateway and which belong in the backend service.\n\nImplementation: vis-network, deployed at `/sims/api-gateway-flow/`."
+}

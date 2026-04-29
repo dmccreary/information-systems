@@ -1,0 +1,14 @@
+{
+  "sim_id": "is-executive-roles",
+  "diagram_name": "Executive IS Roles and Reporting Relationships",
+  "chapter_number": 2,
+  "chapter_title": "The Role of IS in Organizations",
+  "chapter_dir": "02-role-of-is",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** is-executive-roles<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nA vis-network organizational diagram showing nine nodes: the **CEO** at the top, the **Audit Committee** to the side at the same level, and below them the four IS executive roles (**CIO**, **CTO**, **CDO**, **CISO**) plus three supporting professional roles (**Enterprise Architect**, **Business Analyst**, **Data Steward**). Edges represent reporting lines, drawn with a slight y-offset (e.g., 480 → 490) to avoid the vis-network horizontal-edge rendering bug.\n\nColor palette: CEO = navy, Audit Committee = burgundy (signaling independence), CIO = teal, CTO = lime green, CDO = gold, CISO = warm coral, EA / BA / Data Steward = lavender. Each node has an icon: CEO = `mdi-crown`, CIO = `mdi-briefcase`, CTO = `mdi-chip`, CDO = `mdi-database-cog`, CISO = `mdi-shield-lock`, EA = `mdi-sitemap`, BA = `mdi-clipboard-text`, Data Steward = `mdi-database-check`.\n\nInteractivity: clicking a node opens a side panel showing (a) the role's primary accountability in one sentence, (b) two example day-in-the-life activities, and (c) the most common career path into that role. A toggle at the top of the diagram switches between two structural patterns: \"CISO reports to CIO\" versus \"CISO reports independently to the audit committee.\" The reporting edges animate to the new configuration when toggled, illustrating the separation-of-duties tradeoff visually.\n\nLayout: hierarchical, top-down. Canvas resizes on window resize, height ~520px.\n\nLearning objective (Bloom: Analyzing): Students can compare two reporting structures and articulate which separation-of-duties risk each one mitigates or creates.\n\nImplementation: vis-network, deployed at `/sims/is-executive-roles/`."
+}

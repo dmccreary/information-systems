@@ -64,31 +64,31 @@ That is the quiet thesis of this entire textbook: **Information Systems is one o
 
 We will not cover everything in one chapter. That would be cruel. What we *will* do is establish the eighteen foundational concepts that every later chapter assumes you already know — the way a math textbook assumes you know what a number is.
 
-## From Data to Wisdom: The DIKW Hierarchy
+## From Data to Insight: The DIKI Hierarchy
 
-Before we can define an *information system*, we have to define *information*. And to define information, we have to define what it is built from. The classical way to do this in IS is a four-level pyramid called the **DIKW Hierarchy** — Data, Information, Knowledge, Wisdom. (Some textbooks add "Wisdom" at the top, but in IS we usually focus on the bottom three layers because those are the ones our systems actually move around.)
+Before we can define an *information system*, we have to define *information*. And to define information, we have to define what it is built from. The classical way to do this in IS is a four-level pyramid. Older textbooks call it the **DIKW Hierarchy** — Data, Information, Knowledge, **Wisdom** — and you will still see that name in management literature from the 1980s and 1990s. In modern data-science practice we replace the top rung with **Insight**, giving us the **DIKI Hierarchy**: Data, Information, Knowledge, Insight. The shift is more than cosmetic. "Wisdom" is a virtue; "Insight" is a deliverable. An insight is something you can put on a dashboard, attach to a Jira ticket, or feed back into the next model. That's what data-driven organizations actually produce, so that's the framing this book uses.
 
 Let's walk up the pyramid one rung at a time:
 
 - **Data** is a raw fact or observation, recorded but not yet interpreted. The string `98.6`. The string `Marisol Chen`. The number `4.7`. None of these mean anything on their own.
 - **Information** is data placed in context so that it answers a question. `Body temperature 98.6°F at 14:32 for patient Marisol Chen` is information. The fact has been associated with a measurement type, a unit, a timestamp, and a subject — and now it can drive a decision.
 - **Knowledge** is information combined with experience and rules so that it can be acted on. *"Marisol's temperature has held within 0.4°F of normal for six straight readings, which is the pattern that means we can discharge her this afternoon"* is knowledge. It synthesizes many pieces of information against a rule the clinician learned over years.
-- **Wisdom** (the optional fourth rung) is judgment about *which* knowledge to apply when the rules disagree. We will not lean on it heavily in this book; it is a useful concept but rarely a system feature.
+- **Insight** (the top rung) is an actionable, often non-obvious finding distilled from knowledge — usually surfaced by analytics, machine learning, or careful data exploration. *"Across our unit, patients matching Marisol's discharge profile have a 15% higher 72-hour readmission rate when transportation is not pre-confirmed before 3pm"* is an insight. It is the kind of statement that changes a process, retrains a model, or wins a budget meeting.
 
 The reason this hierarchy matters is that **most failed IS projects fail at a layer transition**. The system collected data but never turned it into information (a dashboard nobody can read). It produced information but never integrated it into knowledge (a report nobody acts on). Throughout this textbook we will keep returning to: *which layer are you actually serving here?*
 
-#### Diagram: DIKW Hierarchy Interactive Pyramid
+#### Diagram: DIKI Hierarchy Interactive Pyramid
 
 <details markdown="1">
-<summary>DIKW Hierarchy Interactive Pyramid</summary>
+<summary>DIKI Hierarchy Interactive Pyramid</summary>
 Type: interactive-infographic
-**sim-id:** dikw-pyramid<br/>
+**sim-id:** diki-pyramid<br/>
 **Library:** p5.js<br/>
 **Status:** Specified
 
-A four-level pyramid drawn in p5.js, drawn responsively to fill the available iframe width. From bottom to top, the four layers are labeled **Data**, **Information**, **Knowledge**, **Wisdom**, in that order. Bottom layer is widest (full canvas width minus padding) and shortest in height; each layer above is narrower; top "Wisdom" layer is smallest.
+A four-level pyramid drawn in p5.js, drawn responsively to fill the available iframe width. From bottom to top, the four layers are labeled **Data**, **Information**, **Knowledge**, **Insight**, in that order. Bottom layer is widest (full canvas width minus padding) and shortest in height; each layer above is narrower; top "Insight" layer is smallest.
 
-Color palette (light mode): Data = light steel blue, Information = medium teal, Knowledge = forest green, Wisdom = warm gold. Each layer has a 1px darker border and white label text centered horizontally.
+Color palette (light mode): Data = light steel blue, Information = medium teal, Knowledge = forest green, Insight = warm gold. Each layer has a 1px darker border and white label text centered horizontally.
 
 Interactivity: when the user hovers over (or taps) a layer, a callout box slides out to the right of the pyramid showing:
 
@@ -98,15 +98,17 @@ Interactivity: when the user hovers over (or taps) a layer, a callout box slides
   - Data: "98.6"
   - Information: "Patient Marisol Chen, oral temperature 98.6°F, 14:32 on April 28"
   - Knowledge: "Marisol's six consecutive normal readings indicate she meets the discharge criterion"
-  - Wisdom: "Discharging now versus holding 24 more hours given her transportation situation"
+  - Insight: "Patients matching Marisol's discharge profile have a 15% higher 72-hour readmission rate when transportation is not pre-confirmed before 3pm"
 
 Below the pyramid, a single sentence reads: "Most IS projects fail at a layer transition. Which layer are you actually serving?"
 
+A small footer note on the diagram reads: "Older texts call this the DIKW Hierarchy with *Wisdom* at the top; modern data-science practice prefers *Insight* because it names a deliverable rather than a virtue."
+
 Layout: pyramid centered, callout box appears to the right at desktop widths and below at narrow widths (responsive). Canvas resizes on window resize events. The setup() function calls updateCanvasSize() as its first step. Canvas parented with `canvas.parent(document.querySelector('main'));`.
 
-Learning objective (Bloom: Understanding): Students can correctly classify a given example into Data, Information, Knowledge, or Wisdom and explain why.
+Learning objective (Bloom: Understanding): Students can correctly classify a given example into Data, Information, Knowledge, or Insight and explain why.
 
-Implementation: p5.js, single `main.html`, accompanying `index.md` doc, deployed at `/sims/dikw-pyramid/`.
+Implementation: p5.js, single `main.html`, accompanying `index.md` doc, deployed at `/sims/diki-pyramid/`.
 </details>
 
 ## What Is an Information System?

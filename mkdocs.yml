@@ -14,6 +14,9 @@ copyright: 'Copyright &copy; 2026 Dan McCreary'
 # Theme configuration
 theme:
   name: material
+  custom_dir: overrides
+  static_templates:
+    - 404.html
   logo: img/mascot/neutral.png
   favicon: img/favicon.ico
   palette:
@@ -123,6 +126,47 @@ nav:
     - Mascot Rendering Test: learning-graph/mascot-render-test.md
   - MicroSims:
     - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Ch 1 — DIKI Hierarchy Interactive Pyramid: sims/diki-pyramid/index.md
+    - Ch 1 — Six-Component Model of an Information System: sims/six-component-model/index.md
+    - Ch 2 — Executive IS Roles and Reporting Relationships: sims/is-executive-roles/index.md
+    - Ch 2 — Porter Value Chain with IS Overlay: sims/porter-value-chain/index.md
+    - Ch 3 — API Gateway Request Flow: sims/api-gateway-flow/index.md
+    - Ch 3 — Three-Tier Architecture with Request Flow: sims/three-tier-architecture/index.md
+    - Ch 4 — Build vs Buy vs SaaS Decision Flow: sims/build-buy-saas-decision/index.md
+    - Ch 4 — A Modern CI/CD Pipeline: sims/cicd-pipeline/index.md
+    - Ch 4 — A Simple Feature-Branch Git Workflow: sims/git-feature-branch-workflow/index.md
+    - Ch 4 — The Scrum Sprint Cycle: sims/scrum-sprint-cycle/index.md
+    - Ch 4 — The Technical Debt Feedback Loop: sims/tech-debt-feedback-loop/index.md
+    - Ch 4 — The Waterfall Model: sims/waterfall-model/index.md
+    - Ch 5 — As-Is vs To-Be — Manual, RPA, and Workflow Automation: sims/as-is-to-be-automation-comparison/index.md
+    - Ch 5 — Anatomy of a BPMN Order-to-Cash Process: sims/bpmn-order-to-cash/index.md
+    - Ch 5 — A Value Stream Map of an Invoice-Approval Process: sims/value-stream-map-invoice-approval/index.md
+    - Ch 6 — Normalization Journey from 1NF to 3NF: sims/normalization-journey-1nf-to-3nf/index.md
+    - Ch 6 — A Small Business ERD — Customer, Order, Product, Supplier: sims/small-business-erd/index.md
+    - Ch 6 — Write Skew Under Read Committed Isolation: sims/write-skew-read-committed/index.md
+    - Ch 10 — Use Case Diagram for a Small Library System: sims/library-use-case-diagram/index.md
+    - 'Ch 10 — State Diagram for "Loan Application Status"': sims/loan-application-state-diagram/index.md
+    - 'Ch 10 — Sequence Diagram for "Place Order"': sims/place-order-sequence-diagram/index.md
+    - Ch 11 — Bandwidth, Latency, and Throughput at a Glance: sims/bandwidth-latency-throughput/index.md
+    - Ch 11 — A Modern Enterprise Network — LAN, WAN, VPN, SD-WAN, Cloud: sims/enterprise-network-topology/index.md
+    - Ch 12 — Shared Responsibility Across IaaS, PaaS, SaaS, and FaaS: sims/cloud-shared-responsibility-stack/index.md
+    - Ch 12 — Container vs. Virtual Machine Architecture: sims/container-vs-vm-architecture/index.md
+    - Ch 12 — The Six Rs Decision Tree: sims/six-rs-decision-tree/index.md
+    - Ch 13 — The Enterprise Systems Landscape with ERP at the Center: sims/enterprise-systems-landscape/index.md
+    - Ch 13 — The ERP Implementation Timeline with Cutover: sims/erp-implementation-timeline/index.md
+    - Ch 14 — STRIDE Overlay on a Simple Web Application: sims/stride-threat-model-overlay/index.md
+    - Ch 14 — TLS Handshake and the Chain of Trust: sims/tls-handshake-chain-of-trust/index.md
+    - Ch 14 — Zero Trust Architecture vs Castle-and-Moat: sims/zero-trust-vs-castle-moat/index.md
+    - Ch 15 — A Cross-Border Data Flow Decision Tree: sims/cross-border-transfer-decision/index.md
+    - Ch 15 — The Regulatory Landscape Map: sims/privacy-regulatory-landscape/index.md
+    - Ch 16 — EVM Cost and Schedule Variance Visualization: sims/evm-variance-visualization/index.md
+    - "Ch 16 — A Small Project's Gantt Chart with the Critical Path Highlighted": sims/gantt-with-critical-path/index.md
+    - Ch 16 — The Project Triangle (Scope, Time, Cost — and Quality in the Middle): sims/project-triangle/index.md
+    - Ch 16 — A Sprint Burndown Chart (Ideal vs Actual): sims/sprint-burndown-chart/index.md
+    - Ch 16 — The Stakeholder Power/Interest Grid: sims/stakeholder-power-interest-grid/index.md
+    - Ch 18 — A Digital Twin of a Wind Turbine: sims/digital-twin-wind-turbine/index.md
+    - Ch 18 — An Enterprise Journey Map for a Claims Process: sims/journey-map-claims-process/index.md
+    - Ch 18 — Mobile-First Responsive Breakpoints: sims/responsive-breakpoints-demo/index.md
   - Glossary: glossary.md
   - References: references.md
   - License: license.md

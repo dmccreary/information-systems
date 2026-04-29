@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Small Business ERD — Customer, Order, Product, Supplier</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        #container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a3a6c;
+        }
+        .placeholder {
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .placeholder h2 {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .placeholder p {
+            font-size: 14px;
+            max-width: 480px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 12px;
+        }
+        .meta strong { color: #495057; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>A Small Business ERD — Customer, Order, Product, Supplier</h1>
+        <div class="placeholder">
+            <span class="badge">SCAFFOLD</span>
+            <h2>MicroSim Not Yet Implemented</h2>
+            <p>This MicroSim has been scaffolded from its specification but the
+            interactive content has not been built yet. See the chapter source
+            and the <code>index.md</code> in this directory for the full spec.</p>
+        </div>
+        <div class="meta">
+            <p><strong>Sim ID:</strong> small-business-erd</p>
+            <p><strong>Library:</strong> vis-network</p>
+            <p><strong>Bloom Level:</strong> TBD</p>
+            <p><strong>Learning Objective:</strong> TBD</p>
+        </div>
+    </div>
+
+    <!--
+    SPECIFICATION (from chapter index.md):
+
+    Type: interactive-infographic
+    **sim-id:** small-business-erd<br/>
+    **Library:** vis-network<br/>
+    **Status:** Specified
+    
+    A vis-network entity-relationship diagram (Crow's Foot notation) showing four entities for a small e-commerce business: Customer, Order, Product, and Supplier. Each entity is rendered as a labeled box with two compartments: the upper compartment holds the entity name; the lower compartment lists the primary attributes (Customer: customer_id (PK), email, first_name, last_name, created_at; Order: order_id (PK), customer_id (FK), order_date, status, total; Product: product_id (PK), supplier_id (FK), name, price, in_stock; Supplier: supplier_id (PK), name, contact_email, country). Relationships connect the entities with Crow's Foot markers: Customer 1-to-many Order ("places"), Order many-to-many Product through an OrderLine join entity ("contains"), Supplier 1-to-many Product ("supplies"). The OrderLine join table is shown as a fifth box with order_id, product_id, quantity, unit_price.
+    
+    Color palette: entity boxes in mascot-emerald with white text for the entity name and pale-emerald for the attribute compartment, primary-key attributes underlined and in mascot-magenta, foreign-key attributes italicized in coral. Relationship lines in dark teal, with Crow's Foot markers rendered crisply.
+    
+    Interactivity: hovering an entity reveals (a) a plain-language description of what the entity represents in the business, (b) the rationale for each attribute, and (c) sample row values. Hovering a relationship line reveals its cardinality in plain English ("each Customer places zero or more Orders; each Order is placed by exactly one Customer"). A "show normal forms" toggle highlights which attributes would violate 1NF, 2NF, and 3NF if added carelessly. To work around the vis-network horizontal-edge label rendering bug, relationship lines use a slight y-offset so labels render correctly on initial load.
+    
+    Layout: hierarchical with manual positioning, full canvas width, height ~560px. Canvas resizes on window resize.
+    
+    Learning objective (Bloom: Applying): Students can read a Crow's Foot ERD, name each entity's primary key and foreign keys, identify cardinalities in plain English, and recognize where a join entity is required for a many-to-many relationship.
+    
+    Implementation: vis-network, deployed at `/information-systems/sims/small-business-erd/`.
+    -->
+</body>
+</html>

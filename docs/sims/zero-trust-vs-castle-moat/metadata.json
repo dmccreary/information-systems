@@ -1,0 +1,21 @@
+{
+  "title": "Zero Trust Architecture vs Castle-and-Moat",
+  "description": "Zero Trust Architecture vs Castle-and-Moat",
+  "creator": "Dementia Education Project",
+  "date": "2026-04-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "zero-trust-vs-castle-moat",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 14,
+  "chapter_title": "'Security of Information Assets'",
+  "chapter_dir": "14-security"
+}

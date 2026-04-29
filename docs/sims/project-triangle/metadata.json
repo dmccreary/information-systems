@@ -1,0 +1,21 @@
+{
+  "title": "The Project Triangle (Scope, Time, Cost — and Quality in the Middle)",
+  "description": "The Project Triangle (Scope, Time, Cost — and Quality in the Middle)",
+  "creator": "Dementia Education Project",
+  "date": "2026-04-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "project-triangle",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 16,
+  "chapter_title": "'IS Project Management'",
+  "chapter_dir": "16-project-management"
+}

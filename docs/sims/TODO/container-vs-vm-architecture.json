@@ -1,0 +1,14 @@
+{
+  "sim_id": "container-vs-vm-architecture",
+  "diagram_name": "Container vs. Virtual Machine Architecture",
+  "chapter_number": 12,
+  "chapter_title": "'Cloud Computing and Infrastructure'",
+  "chapter_dir": "12-cloud",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** container-vs-vm-architecture<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nA p5.js side-by-side architectural comparison. Left panel (VM architecture): hardware at the bottom, host OS layer, hypervisor layer, then three stacked virtual machines, each containing its own guest OS, its own libraries/binaries, and its own application. Right panel (Container architecture): hardware at the bottom, host OS layer, container runtime (Docker engine), then five containers each containing only libraries/binaries and an application — the guest OS layer is absent because containers share the host kernel.\n\nColor palette: hardware in slate-gray, host OS in deep teal, hypervisor in coral, guest OS in muted gray, container runtime in mascot-emerald, application layers in mascot-magenta. A small \"size\" badge at the top of each unit shows typical artifact size (VM: 2 GB+, Container: 50-300 MB). A \"boot time\" badge shows typical startup time (VM: 30-90s, Container: <1s).\n\nInteractivity: hovering any layer shows what it does in plain English. A \"scale up\" button animates adding three more units to each panel, illustrating how many more containers fit on the same host. A toggle adds a \"shared kernel\" highlight on the container side, showing the security tradeoff: weaker isolation than full VMs in exchange for density and speed.\n\nLayout: two side-by-side panels, full canvas width, height ~520px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.\n\nLearning objective (Bloom: Analyzing): Students can compare VM and container architectures, explain why containers are smaller and faster, and articulate the isolation/density tradeoff between the two.\n\nImplementation: p5.js, deployed at `/information-systems/sims/container-vs-vm-architecture/`."
+}

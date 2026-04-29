@@ -1,0 +1,14 @@
+{
+  "sim_id": "three-tier-architecture",
+  "diagram_name": "Three-Tier Architecture with Request Flow",
+  "chapter_number": 3,
+  "chapter_title": "Information Systems Architecture",
+  "chapter_dir": "03-architecture",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** three-tier-architecture<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nA vertical three-layer diagram drawn in p5.js, drawn responsively to fill the available iframe width. From top to bottom, the three layers are labeled **Presentation Tier**, **Application Tier**, and **Data Tier**. Each layer is rendered as a rounded rectangle running the full canvas width, with a clear label and a representative icon (browser/phone for presentation, gears for application, cylinder for data).\n\nColor palette (light mode): Presentation = soft sky blue, Application = medium teal, Data = warm gold. Each layer has a 1px darker border and dark text. Layer separators are dashed gray lines.\n\nInteractivity: when the user clicks the **Trace a Request** button, an animated dot travels from the presentation tier down through the application tier to the data tier (request path), pauses, and then travels back up (response path). At each stop, a small callout shows what that tier does for this request: e.g., presentation = \"User clicks 'Apply for Loan'\", application = \"Validate inputs, run eligibility rules\", data = \"Fetch credit history, write application record.\"\n\nA toggle switches between three example requests — view a product page, submit a loan application, generate a monthly report — so the same architecture is shown handling different workloads.\n\nLayout: layers stacked vertically, full width; callout panel appears to the side at desktop widths and below at narrow widths. Canvas resizes on window resize. The setup() function calls updateCanvasSize() as its first step. Canvas parented with `canvas.parent(document.querySelector('main'));`.\n\nLearning objective (Bloom: Understanding): Students can identify which tier owns a given responsibility (rendering a chart, validating a discount rule, storing a customer record).\n\nImplementation: p5.js, single `main.html`, accompanying `index.md` doc, deployed at `/sims/three-tier-architecture/`."
+}

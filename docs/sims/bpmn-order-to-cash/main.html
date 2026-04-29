@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomy of a BPMN Order-to-Cash Process</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        #container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a3a6c;
+        }
+        .placeholder {
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .placeholder h2 {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .placeholder p {
+            font-size: 14px;
+            max-width: 480px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 12px;
+        }
+        .meta strong { color: #495057; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Anatomy of a BPMN Order-to-Cash Process</h1>
+        <div class="placeholder">
+            <span class="badge">SCAFFOLD</span>
+            <h2>MicroSim Not Yet Implemented</h2>
+            <p>This MicroSim has been scaffolded from its specification but the
+            interactive content has not been built yet. See the chapter source
+            and the <code>index.md</code> in this directory for the full spec.</p>
+        </div>
+        <div class="meta">
+            <p><strong>Sim ID:</strong> bpmn-order-to-cash</p>
+            <p><strong>Library:</strong> vis-network</p>
+            <p><strong>Bloom Level:</strong> TBD</p>
+            <p><strong>Learning Objective:</strong> TBD</p>
+        </div>
+    </div>
+
+    <!--
+    SPECIFICATION (from chapter index.md):
+
+    Type: interactive-infographic
+    **sim-id:** bpmn-order-to-cash<br/>
+    **Library:** vis-network<br/>
+    **Status:** Specified
+    
+    A vis-network BPMN diagram showing a simplified order-to-cash process inside a single Customer-Facing-Company pool with three lanes: Sales, Credit, and Fulfillment. The process begins with a start event labeled "Order received" in the Sales lane, flows through a "Validate order" task, then crosses into the Credit lane via an exclusive gateway labeled "Order > $10,000?". The yes path runs a "Manager credit review" task; the no path runs an "Auto-approve credit" task. Both paths re-merge at a converging exclusive gateway, then cross into the Fulfillment lane via a parallel gateway that triggers two simultaneous tasks: "Pick and pack" and "Generate invoice". A converging parallel gateway joins them, followed by a "Ship order" task and an end event labeled "Order shipped". A second pool labeled "Customer" sits below, with a message flow connecting the Customer to the start event ("places order") and another message flow back from "Order shipped" ("delivery confirmation"). To work around the vis-network horizontal-edge label rendering bug, sequence flows use a slight y-offset (e.g., 480 to 490) so labels render on initial load.
+    
+    Color palette: pool boundaries in slate-gray, lanes in alternating soft-blue tints, activity rounded rectangles in mascot-emerald with white text, exclusive gateways in amber with the "X" marker, parallel gateways in coral with the "+" marker, events in mascot-magenta gradients. Sequence flows in dark teal; message flows dashed in muted gray.
+    
+    Interactivity: hovering each element reveals (a) the BPMN element type, (b) its formal definition, and (c) a concrete real-world example. A "trace execution" button animates a token traveling through the diagram following one of two paths (large order vs. small order), pausing briefly at each gateway to show the routing decision. A toggle highlights every "lane crossing" — the visible handoffs in the process — to reinforce the systems-thinking lesson that handoffs are where processes break.
+    
+    Layout: hierarchical, left-to-right, full canvas width, height ~560px. Canvas resizes on window resize.
+    
+    Learning objective (Bloom: Applying): Students can read a BPMN diagram, name each element type by its shape, identify lane handoffs, and trace a token through both paths of an exclusive gateway.
+    
+    Implementation: vis-network, deployed at `/information-systems/sims/bpmn-order-to-cash/`.
+    -->
+</body>
+</html>

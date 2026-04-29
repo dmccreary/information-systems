@@ -1,0 +1,21 @@
+{
+  "title": "A Cross-Border Data Flow Decision Tree",
+  "description": "A Cross-Border Data Flow Decision Tree",
+  "creator": "Dementia Education Project",
+  "date": "2026-04-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "cross-border-transfer-decision",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 15,
+  "chapter_title": "'Privacy, Compliance, and Regulation'",
+  "chapter_dir": "15-privacy-compliance"
+}

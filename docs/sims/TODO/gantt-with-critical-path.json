@@ -1,0 +1,14 @@
+{
+  "sim_id": "gantt-with-critical-path",
+  "diagram_name": "A Small Project's Gantt Chart with the Critical Path Highlighted",
+  "chapter_number": 16,
+  "chapter_title": "'IS Project Management'",
+  "chapter_dir": "16-project-management",
+  "library": "vis-timeline",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** gantt-with-critical-path<br/>\n**Library:** vis-timeline<br/>\n**Status:** Specified\n\nA vis-timeline Gantt chart showing a 12-week IS project (a small CRM rollout) with twelve tasks: Charter Signed (milestone), Requirements Gathering, Vendor Selection, Data Mapping, Test Environment Setup, Configuration, Data Migration Build, User Acceptance Test, Training Materials, Training Delivery, Cutover, Go-Live (milestone). Dependencies shown as arrows; the critical path (Charter → Requirements → Vendor Selection → Configuration → Data Migration → UAT → Cutover → Go-Live) is rendered in a thick mascot-magenta line. Off-critical-path tasks (Test Environment Setup, Training Materials, Training Delivery) are rendered in mascot-emerald with their slack visualized as a faint trailing rectangle.\n\nColor palette: critical-path bars in mascot-magenta, non-critical bars in mascot-emerald, milestones as gold diamonds, slack regions in faint coral, dependency arrows in slate-gray.\n\nInteractivity: students can drag any task to a new start date and the schedule updates, showing whether the move pushes the project finish (a red flash if it does, green if it doesn't). A \"compress schedule\" challenge asks students to find the cheapest 2-week compression by adding resources to critical-path tasks. A toggle highlights the slack on every non-critical task to make the concept of \"free time\" visible.\n\nLayout: full canvas width, height ~560px. Canvas resizes on window resize.\n\nLearning objective (Bloom: Analyzing): Students can read a Gantt chart, identify the critical path, distinguish critical from non-critical tasks, and predict the schedule effect of moving any task.\n\nImplementation: vis-timeline, deployed at `/information-systems/sims/gantt-with-critical-path/`."
+}

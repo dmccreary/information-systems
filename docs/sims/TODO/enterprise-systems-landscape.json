@@ -1,0 +1,14 @@
+{
+  "sim_id": "enterprise-systems-landscape",
+  "diagram_name": "The Enterprise Systems Landscape with ERP at the Center",
+  "chapter_number": 13,
+  "chapter_title": "'Enterprise Systems'",
+  "chapter_dir": "13-enterprise-systems",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** enterprise-systems-landscape<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nA vis-network hub-and-spoke diagram with the ERP system as a central node (large mascot-emerald circle labeled \"ERP — system of record\") surrounded by satellite enterprise systems: CRM (sales, marketing, service), SCM (planning, logistics, warehouse), HRIS (core HR, talent), Payroll, Procurement (source-to-pay), Industry-Cloud overlays, and BI/Reporting. Each satellite is connected to ERP by a labeled integration arrow that names the type of integration (real-time API, nightly batch, event stream, master-data sync) and the direction of the dominant data flow. Edges between satellites (e.g., CRM ↔ Procurement when a customer has a referral relationship to a supplier) show the secondary integration burden that grows with best-of-breed strategies.\n\nColor palette: ERP node in mascot-emerald with white text, satellites in alternating soft-blue and coral, integration edges in teal (real-time) vs. amber (batch) vs. dashed slate (event-driven). To work around the vis-network horizontal-edge label rendering bug, satellite nodes use a slight y-offset (e.g., 480 to 490) so labels render on initial load.\n\nInteractivity: hovering each satellite reveals (a) the system category, (b) representative vendors, and (c) the typical integration pattern with ERP. A \"best of breed vs suite\" toggle adds or removes satellite edges to show the integration-burden difference between the two strategies — students see visibly how many extra arrows appear when each function is a separate vendor product. A \"show master data flow\" highlight draws the customer, vendor, item, and employee master records flowing from ERP outward.\n\nLayout: hub-and-spoke, full canvas width, height ~560px. Canvas resizes on window resize.\n\nLearning objective (Bloom: Understanding): Students can name the major enterprise system categories, identify ERP as the typical system-of-record hub, and articulate why integration complexity grows non-linearly with the number of separate systems.\n\nImplementation: vis-network, deployed at `/information-systems/sims/enterprise-systems-landscape/`."
+}
