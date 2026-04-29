@@ -79,6 +79,10 @@ The reason this hierarchy matters is that **most failed IS projects fail at a la
 
 #### Diagram: DIKI Hierarchy Interactive Pyramid
 
+
+<iframe src="../../sims/diki-pyramid/main.html" width="100%" height="602px" scrolling="no"></iframe>
+[Run DIKI Hierarchy Interactive Pyramid Fullscreen](../../sims/diki-pyramid/main.html)
+
 <details markdown="1">
 <summary>DIKI Hierarchy Interactive Pyramid</summary>
 Type: interactive-infographic
@@ -131,6 +135,10 @@ Let's define each component:
 - **Business Process** (a kind of "process") — the structured sequence of activities the organization performs to produce a result. "Approve a loan." "Discharge a patient." "Onboard a new employee." We will study process modeling in Chapter 5, but you should already have the concept: a process is *what the work is*, separate from the system that supports it.
 
 #### Diagram: Six-Component Model of an Information System
+
+
+<iframe src="../../sims/six-component-model<br/>/main.html" width="100%" height="450px" scrolling="no"></iframe>
+[Run Six-Component Model of an Information System Fullscreen](../../sims/six-component-model<br/>/main.html)
 
 <details markdown="1">
 <summary>Six-Component Model of an Information System</summary>

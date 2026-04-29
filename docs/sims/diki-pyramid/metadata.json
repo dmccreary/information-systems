@@ -1,21 +1,95 @@
 {
   "title": "DIKI Hierarchy Interactive Pyramid",
-  "description": "DIKI Hierarchy Interactive Pyramid",
-  "creator": "Dementia Education Project",
-  "date": "2026-04-29",
+  "description": "An interactive four-level pyramid visualizing the DIKI Hierarchy (Data, Information, Knowledge, Insight) using a single hospital-patient scenario that progresses from a raw temperature reading to an AI-derived readmission insight. Hover or click to reveal a definition and a concrete example at every layer.",
+  "creator": "Dan McCreary",
   "subject": [
-    "dementia"
+    "Information Systems",
+    "Data Hierarchy",
+    "Knowledge Management"
   ],
+  "date": "2026-04-29",
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "diki-pyramid",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "DIKI Hierarchy",
+  "learningObjectives": [
+    "Name the four layers of the DIKI Hierarchy in order from bottom to top",
+    "Classify a given example as Data, Information, Knowledge, or Insight",
+    "Explain why most failed IS projects fail at a layer transition",
+    "Describe how DIKI differs from the older DIKW Hierarchy"
+  ],
+  "duration": "5-10 minutes",
+  "prerequisites": [
+    "None"
+  ],
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 600",
+  "responsive": "Width-responsive",
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "keyboardNavigation": false,
+    "highContrast": true
+  },
+  "controls": [
+    {
+      "type": "hover",
+      "description": "Hover over pyramid layers to see definitions and examples"
+    },
+    {
+      "type": "click",
+      "description": "Click on layers to pin the callout open"
+    }
+  ],
+  "modelType": "Informational Visualization",
+  "assumptions": [
+    "Four-level DIKI variant of the DIKW hierarchy",
+    "'Insight' is preferred over 'Wisdom' because it names a deliverable rather than a virtue"
+  ],
+  "limitations": [
+    "Single hospital-patient scenario; does not show alternative domains",
+    "Does not depict feedback loops back from Insight to Data"
+  ],
+  "visualizationType": [
+    "diagram",
+    "interactive-demo",
+    "infographic"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand"
+  ],
+  "bloomLevel": "Understand",
+  "bloomVerb": "classify",
+  "completion_status": "implemented",
   "chapter_number": 1,
   "chapter_title": "Foundations of Information Systems",
-  "chapter_dir": "01-foundations"
+  "chapter_dir": "01-foundations",
+  "pedagogical": {
+    "pattern": "worked-example",
+    "bloomAlignment": [
+      "remember",
+      "understand"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "describe",
+      "explain",
+      "identify"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "elaborative"
+    ],
+    "interactionStyle": "explore"
+  }
 }
