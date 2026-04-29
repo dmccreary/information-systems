@@ -1,0 +1,14 @@
+{
+  "sim_id": "cross-border-transfer-decision",
+  "diagram_name": "A Cross-Border Data Flow Decision Tree",
+  "chapter_number": 15,
+  "chapter_title": "'Privacy, Compliance, and Regulation'",
+  "chapter_dir": "15-privacy-compliance",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** cross-border-transfer-decision<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nA vis-network decision tree walking through the question: \"I want to transfer personal data from the EU to country X — what do I do?\" The root node poses the question; the first branch tests \"Is X covered by an adequacy decision?\" with a yes-path leading directly to a green \"Transfer permitted\" terminal node and a no-path branching to \"Can the transfer rely on Binding Corporate Rules?\" The tree continues through SCCs (which require a Transfer Impact Assessment node that itself branches based on the destination country's surveillance laws), supplementary measures (encryption with EU-held keys), and finally derogations as a last resort. Schrems II is rendered as a callout node attached to the SCC branch, explaining why TIAs were added.\n\nColor palette: green terminal nodes for permitted transfers, amber for \"permitted with conditions,\" red for \"do not transfer.\" Schrems II callout in mascot-magenta. Decision diamonds in slate-blue.\n\nInteractivity: hovering each branch reveals the legal basis (article number, case citation). A \"scenario picker\" preloads common transfer scenarios — US cloud provider, Indian outsourcer, intra-group US-to-Germany transfer — and animates the path the decision takes. A toggle highlights the supplementary measures that would mitigate the highest-risk paths.\n\nLayout: hierarchical top-to-bottom, full canvas width, height ~600px. Canvas resizes on window resize.\n\nLearning objective (Bloom: Applying): Students can walk through the cross-border transfer decision tree for a realistic scenario, identify the correct legal mechanism, and articulate when a Transfer Impact Assessment is required.\n\nImplementation: vis-network, deployed at `/information-systems/sims/cross-border-transfer-decision/`."
+}

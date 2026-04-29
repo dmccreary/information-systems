@@ -1,0 +1,21 @@
+{
+  "title": "TLS Handshake and the Chain of Trust",
+  "description": "TLS Handshake and the Chain of Trust",
+  "creator": "Dementia Education Project",
+  "date": "2026-04-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "tls-handshake-chain-of-trust",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 14,
+  "chapter_title": "'Security of Information Assets'",
+  "chapter_dir": "14-security"
+}

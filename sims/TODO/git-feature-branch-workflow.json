@@ -1,0 +1,14 @@
+{
+  "sim_id": "git-feature-branch-workflow",
+  "diagram_name": "A Simple Feature-Branch Git Workflow",
+  "chapter_number": 4,
+  "chapter_title": "Application Development for IS",
+  "chapter_dir": "04-appdev",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** git-feature-branch-workflow<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nA vis-network diagram visualizing a feature-branch Git workflow as a directed graph of commit nodes. The `main` branch runs horizontally across the middle of the canvas at y=480. Feature branches diverge upward and downward from `main`, advance through several commit nodes, and merge back via pull-request nodes. To work around the vis-network horizontal-edge label rendering bug, branch lines use a slight y-offset (e.g., 480 to 490) so labels render correctly on initial load.\n\nColor palette: `main` branch in mascot-emerald, feature branches in shades of teal and amber, pull-request merge commits in a contrasting coral. Failed CI checks marked with a red badge; passed checks with a green checkmark.\n\nInteractivity: hovering a commit shows the commit message, author, and CI status; hovering a pull-request node shows the PR title, the reviewer, and the merge-status. A \"play\" control walks through a typical feature lifecycle: branch creation, three commits, push, PR opened, code review comments, fix-up commits, CI passing, PR approved, merge to `main`, deployment trigger fired.\n\nLayout: hierarchical with custom positioning to preserve the linear timeline metaphor. Canvas resizes on window resize, height ~480px.\n\nLearning objective (Bloom: Applying): Students can trace a feature from branch creation through merge, and identify where code review and CI checks fit into the timeline.\n\nImplementation: vis-network, deployed at `/information-systems/sims/git-feature-branch-workflow/`."
+}

@@ -1,0 +1,21 @@
+{
+  "title": "A Small Business ERD — Customer, Order, Product, Supplier",
+  "description": "A Small Business ERD — Customer, Order, Product, Supplier",
+  "creator": "Dementia Education Project",
+  "date": "2026-04-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "small-business-erd",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 6,
+  "chapter_title": "'Data Management Foundations: Modeling, SQL, and Transactions'",
+  "chapter_dir": "06-data-foundations"
+}

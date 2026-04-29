@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An ABET CAC-aligned intelligent textbook covering the foundations of information systems — application development, data management, IS project management, networks and telecommunications for business, security of information assets, and the role of IS in organizations.">
+        <meta name="description" content="How IS managers think about networks — LANs, WANs, VPNs, SD-WAN, cloud connectivity, capacity, latency, SLAs, redundancy, monitoring, and procurement — without getting buried in routing-protocol minutiae.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -22,15 +22,15 @@
       
       
       <link rel="icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
-        <title>11. Networks and Telecommunications - Information Systems</title>
+        <title>Networks and Telecommunications for Business - Information Systems</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -100,7 +100,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Information Systems" class="md-header__button md-logo" aria-label="Information Systems" data-md-component="logo">
       
-  <img src="../../img/logo.png" alt="logo">
+  <img src="../../img/mascot/neutral.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              11. Networks and Telecommunications
+              Networks and Telecommunications for Business
             
           </span>
         </div>
@@ -155,13 +155,11 @@
     
     
     
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -200,14 +198,13 @@
     </div>
   </div>
 </div>
-      
     
     
       <div class="md-header__source">
         <a href="https://github.com/dmccreary/information-systems" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -242,7 +239,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Information Systems" class="md-nav__button md-logo" aria-label="Information Systems" data-md-component="logo">
       
-  <img src="../../img/logo.png" alt="logo">
+  <img src="../../img/mascot/neutral.png" alt="logo">
 
     </a>
     Information Systems
@@ -252,7 +249,7 @@
       <a href="https://github.com/dmccreary/information-systems" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -269,13 +266,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index.md" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
-  
   
   <span class="md-ellipsis">
     Home
-    
   </span>
   
 
@@ -291,13 +286,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about.md" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
-  
   
   <span class="md-ellipsis">
     About
-    
   </span>
   
 
@@ -316,10 +309,8 @@
       <a href="../../course-description/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     Course Description
-    
   </span>
   
 
@@ -344,56 +335,105 @@
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
+          
+        
       
-    
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -406,14 +446,13 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
+          
           <div class="md-nav__link md-nav__container">
             <a href="../" class="md-nav__link ">
               
   
-  
   <span class="md-ellipsis">
     Chapters
-    
   </span>
   
 
@@ -445,10 +484,8 @@
       <a href="../01-foundations/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     1. Foundations of Information Systems
-    
   </span>
   
 
@@ -468,10 +505,8 @@
       <a href="../02-role-of-is/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     2. The Role of IS in Organizations
-    
   </span>
   
 
@@ -491,10 +526,8 @@
       <a href="../03-architecture/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     3. Information Systems Architecture
-    
   </span>
   
 
@@ -514,10 +547,8 @@
       <a href="../04-appdev/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     4. Application Development for IS
-    
   </span>
   
 
@@ -537,10 +568,8 @@
       <a href="../05-bpm/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     5. Business Process Management
-    
   </span>
   
 
@@ -560,10 +589,8 @@
       <a href="../06-data-foundations/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     6. Data Management Foundations
-    
   </span>
   
 
@@ -583,10 +610,8 @@
       <a href="../07-modern-databases/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     7. Modern Databases and Lakehouses
-    
   </span>
   
 
@@ -606,10 +631,8 @@
       <a href="../08-data-governance/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     8. Data Governance and Quality
-    
   </span>
   
 
@@ -629,10 +652,8 @@
       <a href="../09-bi-and-analytics/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     9. Business Intelligence and Analytics
-    
   </span>
   
 
@@ -652,10 +673,8 @@
       <a href="../10-sad/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     10. Systems Analysis and Design
-    
   </span>
   
 
@@ -684,10 +703,8 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
-  
   <span class="md-ellipsis">
     11. Networks and Telecommunications
-    
   </span>
   
 
@@ -697,10 +714,8 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
-  
   <span class="md-ellipsis">
     11. Networks and Telecommunications
-    
   </span>
   
 
@@ -748,6 +763,162 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-networks-are-an-is-management-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Networks Are an IS-Management Topic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-area-network-the-inside" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Area Network: The Inside
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wide-area-network-the-outside" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wide Area Network: The Outside
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internet-intranet-and-extranet-three-audiences-three-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet, Intranet, and Extranet: Three Audiences, Three Networks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vpn-pretending-the-public-internet-is-private" class="md-nav__link">
+    <span class="md-ellipsis">
+      VPN: Pretending the Public Internet Is Private
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sd-wan-the-wan-gets-smart" class="md-nav__link">
+    <span class="md-ellipsis">
+      SD-WAN: The WAN Gets Smart
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-connectivity-the-new-gravity-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Connectivity: The New Gravity Center
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud Connectivity: The New Gravity Center">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-a-modern-enterprise-network-lan-wan-vpn-sd-wan-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: A Modern Enterprise Network — LAN, WAN, VPN, SD-WAN, Cloud
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bandwidth-latency-and-throughput-three-words-that-are-not-synonyms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bandwidth, Latency, and Throughput: Three Words That Are Not Synonyms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bandwidth, Latency, and Throughput: Three Words That Are Not Synonyms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-bandwidth-latency-and-throughput-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Bandwidth, Latency, and Throughput at a Glance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bandwidth-capacity-planning-buying-just-enough" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bandwidth Capacity Planning: Buying Just Enough
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-level-agreements-the-contract-underneath" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Level Agreements: The Contract Underneath
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-redundancy-two-of-everything-that-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Redundancy: Two Of Everything That Matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-monitoring-the-source-of-truth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Monitoring: The Source of Truth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#telecom-procurement-where-the-money-actually-goes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telecom Procurement: Where the Money Actually Goes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -767,10 +938,8 @@
       <a href="../12-cloud/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     12. Cloud Computing and Infrastructure
-    
   </span>
   
 
@@ -790,10 +959,8 @@
       <a href="../13-enterprise-systems/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     13. Enterprise Systems
-    
   </span>
   
 
@@ -813,10 +980,8 @@
       <a href="../14-security/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     14. Security of Information Assets
-    
   </span>
   
 
@@ -836,10 +1001,8 @@
       <a href="../15-privacy-compliance/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     15. Privacy, Compliance, and Regulation
-    
   </span>
   
 
@@ -859,10 +1022,8 @@
       <a href="../16-project-management/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     16. IS Project Management
-    
   </span>
   
 
@@ -882,10 +1043,8 @@
       <a href="../17-itsm/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     17. IT Service Management and Operations
-    
   </span>
   
 
@@ -905,10 +1064,8 @@
       <a href="../18-hci-and-emerging/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     18. HCI and Emerging Topics
-    
   </span>
   
 
@@ -928,10 +1085,8 @@
       <a href="../19-ai-in-is/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     19. AI in Information Systems
-    
   </span>
   
 
@@ -951,10 +1106,8 @@
       <a href="../20-responsible-ai/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     20. Responsible and Ethical Use of AI
-    
   </span>
   
 
@@ -974,10 +1127,8 @@
       <a href="../21-ai-law/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     21. AI Law, Regulation, and Compliance
-    
   </span>
   
 
@@ -997,10 +1148,8 @@
       <a href="../22-ai-security/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     22. AI and Information Security
-    
   </span>
   
 
@@ -1020,10 +1169,8 @@
       <a href="../23-ai-productivity/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     23. AI Productivity Impact
-    
   </span>
   
 
@@ -1043,10 +1190,8 @@
       <a href="../24-knowledge-graphs/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     24. Knowledge Graphs and the EKG
-    
   </span>
   
 
@@ -1066,10 +1211,8 @@
       <a href="../25-ens/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     25. The Enterprise Nervous System
-    
   </span>
   
 
@@ -1114,7 +1257,6 @@
     
     
     
-    
       
         
         
@@ -1125,14 +1267,11 @@
         
   
   
-  
     <a href="../../learning-graph/" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
     Learning Graph
-    
   </span>
   
 
@@ -1160,7 +1299,170 @@
           
         
       
-    
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1174,14 +1476,11 @@
         
   
   
-  
     <a href="../../sims/graph-viewer/" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
     MicroSims
-    
   </span>
   
 
@@ -1206,10 +1505,8 @@
       <a href="../../glossary.md" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     Glossary
-    
   </span>
   
 
@@ -1228,10 +1525,8 @@
       <a href="../../references.md" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     References
-    
   </span>
   
 
@@ -1250,10 +1545,8 @@
       <a href="../../license/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     License
-    
   </span>
   
 
@@ -1272,10 +1565,8 @@
       <a href="../../contact/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     Contact
-    
   </span>
   
 
@@ -1337,6 +1628,162 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-networks-are-an-is-management-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Networks Are an IS-Management Topic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-area-network-the-inside" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Area Network: The Inside
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wide-area-network-the-outside" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wide Area Network: The Outside
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internet-intranet-and-extranet-three-audiences-three-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet, Intranet, and Extranet: Three Audiences, Three Networks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vpn-pretending-the-public-internet-is-private" class="md-nav__link">
+    <span class="md-ellipsis">
+      VPN: Pretending the Public Internet Is Private
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sd-wan-the-wan-gets-smart" class="md-nav__link">
+    <span class="md-ellipsis">
+      SD-WAN: The WAN Gets Smart
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-connectivity-the-new-gravity-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Connectivity: The New Gravity Center
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud Connectivity: The New Gravity Center">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-a-modern-enterprise-network-lan-wan-vpn-sd-wan-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: A Modern Enterprise Network — LAN, WAN, VPN, SD-WAN, Cloud
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bandwidth-latency-and-throughput-three-words-that-are-not-synonyms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bandwidth, Latency, and Throughput: Three Words That Are Not Synonyms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bandwidth, Latency, and Throughput: Three Words That Are Not Synonyms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-bandwidth-latency-and-throughput-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Bandwidth, Latency, and Throughput at a Glance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bandwidth-capacity-planning-buying-just-enough" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bandwidth Capacity Planning: Buying Just Enough
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-level-agreements-the-contract-underneath" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Level Agreements: The Contract Underneath
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-redundancy-two-of-everything-that-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Redundancy: Two Of Everything That Matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-monitoring-the-source-of-truth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Monitoring: The Source of Truth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#telecom-procurement-where-the-money-actually-goes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telecom Procurement: Where the Money Actually Goes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1350,7 +1797,6 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
 
   
     <a href="https://github.com/dmccreary/information-systems/blob/main/docs/chapters/11-networks/index.md" title="Edit this page" class="md-content__button md-icon">
@@ -1391,13 +1837,323 @@
 <li><a href="../02-role-of-is/">Chapter 2: The Role of IS in Organizations</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome back</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Iris the hummingbird waves hello">
+Welcome to Chapter 11. The good news: this chapter will not ask you to memorize the OSI model or recite the difference between BGP and OSPF. Those are wonderful topics for a networking class, but this is an IS-management book, and the questions you will actually face in your career are different. You will be the person who has to decide whether to buy a 1 Gbps circuit or a 10 Gbps circuit. You will be the person who notices that the "redundant" pair of fiber links from your "two different carriers" both run through the same conduit under the same bridge. You will be the person reading an SLA at 11pm trying to figure out whether the credits cover the lost weekend. By the end of this chapter you will know how to ask the right questions, read the right contracts, and avoid the most expensive footguns. Let's go.</p>
+</div>
+<h2 id="why-networks-are-an-is-management-topic">Why Networks Are an IS-Management Topic<a class="headerlink" href="#why-networks-are-an-is-management-topic" title="Permanent link">&para;</a></h2>
+<p>Networks are the circulatory system of every information system. Every database query, every video call, every ERP transaction, every prompt sent to an LLM, every log line shipped to a monitoring service — all of it travels over a network. When the network is healthy, nobody thinks about it. When the network is unhealthy, <em>nothing else works</em>, and the people who built the database, the application, and the AI model all stand around looking at the network team. This is structurally similar to plumbing in a building: invisible until it isn't, and then suddenly the most important thing in the world.</p>
+<p>For an IS manager, the network is mostly a procurement-and-design problem rather than a coding problem. You are deciding which carriers to buy from, how much capacity to buy, how to connect the office to the cloud, whether to encrypt traffic over the public internet or pay for a private circuit, what response times to demand, and what penalties apply when the carrier misses them. The technology underneath those decisions is genuinely fascinating — but the <em>decisions</em> are where careers are made. Get them right and the network fades into the background, which is exactly where it belongs. Get them wrong and you will have eight ways to discover it, all of them painful.</p>
+<p>There is also a systems-thinking reason networks deserve their own chapter. A network is the part of the information system where local optimization is most likely to backfire. Adding capacity at one site can shift the bottleneck somewhere else. Tightening security controls can drive users to consumer-grade workarounds. Saving money on redundancy looks brilliant for years and catastrophic on one Tuesday afternoon. Networks reward the manager who thinks holistically and punishes the one who optimizes in isolation.</p>
+<h2 id="local-area-network-the-inside">Local Area Network: The Inside<a class="headerlink" href="#local-area-network-the-inside" title="Permanent link">&para;</a></h2>
+<p>A <strong>Local Area Network</strong> (LAN) is the network inside a single physical site — an office building, a campus, a factory floor, a hospital wing. The defining property of a LAN is that the organization owns and operates the wiring, the switches, and the wireless access points that make it work. You decide where the cables go, what equipment to buy, and how to configure it. Latency on a LAN is measured in microseconds; speeds of 1 Gbps to 100 Gbps are routine; you are not paying anyone per gigabyte to move data inside it.</p>
+<p>For most organizations the LAN is where the user experience is <em>born</em>. A user's laptop joins the wireless, gets an IP address, and from there reaches everything else — the printer, the file server, the on-premises ERP, the path to the WAN, and, eventually, the cloud. A wobbly LAN is a wobbly company; if Wi-Fi is bad in the executive conference room, you have an organizational problem dressed up as a technical one.</p>
+<h2 id="wide-area-network-the-outside">Wide Area Network: The Outside<a class="headerlink" href="#wide-area-network-the-outside" title="Permanent link">&para;</a></h2>
+<p>A <strong>Wide Area Network</strong> (WAN) connects geographically separated sites — a headquarters in Minneapolis to a regional office in Phoenix to a manufacturing plant in Tijuana. The defining property of a WAN is that you do <em>not</em> own the wires; you lease connectivity from a telecommunications carrier. The WAN is what crosses property lines, county lines, state lines, and oceans. Latency is measured in milliseconds (a US coast-to-coast round trip is around 60-80 ms at the speed of light, and real circuits add to that). Speeds typically range from tens of Mbps for small branches up to multi-gigabit circuits for data-center interconnects. You pay for capacity by the month, often for years at a time.</p>
+<p>The IS-management questions about a WAN are entirely different from the ones about a LAN. <em>How much capacity?</em> <em>From which carriers?</em> <em>On what kind of contract?</em> <em>What happens when a backhoe finds the fiber?</em> This is where the business of telecom lives.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Local Area Network (LAN)</th>
+<th>Wide Area Network (WAN)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geographic scope</td>
+<td>Single site or campus</td>
+<td>Multiple sites, often global</td>
+</tr>
+<tr>
+<td>Ownership</td>
+<td>Organization owns wires &amp; equipment</td>
+<td>Carrier owns the wires; you lease</td>
+</tr>
+<tr>
+<td>Typical speed</td>
+<td>1-100 Gbps</td>
+<td>10 Mbps - 100 Gbps per circuit</td>
+</tr>
+<tr>
+<td>Typical latency</td>
+<td>Microseconds</td>
+<td>Milliseconds (often 10-200 ms)</td>
+</tr>
+<tr>
+<td>Cost model</td>
+<td>Capital + small ongoing</td>
+<td>Recurring monthly per circuit</td>
+</tr>
+<tr>
+<td>Failure mode</td>
+<td>Bad cable, bad switch, bad AP</td>
+<td>Carrier outage, fiber cut, BGP issue</td>
+</tr>
+<tr>
+<td>Manager's question</td>
+<td>"Is the Wi-Fi good enough?"</td>
+<td>"Are we buying enough, and from whom?"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="internet-intranet-and-extranet-three-audiences-three-networks">Internet, Intranet, and Extranet: Three Audiences, Three Networks<a class="headerlink" href="#internet-intranet-and-extranet-three-audiences-three-networks" title="Permanent link">&para;</a></h2>
+<p>The next three terms are easy to confuse because they sound similar and were named in an era when the prefix "intra-" was apparently endorsed by every marketing department. Sort them out once and they stay sorted.</p>
+<p>The <strong>Internet</strong> is the global network of networks — the public, decentralized internetwork that any organization can join by buying connectivity from any internet service provider. The internet is what your customers use to reach you, what your phone uses to fetch email, what your applications use to call third-party APIs. It is enormous, cheap per bit, and entirely beyond your control. Anyone can be on it; that is its strength and the source of every security problem you will ever have.</p>
+<p>An <strong>Intranet</strong> is a private network that uses the <em>same technologies</em> as the internet (TCP/IP, HTTP, browsers, the whole stack) but is restricted to inside the organization. The classic intranet hosts internal portals, HR systems, the company directory, and the wiki where someone wrote down the password for the conference-room AV system three years ago. An intranet is <em>technically</em> an internet in miniature; what makes it an intranet is that the audience is your own employees and the network it runs on is yours.</p>
+<p>An <strong>Extranet</strong> is a private network that extends <em>beyond</em> the organization to selected partners — suppliers, distributors, contractors, key customers. An extranet is what a manufacturer offers a supplier so the supplier can see open purchase orders, ship-to addresses, and inventory positions. It uses internet technology, sometimes runs over the public internet (with VPN or other access controls), and is restricted to a defined set of named outsiders. The audience is the discriminator: the internet is <em>everyone</em>, the intranet is <em>us</em>, the extranet is <em>us-plus-some-of-them</em>.</p>
+<table>
+<thead>
+<tr>
+<th>Network type</th>
+<th>Audience</th>
+<th>Typical content</th>
+<th>Access control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internet</td>
+<td>Anyone in the world</td>
+<td>Public website, customer portal, APIs</td>
+<td>Public, with site-by-site auth</td>
+</tr>
+<tr>
+<td>Intranet</td>
+<td>Employees of the organization</td>
+<td>HR portal, internal wiki, expense system</td>
+<td>Domain login, often network-bound</td>
+</tr>
+<tr>
+<td>Extranet</td>
+<td>Named external partners</td>
+<td>Supplier portal, customer order tracking</td>
+<td>Strong identity + contract-bound</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vpn-pretending-the-public-internet-is-private">VPN: Pretending the Public Internet Is Private<a class="headerlink" href="#vpn-pretending-the-public-internet-is-private" title="Permanent link">&para;</a></h2>
+<p>A <strong>Virtual Private Network</strong> (VPN) is a tunnel that makes a remote device or site behave, network-wise, as if it were directly on a private network — even though the traffic is actually crossing the public internet. The "virtual" is doing real work in that name: there is no actual private wire; there is a stream of encrypted packets that the endpoints decrypt and treat as if they had arrived over a leased line.</p>
+<p>VPNs come in two main flavors. <em>Remote-access</em> VPNs let an individual user (the laptop in a coffee shop, the engineer working from home) appear to be on the corporate network. <em>Site-to-site</em> VPNs connect entire offices to each other — typically a small branch to a headquarters — over the public internet, replacing what would historically have been a leased line.</p>
+<p>The strategic value of a VPN is cost. Encrypting traffic over the public internet is dramatically cheaper than buying a private circuit, especially for low-traffic remote sites. The cost is <em>predictability</em>: VPN traffic shares the public internet with everyone else's traffic, so latency and throughput are whatever the public internet happens to be doing today. For email, file access, and ordinary business apps that's fine. For a real-time control system or a phone call, sometimes it isn't.</p>
+<p>There is a footgun here worth naming. Many organizations treat "we have a VPN" as the answer to <em>all</em> security and connectivity questions. A VPN proves the <em>connection</em> is encrypted; it says nothing about whether the <em>device</em> on the other end is trustworthy, whether the user is who they claim to be, or whether the application requires further controls. Treating the VPN tunnel as a perimeter and the inside as automatically trusted is exactly the model that "zero trust" architectures emerged to replace. The structural fix is to authenticate every request to every application regardless of how the user got onto the network, which we will revisit when we get to security.</p>
+<h2 id="sd-wan-the-wan-gets-smart">SD-WAN: The WAN Gets Smart<a class="headerlink" href="#sd-wan-the-wan-gets-smart" title="Permanent link">&para;</a></h2>
+<p>For decades, WAN connectivity meant buying expensive private circuits — typically MPLS, the dominant carrier offering — and letting the carrier handle the routing. MPLS gave you predictable performance and a single throat to choke when things went wrong, at a price per megabit that could make a CFO weep. Then the public internet got fast and reliable enough that the calculus changed.</p>
+<p><strong>SD-WAN</strong> — Software-Defined WAN — is a category of equipment and software that lets an organization use <em>multiple</em> underlying connections (broadband internet, LTE/5G, satellite, MPLS) at each site, with a controller that decides in real time which traffic should ride which path. Voice traffic might prefer the lowest-latency link; bulk backup traffic might prefer the cheapest link; a critical SAP transaction might be sent down two links simultaneously and whichever copy arrives first wins. The "software-defined" part is that the routing policy is centralized — an administrator sets policies in a controller and pushes them to every site, instead of configuring each branch router by hand.</p>
+<p>The strategic appeal of SD-WAN is dramatic cost reduction without losing reliability. A branch that used to need an expensive MPLS circuit can often be served by two cheap broadband connections plus an SD-WAN box, at a fraction of the cost, with redundancy <em>better</em> than the single MPLS circuit it replaced. The tradeoff is that you are now responsible for the policy: when SD-WAN works well, it is because somebody thought carefully about which apps are sensitive to latency, which to packet loss, which to bandwidth. Drop in SD-WAN with default settings and the savings appear; the <em>quality</em> improvement requires attention.</p>
+<h2 id="cloud-connectivity-the-new-gravity-center">Cloud Connectivity: The New Gravity Center<a class="headerlink" href="#cloud-connectivity-the-new-gravity-center" title="Permanent link">&para;</a></h2>
+<p>Twenty years ago a company's "network" terminated mostly at its own data centers. Today, for most companies, the most important destinations on the network are AWS, Azure, GCP, and a handful of SaaS providers (Salesforce, Workday, ServiceNow). The network has, in effect, a new center of gravity, and <strong>Cloud Connectivity</strong> is the discipline of designing the path between your sites and that gravity center.</p>
+<p>Cloud connectivity comes in three increasingly serious flavors:</p>
+<ul>
+<li><strong>Internet connectivity to public endpoints.</strong> The cheapest option: your traffic to AWS goes out your normal internet connection, across the public internet, into AWS's edge. Fine for most workloads. Subject to the variability of the public internet.</li>
+<li><strong>Peering</strong> — the cloud provider has a presence in a major internet exchange, and your ISP exchanges traffic with them there directly, cutting out intermediate hops. Cheaper and more predictable than pure public-internet routing for high-volume destinations.</li>
+<li><strong>Direct connect</strong> (AWS Direct Connect, Azure ExpressRoute, Google Cloud Interconnect) — a private circuit from your data center or colocation facility into the cloud provider's backbone, with predictable bandwidth, predictable latency, often a price-per-gigabyte that's <em>lower</em> than egress over the public internet, and a private SLA. Used for large, latency-sensitive, or compliance-bound workloads.</li>
+</ul>
+<p>The IS-management decision is which workloads deserve which tier. Email and web apps over public internet — fine. Backup of half a petabyte of clinical imaging from on-premises to S3 every night — direct connect, every time, both for cost and for the predictable completion window. Voice traffic to a cloud-hosted call center — peering at minimum. The footgun here is treating "cloud" as a single thing with a single connectivity story; in reality each major workload deserves its own answer.</p>
+<h4 id="diagram-a-modern-enterprise-network-lan-wan-vpn-sd-wan-cloud">Diagram: A Modern Enterprise Network — LAN, WAN, VPN, SD-WAN, Cloud<a class="headerlink" href="#diagram-a-modern-enterprise-network-lan-wan-vpn-sd-wan-cloud" title="Permanent link">&para;</a></h4>
+<details>
+<summary>A Modern Enterprise Network — LAN, WAN, VPN, SD-WAN, Cloud</summary>
+<p>Type: interactive-infographic
+<strong>sim-id:</strong> enterprise-network-topology<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Specified</p>
+<p>A vis-network topology diagram showing a typical mid-size enterprise network. On the left: three sites — Headquarters (large), Branch Office (medium), and a Manufacturing Plant (medium) — each rendered as a rounded container with internal LAN icons (switch, wireless access points, user laptops). Each site has an SD-WAN appliance at its edge. The HQ has two WAN connections (MPLS + broadband internet); the branch has two broadband internet connections; the plant has one broadband + one LTE failover. Lines from each site cross the WAN cloud in the middle of the diagram. Beyond the WAN cloud sit three destinations: the public Internet (with a sample customer device), a "Cloud Provider" container labeled AWS with a Direct Connect circuit drawn as a thick private line from HQ, and a SaaS icon (Salesforce). A remote worker icon at the bottom shows a VPN tunnel (dashed encrypted line) crossing the public internet and entering HQ.</p>
+<p>Color palette: LAN regions in soft mascot-emerald, WAN cloud in slate-gray, public internet in pale yellow, cloud provider in mascot-magenta tints, SD-WAN appliances in coral, VPN tunnel in dashed teal. Direct Connect circuit drawn thicker than the public-internet links.</p>
+<p>Interactivity: hovering each element reveals (a) what category it is (LAN/WAN/VPN/SD-WAN/Direct Connect), (b) typical bandwidth, (c) typical latency, (d) typical monthly cost order-of-magnitude. A "trace a packet" button animates a packet from a HQ user to (a) the public website, (b) Salesforce SaaS, (c) AWS via Direct Connect, (d) a remote VPN user — showing the path each one takes. A "fail a link" button lets the student knock out the MPLS circuit at HQ and watch SD-WAN reroute traffic over broadband automatically.</p>
+<p>Layout: hierarchical, left-to-right, full canvas width, height ~600px. Edge labels use a slight y-offset to work around the vis-network horizontal-edge label rendering bug. Canvas resizes on window resize.</p>
+<p>Learning objective (Bloom: Understanding): Students can identify each network category in a real-world enterprise topology, trace traffic from a user to four different destinations, and explain what SD-WAN does when a primary link fails.</p>
+<p>Implementation: vis-network, deployed at <code>/information-systems/sims/enterprise-network-topology/</code>.</p>
+</details>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Pause here</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Iris is thinking">
+The single mental model worth carrying out of this chapter is the <em>layering</em>: LAN inside, WAN between, internet/cloud beyond. Every connectivity decision lives in exactly one of those three layers, and the right answer almost always depends on which layer the decision belongs to. A weak Wi-Fi signal in a conference room is a LAN problem and no amount of bandwidth from your carrier will fix it. A slow ERP transaction from a branch office may be a WAN problem and no amount of LAN-side tuning will help. A laggy SaaS dashboard is often a <em>cloud connectivity</em> problem disguised as either of the others. When users complain about "the network being slow," your first job is to figure out <em>which</em> network they mean. The fix is in a different drawer for each one.</p>
+</div>
+<h2 id="bandwidth-latency-and-throughput-three-words-that-are-not-synonyms">Bandwidth, Latency, and Throughput: Three Words That Are Not Synonyms<a class="headerlink" href="#bandwidth-latency-and-throughput-three-words-that-are-not-synonyms" title="Permanent link">&para;</a></h2>
+<p>Now we get to the three words that every IS manager must distinguish, because they are casually used as synonyms by everyone outside the field and the confusion costs real money in real procurement decisions.</p>
+<p><strong>Bandwidth</strong> is the <em>capacity</em> of a link — the maximum rate at which it can move data, usually measured in bits per second. A "1 Gbps circuit" has a bandwidth of one gigabit per second. Bandwidth is what you buy. It is a property of the <em>pipe</em>, not of any particular conversation flowing through it.</p>
+<p><strong>Latency</strong> is the <em>time delay</em> between sending a packet and that packet arriving at its destination, usually measured in milliseconds. Latency is dominated by physics (the speed of light through fiber, plus a small overhead for each hop) and by congestion (queues at intermediate routers). Latency is a property of the <em>path</em>, not of how much you are sending. A 100 Gbps link from Boston to Sydney still has roughly 200 ms of one-way latency, because Sydney is a long way away and light has commitments.</p>
+<p><strong>Throughput</strong> is the <em>actual achieved data rate</em> of a particular conversation — what you measure, end-to-end, in practice. Throughput depends on bandwidth (you can't push more data than the pipe permits), latency (TCP and many other protocols slow down on long paths), packet loss, the application's own behavior, and the capacity of <em>every</em> device along the way. The general intuition is:</p>
+<p>( \text{throughput} \approx \min(\text{bandwidth along path}, \text{capacity of slowest device}, \text{protocol limit at this latency}) )</p>
+<p>This is why "we bought a 1 Gbps circuit and we're only seeing 200 Mbps" is a perfectly common, deeply confusing experience. The bandwidth is 1 Gbps. The throughput, on a high-latency path with TCP and lossy intermediate links, can easily be a fraction of that. <strong>Bandwidth is what you bought; throughput is what you got; latency is part of why they differ.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>What it is</th>
+<th>Units</th>
+<th>Analogy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bandwidth</td>
+<td>Maximum capacity of the pipe</td>
+<td>bits per second</td>
+<td>Width of the highway</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>One-way (or round-trip) time delay</td>
+<td>milliseconds</td>
+<td>Length of the highway</td>
+</tr>
+<tr>
+<td>Throughput</td>
+<td>Actual rate of a real data transfer</td>
+<td>bits per second</td>
+<td>Cars per second actually arriving</td>
+</tr>
+</tbody>
+</table>
+<p>A useful rule of thumb: bandwidth problems are solved by <em>buying more</em>. Latency problems are solved by <em>moving the endpoints closer</em> (caching, CDNs, regional cloud). Throughput problems are solved by <em>finding the bottleneck</em> — which is, most often, somewhere you weren't looking.</p>
+<h4 id="diagram-bandwidth-latency-and-throughput-at-a-glance">Diagram: Bandwidth, Latency, and Throughput at a Glance<a class="headerlink" href="#diagram-bandwidth-latency-and-throughput-at-a-glance" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Bandwidth, Latency, and Throughput at a Glance</summary>
+<p>Type: interactive-infographic
+<strong>sim-id:</strong> bandwidth-latency-throughput<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>A p5.js animation showing a horizontal "highway" between two nodes labeled Sender and Receiver. The pipe has an adjustable width (representing bandwidth) and an adjustable length (representing latency). Tiny packet rectangles travel left-to-right along the pipe, queuing at the entrance when the sender tries to push more than fits. A throughput meter on the right side measures actual packets-arrived-per-second. Three sliders let the student vary bandwidth (1 Mbps to 10 Gbps), one-way latency (1 ms to 300 ms), and packet loss (0% to 5%). A "TCP behavior" toggle shows how throughput collapses on long, lossy paths even when bandwidth is high.</p>
+<p>Color palette: pipe walls in slate-gray, packets in mascot-emerald, queued packets in coral when they back up, throughput meter in mascot-magenta. Latency drawn as visible distance traveled.</p>
+<p>Interactivity: students drag the sliders and see throughput change in real time. A preset menu provides representative scenarios: "LAN", "Same-region cloud", "Coast-to-coast", "Trans-Pacific", "Satellite link." Each preset locks bandwidth and latency to realistic values and lets the student observe the resulting throughput.</p>
+<p>Layout: full canvas width, height ~480px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with <code>canvas.parent(document.querySelector('main'));</code>.</p>
+<p>Learning objective (Bloom: Analyzing): Students can predict why a high-bandwidth long-latency link delivers less throughput than its bandwidth would suggest, and identify the conditions under which adding bandwidth does and does not help.</p>
+<p>Implementation: p5.js, deployed at <code>/information-systems/sims/bandwidth-latency-throughput/</code>.</p>
+</details>
+<h2 id="bandwidth-capacity-planning-buying-just-enough">Bandwidth Capacity Planning: Buying Just Enough<a class="headerlink" href="#bandwidth-capacity-planning-buying-just-enough" title="Permanent link">&para;</a></h2>
+<p><strong>Bandwidth Capacity Planning</strong> is the discipline of forecasting how much bandwidth each site, link, and cloud destination will need over a planning horizon (typically 12-36 months), and procuring accordingly. It sits at the intersection of telecom contracts (which lock in capacity for years) and business growth (which is uncertain by definition).</p>
+<p>The three load-bearing inputs to a capacity plan are:</p>
+<ul>
+<li><strong>Current utilization.</strong> What is each link actually carrying today, at peak, on a representative business day? Without instrumentation, you are guessing.</li>
+<li><strong>Growth drivers.</strong> New users, new sites, new applications, new data flows. A cloud migration is a capacity event. A video-conferencing rollout is a capacity event. An AI initiative that ships training data to a cloud GPU cluster is a capacity event most organizations do not see coming.</li>
+<li><strong>Headroom policy.</strong> A standard rule of thumb is to upgrade a link when sustained peak utilization passes 60-70%. Running links hot looks economically efficient and feels economically efficient until the day the application stack wedges and everyone discovers what queuing delay feels like.</li>
+</ul>
+<p>There is a feedback loop worth seeing here. Capacity planning underestimate → outage on a peak day → emergency overprovision under pressure → permanent overspend → CFO scrutiny → underinvestment in the next round → repeat. The structural fix is to make capacity planning a <em>quarterly rhythm</em> with measured baselines, not an <em>annual budget exercise</em>. A capacity plan that updates only once a year is one that learns from outages instead of preventing them.</p>
+<h2 id="service-level-agreements-the-contract-underneath">Service Level Agreements: The Contract Underneath<a class="headerlink" href="#service-level-agreements-the-contract-underneath" title="Permanent link">&para;</a></h2>
+<p>A <strong>Service Level Agreement</strong> (SLA) is the contractual specification of the performance the carrier (or cloud provider, or any service vendor) commits to deliver, the metrics by which performance is measured, and the financial consequences of missing the commitment. SLAs are how the IS manager turns "we should have a reliable network" into a <em>number</em> that someone is on the hook for.</p>
+<p>A well-formed network SLA names at least the following:</p>
+<ul>
+<li><strong>Availability.</strong> The percentage of time the service is operational. "99.9% availability" sounds like a lot until you do the arithmetic: 99.9% allows about 8.76 hours of downtime per year. "99.99%" allows about 52 minutes. "99.999%" — the famous "five nines" — allows about 5 minutes. Each additional nine costs roughly an order of magnitude more.</li>
+<li><strong>Latency target.</strong> The maximum round-trip latency between specified points, measured how, over what window.</li>
+<li><strong>Packet loss target.</strong> The maximum percentage of packets that can be lost before the carrier is in violation.</li>
+<li><strong>Mean Time to Repair (MTTR).</strong> How quickly the carrier commits to restoring service after an outage.</li>
+<li><strong>Service credits.</strong> What the carrier will refund — usually a percentage of the affected month's charges — if the targets are missed.</li>
+<li><strong>Exclusions.</strong> What the carrier will not be on the hook for. Acts of God, scheduled maintenance, customer-caused outages, force majeure. Read the exclusions before you read anything else.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>SLA component</th>
+<th>Typical value (mid-tier)</th>
+<th>Footgun to watch for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Availability</td>
+<td>99.9% - 99.99%</td>
+<td>Counted per circuit, not per <em>site</em></td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>50 ms regional, 80 ms US-wide</td>
+<td>Measured between carrier POPs, not your routers</td>
+</tr>
+<tr>
+<td>Packet loss</td>
+<td>&lt;0.1%</td>
+<td>Averaged over a long window, hiding bursts</td>
+</tr>
+<tr>
+<td>MTTR</td>
+<td>4 hours target</td>
+<td>Clock starts when <em>carrier</em> opens ticket</td>
+</tr>
+<tr>
+<td>Service credits</td>
+<td>5%-25% of monthly fee</td>
+<td>Credits never approach business loss</td>
+</tr>
+<tr>
+<td>Maintenance windows</td>
+<td>"Reasonable notice"</td>
+<td>Sometimes interpreted as 24 hours</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Iris's Tip</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Iris shares a tip">
+Pro move when reading any vendor SLA: read the <em>exclusions</em> section first, the <em>credit calculation</em> section second, and the <em>headline availability number</em> last. The headline number is what the salesperson wants to talk about; the exclusions and the credit math are what determine whether the SLA is worth the paper. Ask one specific question before signing: "Walk me through what credits I would receive for a four-hour outage starting at 10am on a Tuesday." If the answer is vague, the SLA is vague, and you have just identified the work that needs to happen at the negotiating table.</p>
+</div>
+<p>The footgun in SLAs deserves to be stated as a <em>footgun</em> in the proper sense: it is silent, easy to trigger, and damaging in delayed, invisible ways. The footgun is treating <em>service credits as the cost of an outage</em>. They are not. A 25% credit on a $5,000 circuit is $1,250. A four-hour outage that prevents a manufacturing line from shipping is six figures of business loss, minimum. The SLA does not make you whole; it gives the carrier a number small enough to write off and large enough to feel motivating. The structural fix is to invest in <em>redundancy</em> (next section) so that <em>no single SLA failure causes a business outage</em>. The SLA is a backstop; it is not a strategy.</p>
+<h2 id="network-redundancy-two-of-everything-that-matters">Network Redundancy: Two Of Everything That Matters<a class="headerlink" href="#network-redundancy-two-of-everything-that-matters" title="Permanent link">&para;</a></h2>
+<p><strong>Network Redundancy</strong> is the practice of providing more than one path for traffic to take, more than one device to handle a function, more than one carrier providing connectivity, so that the failure of any one component does not cause an outage. The principle is ancient (sailing ships had two masts) and the implementation is endlessly subtle.</p>
+<p>The IS manager's redundancy checklist for a critical site looks roughly like this:</p>
+<ul>
+<li><strong>Two carriers.</strong> Not "one carrier with two circuits" — two genuinely different carriers, with separate billing, separate operations centers, and separate fiber networks. When AT&amp;T has a bad day, Verizon usually does not, and vice versa.</li>
+<li><strong>Two physical paths.</strong> The carriers' fiber must take physically different routes into the building. This is the part organizations get wrong constantly: they buy two circuits from two carriers and discover, the day a backhoe finds the conduit under the river, that <em>both circuits ran through the same conduit</em>. Demand circuit-route diversity in writing, demand the carrier produce maps, and demand it again at every contract renewal.</li>
+<li><strong>Two pieces of equipment.</strong> Router pairs, switch stacks, firewall clusters. Single boxes are single points of failure.</li>
+<li><strong>Two power feeds.</strong> From two different utility transformers, ideally on two different grids, with a generator and UPS.</li>
+<li><strong>Two locations.</strong> For genuinely critical workloads, the work itself runs in two data centers (or two cloud regions) so that the loss of an entire site is recoverable.</li>
+</ul>
+<p>Redundancy costs money. Two carriers cost more than one. Two paths cost more than one. Two routers cost more than one. The systems-thinking question is <em>how much availability does each marginal dollar of redundancy actually buy?</em> The relationship is non-linear: the second carrier might double your effective availability; the third carrier might add a fraction of a percent. Most organizations find their sweet spot at <em>two of everything</em> and stop there, accepting that the rare cases when both fail simultaneously are handled by disaster recovery rather than by a third leg.</p>
+<p>The classic footgun here, repeated in nearly every survey of post-incident reports, is the <strong>shared-risk failure</strong> — two circuits that the carriers swore were diverse but that converged at some point neither party disclosed. Shared conduits, shared bridges, shared central offices, shared submarine cables. The structural fix is <em>carrier diversity by ownership</em> (different companies, not different products from the same parent) plus <em>route diversity in writing</em> (with maps) plus <em>periodic re-verification</em> (carriers reroute their own networks all the time, and your "diverse" pair might quietly converge on a Tuesday in Q3 without anyone telling you).</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Heads up</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Iris warns you">
+Every IS manager eventually meets the <em>shared-conduit</em> story. It usually goes like this: "We had two circuits, one from Carrier A and one from Carrier B, and we paid extra for diversity, and a backhoe in the parking lot took both of them out at 11am on a Tuesday." It turns out the two carriers had quietly leased the same physical fiber bundle for the last mile. The lesson is not "redundancy is a lie." The lesson is that <em>carrier diversity is a measurement, not a marketing claim</em> — and the measurement has to be re-taken at every contract renewal, with route maps in hand. Trust, but verify, then verify again next year.</p>
+</div>
+<h2 id="network-monitoring-the-source-of-truth">Network Monitoring: The Source of Truth<a class="headerlink" href="#network-monitoring-the-source-of-truth" title="Permanent link">&para;</a></h2>
+<p><strong>Network Monitoring</strong> is the continuous, automated observation of the network — devices, links, traffic patterns, performance metrics, and security events — so that problems are detected and characterized before users notice them, and so that arguments about what happened during an incident can be settled by data instead of by memory.</p>
+<p>A modern monitoring stack has roughly four layers:</p>
+<ul>
+<li><strong>Device health.</strong> Are the routers, switches, firewalls, and access points up and reachable? CPU, memory, fan, temperature.</li>
+<li><strong>Link performance.</strong> Bandwidth utilization, latency, jitter, packet loss, error rates per circuit.</li>
+<li><strong>Application performance.</strong> Synthetic transactions that simulate a user logging into Salesforce or an ERP from each major site, measuring the actual end-to-end experience.</li>
+<li><strong>Flow analysis.</strong> Where is traffic coming from, where is it going, what protocols, what volumes? Used both for capacity planning and for spotting anomalies that hint at security incidents.</li>
+</ul>
+<p>Tools in common use include SolarWinds, Datadog, Splunk, ThousandEyes, PRTG, LogicMonitor, Cisco DNA Center, and a host of cloud-native monitoring offerings. The choice of tool matters less than the <em>commitment</em> to monitoring as the source of truth — the place that gets believed when carrier and customer disagree about whether there was an outage, the place that stores the baseline that capacity-planning decisions reference, the place that fires the alert before the help desk does.</p>
+<p>This is one of the highest-leverage places in the entire IS portfolio. Per Donella Meadows' framing of leverage points, <em>information flow</em> is far higher leverage than parameter tuning. A network with weak monitoring is a network where every problem turns into a debate; a network with strong monitoring is one where problems are <em>measured</em>, <em>prioritized</em>, and <em>fixed</em>. Investing one engineer-year in monitoring, in most organizations, returns more uptime than buying another circuit.</p>
+<h2 id="telecom-procurement-where-the-money-actually-goes">Telecom Procurement: Where the Money Actually Goes<a class="headerlink" href="#telecom-procurement-where-the-money-actually-goes" title="Permanent link">&para;</a></h2>
+<p><strong>Telecom Procurement</strong> is the process of selecting carriers, negotiating contracts, executing agreements, and managing the carrier relationship over the life of the contract. For a mid-size enterprise, telecom is typically a multi-million-dollar annual line item, and it has the unusual property that the contracts are long (typically 36 months), the pricing is opaque, the bills are notoriously inaccurate, and the renewal-versus-switch decision is operationally painful enough that incumbents often win by default.</p>
+<p>A serviceable telecom-procurement playbook looks something like this:</p>
+<ol>
+<li><strong>Inventory what you have.</strong> Most enterprises do not actually know what circuits they are paying for. Do a true-up before you renew anything. Telecom expense management (TEM) services exist because this problem is so universal.</li>
+<li><strong>Define what you need.</strong> Capacity per site, redundancy requirements, cloud connectivity needs, latency targets, application priorities. Write it down before you talk to a carrier.</li>
+<li><strong>Solicit competing bids.</strong> Multiple carriers, on identical specifications, with identical SLAs. The first quote is never the right one. The competitive process itself routinely returns 20-40% savings.</li>
+<li><strong>Negotiate the SLA, not just the price.</strong> A cheap circuit with a bad SLA is more expensive than a slightly more expensive circuit with a good SLA. Read the credit clauses, the MTTR, the maintenance-window provisions.</li>
+<li><strong>Watch the auto-renewals.</strong> Many telecom contracts auto-renew on punitive terms if you miss a notice window. Calendar the notice dates the day you sign.</li>
+<li><strong>Audit the bills.</strong> Telecom bills routinely contain errors — billing for circuits that no longer exist, charging for services that were canceled, applying old rates after a renegotiation. Most enterprises that audit recover 5-15% of telecom spend in the first year alone.</li>
+</ol>
+<p>The systems-thinking observation about telecom procurement is that it is one of the rare IS domains where the <em>quality of your inventory and your governance</em> dominates the quality of your technical decisions. The team that knows what it has, has a defined renewal calendar, and audits its bills will outperform a more technically sophisticated team that doesn't, almost every time.</p>
+<h2 id="putting-it-all-together">Putting It All Together<a class="headerlink" href="#putting-it-all-together" title="Permanent link">&para;</a></h2>
+<p>Networks, for the IS manager, are a layered set of decisions about <em>capacity</em>, <em>connectivity</em>, <em>cost</em>, and <em>contracts</em>.</p>
+<ul>
+<li>The <strong>LAN</strong> is the network you own and operate inside a single site; the <strong>WAN</strong> is the network you lease to connect sites together; the <strong>internet</strong> is the public network that connects everyone; the <strong>intranet</strong> is your private internet for employees; the <strong>extranet</strong> is the version you extend to selected partners.</li>
+<li>A <strong>VPN</strong> uses encryption to make the public internet behave like a private network; <strong>SD-WAN</strong> uses software policy to route traffic intelligently across multiple underlying links, often replacing expensive MPLS circuits with cheaper, more flexible internet connectivity.</li>
+<li><strong>Cloud connectivity</strong> decisions — public internet, peering, or direct connect — depend on the workload's tolerance for variability, its volume, and its compliance posture. Different workloads deserve different answers.</li>
+<li><strong>Bandwidth capacity planning</strong>, <strong>latency</strong>, and <strong>throughput</strong> are three different concepts that should never be confused: bandwidth is what you bought, latency is how far away you are, throughput is what the actual conversation got. Buying more bandwidth fixes some problems; for many of the others, you need a different lever entirely.</li>
+<li><strong>Service Level Agreements</strong> specify the performance commitment, the metrics, and the credits, but service credits never make you whole — that is what <strong>network redundancy</strong> is for. Two carriers, two paths, two devices, two power feeds, verified at every renewal.</li>
+<li><strong>Network monitoring</strong> is the source of truth that everything else depends on; it is one of the highest-leverage investments an IS organization can make. <strong>Telecom procurement</strong> is where the money actually flows, and disciplined inventory, competitive bidding, SLA negotiation, and bill auditing routinely save more than any single technical optimization.</li>
+</ul>
+<p>A graduate of this chapter walking into their first job should be able to ask, the first time the network gets blamed for something: <em>Which network — LAN, WAN, internet, or cloud connectivity? What does the monitoring data show? Are we hitting bandwidth limits, latency limits, or throughput limits? Are we in violation of an SLA, and if so, what does that get us? Is the redundancy doing its job, and have we verified the diversity recently? When does the contract renew, and what's our walk-away?</em> Those are the questions of someone who manages networks, rather than someone who is managed by them.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Nicely done</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
+You just learned to think about networks the way an IS leader has to think about them — as a layered set of capacity, connectivity, cost, and contract decisions, rather than as a stack of routing protocols. You can now distinguish bandwidth from latency from throughput, you know why "five nines" costs an order of magnitude more than "four nines," you know why the second carrier has to be a <em>different company</em> and not a different product from the same parent, and you know that monitoring is the place every other network decision either gets validated or gets exposed. Most importantly, you know which questions to ask when a vendor tells you their SLA covers everything — because nothing covers everything, and the manager who knows that is the manager who designs around it. Onward to Chapter 12, where we leave telecom and step into the world of enterprise systems — the ERP, CRM, and SCM platforms that all this connectivity exists to serve.</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -1488,7 +2244,7 @@
       
     
     <a href="https://github.com/dmccreary/information-systems" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
     </a>
   
 </div>
@@ -1503,12 +2259,10 @@
     </div>
     
     
-    
-      
-      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

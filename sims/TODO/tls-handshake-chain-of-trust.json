@@ -1,0 +1,14 @@
+{
+  "sim_id": "tls-handshake-chain-of-trust",
+  "diagram_name": "TLS Handshake and the Chain of Trust",
+  "chapter_number": 14,
+  "chapter_title": "'Security of Information Assets'",
+  "chapter_dir": "14-security",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** tls-handshake-chain-of-trust<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nA p5.js animated sequence diagram showing the TLS 1.3 handshake between a browser and a server. Left side: the browser. Right side: the server. Steps animate in order: (1) ClientHello with supported cipher suites, (2) ServerHello with chosen cipher and the server's certificate, (3) browser walks the certificate chain — server cert → intermediate CA → root CA — verifying each signature against its parent until reaching a trust anchor in the OS keystore, (4) ephemeral key agreement using elliptic-curve Diffie-Hellman, (5) symmetric session key established, (6) encrypted application data flows. Below the handshake animation, a separate panel renders the certificate chain as a tree, with each cert showing its subject, issuer, validity, and signature.\n\nColor palette: browser side in mascot-emerald, server side in mascot-magenta, the trust chain in slate-gray with green checkmarks for valid signatures and red X's for invalid ones, the symmetric session encryption in coral. An \"attacker\" toggle attempts a man-in-the-middle attack with a self-signed certificate; the chain validation step fails visibly and a browser warning is rendered.\n\nInteractivity: step-through controls (next/back) walk a student through each handshake message; a \"show what an attacker sees\" toggle shows the encrypted bytes after the handshake completes; a \"force certificate expired\" toggle demonstrates the failure mode.\n\nLayout: full canvas width, height ~620px. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.\n\nLearning objective (Bloom: Understanding): Students can describe the TLS handshake at a conceptual level, explain how PKI's chain of trust prevents man-in-the-middle attacks, and predict what happens when a certificate is invalid or self-signed.\n\nImplementation: p5.js, deployed at `/information-systems/sims/tls-handshake-chain-of-trust/`."
+}

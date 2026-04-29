@@ -1,0 +1,21 @@
+{
+  "title": "An Enterprise Journey Map for a Claims Process",
+  "description": "An Enterprise Journey Map for a Claims Process",
+  "creator": "Dementia Education Project",
+  "date": "2026-04-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "journey-map-claims-process",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 18,
+  "chapter_title": "'Human-Computer Interaction and Emerging Topics'",
+  "chapter_dir": "18-hci-and-emerging"
+}

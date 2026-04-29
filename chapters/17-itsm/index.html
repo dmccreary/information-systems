@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An ABET CAC-aligned intelligent textbook covering the foundations of information systems — application development, data management, IS project management, networks and telecommunications for business, security of information assets, and the role of IS in organizations.">
+        <meta name="description" content="How IS organizations run services after they ship — the ITIL service lifecycle, incident and change management, CMDBs, observability, on-call rotations, and the blameless culture that makes the whole machine work.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -22,15 +22,15 @@
       
       
       <link rel="icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
-        <title>17. IT Service Management and Operations - Information Systems</title>
+        <title>IT Service Management and Operations - Information Systems</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -100,7 +100,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Information Systems" class="md-header__button md-logo" aria-label="Information Systems" data-md-component="logo">
       
-  <img src="../../img/logo.png" alt="logo">
+  <img src="../../img/mascot/neutral.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              17. IT Service Management and Operations
+              IT Service Management and Operations
             
           </span>
         </div>
@@ -155,13 +155,11 @@
     
     
     
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -200,14 +198,13 @@
     </div>
   </div>
 </div>
-      
     
     
       <div class="md-header__source">
         <a href="https://github.com/dmccreary/information-systems" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -242,7 +239,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Information Systems" class="md-nav__button md-logo" aria-label="Information Systems" data-md-component="logo">
       
-  <img src="../../img/logo.png" alt="logo">
+  <img src="../../img/mascot/neutral.png" alt="logo">
 
     </a>
     Information Systems
@@ -252,7 +249,7 @@
       <a href="https://github.com/dmccreary/information-systems" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -269,13 +266,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index.md" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
-  
   
   <span class="md-ellipsis">
     Home
-    
   </span>
   
 
@@ -291,13 +286,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about.md" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
-  
   
   <span class="md-ellipsis">
     About
-    
   </span>
   
 
@@ -316,10 +309,8 @@
       <a href="../../course-description/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     Course Description
-    
   </span>
   
 
@@ -344,56 +335,105 @@
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
+          
+        
       
-    
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -406,14 +446,13 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
+          
           <div class="md-nav__link md-nav__container">
             <a href="../" class="md-nav__link ">
               
   
-  
   <span class="md-ellipsis">
     Chapters
-    
   </span>
   
 
@@ -445,10 +484,8 @@
       <a href="../01-foundations/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     1. Foundations of Information Systems
-    
   </span>
   
 
@@ -468,10 +505,8 @@
       <a href="../02-role-of-is/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     2. The Role of IS in Organizations
-    
   </span>
   
 
@@ -491,10 +526,8 @@
       <a href="../03-architecture/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     3. Information Systems Architecture
-    
   </span>
   
 
@@ -514,10 +547,8 @@
       <a href="../04-appdev/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     4. Application Development for IS
-    
   </span>
   
 
@@ -537,10 +568,8 @@
       <a href="../05-bpm/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     5. Business Process Management
-    
   </span>
   
 
@@ -560,10 +589,8 @@
       <a href="../06-data-foundations/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     6. Data Management Foundations
-    
   </span>
   
 
@@ -583,10 +610,8 @@
       <a href="../07-modern-databases/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     7. Modern Databases and Lakehouses
-    
   </span>
   
 
@@ -606,10 +631,8 @@
       <a href="../08-data-governance/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     8. Data Governance and Quality
-    
   </span>
   
 
@@ -629,10 +652,8 @@
       <a href="../09-bi-and-analytics/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     9. Business Intelligence and Analytics
-    
   </span>
   
 
@@ -652,10 +673,8 @@
       <a href="../10-sad/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     10. Systems Analysis and Design
-    
   </span>
   
 
@@ -675,10 +694,8 @@
       <a href="../11-networks/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     11. Networks and Telecommunications
-    
   </span>
   
 
@@ -698,10 +715,8 @@
       <a href="../12-cloud/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     12. Cloud Computing and Infrastructure
-    
   </span>
   
 
@@ -721,10 +736,8 @@
       <a href="../13-enterprise-systems/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     13. Enterprise Systems
-    
   </span>
   
 
@@ -744,10 +757,8 @@
       <a href="../14-security/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     14. Security of Information Assets
-    
   </span>
   
 
@@ -767,10 +778,8 @@
       <a href="../15-privacy-compliance/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     15. Privacy, Compliance, and Regulation
-    
   </span>
   
 
@@ -790,10 +799,8 @@
       <a href="../16-project-management/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     16. IS Project Management
-    
   </span>
   
 
@@ -822,10 +829,8 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
-  
   <span class="md-ellipsis">
     17. IT Service Management and Operations
-    
   </span>
   
 
@@ -835,10 +840,8 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
-  
   <span class="md-ellipsis">
     17. IT Service Management and Operations
-    
   </span>
   
 
@@ -886,6 +889,150 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-operations-matters-and-why-it-used-to-be-boring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Operations Matters (and Why It Used to Be Boring)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-itil-service-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      The ITIL Service Lifecycle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-service-catalog-what-are-you-even-offering" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Service Catalog: What Are You Even Offering?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-level-management-the-promises-we-make" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Level Management: The Promises We Make
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-budgets-the-most-important-idea-in-modern-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Budgets: The Most Important Idea in Modern Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incident-management-make-the-pain-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incident Management: Make the Pain Stop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-management-why-did-the-pain-happen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem Management: Why Did the Pain Happen?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-management-how-to-touch-the-live-system-without-breaking-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Management: How to Touch the Live System Without Breaking It
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-management-and-the-cmdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Management and the CMDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-help-desk-and-service-desk-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Help Desk and Service Desk Tiers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ticket-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ticket Lifecycle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knowledge-management-the-help-desks-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge Management: The Help Desk's Memory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observability-three-pillars-of-knowing-what-your-system-is-doing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observability: Three Pillars of Knowing What Your System Is Doing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-call-rotation-somebody-has-to-carry-the-pager" class="md-nav__link">
+    <span class="md-ellipsis">
+      On-Call Rotation: Somebody Has to Carry the Pager
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-postmortem-and-the-blameless-culture" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Postmortem and the Blameless Culture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -905,10 +1052,8 @@
       <a href="../18-hci-and-emerging/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     18. HCI and Emerging Topics
-    
   </span>
   
 
@@ -928,10 +1073,8 @@
       <a href="../19-ai-in-is/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     19. AI in Information Systems
-    
   </span>
   
 
@@ -951,10 +1094,8 @@
       <a href="../20-responsible-ai/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     20. Responsible and Ethical Use of AI
-    
   </span>
   
 
@@ -974,10 +1115,8 @@
       <a href="../21-ai-law/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     21. AI Law, Regulation, and Compliance
-    
   </span>
   
 
@@ -997,10 +1136,8 @@
       <a href="../22-ai-security/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     22. AI and Information Security
-    
   </span>
   
 
@@ -1020,10 +1157,8 @@
       <a href="../23-ai-productivity/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     23. AI Productivity Impact
-    
   </span>
   
 
@@ -1043,10 +1178,8 @@
       <a href="../24-knowledge-graphs/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     24. Knowledge Graphs and the EKG
-    
   </span>
   
 
@@ -1066,10 +1199,8 @@
       <a href="../25-ens/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     25. The Enterprise Nervous System
-    
   </span>
   
 
@@ -1114,7 +1245,6 @@
     
     
     
-    
       
         
         
@@ -1125,14 +1255,11 @@
         
   
   
-  
     <a href="../../learning-graph/" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
     Learning Graph
-    
   </span>
   
 
@@ -1160,7 +1287,170 @@
           
         
       
-    
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1174,14 +1464,11 @@
         
   
   
-  
     <a href="../../sims/graph-viewer/" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
     MicroSims
-    
   </span>
   
 
@@ -1206,10 +1493,8 @@
       <a href="../../glossary.md" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     Glossary
-    
   </span>
   
 
@@ -1228,10 +1513,8 @@
       <a href="../../references.md" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     References
-    
   </span>
   
 
@@ -1250,10 +1533,8 @@
       <a href="../../license/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     License
-    
   </span>
   
 
@@ -1272,10 +1553,8 @@
       <a href="../../contact/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     Contact
-    
   </span>
   
 
@@ -1337,6 +1616,150 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-operations-matters-and-why-it-used-to-be-boring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Operations Matters (and Why It Used to Be Boring)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-itil-service-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      The ITIL Service Lifecycle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-service-catalog-what-are-you-even-offering" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Service Catalog: What Are You Even Offering?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-level-management-the-promises-we-make" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Level Management: The Promises We Make
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-budgets-the-most-important-idea-in-modern-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Budgets: The Most Important Idea in Modern Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incident-management-make-the-pain-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incident Management: Make the Pain Stop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-management-why-did-the-pain-happen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem Management: Why Did the Pain Happen?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-management-how-to-touch-the-live-system-without-breaking-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Management: How to Touch the Live System Without Breaking It
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-management-and-the-cmdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Management and the CMDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-help-desk-and-service-desk-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Help Desk and Service Desk Tiers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ticket-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ticket Lifecycle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knowledge-management-the-help-desks-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge Management: The Help Desk's Memory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observability-three-pillars-of-knowing-what-your-system-is-doing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observability: Three Pillars of Knowing What Your System Is Doing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-call-rotation-somebody-has-to-carry-the-pager" class="md-nav__link">
+    <span class="md-ellipsis">
+      On-Call Rotation: Somebody Has to Carry the Pager
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-postmortem-and-the-blameless-culture" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Postmortem and the Blameless Culture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1350,7 +1773,6 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
 
   
     <a href="https://github.com/dmccreary/information-systems/blob/main/docs/chapters/17-itsm/index.md" title="Edit this page" class="md-content__button md-icon">
@@ -1404,13 +1826,359 @@
 <li><a href="../16-project-management/">Chapter 16: IS Project Management</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome back</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Iris the hummingbird waves hello">
+Welcome to Chapter 17. Up to this point we have been mostly talking about <em>building</em> information systems — designing them, modeling their processes, picking their databases, shipping their first release. This chapter is about what happens <em>after</em> the ribbon is cut: keeping the system alive, healthy, and useful for the years it is going to spend in production. This is the discipline of operations, and it is where the real money, the real reputation, and the surprising amount of the real fun of IS actually lives. By the end you will be able to read an ITIL diagram without rolling your eyes, defend an error budget to a frustrated product manager, run a blameless postmortem, and survive your first on-call shift with your dignity and your friendships intact.</p>
+</div>
+<h2 id="why-operations-matters-and-why-it-used-to-be-boring">Why Operations Matters (and Why It Used to Be Boring)<a class="headerlink" href="#why-operations-matters-and-why-it-used-to-be-boring" title="Permanent link">&para;</a></h2>
+<p>Most introductory IS courses skip operations, or treat it as a footnote called "maintenance" tacked onto the end of the project lifecycle. This is unfortunate, because <em>most of an information system's life is operations</em>. A typical enterprise application is in development for one to two years and in production for ten to fifteen. The math is brutal: roughly 85% of the dollars an organization spends on a system, it spends after the project team has gone home. If you are interested in where IS actually happens, you are interested in operations.</p>
+<p>The discipline used to feel boring because, for a long time, it <em>was</em>. Twentieth-century operations was largely about keeping mainframes fed with tapes, watching for blinking red lights, and printing the morning's batch reports. Then the world changed. Distributed systems exploded the surface area of "things that can break." The internet meant the customer was watching, in real time, every time something broke. Cloud platforms made the underlying infrastructure programmable. And then SRE — site reliability engineering, an operational philosophy invented at Google in the early 2000s — formalized the idea that operations work could be <em>engineered</em> rather than merely performed. Operations went from clipboards-and-pagers to one of the most intellectually rich subfields of IS.</p>
+<p>The structural reason operations matters is that <em>services exist over time</em>. A project ends. A service does not. Every information system the organization runs is making promises every minute of every day to somebody — customers, employees, partners, regulators — and the operations function is what keeps those promises. This chapter is about the frameworks, tools, and culture that make that possible.</p>
+<h2 id="the-itil-service-lifecycle">The ITIL Service Lifecycle<a class="headerlink" href="#the-itil-service-lifecycle" title="Permanent link">&para;</a></h2>
+<p>The dominant framework for IT service management is <strong>ITIL</strong> — the Information Technology Infrastructure Library — originally developed by the UK government in the late 1980s and now in its fourth major edition (ITIL 4, released in 2019). ITIL's contribution is not any single brilliant insight; it is a <em>vocabulary</em> and a <em>common map</em> that lets IT organizations all over the world talk about service management without redefining every term.</p>
+<p>The <strong>ITIL Service Lifecycle</strong> is the framework's high-level organizing structure. ITIL v3, the version that codified the lifecycle most clearly, divides the life of every IT service into five phases that flow into one another like a wheel: Service Strategy, Service Design, Service Transition, Service Operation, and Continual Service Improvement. ITIL 4 reorganized some of this into a more flexible "service value system," but the five-phase lifecycle remains the cleanest way to introduce the territory, and it is still how most working IT shops actually think.</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>What it answers</th>
+<th>Typical artifacts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Service Strategy</td>
+<td><em>What services should we offer, and to whom?</em></td>
+<td>Service portfolio, business case, demand forecast</td>
+</tr>
+<tr>
+<td>Service Design</td>
+<td><em>How will the service be built and supported?</em></td>
+<td>Service Design Package, SLAs, capacity plans</td>
+</tr>
+<tr>
+<td>Service Transition</td>
+<td><em>How do we get it into production safely?</em></td>
+<td>Change records, test plans, release packages</td>
+</tr>
+<tr>
+<td>Service Operation</td>
+<td><em>How do we run it, day to day?</em></td>
+<td>Incident records, fulfillment requests, monitoring</td>
+</tr>
+<tr>
+<td>Continual Service Improvement</td>
+<td><em>How do we make it better, forever?</em></td>
+<td>Improvement register, KPI reviews, retrospectives</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Service Strategy</strong> is the phase that asks the most embarrassing question in IT: <em>should this service exist at all?</em> It defines the service portfolio (everything the IT organization currently offers, has retired, or is considering), aligns the portfolio with business goals, and decides where to invest. Strategy is where "we should build a customer self-service portal" gets evaluated against "we should buy one" against "we should not have one because customers actually like calling us." Skipping strategy is how organizations end up with seventeen overlapping ticketing systems.</p>
+<p><strong>Service Design</strong> is where the service gets architected — not just the technology, but the people, the processes, the suppliers, the metrics, and the support model. The signature artifact is the <em>Service Design Package</em>, a document that hands over to the operations team everything they will need to run the thing. Good design dramatically reduces operational pain; bad design — or, worse, no design — is how on-call engineers end up paged at 3 AM about systems they did not know existed.</p>
+<p><strong>Service Transition</strong> is the bridge from "built" to "running." It includes change management, release management, testing, training, and the often-painful work of cutting over from the old system to the new one. The transition phase is where projects most often die in production: a system that worked beautifully in QA can collapse on its first contact with real users, real data, and real load.</p>
+<p><strong>Service Operation</strong> is the steady-state work of running the service: handling incidents, fulfilling requests, monitoring health, and making the service show up reliably for users. This is the longest phase and the one that consumes most of the IT budget. Most of this chapter is really about service operation.</p>
+<p><strong>Continual Service Improvement</strong> (CSI) is the cross-cutting practice of measuring everything that moves and using the data to make the service incrementally better. CSI is ITIL's rebranded version of kaizen: small, ongoing, measurable improvements that compound over years. It is also the phase organizations skip first when they get busy, which is exactly when they should not skip it.</p>
+<details>
+<summary>Diagram: The ITIL Service Lifecycle Wheel</summary>
+<p>Type: interactive-infographic
+<strong>sim-id:</strong> itil-service-lifecycle-wheel<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>A p5.js circular wheel diagram showing the five ITIL service lifecycle phases arranged clockwise around a central hub. The hub is labeled "Continual Service Improvement" and is rendered as a contrasting inner ring touching all four outer phases (Strategy, Design, Transition, Operation), visually reinforcing that CSI cuts across every phase. Each outer phase is a labeled arc segment with its key questions and primary artifacts displayed on hover. Arrows around the rim show the typical flow Strategy → Design → Transition → Operation, with a feedback arrow from Operation back to Strategy to show the closed loop.</p>
+<p>Color palette: Strategy in slate-blue, Design in mascot-emerald, Transition in amber, Operation in coral, CSI in mascot-magenta. Hub uses a slow pulsing animation to suggest ongoing activity.</p>
+<p>Interactivity: clicking a phase reveals its sub-processes (e.g., Operation reveals incident management, problem management, event management, request fulfillment, access management). A "trace a service" button animates a sample service moving around the wheel from initial strategy through years of operation, with CSI interventions marked as small orbiting dots.</p>
+<p>Layout: square canvas, full container width, height ~560px. setup() calls updateCanvasSize() first. Canvas parented with <code>canvas.parent(document.querySelector('main'));</code>.</p>
+<p>Learning objective (Bloom: Understanding): Students can name the five lifecycle phases in order, describe the central role of CSI, and identify which phase a given activity belongs to.</p>
+<p>Implementation: p5.js, deployed at <code>/information-systems/sims/itil-service-lifecycle-wheel/</code>.</p>
+</details>
+<h2 id="the-service-catalog-what-are-you-even-offering">The Service Catalog: What Are You Even Offering?<a class="headerlink" href="#the-service-catalog-what-are-you-even-offering" title="Permanent link">&para;</a></h2>
+<p>The most underrated artifact in IT service management is the <strong>Service Catalog</strong> — a published, plain-language list of every service the IT organization offers, with a description of what each one does, who is entitled to it, what it costs (or whose budget pays for it), and how to request it. The catalog is the front door of IT. Without one, users have no idea what IT can do for them; they call somebody they know, ask for whatever they think IT might offer, and receive whatever the helpful soul on the other end of the line can improvise.</p>
+<p>A good service catalog typically separates two views: a <em>business-facing</em> catalog (what users see — "request a new laptop," "request VPN access," "request a sandbox environment") and a <em>technical</em> catalog (what the operations team sees — the underlying components, dependencies, and support arrangements). The two views point at the same services, but at different levels of abstraction. Modern catalogs are usually self-service portals that integrate with workflow automation: the user clicks "request laptop," the workflow engine routes to procurement, finance, IT setup, and finally hands the laptop to the user with everything pre-installed.</p>
+<p>The systems-thinking lesson here is that <em>publishing the catalog changes the demand</em>. Once users can see what is available, they ask for more of the things they didn't know existed and less of the things they were inventing workarounds for. The catalog is a leverage point: a small artifact that reshapes the conversation between IT and the business.</p>
+<h2 id="service-level-management-the-promises-we-make">Service Level Management: The Promises We Make<a class="headerlink" href="#service-level-management-the-promises-we-make" title="Permanent link">&para;</a></h2>
+<p><strong>Service Level Management</strong> is the ITIL process for negotiating, monitoring, and reporting on the <em>promises</em> a service makes. Those promises take three nested forms: SLAs, OLAs, and (in the SRE world) SLOs and SLIs. Getting these straight is one of the highest-value vocabulary investments a junior IS professional can make, because executives, auditors, customers, and engineers all use them — and very often misuse them.</p>
+<p>A <strong>Service Level Agreement</strong> (SLA) is a <em>promise to a customer</em>. It is written down, often signed, and usually has financial consequences if you miss it. "The expense reporting system will be available 99.5% of the month, measured at the front door, excluding scheduled maintenance windows posted at least 72 hours in advance." That is an SLA. Customers can hold you to it. Many SLAs include service credits — you missed the promise, so the customer's next bill is reduced.</p>
+<p>The metrics inside an SLA are called <strong>SLA Metrics</strong>. The most common are <em>availability</em> (what fraction of the time is the service up?), <em>response time</em> (how fast does it respond when called?), <em>throughput</em> (how much work can it process per unit time?), <em>time to acknowledge</em> (how fast does the support team see a ticket?), and <em>time to resolve</em> (how fast does the support team close it?). Each metric has an agreed-upon target and an agreed-upon measurement method — and the measurement method matters as much as the target. "Availability measured by external synthetic probes from three geographies" and "availability measured by internal heartbeat polls" can produce wildly different numbers for the exact same service.</p>
+<p>Availability is the SLA metric students will hear about most, and it has a beautifully simple form:</p>
+<p>[ \text{availability} = 1 - \frac{\text{downtime}}{\text{total time}} ]</p>
+<p>Three nines (99.9%) of availability sounds impressive until you do the arithmetic: it allows about 8.77 hours of downtime per year. Four nines (99.99%) cuts that to 52 minutes per year. Five nines (99.999%) — the legendary "five nines" of telecom infrastructure — allows just over 5 minutes of downtime per year. Each additional nine costs roughly an order of magnitude more to deliver. SLAs that promise extra nines without budgets to match are how operations teams burn out.</p>
+<p>An <strong>OLA</strong> — Operational Level Agreement — is the <em>internal</em> counterpart of an SLA. Where an SLA is a promise to a customer, an OLA is a promise <em>between teams inside the organization</em> about what one team will deliver to another so that the customer-facing SLA can actually be met. If your SLA promises four-hour resolution of critical incidents, your network team's OLA might commit to thirty-minute response on infrastructure tickets, your DBA team's OLA to one-hour response on database tickets, and so on. The OLAs add up, with margin, to the SLA. If your OLAs do not arithmetically support your SLA, the SLA is fiction.</p>
+<table>
+<thead>
+<tr>
+<th>Acronym</th>
+<th>Audience</th>
+<th>Form</th>
+<th>Consequences if missed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SLA</td>
+<td>External customer / business unit</td>
+<td>Contractual, signed</td>
+<td>Service credits, reputation, lawsuits</td>
+</tr>
+<tr>
+<td>OLA</td>
+<td>Internal supporting team</td>
+<td>Operational agreement</td>
+<td>Internal escalation, performance review</td>
+</tr>
+<tr>
+<td>UC</td>
+<td>External vendor</td>
+<td>Underpinning Contract</td>
+<td>Vendor penalties, contract review</td>
+</tr>
+<tr>
+<td>SLO</td>
+<td>Engineering team (self-imposed)</td>
+<td>Target, often public</td>
+<td>Trigger error-budget policy</td>
+</tr>
+<tr>
+<td>SLI</td>
+<td>Engineering team (self-imposed)</td>
+<td>Measured indicator</td>
+<td>Drives the SLO calculation</td>
+</tr>
+</tbody>
+</table>
+<p>The two newest entries in that table come from the SRE world. An <strong>SLO</strong> (Service Level Objective) is an internal target the engineering team holds itself to — usually tighter than the customer SLA, so that there is buffer when things go sideways. An <strong>SLI</strong> (Service Level Indicator) is the underlying <em>measurement</em> that the SLO is computed from: a specific, well-defined number like "the fraction of HTTP requests that returned a 200-class response within 500ms over the last 28 days." SLIs are the raw data, SLOs are the targets, SLAs are the promises. SLOs and SLIs together — sometimes written as <strong>SLO and SLI</strong> — are the engineering-team-facing layer that makes SLAs actually defensible.</p>
+<h2 id="error-budgets-the-most-important-idea-in-modern-operations">Error Budgets: The Most Important Idea in Modern Operations<a class="headerlink" href="#error-budgets-the-most-important-idea-in-modern-operations" title="Permanent link">&para;</a></h2>
+<p>Once you have an SLO, you can compute its complement, which is the most clarifying number in modern operations:</p>
+<p>[ \text{error budget} = 1 - \text{SLO} ]</p>
+<p>The <strong>Error Budget</strong> is the maximum amount of unreliability you are <em>allowed</em> to spend in a measurement window. If your SLO is 99.9% availability over 28 days, your error budget is 0.1% — about 40 minutes of "you may be down" per 28-day window. As the window progresses, every incident, every failed deploy, every bad config push consumes error-budget minutes. When the budget is exhausted, the team enters an <em>error-budget policy</em> (no new feature deploys, only reliability fixes) until the window resets and the budget is restored.</p>
+<p>Why is this so clarifying? Because it dissolves one of the oldest, most exhausting fights in software organizations: <em>"the product team wants to ship faster, the operations team wants to lock things down, who wins?"</em> With error budgets, neither side wins by argument; the data wins. Budget remaining? Ship away — try things, take risks, deploy on Friday afternoon if you must. Budget exhausted? Stop and stabilize until the budget regenerates. It is structural conflict resolution by mathematics, and it is the single biggest leverage point SRE has contributed to IT operations.</p>
+<p>The footgun, of course, is setting SLOs that are <em>too tight</em> (so the budget is always exhausted, the policy is always in effect, and the product team starts gaming the measurement) or <em>too loose</em> (so the budget is never exhausted, the policy never bites, and reliability slowly degrades because nobody feels constrained). Setting the right SLO is an iterative discipline, not a one-time decision.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Pause here</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Iris is thinking">
+Notice what just happened. We took a fight that had been raging in IT organizations for forty years — <em>ship fast vs. stay stable</em> — and we replaced it with a budget. Nobody has to win the philosophical argument anymore. The error-budget pattern is a classic Donella-Meadows leverage point: it doesn't tune a parameter, it doesn't even change a goal, it changes the <em>rules of the system</em> so the old fight stops happening. Whenever you see a recurring conflict between two organizational functions, ask whether the structural fix is to invent a budget that both sides can read off the same dashboard. It is one of the most powerful moves in IS.</p>
+</div>
+<h2 id="incident-management-make-the-pain-stop">Incident Management: Make the Pain Stop<a class="headerlink" href="#incident-management-make-the-pain-stop" title="Permanent link">&para;</a></h2>
+<p><strong>Incident Management</strong> is the ITIL process for handling unplanned disruptions — anything that takes a service below its committed level of operation. The credit card system is rejecting valid cards. The HR portal is throwing 500 errors. The shared drive is read-only. <em>That</em> is an incident. The single, narrowly defined goal of incident management is <strong>restore service as fast as possible</strong>. Not figure out why it broke. Not prevent it from happening again. Not document it for the auditors. Those goals matter, but they belong to other processes. Incident management is "make the pain stop."</p>
+<p>The reason this distinction matters is that the fastest way to make the pain stop is often <em>not</em> the right long-term fix. Restart the broken pod. Roll back the bad deploy. Fail over to the standby. Reboot the appliance. Whatever returns the service to working order soonest — that is the right move during an incident, even if it leaves the underlying root cause untouched and lurking. The phrase the SRE world uses is <em>"stop the bleeding first."</em></p>
+<p>Incidents are typically classified along two axes: <em>priority</em> (a function of impact and urgency) and <em>severity</em> (how bad it is technically). A Sev-1 incident affecting all users gets a different response than a Sev-3 incident affecting one user. Most organizations have a published priority matrix, an associated response-time SLA per priority level, and an escalation path for each.</p>
+<h2 id="problem-management-why-did-the-pain-happen">Problem Management: Why Did the Pain Happen?<a class="headerlink" href="#problem-management-why-did-the-pain-happen" title="Permanent link">&para;</a></h2>
+<p><strong>Problem Management</strong> is incident management's intellectual partner. Where incident management cares about <em>restoring service</em>, problem management cares about <em>understanding the underlying cause</em> so that the incident — and any similar incidents — can be prevented in the future. A <em>problem</em>, in ITIL vocabulary, is the underlying cause of one or more incidents. Restarting the pod is incident management. Figuring out why the pod kept crashing every Thursday at 4 AM is problem management.</p>
+<p>Problem management has two flavors. <em>Reactive</em> problem management is launched in response to an incident (or a cluster of related incidents) that has already happened. <em>Proactive</em> problem management goes hunting for problems before they cause incidents, by looking at trends, near-misses, and patterns in the incident log. Mature operations teams do both; immature teams do neither, and the same incidents recur indefinitely.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Incident Management</th>
+<th>Problem Management</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Goal</td>
+<td>Restore service fast</td>
+<td>Eliminate the underlying cause</td>
+</tr>
+<tr>
+<td>Time horizon</td>
+<td>Minutes to hours</td>
+<td>Days to weeks</td>
+</tr>
+<tr>
+<td>Success metric</td>
+<td>Mean time to recover (MTTR)</td>
+<td>Recurrence rate of similar incidents</td>
+</tr>
+<tr>
+<td>Owner</td>
+<td>On-call engineer, NOC, service desk</td>
+<td>Reliability engineer, problem manager</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Incident record, workaround</td>
+<td>Known error, RCA, permanent fix</td>
+</tr>
+<tr>
+<td>Failure mode</td>
+<td>Heroics without learning</td>
+<td>Analysis without action</td>
+</tr>
+</tbody>
+</table>
+<p>The classic operational anti-pattern is doing only the first column — a team that is <em>spectacular</em> at putting out fires, week after week, while never quite finding the time to ask why the building keeps catching fire. This is one of the most reliable ways to burn out an operations team. The structural fix is the discipline of writing every incident up to the point of having a <em>known error</em> and a <em>planned permanent fix</em>, and tracking the backlog of known errors as carefully as the backlog of features.</p>
+<h2 id="change-management-how-to-touch-the-live-system-without-breaking-it">Change Management: How to Touch the Live System Without Breaking It<a class="headerlink" href="#change-management-how-to-touch-the-live-system-without-breaking-it" title="Permanent link">&para;</a></h2>
+<p><strong>ITIL Change Management</strong> is the process that governs every modification to the production environment. A "change" in ITIL parlance is broader than just a software deploy — it includes hardware swaps, configuration tweaks, network reroutes, vendor patches, schema migrations, even DNS updates. The premise is that <em>most outages are self-inflicted</em>, caused by changes the organization itself made; therefore, controlling and tracking changes is the most leveraged thing an operations team can do for reliability.</p>
+<p>ITIL classically distinguishes three types of change. A <em>standard change</em> is pre-approved, well-understood, and low-risk — provisioning a laptop, resetting a password, applying a routine OS patch. Standard changes are processed quickly through a checklist. A <em>normal change</em> is novel enough to require review by the <strong>Change Advisory Board</strong> (CAB), a cross-functional committee that meets periodically to assess risk, review timing, and approve or defer. An <em>emergency change</em> is required immediately to fix an active or imminent incident; it gets a streamlined approval process (an Emergency CAB, or a single delegated approver) and is documented after the fact.</p>
+<p>The footgun here is unmistakable. <strong>Properties of the footgun:</strong> (1) <em>silent</em> — the CAB process feels safe, so nobody notices it producing harm; (2) <em>easy to trigger</em> — every change goes through CAB by default; (3) <em>delayed and invisible damage</em> — the cost of CAB delay shows up as outages that an urgent fix could not be deployed against, and as developers routing around the process altogether. <strong>Structural fix:</strong> classify aggressively into standard changes (so most changes don't touch CAB at all), use risk-based automation in the change tooling (so low-risk changes auto-approve based on data), and make the emergency-change path frictionless so people don't avoid it when they should be using it. The goal of change management is to <em>enable</em> safe change at speed, not to slow change down for its own sake.</p>
+<h2 id="configuration-management-and-the-cmdb">Configuration Management and the CMDB<a class="headerlink" href="#configuration-management-and-the-cmdb" title="Permanent link">&para;</a></h2>
+<p><strong>Configuration Management</strong> is the ITIL process — and the underlying engineering discipline — for tracking <em>what is in the production environment</em>. Every server, every application, every database, every network device, every license, every relationship between any two of those things — all of it should, in theory, live in a single authoritative inventory called a <strong>CMDB</strong> (Configuration Management Database).</p>
+<p>Each thing tracked in the CMDB is a <strong>Configuration Item</strong> (CI). Common CI types include:</p>
+<ul>
+<li><strong>Hardware CIs</strong> — physical servers, network switches, storage arrays, end-user laptops, mobile devices.</li>
+<li><strong>Software CIs</strong> — operating systems, applications, middleware, libraries, container images.</li>
+<li><strong>Service CIs</strong> — the customer-facing services in the service catalog, plus the internal services that support them.</li>
+<li><strong>Documentation CIs</strong> — runbooks, architecture diagrams, vendor contracts, license agreements.</li>
+<li><strong>People CIs</strong> — service owners, on-call rotations, escalation contacts.</li>
+<li><strong>Location CIs</strong> — data centers, cloud regions, office sites.</li>
+<li><strong>Relationship CIs</strong> — the explicit links: "Service A <em>runs on</em> Server B," "Server B <em>is hosted in</em> Region C," "Service A <em>is owned by</em> Team D."</li>
+</ul>
+<p>The relationships are the most valuable part. A CMDB without relationships is a spreadsheet; a CMDB <em>with</em> relationships is a graph that lets you ask "if Server B fails, what services are affected?" — which is exactly the question you need answered the moment Server B fails.</p>
+<p>The historical reality is that most CMDBs are <em>aspirational documents that drifted out of date the day after they were built</em>. The data-quality problem is real and chronic. The modern fix is <em>discovery</em> — automated tools that crawl the network, the cloud APIs, and the configuration management tools to populate the CMDB continuously. A discovery-fed CMDB is genuinely useful; a hand-maintained CMDB is, almost without exception, a lie.</p>
+<details>
+<summary>Diagram: Incident → Problem → Change Flow with the CMDB at the Center</summary>
+<p>Type: interactive-infographic
+<strong>sim-id:</strong> itsm-incident-problem-change-cmdb<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Specified</p>
+<p>A vis-network flow diagram showing the relationship between the three core ITIL operational processes and the CMDB. At the center sits the CMDB, drawn as a hexagonal node containing a small icon of a graph. Surrounding it are three large process nodes (Incident Management in coral, Problem Management in amber, Change Management in mascot-emerald) connected to the CMDB with bidirectional arrows. Smaller satellite nodes show the artifacts each process produces (incident record, known error, change request) and the events that flow between them (incident → problem when recurrence detected; problem → change when permanent fix is designed; change → incident when a change goes wrong). To work around the vis-network horizontal-edge label rendering bug, edges use a slight y-offset (e.g., 480 to 490) so labels render on initial load.</p>
+<p>Color palette: CMDB in slate-gray with a subtle pulsing border, Incident in coral, Problem in amber, Change in mascot-emerald, artifacts in muted versions of their parent process color, event arrows in dark teal.</p>
+<p>Interactivity: clicking any process node expands its sub-flow (e.g., Incident expands to detect → log → categorize → prioritize → diagnose → resolve → close). Clicking the CMDB highlights every CI type it tracks. A "trace a real incident" button animates a worked example: a database server fails, the incident record links to the affected services via the CMDB, problem management traces the failure to a memory leak, change management approves a kernel patch, the patch deploys, the CMDB gets updated.</p>
+<p>Layout: hierarchical, full canvas width, height ~560px. Canvas resizes on window resize.</p>
+<p>Learning objective (Bloom: Analyzing): Students can describe the bidirectional relationships between the three core ITIL processes and the CMDB, identify which artifact each process produces, and trace a real-world incident through all three.</p>
+<p>Implementation: vis-network, deployed at <code>/information-systems/sims/itsm-incident-problem-change-cmdb/</code>.</p>
+</details>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Iris's Tip</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Iris shares a tip">
+When you join a new IT organization, ask to see the CMDB on day one. Then ask when it was last reconciled with reality. The gap between those two answers tells you almost everything you need to know about the operational maturity of the place. A CMDB updated by automated discovery and reviewed weekly is a sign of a team that takes operations seriously. A CMDB that lives in a spreadsheet and was last touched eighteen months ago is a sign that you are about to spend your first year on a treasure hunt every time something breaks. Neither answer is a reason to leave — both are interesting — but you should know which one you walked into.</p>
+</div>
+<h2 id="the-help-desk-and-service-desk-tiers">The Help Desk and Service Desk Tiers<a class="headerlink" href="#the-help-desk-and-service-desk-tiers" title="Permanent link">&para;</a></h2>
+<p>The <strong>Help Desk</strong> is the human-facing front door of IT operations: the team that answers the phone, replies to the chat window, and works the ticket queue when users have problems or requests. ITIL's preferred term is <em>service desk</em>, which is broader (it handles both incidents and service requests, and it is the user's single point of contact with IT), but in practice many organizations use "help desk" and "service desk" interchangeably.</p>
+<p>The work is organized into <strong>Service Desk Tiers</strong> — concentric rings of increasing technical depth, where each ring escalates to the next when a ticket exceeds its scope.</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Also called</th>
+<th>Typical work</th>
+<th>Resolution target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tier 0</td>
+<td>Self-service</td>
+<td>FAQ pages, knowledge base, chatbot, password-reset portal</td>
+<td>Instant</td>
+</tr>
+<tr>
+<td>Tier 1</td>
+<td>Service desk</td>
+<td>Phone/chat triage, password resets, basic how-to</td>
+<td>~80% of tickets at first contact</td>
+</tr>
+<tr>
+<td>Tier 2</td>
+<td>Technical support</td>
+<td>Application-specific issues, hardware swaps, account permissions</td>
+<td>Hours</td>
+</tr>
+<tr>
+<td>Tier 3</td>
+<td>Engineering / SME</td>
+<td>Code bugs, infrastructure issues, vendor escalations</td>
+<td>Days</td>
+</tr>
+</tbody>
+</table>
+<p>The economic logic of tiering is that each tier is roughly an order of magnitude more expensive than the tier below it. A self-service password reset costs cents; a Tier-1 phone reset costs a few dollars; a Tier-3 engineer chasing the same issue costs hundreds. The strategic goal of every help-desk leader is to <em>push work down the tier ladder</em> — automate Tier 1 with self-service, automate Tier 2 with better tooling, free Tier 3 to do real engineering work. The strategic <em>failure mode</em> is letting work drift up the ladder, which happens silently when knowledge isn't shared, when self-service options are clunky, or when Tier-1 staff are too rushed to actually solve anything.</p>
+<h2 id="the-ticket-lifecycle">The Ticket Lifecycle<a class="headerlink" href="#the-ticket-lifecycle" title="Permanent link">&para;</a></h2>
+<p>Every incident, request, problem, and change in an IT organization travels through a <strong>Ticket Lifecycle</strong> — a sequence of states that the ticket passes through from creation to closure. The exact states vary by tool and organization, but the canonical flow looks like this:</p>
+<ol>
+<li><strong>New</strong> — the ticket has been created but not yet looked at.</li>
+<li><strong>Assigned</strong> — a person or team has taken ownership.</li>
+<li><strong>In Progress</strong> — work is actively happening.</li>
+<li><strong>Pending</strong> — work is paused waiting on someone (the user, a vendor, a parts shipment).</li>
+<li><strong>Resolved</strong> — the work appears to be complete; the user is asked to confirm.</li>
+<li><strong>Closed</strong> — the user has confirmed, or enough time has elapsed that the system auto-closes.</li>
+<li><strong>Reopened</strong> — the user found that the issue wasn't actually fixed (a metric worth watching, because high reopen rates mean Tier 1 is closing tickets prematurely).</li>
+</ol>
+<p>The lifecycle is the load-bearing structure of every ITSM tool — ServiceNow, Jira Service Management, Zendesk, Freshservice, BMC Helix. Reports are built on it, SLAs are measured against it, and KPIs are computed from it. The most-watched metrics include time in each state, total cycle time, first-contact resolution rate, and reopen rate. These metrics — like all metrics — are vulnerable to Goodhart's Law: tie staff bonuses to "tickets closed per day" and you will get tickets closed per day, often by closing them prematurely. Tie bonuses to "first-contact resolution rate" and you will see tickets quietly merged so that the second contact doesn't count. Watch what your metrics are warping.</p>
+<h2 id="knowledge-management-the-help-desks-memory">Knowledge Management: The Help Desk's Memory<a class="headerlink" href="#knowledge-management-the-help-desks-memory" title="Permanent link">&para;</a></h2>
+<p><strong>Knowledge Management</strong> is the discipline of capturing, organizing, and reusing the things the IT organization has <em>already figured out</em>. Every time a Tier-1 agent solves a tricky issue, every time a Tier-3 engineer roots out an obscure root cause, every time a vendor escalation produces a useful workaround — that knowledge is potentially worth more than the ticket it solved. Captured well, it gets re-used by the next agent, the next user, and (increasingly) the chatbot that handles Tier 0. Captured badly — or not at all — the next agent solves it from scratch, slower.</p>
+<p>A modern knowledge base is structured around <em>articles</em> (problem, symptoms, cause, resolution, related CIs, version history), tightly integrated with the ticketing tool (so resolving a ticket can spawn or update an article), and increasingly fed into AI-powered search and chatbot systems that surface the right article at the right time. The systems-thinking insight is the <em>flywheel</em>: better articles → faster resolution → more time to write articles → even better articles. The doom-loop counterpart is just as real: nobody writes articles → resolution stays slow → no time to write articles → articles stay sparse forever.</p>
+<h2 id="observability-three-pillars-of-knowing-what-your-system-is-doing">Observability: Three Pillars of Knowing What Your System Is Doing<a class="headerlink" href="#observability-three-pillars-of-knowing-what-your-system-is-doing" title="Permanent link">&para;</a></h2>
+<p>In production, the question is not <em>will something go wrong</em> — it is <em>will you find out before your customers do</em>. The discipline of arranging your systems so that you can answer that question is <strong>Observability</strong> (sometimes shortened to "o11y" because there are eleven letters between the "o" and the "y," which engineers find amusing). Observability is the modern, more rigorous successor to "monitoring," and it rests on three pillars: logs, metrics, and traces.</p>
+<ul>
+<li><strong>Logs</strong> are timestamped, structured records of discrete events. "User 42 logged in at 10:14:03." "Database query took 1840ms." "Error: connection refused." Logs are great for forensics — once you know roughly where to look, the relevant log line tells you exactly what happened. They are bad for high-level overview, because nobody reads a million log lines per minute.</li>
+<li><strong>Metrics</strong> are numerical measurements aggregated over time. CPU usage, request rate, error rate, queue depth, latency-at-the-99th-percentile. Metrics are great for dashboards, alerts, and trend analysis — they answer "is the system healthy?" at a glance. They are bad for drilling into a specific failure, because they have already aggregated the individual events away.</li>
+<li><strong>Traces</strong> are end-to-end records of a single request as it travels through every service in a distributed system. A trace shows that the customer's checkout request hit the front-end in 12ms, the cart service in 8ms, the inventory service in 240ms (uh oh), the payment service in 50ms, and the order service in 30ms — and that the inventory service spent 220ms of those 240ms waiting on a database query. Traces are how you debug latency in microservices; without them, you are guessing.</li>
+</ul>
+<details>
+<summary>Diagram: The Three Pillars of Observability — Logs, Metrics, Traces</summary>
+<p>Type: interactive-infographic
+<strong>sim-id:</strong> observability-three-pillars<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>A p5.js infographic showing three vertical "pillars" — labeled Logs, Metrics, and Traces — supporting a horizontal capstone labeled "Observability." Each pillar has an iconic visual treatment: Logs shown as stacked horizontal text-line bars, Metrics shown as a small line chart, Traces shown as a horizontal flame-chart waterfall of nested spans. Below each pillar, a panel describes (a) what it is, (b) what question it best answers, (c) what tool category produces it (e.g., Splunk/Elastic for logs, Prometheus/Datadog for metrics, Jaeger/Honeycomb for traces).</p>
+<p>Color palette: Logs in slate-gray, Metrics in mascot-emerald, Traces in mascot-magenta, capstone in coral. Each pillar pulses gently when hovered.</p>
+<p>Interactivity: clicking any pillar expands a worked example of debugging a real incident using only that pillar, then a second view showing how all three pillars together solve the incident faster than any one alone. A "scenario" dropdown lets the student pick a debugging scenario (intermittent latency, error spike, capacity exhaustion) and see which pillars are most useful for each.</p>
+<p>Layout: full canvas width, height ~520px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with <code>canvas.parent(document.querySelector('main'));</code>.</p>
+<p>Learning objective (Bloom: Understanding): Students can name the three pillars of observability, describe what each is best at, and choose the appropriate pillar for a given debugging scenario.</p>
+<p>Implementation: p5.js, deployed at <code>/information-systems/sims/observability-three-pillars/</code>.</p>
+</details>
+<p>The cultural shift from monitoring to observability is the shift from "we will write alerts for the failure modes we can predict" to "we will instrument the system so richly that we can investigate failure modes we have <em>never seen before</em>." Modern observability platforms — Datadog, New Relic, Honeycomb, Grafana, Splunk Observability — try to unify the three pillars in a single pane of glass, so an engineer chasing a problem can pivot from a metric spike to the relevant traces to the relevant logs in a few clicks. Without observability, on-call engineers are flying instruments-out at night.</p>
+<h2 id="on-call-rotation-somebody-has-to-carry-the-pager">On-Call Rotation: Somebody Has to Carry the Pager<a class="headerlink" href="#on-call-rotation-somebody-has-to-carry-the-pager" title="Permanent link">&para;</a></h2>
+<p>Operations work doesn't stop when the office closes. Production systems run 24×7, customers expect them to be available 24×7, and somebody has to be reachable when something breaks at 3 AM on a Sunday. That somebody is the <strong>On-Call Rotation</strong> — a published schedule that names, for every hour of every day, exactly one human (and usually a backup) who is responsible for responding to alerts.</p>
+<p>A healthy on-call rotation has a few load-bearing properties. The shifts are <em>predictable</em> and published far in advance, so engineers can plan their lives around them. The shifts are <em>equitably distributed</em> across the team, with weekend and holiday rotation handled fairly. The shifts are <em>short enough</em> that the engineer can actually sleep — typically a week at a time, never longer than two. The pager <em>only fires for things that actually require human judgment</em> — every alert that fires for a non-actionable reason erodes trust and trains the engineer to ignore the pager (a phenomenon called <em>alert fatigue</em> or <em>pager fatigue</em>, and the surest predictor of an eventual missed real incident). And the team has explicit <em>handoff rituals</em> between rotations, so the incoming on-call knows what's still in flight.</p>
+<p>The systems-thinking observation here is the feedback loop: pager fatigue → missed alerts → real outage → louder, twitchier alerting → more false positives → worse pager fatigue. The structural fix is treating <em>alert quality</em> as a first-class engineering concern: an alert that fires falsely is a bug, not a noise floor. SRE teams formalize this with metrics like "false-positive rate per alert" and "pages per shift," and treat anything above a threshold as an incident in itself.</p>
+<p>The other systems-thinking observation is the human cost. Carrying the pager is not free. It is sleep disruption, it is anxiety, it is missed dinners. The most expensive on-call rotation is the one that produces an excellent service for two years and then loses the senior engineer who can no longer face another Sunday. Compensation, time-in-lieu, and disciplined alert hygiene are the mitigations. The leverage point is structural: the cost of carrying the pager <em>is</em> the cost of operating the service. Pretending otherwise produces a debt that gets paid in resignations.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Heads up</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Iris warns you">
+Watch out for the on-call rotation that has been quietly absorbing operational debt. The signs are subtle — the same engineer always volunteers to swap into your shift, the runbook for that one weird service is "just text Jamie," every postmortem mentions an alert that "always fires falsely so we ignore it." This is a system being held together by individual heroics, and individual heroics are an organizational antipattern dressed up as a virtue. The structural fix is to convert every act of heroism into either a documented runbook, a fixed alert, or a feature ticket — and to make the conversion the on-call engineer's <em>primary</em> deliverable, not a "nice to have if there's time."</p>
+</div>
+<h2 id="the-postmortem-and-the-blameless-culture">The Postmortem and the Blameless Culture<a class="headerlink" href="#the-postmortem-and-the-blameless-culture" title="Permanent link">&para;</a></h2>
+<p>When an incident is over and the service has been restored, the work is not done. The next, equally important step is the <strong>Postmortem</strong> — a written, shared retrospective document that captures what happened, why it happened, what was learned, and what will change as a result. The name comes from medicine; the practice comes most directly from aviation, where the entire industry's safety record is built on the discipline of investigating every accident and near-miss without exception.</p>
+<p>A canonical postmortem has the following sections, in roughly this order:</p>
+<ol>
+<li><strong>Summary</strong> — a one-paragraph plain-language description suitable for an executive audience.</li>
+<li><strong>Impact</strong> — who was affected, for how long, by what amount, and (if applicable) what error-budget cost.</li>
+<li><strong>Timeline</strong> — a minute-by-minute reconstruction of detection, diagnosis, mitigation, and recovery.</li>
+<li><strong>Root cause analysis</strong> — the technical and organizational factors that produced the incident, often using the <em>Five Whys</em> technique to drill from symptom to underlying cause.</li>
+<li><strong>What went well</strong> — the parts of the response that worked. (Always there. Always.)</li>
+<li><strong>What went poorly</strong> — the parts that didn't.</li>
+<li><strong>Action items</strong> — concrete, owned, dated commitments to change something so this incident class is less likely to recur. These are tracked to completion like any other engineering work.</li>
+<li><strong>Lessons learned</strong> — generalizable insights that go beyond the specific incident.</li>
+</ol>
+<p>The postmortem is <em>only</em> useful if the organization runs it as a learning exercise rather than a blame exercise. That brings us to the most important cultural commitment in modern operations: <strong>Blameless Culture</strong>.</p>
+<p>A blameless culture is one in which incident investigations focus on <em>systemic factors</em> — the unclear runbook, the brittle deploy pipeline, the missing alert, the under-staffed rotation — rather than on <em>individual fault</em>. The premise is that humans operating in a complex system will, on a long enough timeline, make every available mistake; designing the system so the mistakes are caught, contained, or impossible is the only durable response. <em>Punishing the human who made today's mistake guarantees that tomorrow's human will hide their mistake instead.</em></p>
+<p>The principles of a blameless culture, as practiced in mature operations organizations:</p>
+<ul>
+<li><strong>Assume good intent.</strong> Engineers were doing what made sense to them with the information they had at the time.</li>
+<li><strong>Focus on the system, not the person.</strong> "Why was it possible for this command to take down production?" not "Why did Jamie run this command?"</li>
+<li><strong>Reward honest reporting.</strong> The engineer who self-discloses a near-miss is a hero, not a suspect. Near-misses are how the organization learns cheaply.</li>
+<li><strong>Separate accountability from punishment.</strong> Owning an action item is accountability. Losing a bonus over an honest mistake is punishment, and it kills future honesty.</li>
+<li><strong>Make the postmortem public</strong> within the organization. Cross-team learning is one of the highest-leverage outputs of postmortem culture.</li>
+<li><strong>Track action items to completion.</strong> A postmortem with un-actioned recommendations is a postmortem that lied.</li>
+</ul>
+<p>The systems-thinking core of blamelessness is a feedback loop. Blameless culture → honest reporting of mistakes and near-misses → richer organizational learning → fewer repeat incidents → tighter SLOs feasible → better service. The opposite loop is the one most organizations live in by default: blame culture → people hide mistakes → near-misses go unreported → the organization can only learn from the disasters big enough to be impossible to hide → repeat disasters → executives demand "more accountability" → blame intensifies → the loop tightens. The blameless culture is a <em>paradigm-level</em> leverage point in Donella Meadows' sense: it changes the goal of incident investigation from "find the responsible party" to "make the system safer," and that single change rewires almost everything downstream.</p>
+<h2 id="putting-it-all-together">Putting It All Together<a class="headerlink" href="#putting-it-all-together" title="Permanent link">&para;</a></h2>
+<p>Operations is the discipline that turns information systems from <em>projects</em> into <em>services</em> — things that exist over time, make promises, and keep them.</p>
+<ul>
+<li>The <strong>ITIL Service Lifecycle</strong> — Service Strategy, Service Design, Service Transition, Service Operation, and Continual Service Improvement — is the standard organizing framework, with the <strong>Service Catalog</strong> as the user-facing front door and <strong>Service Level Management</strong> as the discipline of negotiating and tracking the promises a service makes.</li>
+<li>Promises take three nested forms: customer-facing <strong>SLAs</strong> with <strong>SLA Metrics</strong>, internal <strong>OLAs</strong> between supporting teams, and engineering-facing <strong>SLO and SLI</strong> pairs. The SRE <strong>Error Budget</strong> — the complement of the SLO — converts the eternal "ship vs. stability" fight into a number both sides can read off the same dashboard.</li>
+<li>Day-to-day operations runs on three intertwined processes: <strong>Incident Management</strong> (restore service fast), <strong>Problem Management</strong> (find and eliminate root causes), and <strong>ITIL Change Management</strong> (govern every modification to the production environment). The <strong>CAB</strong> keeps changes safe; aggressive standard-change classification keeps it from becoming a bottleneck.</li>
+<li><strong>Configuration Management</strong> and the <strong>CMDB</strong> are the inventory and graph of every Configuration Item in production — useful only when populated by automated discovery, dangerous when maintained by hand.</li>
+<li>The <strong>Help Desk</strong> and its <strong>Service Desk Tier</strong>s handle the human-facing work, escalating tickets through the <strong>Ticket Lifecycle</strong> and capturing reusable learnings via <strong>Knowledge Management</strong>.</li>
+<li><strong>Observability</strong> — logs, metrics, and traces — is how operators know what their systems are doing in production, and the foundation of any healthy <strong>On-Call Rotation</strong>. After every incident, the <strong>Postmortem</strong>, conducted under a <strong>Blameless Culture</strong>, is what turns pain into learning.</li>
+</ul>
+<p>A graduate of this chapter walking onto an operations team for the first time should be able to ask, in order: <em>What services do we run? What promises have we made about each? Where does our error budget stand? What incidents are open right now? What problems are we tracking behind those incidents? What changes are queued for this week's CAB? Is the CMDB telling us the truth? Where are the alerts firing falsely? When was our last postmortem, and did we actually do the action items?</em> That is the working vocabulary of running real systems for real users. You can ask all of it after a single chapter.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Nicely done</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
+You just learned the working vocabulary of IT service management and operations — the ITIL service lifecycle, SLAs and OLAs and SLOs and SLIs and error budgets, incident and problem and change management, CMDBs, help desk tiering, observability's three pillars, on-call rotations, and the blameless culture that holds it all together. You can now read an ITIL diagram without flinching, defend an error budget to a frustrated PM, run a postmortem without naming a villain, and recognize pager fatigue as the warning sign it is. Operations used to have a reputation for being the unglamorous part of IS. That was before SRE made it one of the most intellectually rich corners of the field — full of leverage points, feedback loops, and elegant structural fixes for fights that used to last decades. The lights stay on because somebody decided to be deliberate about how they stay on. That somebody, increasingly, is going to be you. Onward to Chapter 18, where we step out of operations and into the broader strategic question of how IS organizations align themselves to the businesses they serve.</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -1501,7 +2269,7 @@
       
     
     <a href="https://github.com/dmccreary/information-systems" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
     </a>
   
 </div>
@@ -1516,12 +2284,10 @@
     </div>
     
     
-    
-      
-      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

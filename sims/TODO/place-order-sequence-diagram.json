@@ -1,0 +1,14 @@
+{
+  "sim_id": "place-order-sequence-diagram",
+  "diagram_name": "Sequence Diagram for \"Place Order\"",
+  "chapter_number": 10,
+  "chapter_title": "'Systems Analysis and Design'",
+  "chapter_dir": "10-sad",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** place-order-sequence-diagram<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nA p5.js sequence diagram showing the \"Place Order\" interaction across five participants drawn as columns left to right: *Customer (Browser)*, *Web Frontend*, *Order Service*, *Inventory Service*, *Payment Gateway*. Time flows downward. The Customer sends a synchronous message *submitOrder(items, payment)* to the Web Frontend, which calls *createOrder(...)* on Order Service. Order Service sends *reserveItems(...)* synchronously to Inventory Service, which returns a *reservationId*. Order Service then calls *charge(amount, token)* synchronously on Payment Gateway, which returns a *paymentConfirmation*. An `alt` combined fragment wraps two cases: payment succeeds (Order Service confirms reservation and returns *orderConfirmed*) versus payment fails (Order Service calls *releaseItems(reservationId)* on Inventory Service and returns *orderFailed*). The Web Frontend returns the result to the Customer.\n\nColor palette: lifelines in slate-gray, activation bars in mascot-emerald, synchronous messages in dark teal, return messages dashed in coral, the `alt` fragment outlined in mascot-magenta. Each participant column header includes a small icon indicating whether it is a human, a UI, or a service.\n\nInteractivity: a \"play\" button animates a token traveling along the messages in time order, pausing at each step to display the message name, payload schema, and expected response. A toggle lets the user step through both branches of the `alt` fragment. Hovering an activation bar shows what the participant is doing during that interval. A \"show timing\" toggle adds approximate latency budgets to each message arrow, making the diagram pull double-duty as a performance-budget conversation.\n\nLayout: full canvas width, height ~600px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.\n\nLearning objective (Bloom: Applying): Students can read a sequence diagram, identify each participant and message type, follow the time order, and trace both branches of an `alt` combined fragment.\n\nImplementation: p5.js, deployed at `/information-systems/sims/place-order-sequence-diagram/`."
+}

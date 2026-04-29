@@ -1,0 +1,14 @@
+{
+  "sim_id": "enterprise-network-topology",
+  "diagram_name": "A Modern Enterprise Network — LAN, WAN, VPN, SD-WAN, Cloud",
+  "chapter_number": 11,
+  "chapter_title": "'Networks and Telecommunications for Business'",
+  "chapter_dir": "11-networks",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** enterprise-network-topology<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nA vis-network topology diagram showing a typical mid-size enterprise network. On the left: three sites — Headquarters (large), Branch Office (medium), and a Manufacturing Plant (medium) — each rendered as a rounded container with internal LAN icons (switch, wireless access points, user laptops). Each site has an SD-WAN appliance at its edge. The HQ has two WAN connections (MPLS + broadband internet); the branch has two broadband internet connections; the plant has one broadband + one LTE failover. Lines from each site cross the WAN cloud in the middle of the diagram. Beyond the WAN cloud sit three destinations: the public Internet (with a sample customer device), a \"Cloud Provider\" container labeled AWS with a Direct Connect circuit drawn as a thick private line from HQ, and a SaaS icon (Salesforce). A remote worker icon at the bottom shows a VPN tunnel (dashed encrypted line) crossing the public internet and entering HQ.\n\nColor palette: LAN regions in soft mascot-emerald, WAN cloud in slate-gray, public internet in pale yellow, cloud provider in mascot-magenta tints, SD-WAN appliances in coral, VPN tunnel in dashed teal. Direct Connect circuit drawn thicker than the public-internet links.\n\nInteractivity: hovering each element reveals (a) what category it is (LAN/WAN/VPN/SD-WAN/Direct Connect), (b) typical bandwidth, (c) typical latency, (d) typical monthly cost order-of-magnitude. A \"trace a packet\" button animates a packet from a HQ user to (a) the public website, (b) Salesforce SaaS, (c) AWS via Direct Connect, (d) a remote VPN user — showing the path each one takes. A \"fail a link\" button lets the student knock out the MPLS circuit at HQ and watch SD-WAN reroute traffic over broadband automatically.\n\nLayout: hierarchical, left-to-right, full canvas width, height ~600px. Edge labels use a slight y-offset to work around the vis-network horizontal-edge label rendering bug. Canvas resizes on window resize.\n\nLearning objective (Bloom: Understanding): Students can identify each network category in a real-world enterprise topology, trace traffic from a user to four different destinations, and explain what SD-WAN does when a primary link fails.\n\nImplementation: vis-network, deployed at `/information-systems/sims/enterprise-network-topology/`."
+}

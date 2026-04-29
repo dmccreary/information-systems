@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+         <loc>https://dmccreary.github.io/information-systems/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/about/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/information-systems/contact/</loc>
          <lastmod>2026-04-29</lastmod>
     </url>
@@ -117,6 +125,10 @@
          <lastmod>2026-04-29</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/information-systems/img/cover-image-description/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/information-systems/img/mascot/image-prompts/</loc>
          <lastmod>2026-04-29</lastmod>
     </url>
@@ -153,7 +165,171 @@
          <lastmod>2026-04-29</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/api-gateway-flow/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/as-is-to-be-automation-comparison/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/bandwidth-latency-throughput/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/bpmn-order-to-cash/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/build-buy-saas-decision/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/cicd-pipeline/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/cloud-shared-responsibility-stack/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/container-vs-vm-architecture/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/cross-border-transfer-decision/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/digital-twin-wind-turbine/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/diki-pyramid/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/enterprise-network-topology/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/enterprise-systems-landscape/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/erp-implementation-timeline/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/evm-variance-visualization/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/gantt-with-critical-path/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/git-feature-branch-workflow/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/information-systems/sims/graph-viewer/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/is-executive-roles/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/journey-map-claims-process/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/library-use-case-diagram/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/loan-application-state-diagram/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/normalization-journey-1nf-to-3nf/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/place-order-sequence-diagram/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/porter-value-chain/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/privacy-regulatory-landscape/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/project-triangle/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/responsive-breakpoints-demo/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/scrum-sprint-cycle/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/six-component-model/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/six-rs-decision-tree/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/small-business-erd/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/sprint-burndown-chart/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/stakeholder-power-interest-grid/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/stride-threat-model-overlay/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/tech-debt-feedback-loop/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/three-tier-architecture/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/tls-handshake-chain-of-trust/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/value-stream-map-invoice-approval/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/waterfall-model/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/write-skew-read-committed/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/information-systems/sims/zero-trust-vs-castle-moat/</loc>
          <lastmod>2026-04-29</lastmod>
     </url>
 </urlset>

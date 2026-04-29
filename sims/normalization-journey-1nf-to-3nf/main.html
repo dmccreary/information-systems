@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normalization Journey from 1NF to 3NF</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        #container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a3a6c;
+        }
+        .placeholder {
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .placeholder h2 {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .placeholder p {
+            font-size: 14px;
+            max-width: 480px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 12px;
+        }
+        .meta strong { color: #495057; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Normalization Journey from 1NF to 3NF</h1>
+        <div class="placeholder">
+            <span class="badge">SCAFFOLD</span>
+            <h2>MicroSim Not Yet Implemented</h2>
+            <p>This MicroSim has been scaffolded from its specification but the
+            interactive content has not been built yet. See the chapter source
+            and the <code>index.md</code> in this directory for the full spec.</p>
+        </div>
+        <div class="meta">
+            <p><strong>Sim ID:</strong> normalization-journey-1nf-to-3nf</p>
+            <p><strong>Library:</strong> p5.js</p>
+            <p><strong>Bloom Level:</strong> TBD</p>
+            <p><strong>Learning Objective:</strong> TBD</p>
+        </div>
+    </div>
+
+    <!--
+    SPECIFICATION (from chapter index.md):
+
+    Type: interactive-infographic
+    **sim-id:** normalization-journey-1nf-to-3nf<br/>
+    **Library:** p5.js<br/>
+    **Status:** Specified
+    
+    A p5.js step-through diagram showing a single denormalized table (an Order Report with columns customer_name, customer_email, product_list, order_total, salesperson, salesperson_region) and walking it through three transformations: 1NF (split the product_list into a separate OrderLine table, one row per product), 2NF (extract product_name and price into a Product table referenced by product_id), and 3NF (extract salesperson_region into a Salesperson table referenced by salesperson_id). Each step is rendered as a side-by-side before/after panel with the violating columns highlighted in coral and the corrected schema highlighted in mascot-emerald.
+    
+    Color palette: violation columns in coral with a pulsing red border, corrected columns in mascot-emerald, foreign-key arrows in dark teal. Update-anomaly icons (a small cracked-pencil symbol) appear over violating columns to telegraph the underlying problem.
+    
+    Interactivity: a "Next step" button advances through the four states (denormalized → 1NF → 2NF → 3NF). At each step, a side panel explains in plain English (a) what rule was violated, (b) the update anomaly the violation creates, and (c) the structural fix. A "show update" button animates a hypothetical change (e.g., renaming a product, moving a salesperson to a new region) and shows how many rows must be updated in the violating schema versus the corrected schema — usually a dramatic ratio (50 vs 1).
+    
+    Layout: side-by-side panels stacked vertically across four steps, full canvas width, height ~640px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.
+    
+    Learning objective (Bloom: Applying): Students can take a denormalized table, identify 1NF, 2NF, and 3NF violations, propose the structural fix for each, and quantify the update-anomaly cost of leaving the violation in place.
+    
+    Implementation: p5.js, deployed at `/information-systems/sims/normalization-journey-1nf-to-3nf/`.
+    -->
+</body>
+</html>

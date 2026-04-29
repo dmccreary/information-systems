@@ -1,0 +1,21 @@
+{
+  "title": "Sequence Diagram for \"Place Order\"",
+  "description": "Sequence Diagram for \"Place Order\"",
+  "creator": "Dementia Education Project",
+  "date": "2026-04-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "place-order-sequence-diagram",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 10,
+  "chapter_title": "'Systems Analysis and Design'",
+  "chapter_dir": "10-sad"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "DIKI Hierarchy Interactive Pyramid",
+  "description": "DIKI Hierarchy Interactive Pyramid",
+  "creator": "Dementia Education Project",
+  "date": "2026-04-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "diki-pyramid",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Information Systems",
+  "chapter_dir": "01-foundations"
+}

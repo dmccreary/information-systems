@@ -1,0 +1,14 @@
+{
+  "sim_id": "six-rs-decision-tree",
+  "diagram_name": "The Six Rs Decision Tree",
+  "chapter_number": 12,
+  "chapter_title": "'Cloud Computing and Infrastructure'",
+  "chapter_dir": "12-cloud",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** six-rs-decision-tree<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nA vis-network decision tree starting from a single root node \"Workload to migrate\". The first branching question is \"Still used?\" — a No branch leads to a \"Retire\" leaf node in slate-gray. The Yes branch leads to \"SaaS equivalent available?\" — Yes leads to \"Repurchase\" in mascot-magenta. The No branch leads to \"Strategic, long-lived application?\" — Yes leads to \"Refactor\" in mascot-emerald. No leads to \"Cloud benefit worth minor effort?\" — Yes leads to \"Replatform\" in coral, and No leads to \"Migration deadline pressure?\" — Yes leads to \"Rehost / Lift and Shift\" in amber, and No leads to \"Retain / Revisit\" in slate-gray.\n\nTo work around the vis-network horizontal-edge label rendering bug, edge labels use a slight y-offset (480 to 490) so labels render correctly on initial load. Edge labels are short (\"Yes\", \"No\"). Each leaf node contains the R name, the typical effort level, and an icon.\n\nColor palette: decision nodes in deep teal, leaf nodes color-coded by effort (slate-gray for Retain/Retire, mascot-emerald for high-value paths, coral for medium, amber for quick-and-dirty). Edge arrows in dark teal.\n\nInteractivity: clicking any node highlights the path from root to that node. Hovering each leaf shows (a) what the strategy means, (b) typical timeline, and (c) a real-world example. A \"trace example\" button lets students step through a worked example workload (e.g., \"company's homegrown HR portal\") to see which R the tree recommends and why.\n\nLayout: hierarchical, top-to-bottom, full canvas width, height ~620px. Canvas resizes on window resize.\n\nLearning objective (Bloom: Applying): Students can apply the Six Rs decision tree to an unfamiliar workload, choose the appropriate R, and defend the choice against the alternatives.\n\nImplementation: vis-network, deployed at `/information-systems/sims/six-rs-decision-tree/`."
+}

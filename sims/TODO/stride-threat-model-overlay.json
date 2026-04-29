@@ -1,0 +1,14 @@
+{
+  "sim_id": "stride-threat-model-overlay",
+  "diagram_name": "STRIDE Overlay on a Simple Web Application",
+  "chapter_number": 14,
+  "chapter_title": "'Security of Information Assets'",
+  "chapter_dir": "14-security",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** stride-threat-model-overlay<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nA vis-network data flow diagram of a small web application: a browser (external entity) connects through a TLS boundary to a web server (process), which talks to an application server (process), which talks to a database (data store) and an authentication service (process). Trust boundaries are drawn as dashed regions: browser-to-server, server-to-internal-services, services-to-database. Overlaid on each element and data flow are STRIDE threat indicators — small colored badges (S, T, R, I, D, E) — that students can click to reveal the specific threat scenario, the security property it violates, and the standard mitigating control.\n\nColor palette: external entities in slate-gray, processes in mascot-emerald, data stores in mascot-magenta, trust boundaries in coral dashed lines, STRIDE badges color-coded per category. A \"show mitigations\" toggle replaces each threat badge with the corresponding control (TLS for spoofing on the wire, hashed passwords for tampering on stored credentials, audit logs for repudiation, encryption-at-rest for information disclosure on the DB, rate limiting for denial of service, RBAC for elevation of privilege).\n\nInteractivity: hovering an element lists every applicable STRIDE threat for that element type; clicking a threat badge opens a panel with the threat description and recommended controls. A scoring mode lets students attempt to identify all threats on each element and reveals their score against the canonical answer.\n\nLayout: full canvas width, height ~600px. Sequence flows use slight y-offsets to work around the vis-network horizontal-edge-label rendering bug.\n\nLearning objective (Bloom: Applying): Students can apply the STRIDE method to a small system architecture, identify at least one threat per category, and propose a standard mitigating control for each.\n\nImplementation: vis-network, deployed at `/information-systems/sims/stride-threat-model-overlay/`."
+}

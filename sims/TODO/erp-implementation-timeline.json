@@ -1,0 +1,14 @@
+{
+  "sim_id": "erp-implementation-timeline",
+  "diagram_name": "The ERP Implementation Timeline with Cutover",
+  "chapter_number": 13,
+  "chapter_title": "'Enterprise Systems'",
+  "chapter_dir": "13-enterprise-systems",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** erp-implementation-timeline<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nA p5.js horizontal Gantt-style timeline showing a representative 24-month ERP implementation broken into the seven phases (Strategy/Selection, Discovery/Design, Build/Configure, Test, Train, Cutover, Hypercare). Each phase is a colored bar of proportional length. Overlaid on the timeline is the *cutover plan* itself, expanded as a 96-hour window in the middle of the cutover phase: a vertical zoom showing the hour-by-hour activities (freeze legacy systems → final extract → data migration → reconciliation → smoke tests → go/no-go decision → user enablement → first transactions → hypercare standby).\n\nBelow the main timeline, a parallel \"rollout strategy\" lane lets students switch between Big Bang (single cutover bar at month 22) and Phased (three smaller cutover bars at months 14, 18, and 24, each covering a region or business unit). A \"show interim integration\" toggle in phased mode draws temporary integration arrows between the on-old-system and on-new-system populations.\n\nColor palette: phase bars in mascot-emerald with darker shades for the more risk-bearing phases; cutover window in coral with amber for the go/no-go decision point; hypercare in soft-blue with a \"support hotline\" icon. Interim-integration arrows in dashed slate-gray.\n\nInteractivity: hovering each phase shows typical duration, deliverables, and the most common failure modes. A \"what if we skip testing\" button compresses the timeline and shows in red the cutover failures that result. A \"post-ERP review\" marker appears at month 30 (six months after go-live) showing what the post-implementation audit typically covers.\n\nLayout: full canvas width, height ~620px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.\n\nLearning objective (Bloom: Analyzing): Students can describe the phases of an ERP implementation, identify the cutover window, contrast big-bang and phased rollout strategies on the same timeline, and explain why testing and hypercare are non-negotiable.\n\nImplementation: p5.js, deployed at `/information-systems/sims/erp-implementation-timeline/`."
+}

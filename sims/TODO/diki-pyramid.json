@@ -1,0 +1,14 @@
+{
+  "sim_id": "diki-pyramid",
+  "diagram_name": "DIKI Hierarchy Interactive Pyramid",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Information Systems",
+  "chapter_dir": "01-foundations",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** diki-pyramid<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nA four-level pyramid drawn in p5.js, drawn responsively to fill the available iframe width. From bottom to top, the four layers are labeled **Data**, **Information**, **Knowledge**, **Insight**, in that order. Bottom layer is widest (full canvas width minus padding) and shortest in height; each layer above is narrower; top \"Insight\" layer is smallest.\n\nColor palette (light mode): Data = light steel blue, Information = medium teal, Knowledge = forest green, Insight = warm gold. Each layer has a 1px darker border and white label text centered horizontally.\n\nInteractivity: when the user hovers over (or taps) a layer, a callout box slides out to the right of the pyramid showing:\n\n- The layer name in bold\n- A one-line definition\n- A concrete example using a hospital-patient scenario:\n  - Data: \"98.6\"\n  - Information: \"Patient Marisol Chen, oral temperature 98.6°F, 14:32 on April 28\"\n  - Knowledge: \"Marisol's six consecutive normal readings indicate she meets the discharge criterion\"\n  - Insight: \"Patients matching Marisol's discharge profile have a 15% higher 72-hour readmission rate when transportation is not pre-confirmed before 3pm\"\n\nBelow the pyramid, a single sentence reads: \"Most IS projects fail at a layer transition. Which layer are you actually serving?\"\n\nA small footer note on the diagram reads: \"Older texts call this the DIKW Hierarchy with *Wisdom* at the top; modern data-science practice prefers *Insight* because it names a deliverable rather than a virtue.\"\n\nLayout: pyramid centered, callout box appears to the right at desktop widths and below at narrow widths (responsive). Canvas resizes on window resize events. The setup() function calls updateCanvasSize() as its first step. Canvas parented with `canvas.parent(document.querySelector('main'));`.\n\nLearning objective (Bloom: Understanding): Students can correctly classify a given example into Data, Information, Knowledge, or Insight and explain why.\n\nImplementation: p5.js, single `main.html`, accompanying `index.md` doc, deployed at `/sims/diki-pyramid/`."
+}

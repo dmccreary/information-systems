@@ -1,0 +1,14 @@
+{
+  "sim_id": "privacy-regulatory-landscape",
+  "diagram_name": "The Regulatory Landscape Map",
+  "chapter_number": 15,
+  "chapter_title": "'Privacy, Compliance, and Regulation'",
+  "chapter_dir": "15-privacy-compliance",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** privacy-regulatory-landscape<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nA vis-network 2D map laying out the major privacy and compliance regimes on two axes: the horizontal axis is *geographic scope* (single state, national, multi-national, global), the vertical axis is *sector scope* (cross-sector / general, finance-only, healthcare-only, payments-only). Each regulation is rendered as a labeled node placed at its intersection: GDPR in the upper-right (multi-national, cross-sector), CCPA/CPRA in the lower-left (single-state, cross-sector), HIPAA in the upper-middle (national, healthcare), SOX in the upper-middle (national, finance), PCI-DSS spanning the right side (global, payments). Edges connect regulations that share data subject rights, breach notification requirements, or enforcement patterns.\n\nColor palette: GDPR in mascot-emerald, CCPA/CPRA in coral, HIPAA in mascot-magenta, SOX in slate-blue, PCI-DSS in amber. Background quadrant tints distinguish geographic regions.\n\nInteractivity: hovering each regulation reveals a popup with (a) the year of force, (b) the regulator, (c) the maximum penalty, and (d) a one-line plain-English summary of what it actually demands. A \"filter by data type\" dropdown highlights which regulations apply when a given data type (health, finance, card, generic personal) is in play. A \"what applies to me?\" walk-through asks the student five questions and lights up the regulations that would apply.\n\nLayout: full canvas width, height ~560px. Canvas resizes on window resize.\n\nLearning objective (Bloom: Analyzing): Students can place each regulation on a sector/geography map, identify which regulations co-apply to a given system, and read the matrix to scope a compliance program.\n\nImplementation: vis-network, deployed at `/information-systems/sims/privacy-regulatory-landscape/`."
+}

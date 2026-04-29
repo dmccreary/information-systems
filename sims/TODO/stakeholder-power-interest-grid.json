@@ -1,0 +1,14 @@
+{
+  "sim_id": "stakeholder-power-interest-grid",
+  "diagram_name": "The Stakeholder Power/Interest Grid",
+  "chapter_number": 16,
+  "chapter_title": "'IS Project Management'",
+  "chapter_dir": "16-project-management",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-29",
+  "specification": "Type: interactive-infographic\n**sim-id:** stakeholder-power-interest-grid<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nA p5.js 2x2 matrix with \"Interest in Project\" on the X axis and \"Power to Affect Project\" on the Y axis. The four quadrants are labeled Manage Closely (top-right), Keep Satisfied (top-left), Keep Informed (bottom-right), and Monitor (bottom-left). Pre-populated with twelve stakeholder dots from a sample IS project (e.g., CFO, end users, IT Director, vendor account manager, compliance officer, union steward, help desk lead, project sponsor, departmental power user, intern team, board of directors, external auditor).\n\nColor palette: each quadrant tinted by its strategy — Manage Closely in mascot-emerald, Keep Satisfied in coral, Keep Informed in mascot-magenta tints, Monitor in slate-gray. Stakeholder dots colored by current attitude (champion=green, supporter=teal, neutral=gray, skeptic=amber, blocker=red).\n\nInteractivity: students can drag stakeholder dots around to reposition them, and the suggested engagement strategy updates in a side panel. A \"what if\" toggle simulates an attitude shift over time, animating dots to show how a regulator's interest spikes after a public incident, or how a sponsor's power decays after a reorg. Clicking a dot reveals the stakeholder's role, concerns, and preferred communication cadence.\n\nLayout: full canvas width, height ~520px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.\n\nLearning objective (Bloom: Analyzing): Students can place stakeholders on a power/interest grid, justify the placement, and select an appropriate engagement strategy for each quadrant.\n\nImplementation: p5.js, deployed at `/information-systems/sims/stakeholder-power-interest-grid/`."
+}

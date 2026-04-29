@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Sprint Burndown Chart (Ideal vs Actual)</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        #container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a3a6c;
+        }
+        .placeholder {
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .placeholder h2 {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .placeholder p {
+            font-size: 14px;
+            max-width: 480px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 12px;
+        }
+        .meta strong { color: #495057; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>A Sprint Burndown Chart (Ideal vs Actual)</h1>
+        <div class="placeholder">
+            <span class="badge">SCAFFOLD</span>
+            <h2>MicroSim Not Yet Implemented</h2>
+            <p>This MicroSim has been scaffolded from its specification but the
+            interactive content has not been built yet. See the chapter source
+            and the <code>index.md</code> in this directory for the full spec.</p>
+        </div>
+        <div class="meta">
+            <p><strong>Sim ID:</strong> sprint-burndown-chart</p>
+            <p><strong>Library:</strong> Chart.js</p>
+            <p><strong>Bloom Level:</strong> TBD</p>
+            <p><strong>Learning Objective:</strong> TBD</p>
+        </div>
+    </div>
+
+    <!--
+    SPECIFICATION (from chapter index.md):
+
+    Type: interactive-infographic
+    **sim-id:** sprint-burndown-chart<br/>
+    **Library:** Chart.js<br/>
+    **Status:** Specified
+    
+    A Chart.js line chart showing a 10-day sprint with two lines: an ideal burndown (a straight diagonal from 50 story points on day 0 to 0 on day 10, in dashed slate-gray) and an actual burndown (a real-looking jagged line that plateaus on day 3 due to a blocked story, drops sharply on day 5 when it unblocks, ticks upward on day 7 when scope is added mid-sprint, and ends at 8 points remaining on day 10 — a missed sprint goal).
+    
+    Color palette: ideal line in slate-gray dashed, actual line in mascot-magenta solid, scope-added events marked with coral upward arrows, completed-story events marked with mascot-emerald downward steps.
+    
+    Interactivity: students can drag the actual line at each day to simulate different scenarios and see whether the sprint goal is met. A "what-if" toggle adds an overlay showing the velocity-based forecast for the next sprint based on the current sprint's outcome. A second chart shows team velocity over the last six sprints with a trendline.
+    
+    Layout: full canvas width, height ~480px. Canvas resizes on window resize.
+    
+    Learning objective (Bloom: Analyzing): Students can read a burndown chart, distinguish ideal from actual, identify scope-change events, and forecast the next sprint's likely outcome from velocity history.
+    
+    Implementation: Chart.js, deployed at `/information-systems/sims/sprint-burndown-chart/`.
+    -->
+</body>
+</html>

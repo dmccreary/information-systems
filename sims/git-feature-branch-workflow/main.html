@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Simple Feature-Branch Git Workflow</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        #container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a3a6c;
+        }
+        .placeholder {
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .placeholder h2 {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .placeholder p {
+            font-size: 14px;
+            max-width: 480px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 12px;
+        }
+        .meta strong { color: #495057; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>A Simple Feature-Branch Git Workflow</h1>
+        <div class="placeholder">
+            <span class="badge">SCAFFOLD</span>
+            <h2>MicroSim Not Yet Implemented</h2>
+            <p>This MicroSim has been scaffolded from its specification but the
+            interactive content has not been built yet. See the chapter source
+            and the <code>index.md</code> in this directory for the full spec.</p>
+        </div>
+        <div class="meta">
+            <p><strong>Sim ID:</strong> git-feature-branch-workflow</p>
+            <p><strong>Library:</strong> vis-network</p>
+            <p><strong>Bloom Level:</strong> TBD</p>
+            <p><strong>Learning Objective:</strong> TBD</p>
+        </div>
+    </div>
+
+    <!--
+    SPECIFICATION (from chapter index.md):
+
+    Type: interactive-infographic
+    **sim-id:** git-feature-branch-workflow<br/>
+    **Library:** vis-network<br/>
+    **Status:** Specified
+    
+    A vis-network diagram visualizing a feature-branch Git workflow as a directed graph of commit nodes. The `main` branch runs horizontally across the middle of the canvas at y=480. Feature branches diverge upward and downward from `main`, advance through several commit nodes, and merge back via pull-request nodes. To work around the vis-network horizontal-edge label rendering bug, branch lines use a slight y-offset (e.g., 480 to 490) so labels render correctly on initial load.
+    
+    Color palette: `main` branch in mascot-emerald, feature branches in shades of teal and amber, pull-request merge commits in a contrasting coral. Failed CI checks marked with a red badge; passed checks with a green checkmark.
+    
+    Interactivity: hovering a commit shows the commit message, author, and CI status; hovering a pull-request node shows the PR title, the reviewer, and the merge-status. A "play" control walks through a typical feature lifecycle: branch creation, three commits, push, PR opened, code review comments, fix-up commits, CI passing, PR approved, merge to `main`, deployment trigger fired.
+    
+    Layout: hierarchical with custom positioning to preserve the linear timeline metaphor. Canvas resizes on window resize, height ~480px.
+    
+    Learning objective (Bloom: Applying): Students can trace a feature from branch creation through merge, and identify where code review and CI checks fit into the timeline.
+    
+    Implementation: vis-network, deployed at `/information-systems/sims/git-feature-branch-workflow/`.
+    -->
+</body>
+</html>

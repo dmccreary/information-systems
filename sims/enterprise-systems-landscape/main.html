@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Enterprise Systems Landscape with ERP at the Center</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        #container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a3a6c;
+        }
+        .placeholder {
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .placeholder h2 {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .placeholder p {
+            font-size: 14px;
+            max-width: 480px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 12px;
+        }
+        .meta strong { color: #495057; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>The Enterprise Systems Landscape with ERP at the Center</h1>
+        <div class="placeholder">
+            <span class="badge">SCAFFOLD</span>
+            <h2>MicroSim Not Yet Implemented</h2>
+            <p>This MicroSim has been scaffolded from its specification but the
+            interactive content has not been built yet. See the chapter source
+            and the <code>index.md</code> in this directory for the full spec.</p>
+        </div>
+        <div class="meta">
+            <p><strong>Sim ID:</strong> enterprise-systems-landscape</p>
+            <p><strong>Library:</strong> vis-network</p>
+            <p><strong>Bloom Level:</strong> TBD</p>
+            <p><strong>Learning Objective:</strong> TBD</p>
+        </div>
+    </div>
+
+    <!--
+    SPECIFICATION (from chapter index.md):
+
+    Type: interactive-infographic
+    **sim-id:** enterprise-systems-landscape<br/>
+    **Library:** vis-network<br/>
+    **Status:** Specified
+    
+    A vis-network hub-and-spoke diagram with the ERP system as a central node (large mascot-emerald circle labeled "ERP — system of record") surrounded by satellite enterprise systems: CRM (sales, marketing, service), SCM (planning, logistics, warehouse), HRIS (core HR, talent), Payroll, Procurement (source-to-pay), Industry-Cloud overlays, and BI/Reporting. Each satellite is connected to ERP by a labeled integration arrow that names the type of integration (real-time API, nightly batch, event stream, master-data sync) and the direction of the dominant data flow. Edges between satellites (e.g., CRM ↔ Procurement when a customer has a referral relationship to a supplier) show the secondary integration burden that grows with best-of-breed strategies.
+    
+    Color palette: ERP node in mascot-emerald with white text, satellites in alternating soft-blue and coral, integration edges in teal (real-time) vs. amber (batch) vs. dashed slate (event-driven). To work around the vis-network horizontal-edge label rendering bug, satellite nodes use a slight y-offset (e.g., 480 to 490) so labels render on initial load.
+    
+    Interactivity: hovering each satellite reveals (a) the system category, (b) representative vendors, and (c) the typical integration pattern with ERP. A "best of breed vs suite" toggle adds or removes satellite edges to show the integration-burden difference between the two strategies — students see visibly how many extra arrows appear when each function is a separate vendor product. A "show master data flow" highlight draws the customer, vendor, item, and employee master records flowing from ERP outward.
+    
+    Layout: hub-and-spoke, full canvas width, height ~560px. Canvas resizes on window resize.
+    
+    Learning objective (Bloom: Understanding): Students can name the major enterprise system categories, identify ERP as the typical system-of-record hub, and articulate why integration complexity grows non-linearly with the number of separate systems.
+    
+    Implementation: vis-network, deployed at `/information-systems/sims/enterprise-systems-landscape/`.
+    -->
+</body>
+</html>
