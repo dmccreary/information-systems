@@ -161,13 +161,15 @@ function drawLayer(layerIndex) {
   vertex(bl, nextY);
   endShape(CLOSE);
 
-  // Label
+  // Label (nudge top layer down so it clears the narrow apex)
   fill(layer.headerText);
   noStroke();
   textSize(layerIndex === 3 ? 13 : 16);
   textStyle(BOLD);
   textAlign(CENTER, CENTER);
-  text(layer.name, pyramidTopX, y + levelHeight / 2);
+  let labelY = y + levelHeight / 2;
+  if (layerIndex === 3) labelY += 15;
+  text(layer.name, pyramidTopX, labelY);
   textStyle(NORMAL);
 
   if (isHovered) {

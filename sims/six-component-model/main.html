@@ -3,107 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
     <title>Six-Component Model of an Information System</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/vis-network/styles/vis-network.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
-        <h1>Six-Component Model of an Information System</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> six-component-model</p>
-            <p><strong>Library:</strong> vis-network</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> TBD</p>
-        </div>
-    </div>
+    <main class="container">
+        <div id="network"></div>
 
-    <!--
-    SPECIFICATION (from chapter index.md):
+        <div class="title">Six-Component Model of an Information System</div>
 
-    Type: interactive-infographic
-    **sim-id:** six-component-model<br/>
-    **Library:** vis-network<br/>
-    **Status:** Specified
-    
-    A vis-network diagram with six labeled nodes arranged in a hexagon: **Hardware**, **Software**, **Network**, **Data**, **User**, **Business Process**. Each node is colored by category — Hardware (slate gray), Software (lime green), Network (steel blue), Data (gold), User (warm coral), Business Process (lavender). Each node has an icon (Material Design Icons): hardware = `mdi-server`, software = `mdi-application-braces`, network = `mdi-lan`, data = `mdi-database`, user = `mdi-account`, business process = `mdi-sitemap`.
-    
-    All six nodes are connected to each of the other five (a complete graph K6), but edges have a slight y-offset (e.g., 480 → 490 baseline) to avoid the vis-network horizontal-edge label rendering bug. Edges are unlabeled by default, light gray, 1px.
-    
-    Interactivity: when a user clicks a node, a side panel reveals (a) a one-sentence definition of that component, (b) a concrete example from a hospital admission scenario, and (c) the question *"What breaks if this component is missing?"* with a one-line answer. Example for "User": "If the nurse cannot or will not chart accurately, the data layer becomes unreliable and every dashboard above it lies."
-    
-    A toggle below the diagram switches between three example scenarios: hospital admission, loan approval, university course registration. The same six components remain; only the side-panel descriptions change.
-    
-    Layout: responsive, fills available iframe width, height ~500px. Canvas resizes on window resize.
-    
-    Learning objective (Bloom: Applying): Given a real-world organizational task, students can identify which entity in the scenario plays each of the six roles.
-    
-    Implementation: vis-network, deployed at `/sims/six-component-model/`.
-    -->
+        <div class="right-panel">
+            <div class="scenario-selector">
+                <label for="scenario-select"><strong>Scenario:</strong></label>
+                <select id="scenario-select">
+                    <option value="hospital">Hospital Admission</option>
+                    <option value="loan">Loan Approval</option>
+                    <option value="university">Course Registration</option>
+                </select>
+            </div>
+
+            <div class="info-panel">
+                <div class="info-header" id="info-header">
+                    <span class="info-swatch" id="info-swatch"></span>
+                    <span class="info-title" id="info-title">Click a component</span>
+                </div>
+                <div class="info-body" id="info-body">
+                    <p class="info-hint">Click any of the six nodes to see how that component plays its role in the selected scenario.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="six-component-model.js"></script>
 </body>
 </html>
