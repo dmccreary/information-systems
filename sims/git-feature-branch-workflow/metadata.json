@@ -1,21 +1,53 @@
 {
-  "title": "A Simple Feature-Branch Git Workflow",
-  "description": "A Simple Feature-Branch Git Workflow",
-  "creator": "Dementia Education Project",
+  "title": "Feature-Branch Git Workflow",
+  "description": "Interactive vis-network visualization of a feature-branch Git workflow with commits, pull request, code review, CI status, fix-up, merge, and deployment.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Software Development", "Git", "DevOps" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "git-feature-branch-workflow",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "Git Workflow",
+  "learningObjectives": [
+    "Trace a feature from branch creation through deployment",
+    "Identify where code review and CI checks fit in the timeline",
+    "Distinguish a regular commit from a merge commit",
+    "Explain why fix-up commits are normal"
+  ],
+  "duration": "5-10 minutes",
+  "prerequisites": [ "Familiarity with Git basics" ],
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "vis-network 9.1",
+  "responsive": "Width-responsive",
+  "dependencies": [ "vis-network 9.1.9" ],
+  "accessibility": { "screenReaderSupport": false, "keyboardNavigation": false, "highContrast": true },
+  "controls": [
+    { "type": "button", "description": "Play feature lifecycle" },
+    { "type": "click", "description": "Click for commit metadata" }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [ "Feature-branch + PR workflow (GitHub flow)" ],
+  "limitations": [ "Does not depict trunk-based development or release branches" ],
+  "visualizationType": [ "diagram", "network", "graph" ],
+  "bloomsTaxonomy": [ "Understand", "Apply" ],
+  "bloomLevel": "Apply",
+  "bloomVerb": "trace",
+  "completion_status": "implemented",
   "chapter_number": 4,
   "chapter_title": "Application Development for IS",
-  "chapter_dir": "04-appdev"
+  "chapter_dir": "04-appdev",
+  "pedagogical": {
+    "pattern": "interactive-trace",
+    "bloomAlignment": [ "understand", "apply" ],
+    "bloomVerbs": [ "trace", "identify" ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [ "elaborative" ],
+    "interactionStyle": "explore"
+  }
 }

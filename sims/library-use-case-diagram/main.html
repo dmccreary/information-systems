@@ -3,105 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Use Case Diagram for a Small Library System</title>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Library Use Case Diagram</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 12px; font-family: 'Segoe UI', Arial, sans-serif; background: #fff; color: #212529; }
+        h2 { margin: 0 0 6px 0; color: #1a3a6c; font-size: 16px; }
+        .controls { display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0; align-items: center; font-size: 12px; }
+        button { background: #1a3a6c; color: white; border: none; padding: 7px 12px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600; }
+        button:hover { background: #2e5285; }
+        .layout { display: grid; grid-template-columns: 1fr 280px; gap: 10px; height: 540px; }
+        @media (max-width: 700px) { .layout { grid-template-columns: 1fr; height: auto; } #network { height: 380px !important; } }
+        #network { border: 2px solid #455A64; border-radius: 4px; background: #fafbfc; height: 100%; position: relative; }
+        #network::before { content: 'Library System'; position: absolute; top: 6px; left: 12px; color: #455A64; font-weight: bold; font-size: 12px; z-index: 1; }
+        #side-panel { border: 1px solid #ced4da; border-radius: 4px; background: #fafbfc; padding: 10px; overflow-y: auto; height: 100%; font-size: 12px; }
+        #panel-title { font-size: 13px; font-weight: bold; color: #1a3a6c; margin-bottom: 6px; }
+        #panel-body p { margin: 4px 0; }
     </style>
 </head>
 <body>
-    <div id="container">
-        <h1>Use Case Diagram for a Small Library System</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> library-use-case-diagram</p>
-            <p><strong>Library:</strong> vis-network</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> TBD</p>
+    <h2>UML Use Case Diagram — Library System</h2>
+    <div class="controls">
+        <button id="toggle-includes">Show «include»/«extend»</button>
+        <span style="color:#666;">Click an actor for associations or a use case for its template.</span>
+    </div>
+    <div class="layout">
+        <div id="network"></div>
+        <div id="side-panel">
+            <div id="panel-title"></div>
+            <div id="panel-body"></div>
         </div>
     </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: interactive-infographic
-    **sim-id:** library-use-case-diagram<br/>
-    **Library:** vis-network<br/>
-    **Status:** Specified
-    
-    A vis-network use case diagram showing a small public-library system. The system boundary is a labeled rectangle titled "Library System." Inside the rectangle, ellipses represent the use cases: *Search Catalog*, *Borrow Item*, *Return Item*, *Renew Loan*, *Place Hold*, *Pay Fine*, *Manage Catalog*, *Generate Reports*, and *Authenticate User*. Outside the rectangle, three actors as stick figures: *Patron* (left), *Librarian* (right), and a system actor *Payment Gateway* (bottom). Lines connect each actor to the use cases they participate in: Patron connects to Search/Borrow/Return/Renew/Hold/Pay; Librarian connects to Manage Catalog/Generate Reports plus all Patron-facing use cases (since librarians also help walk-in patrons); Payment Gateway connects to Pay Fine. *Authenticate User* is connected via dashed `<<include>>` arrows from *Borrow Item*, *Place Hold*, and *Pay Fine*. *Apply Late-Fee Waiver* is shown as an `<<extend>>` of *Pay Fine*. To work around the vis-network horizontal-edge label rendering bug, lines with `<<include>>` and `<<extend>>` labels use a slight y-offset (480 to 490) so labels render correctly on initial load.
-    
-    Color palette: system boundary in slate-gray, ellipses in mascot-emerald, actors in dark teal, include/extend arrows in coral with dashed line styles. Authentication use case highlighted in mascot-magenta as the cross-cutting concern.
-    
-    Interactivity: hovering each use case opens a side panel showing the canonical use-case template for that case (preconditions, main success scenario, alternative flows, postconditions). Clicking an actor highlights every use case that actor participates in. A "show includes/extends" toggle hides or reveals the dashed relationship arrows so students can see the diagram with and without the advanced notation.
-    
-    Layout: actors on the left and right margins, use cases clustered inside the boundary, height ~520px. Canvas resizes on window resize.
-    
-    Learning objective (Bloom: Applying): Students can read a use case diagram, identify the actors and use cases, distinguish `<<include>>` from `<<extend>>`, and produce a use case template for any ellipse on the page.
-    
-    Implementation: vis-network, deployed at `/information-systems/sims/library-use-case-diagram/`.
-    -->
+    <script src="library-use-case-diagram.js"></script>
 </body>
 </html>

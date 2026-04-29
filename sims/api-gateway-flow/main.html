@@ -3,107 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
     <title>API Gateway Request Flow</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 12px; font-family: 'Segoe UI', Arial, sans-serif; background: #fff; color: #212529; }
+        h2 { margin: 0 0 6px 0; color: #1a3a6c; font-size: 16px; }
+        .controls {
+            display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0; align-items: center;
             font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
         }
-        .meta strong { color: #495057; }
+        button {
+            background: #1a3a6c; color: white; border: none; padding: 7px 12px;
+            border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600;
+        }
+        button:hover { background: #2e5285; }
+        button.active { background: #FF7043; }
+        button:disabled { opacity: 0.5; cursor: not-allowed; }
+        select { padding: 6px 10px; font-size: 12px; border-radius: 4px; border: 1px solid #ced4da; }
+        .layout { display: grid; grid-template-columns: 1fr 280px; gap: 10px; height: 480px; }
+        @media (max-width: 700px) { .layout { grid-template-columns: 1fr; height: auto; } #network { height: 360px !important; } }
+        #network { border: 1px solid #ced4da; border-radius: 4px; background: #fafbfc; height: 100%; }
+        #side-panel {
+            border: 1px solid #ced4da; border-radius: 4px; background: #fafbfc;
+            padding: 10px; overflow-y: auto; height: 100%;
+        }
+        #panel-title { font-size: 12px; font-weight: bold; color: #1a3a6c; margin-bottom: 8px; }
+        .concern { display: flex; gap: 8px; margin-bottom: 8px; font-size: 12px; }
+        .step-num {
+            background: #1a3a6c; color: white; width: 22px; height: 22px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: bold; flex-shrink: 0;
+        }
+        .detail { color: #555; }
     </style>
 </head>
 <body>
-    <div id="container">
-        <h1>API Gateway Request Flow</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> api-gateway-flow</p>
-            <p><strong>Library:</strong> vis-network</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> TBD</p>
+    <h2>API Gateway Request Flow</h2>
+    <div class="controls">
+        <label>Target service:
+            <select id="target-service">
+                <option value="orders">Orders</option>
+                <option value="inventory">Inventory</option>
+                <option value="customer">Customer</option>
+            </select>
+        </label>
+        <button id="trace-btn">Send Request &rarr;</button>
+        <button id="no-gateway">Show Without Gateway</button>
+        <span style="color:#555;">Tip: click any node for details.</span>
+    </div>
+    <div class="layout">
+        <div id="network"></div>
+        <div id="side-panel">
+            <div id="panel-title"></div>
+            <div id="panel-body"></div>
         </div>
     </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: interactive-infographic
-    **sim-id:** api-gateway-flow<br/>
-    **Library:** vis-network<br/>
-    **Status:** Specified
-    
-    A vis-network diagram showing a left-to-right flow: a **Client** node (mobile phone or browser icon) on the left, an **API Gateway** node in the middle, and three backend service nodes on the right (**Orders Service**, **Inventory Service**, **Customer Service**). Each backend service has its own database node attached below it. Edges connect client to gateway and gateway to each backend. All edges use a slight y-offset (e.g., 480 → 490) to avoid the vis-network horizontal-edge label rendering bug.
-    
-    Color palette: Client = sky blue, API Gateway = teal, Orders = lime green, Inventory = gold, Customer = warm coral. Databases are slate gray cylinders.
-    
-    Interactivity: clicking the **Send Request** button animates a request token from the client to the gateway, where a side panel highlights the cross-cutting concerns the gateway applies in sequence (authenticate → rate limit → route → log). The token then continues to the appropriate backend service (chosen via a dropdown — orders, inventory, or customer). The response animates back along the same path, and the panel updates to show response-side concerns (caching, transformation, logging).
-    
-    A toggle reveals what the diagram looks like *without* a gateway — every backend service exposed directly, each one having to reimplement authentication, rate limiting, and logging. The clutter is the point.
-    
-    Layout: horizontal flow, full canvas width, height ~480px. Canvas resizes on window resize.
-    
-    Learning objective (Bloom: Analyzing): Students can articulate which cross-cutting concerns belong in the gateway and which belong in the backend service.
-    
-    Implementation: vis-network, deployed at `/sims/api-gateway-flow/`.
-    -->
+    <script src="api-gateway-flow.js"></script>
 </body>
 </html>

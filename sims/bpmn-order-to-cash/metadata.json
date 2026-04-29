@@ -1,21 +1,54 @@
 {
-  "title": "Anatomy of a BPMN Order-to-Cash Process",
-  "description": "Anatomy of a BPMN Order-to-Cash Process",
-  "creator": "Dementia Education Project",
+  "title": "BPMN Order-to-Cash Process",
+  "description": "An interactive BPMN order-to-cash diagram with three lanes (Sales, Credit, Fulfillment), exclusive and parallel gateways, message flows to a Customer pool, and a token-trace animation for two paths.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Business Process Management", "BPMN" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "bpmn-order-to-cash",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "BPMN Modeling",
+  "learningObjectives": [
+    "Read a BPMN diagram and name each element type by shape",
+    "Distinguish exclusive (XOR) from parallel (AND) gateways",
+    "Trace a token through both branches of an exclusive gateway",
+    "Identify lane handoffs and explain their risk"
+  ],
+  "duration": "10-15 minutes",
+  "prerequisites": [ "Familiarity with business processes" ],
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "vis-network 9.1",
+  "responsive": "Width-responsive",
+  "dependencies": [ "vis-network 9.1.9" ],
+  "accessibility": { "screenReaderSupport": false, "keyboardNavigation": false, "highContrast": true },
+  "controls": [
+    { "type": "button", "description": "Trace large/small order paths" },
+    { "type": "button", "description": "Highlight lane handoffs" },
+    { "type": "click", "description": "Click elements for definitions" }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [ "Simplified one-pool, three-lane process" ],
+  "limitations": [ "No exception flows or compensation events" ],
+  "visualizationType": [ "diagram", "process-flow", "bpmn" ],
+  "bloomsTaxonomy": [ "Understand", "Apply" ],
+  "bloomLevel": "Apply",
+  "bloomVerb": "trace",
+  "completion_status": "implemented",
   "chapter_number": 5,
   "chapter_title": "Business Process Management",
-  "chapter_dir": "05-bpm"
+  "chapter_dir": "05-bpm",
+  "pedagogical": {
+    "pattern": "interactive-trace",
+    "bloomAlignment": [ "understand", "apply" ],
+    "bloomVerbs": [ "identify", "trace", "distinguish" ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [ "elaborative" ],
+    "interactionStyle": "explore"
+  }
 }

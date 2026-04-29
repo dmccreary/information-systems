@@ -1,21 +1,53 @@
 {
-  "title": "The Six Rs Decision Tree",
-  "description": "The Six Rs Decision Tree",
-  "creator": "Dementia Education Project",
+  "title": "Six Rs Cloud Migration Decision Tree",
+  "description": "Interactive decision tree for choosing among the Six Rs (Retire, Repurchase, Refactor, Replatform, Rehost, Retain) for cloud migration with worked examples.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Cloud Computing", "Migration Strategy" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "six-rs-decision-tree",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "Cloud Migration Strategy",
+  "learningObjectives": [
+    "Apply the Six Rs decision tree to an unfamiliar workload",
+    "Choose the appropriate R and defend the choice",
+    "Estimate timeline implications",
+    "Identify when Retain is the best short-term choice"
+  ],
+  "duration": "10 minutes",
+  "prerequisites": [ "Basic cloud computing familiarity" ],
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "vis-network 9.1",
+  "responsive": "Width-responsive",
+  "dependencies": [ "vis-network 9.1.9" ],
+  "accessibility": { "screenReaderSupport": false, "keyboardNavigation": false, "highContrast": true },
+  "controls": [
+    { "type": "button", "description": "Trace example workload" },
+    { "type": "click", "description": "Click leaves for details" }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [ "Six Rs framework as commonly used in cloud migration practice" ],
+  "limitations": [ "Real decisions involve more variables (cost, risk, team skills)" ],
+  "visualizationType": [ "decision-tree", "diagram" ],
+  "bloomsTaxonomy": [ "Apply", "Evaluate" ],
+  "bloomLevel": "Apply",
+  "bloomVerb": "apply",
+  "completion_status": "implemented",
   "chapter_number": 12,
-  "chapter_title": "'Cloud Computing and Infrastructure'",
-  "chapter_dir": "12-cloud"
+  "chapter_title": "Cloud Computing and Infrastructure",
+  "chapter_dir": "12-cloud",
+  "pedagogical": {
+    "pattern": "decision-tree",
+    "bloomAlignment": [ "apply", "evaluate" ],
+    "bloomVerbs": [ "apply", "choose", "defend" ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [ "elaborative" ],
+    "interactionStyle": "explore"
+  }
 }

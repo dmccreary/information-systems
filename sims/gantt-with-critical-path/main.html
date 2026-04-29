@@ -3,105 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Small Project's Gantt Chart with the Critical Path Highlighted</title>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Gantt Chart with Critical Path</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-timeline@7.7.3/styles/vis-timeline-graph2d.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vis-timeline@7.7.3/standalone/umd/vis-timeline-graph2d.min.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { box-sizing: border-box; }
         body {
+            margin: 0;
+            padding: 12px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
+            background: #ffffff;
             color: #212529;
         }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
+        h2 {
+            margin: 0 0 6px 0;
             color: #1a3a6c;
+            font-size: 16px;
         }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
+        .controls {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
             align-items: center;
         }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
+        button {
+            background: #1a3a6c;
+            color: white;
+            border: none;
+            padding: 7px 12px;
+            border-radius: 4px;
+            cursor: pointer;
             font-size: 12px;
             font-weight: 600;
-            margin-bottom: 12px;
         }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
+        button:hover { background: #2e5285; }
+        button.active { background: #FF7043; }
+        #timeline {
+            border: 1px solid #ced4da;
+            border-radius: 4px;
             margin-bottom: 8px;
         }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
+        .legend {
+            display: flex;
+            gap: 16px;
+            font-size: 12px;
+            color: #555;
+            flex-wrap: wrap;
+            margin: 6px 0;
         }
-        .meta {
-            margin-top: 20px;
+        .legend span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .legend i {
+            display: inline-block;
+            width: 18px;
+            height: 12px;
+            border-radius: 2px;
+        }
+        #status-message {
+            padding: 8px 12px;
+            border-radius: 4px;
             font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
+            font-weight: 600;
         }
-        .meta strong { color: #495057; }
+        .alert-good { background: #e0f2f1; border-left: 4px solid #00897B; }
+        .alert-bad { background: #fce4ec; border-left: 4px solid #C2185B; }
+        /* vis-timeline customization */
+        .vis-item.task-critical {
+            background-color: #C2185B;
+            border-color: #880E4F;
+            color: white;
+            font-weight: 600;
+        }
+        .vis-item.task-normal {
+            background-color: #00897B;
+            border-color: #004D40;
+            color: white;
+            font-weight: 600;
+        }
+        .vis-item.task-milestone {
+            background-color: #FFA000;
+            border-color: #E65100;
+            color: #333;
+            font-weight: 700;
+        }
+        .vis-item.task-slack {
+            background-color: rgba(255, 112, 67, 0.20);
+            border-color: rgba(255, 112, 67, 0.4);
+        }
+        .vis-label.vis-group-level-0 { font-size: 11px; }
     </style>
 </head>
 <body>
-    <div id="container">
-        <h1>A Small Project's Gantt Chart with the Critical Path Highlighted</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> gantt-with-critical-path</p>
-            <p><strong>Library:</strong> vis-timeline</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> TBD</p>
-        </div>
+    <h2>CRM Rollout — 12-Week Gantt Chart with Critical Path</h2>
+    <div class="controls">
+        <button id="toggle-slack">Show Slack on Non-Critical Tasks</button>
+        <button id="reset-schedule">Reset Schedule</button>
+        <span style="font-size: 12px; color: #555;">Tip: drag any task bar to a new start date.</span>
     </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: interactive-infographic
-    **sim-id:** gantt-with-critical-path<br/>
-    **Library:** vis-timeline<br/>
-    **Status:** Specified
-    
-    A vis-timeline Gantt chart showing a 12-week IS project (a small CRM rollout) with twelve tasks: Charter Signed (milestone), Requirements Gathering, Vendor Selection, Data Mapping, Test Environment Setup, Configuration, Data Migration Build, User Acceptance Test, Training Materials, Training Delivery, Cutover, Go-Live (milestone). Dependencies shown as arrows; the critical path (Charter → Requirements → Vendor Selection → Configuration → Data Migration → UAT → Cutover → Go-Live) is rendered in a thick mascot-magenta line. Off-critical-path tasks (Test Environment Setup, Training Materials, Training Delivery) are rendered in mascot-emerald with their slack visualized as a faint trailing rectangle.
-    
-    Color palette: critical-path bars in mascot-magenta, non-critical bars in mascot-emerald, milestones as gold diamonds, slack regions in faint coral, dependency arrows in slate-gray.
-    
-    Interactivity: students can drag any task to a new start date and the schedule updates, showing whether the move pushes the project finish (a red flash if it does, green if it doesn't). A "compress schedule" challenge asks students to find the cheapest 2-week compression by adding resources to critical-path tasks. A toggle highlights the slack on every non-critical task to make the concept of "free time" visible.
-    
-    Layout: full canvas width, height ~560px. Canvas resizes on window resize.
-    
-    Learning objective (Bloom: Analyzing): Students can read a Gantt chart, identify the critical path, distinguish critical from non-critical tasks, and predict the schedule effect of moving any task.
-    
-    Implementation: vis-timeline, deployed at `/information-systems/sims/gantt-with-critical-path/`.
-    -->
+    <div class="legend">
+        <span><i style="background:#C2185B;"></i>Critical Path</span>
+        <span><i style="background:#00897B;"></i>Non-Critical (has slack)</span>
+        <span><i style="background:#FFA000;"></i>Milestone</span>
+        <span><i style="background:rgba(255,112,67,0.20); border:1px solid rgba(255,112,67,0.4);"></i>Slack</span>
+    </div>
+    <div id="timeline" style="height: 500px;"></div>
+    <div id="status-message"></div>
+    <script src="gantt-with-critical-path.js"></script>
 </body>
 </html>

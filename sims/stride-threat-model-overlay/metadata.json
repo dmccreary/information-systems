@@ -1,21 +1,54 @@
 {
-  "title": "STRIDE Overlay on a Simple Web Application",
-  "description": "STRIDE Overlay on a Simple Web Application",
-  "creator": "Dementia Education Project",
+  "title": "STRIDE Threat Model Overlay",
+  "description": "Interactive STRIDE threat model overlay on a web-application DFD with per-element threats, mitigations, and a reveal-all button.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Security", "Threat Modeling" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "stride-threat-model-overlay",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "STRIDE Threat Modeling",
+  "learningObjectives": [
+    "Apply STRIDE to a small system architecture",
+    "Identify at least one threat per category per element",
+    "Propose standard mitigating controls",
+    "Distinguish threats appropriate to data stores vs processes vs flows"
+  ],
+  "duration": "15-20 minutes",
+  "prerequisites": [ "Basic security concepts" ],
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "vis-network 9.1",
+  "responsive": "Width-responsive",
+  "dependencies": [ "vis-network 9.1.9" ],
+  "accessibility": { "screenReaderSupport": false, "keyboardNavigation": false, "highContrast": true },
+  "controls": [
+    { "type": "click", "description": "Click for element threats" },
+    { "type": "button", "description": "Show mitigations" },
+    { "type": "button", "description": "Reveal all threats" }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [ "Simplified five-element web application" ],
+  "limitations": [ "Does not include CDN, queue, or message bus" ],
+  "visualizationType": [ "diagram", "dfd", "threat-model" ],
+  "bloomsTaxonomy": [ "Apply", "Analyze" ],
+  "bloomLevel": "Apply",
+  "bloomVerb": "apply",
+  "completion_status": "implemented",
   "chapter_number": 14,
-  "chapter_title": "'Security of Information Assets'",
-  "chapter_dir": "14-security"
+  "chapter_title": "Security of Information Assets",
+  "chapter_dir": "14-security",
+  "pedagogical": {
+    "pattern": "interactive-overlay",
+    "bloomAlignment": [ "apply", "analyze" ],
+    "bloomVerbs": [ "apply", "identify", "propose" ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [ "elaborative" ],
+    "interactionStyle": "explore"
+  }
 }

@@ -3,105 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Regulatory Landscape Map</title>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Privacy Regulatory Landscape</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 12px; font-family: 'Segoe UI', Arial, sans-serif; background: #fff; color: #212529; }
+        h2 { margin: 0 0 6px 0; color: #1a3a6c; font-size: 16px; }
+        .controls { display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0; align-items: center; font-size: 12px; }
+        select { padding: 6px 10px; font-size: 12px; border-radius: 4px; border: 1px solid #ced4da; }
+        .layout { display: grid; grid-template-columns: 1fr 280px; gap: 10px; height: 540px; }
+        @media (max-width: 700px) { .layout { grid-template-columns: 1fr; height: auto; } #network { height: 380px !important; } }
+        #network { border: 1px solid #ced4da; border-radius: 4px; background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%); height: 100%; }
+        #side-panel { border: 1px solid #ced4da; border-radius: 4px; background: #fafbfc; padding: 10px; overflow-y: auto; height: 100%; font-size: 12px; }
+        #panel-title { font-size: 13px; font-weight: bold; color: #1a3a6c; margin-bottom: 6px; }
+        #panel-body p { margin: 4px 0; }
     </style>
 </head>
 <body>
-    <div id="container">
-        <h1>The Regulatory Landscape Map</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> privacy-regulatory-landscape</p>
-            <p><strong>Library:</strong> vis-network</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> TBD</p>
+    <h2>Privacy &amp; Compliance Regulatory Landscape</h2>
+    <div class="controls">
+        <label>Filter by data type:
+            <select id="data-filter">
+                <option value="">— show all —</option>
+                <option value="health">Health (PHI)</option>
+                <option value="finance">Finance (financial reporting)</option>
+                <option value="card">Card (payment)</option>
+                <option value="generic-personal">Generic personal info</option>
+            </select>
+        </label>
+        <span style="color:#666;">Click any node for year, regulator, penalty, summary.</span>
+    </div>
+    <div class="layout">
+        <div id="network"></div>
+        <div id="side-panel">
+            <div id="panel-title"></div>
+            <div id="panel-body"></div>
         </div>
     </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: interactive-infographic
-    **sim-id:** privacy-regulatory-landscape<br/>
-    **Library:** vis-network<br/>
-    **Status:** Specified
-    
-    A vis-network 2D map laying out the major privacy and compliance regimes on two axes: the horizontal axis is *geographic scope* (single state, national, multi-national, global), the vertical axis is *sector scope* (cross-sector / general, finance-only, healthcare-only, payments-only). Each regulation is rendered as a labeled node placed at its intersection: GDPR in the upper-right (multi-national, cross-sector), CCPA/CPRA in the lower-left (single-state, cross-sector), HIPAA in the upper-middle (national, healthcare), SOX in the upper-middle (national, finance), PCI-DSS spanning the right side (global, payments). Edges connect regulations that share data subject rights, breach notification requirements, or enforcement patterns.
-    
-    Color palette: GDPR in mascot-emerald, CCPA/CPRA in coral, HIPAA in mascot-magenta, SOX in slate-blue, PCI-DSS in amber. Background quadrant tints distinguish geographic regions.
-    
-    Interactivity: hovering each regulation reveals a popup with (a) the year of force, (b) the regulator, (c) the maximum penalty, and (d) a one-line plain-English summary of what it actually demands. A "filter by data type" dropdown highlights which regulations apply when a given data type (health, finance, card, generic personal) is in play. A "what applies to me?" walk-through asks the student five questions and lights up the regulations that would apply.
-    
-    Layout: full canvas width, height ~560px. Canvas resizes on window resize.
-    
-    Learning objective (Bloom: Analyzing): Students can place each regulation on a sector/geography map, identify which regulations co-apply to a given system, and read the matrix to scope a compliance program.
-    
-    Implementation: vis-network, deployed at `/information-systems/sims/privacy-regulatory-landscape/`.
-    -->
+    <script src="privacy-regulatory-landscape.js"></script>
 </body>
 </html>

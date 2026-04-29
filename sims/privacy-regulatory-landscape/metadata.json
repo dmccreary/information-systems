@@ -1,21 +1,53 @@
 {
-  "title": "The Regulatory Landscape Map",
-  "description": "The Regulatory Landscape Map",
-  "creator": "Dementia Education Project",
+  "title": "Privacy & Compliance Regulatory Landscape",
+  "description": "Interactive 2D map of major privacy and compliance regimes (GDPR, CCPA/CPRA, HIPAA, SOX, PCI-DSS, PIPL, LGPD, PIPEDA) with details and a data-type filter.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Privacy", "Compliance", "Regulation" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "privacy-regulatory-landscape",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "Privacy & Compliance Regulations",
+  "learningObjectives": [
+    "Place each regulation on a sector x geography map",
+    "Identify regulations that co-apply to a system",
+    "Scope a compliance program for a hypothetical company",
+    "Compare maximum penalties across regimes"
+  ],
+  "duration": "10 minutes",
+  "prerequisites": [ "None" ],
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "vis-network 9.1",
+  "responsive": "Width-responsive",
+  "dependencies": [ "vis-network 9.1.9" ],
+  "accessibility": { "screenReaderSupport": false, "keyboardNavigation": false, "highContrast": true },
+  "controls": [
+    { "type": "select", "description": "Filter by data type" },
+    { "type": "click", "description": "Click for regulation details" }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [ "Simplified to eight major regimes; many sub-state laws omitted" ],
+  "limitations": [ "Penalty caps simplified; specific case-by-case calculations may differ" ],
+  "visualizationType": [ "map", "diagram", "network" ],
+  "bloomsTaxonomy": [ "Understand", "Analyze" ],
+  "bloomLevel": "Analyze",
+  "bloomVerb": "analyze",
+  "completion_status": "implemented",
   "chapter_number": 15,
-  "chapter_title": "'Privacy, Compliance, and Regulation'",
-  "chapter_dir": "15-privacy-compliance"
+  "chapter_title": "Privacy, Compliance, and Regulation",
+  "chapter_dir": "15-privacy-compliance",
+  "pedagogical": {
+    "pattern": "interactive-map",
+    "bloomAlignment": [ "understand", "analyze" ],
+    "bloomVerbs": [ "place", "identify", "compare" ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [ "elaborative" ],
+    "interactionStyle": "explore"
+  }
 }
