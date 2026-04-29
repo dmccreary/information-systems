@@ -1,0 +1,2334 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="How IS organizations build and acquire applications — SDLC, agile and waterfall, requirements, version control, CI/CD, build-vs-buy-vs-SaaS, low-code, and the slow gravity of technical debt.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/information-systems/chapters/04-appdev/">
+      
+      
+        <link rel="prev" href="../03-architecture/">
+      
+      
+        <link rel="next" href="../05-bpm/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Application Development for IS - Information Systems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#application-development-for-is" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Information Systems" class="md-header__button md-logo" aria-label="Information Systems" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Information Systems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Application Development for IS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/information-systems" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Information Systems" class="md-nav__button md-logo" aria-label="Information Systems" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Information Systems
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/information-systems" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Description
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Chapters
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Foundations of Information Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-role-of-is/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. The Role of IS in Organizations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Information Systems Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    4. Application Development for IS
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    4. Application Development for IS
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-lifecycle-why-we-need-a-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Lifecycle: Why We Need a Method
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waterfall-the-original-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waterfall: The Original Method
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Waterfall: The Original Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-the-waterfall-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: The Waterfall Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agile-the-counter-reformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agile: The Counter-Reformation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scrum-the-most-popular-agile-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scrum: The Most Popular Agile Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scrum: The Most Popular Agile Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-the-scrum-sprint-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: The Scrum Sprint Cycle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kanban-flow-without-the-sprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kanban: Flow Without the Sprints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extreme-programming-the-engineering-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extreme Programming: The Engineering Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-what-to-build-not-just-how" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements: What to Build, Not Just How
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-control-and-the-git-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Control and the Git Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version Control and the Git Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-a-simple-feature-branch-git-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: A Simple Feature-Branch Git Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-review-where-software-quality-actually-happens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Review: Where Software Quality Actually Happens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-integration-and-continuous-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Integration and Continuous Delivery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuous Integration and Continuous Delivery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-a-modern-cicd-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: A Modern CI/CD Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-vs-buy-vs-saas-the-acquisition-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build vs Buy vs SaaS: The Acquisition Decision
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build vs Buy vs SaaS: The Acquisition Decision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-build-vs-buy-vs-saas-decision-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Build vs Buy vs SaaS Decision Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#low-code-platforms-and-the-citizen-developer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low-Code Platforms and the Citizen Developer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-debt-the-slow-tax-on-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Debt: The Slow Tax on Everything
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Debt: The Slow Tax on Everything">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-the-technical-debt-feedback-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: The Technical Debt Feedback Loop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-bpm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5. Business Process Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-data-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6. Data Management Foundations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-modern-databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7. Modern Databases and Lakehouses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-data-governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8. Data Governance and Quality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-bi-and-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9. Business Intelligence and Analytics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-sad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10. Systems Analysis and Design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11. Networks and Telecommunications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12. Cloud Computing and Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-enterprise-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13. Enterprise Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    14. Security of Information Assets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-privacy-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    15. Privacy, Compliance, and Regulation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-project-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    16. IS Project Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-itsm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    17. IT Service Management and Operations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-hci-and-emerging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    18. HCI and Emerging Topics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-ai-in-is/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    19. AI in Information Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-responsible-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20. Responsible and Ethical Use of AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-ai-law/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    21. AI Law, Regulation, and Compliance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-ai-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    22. AI and Information Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23-ai-productivity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    23. AI Productivity Impact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24-knowledge-graphs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    24. Knowledge Graphs and the EKG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25-ens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    25. The Enterprise Nervous System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Learning Graph
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MicroSims
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-lifecycle-why-we-need-a-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Lifecycle: Why We Need a Method
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waterfall-the-original-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waterfall: The Original Method
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Waterfall: The Original Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-the-waterfall-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: The Waterfall Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agile-the-counter-reformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agile: The Counter-Reformation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scrum-the-most-popular-agile-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scrum: The Most Popular Agile Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scrum: The Most Popular Agile Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-the-scrum-sprint-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: The Scrum Sprint Cycle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kanban-flow-without-the-sprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kanban: Flow Without the Sprints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extreme-programming-the-engineering-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extreme Programming: The Engineering Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-what-to-build-not-just-how" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements: What to Build, Not Just How
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-control-and-the-git-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Control and the Git Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version Control and the Git Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-a-simple-feature-branch-git-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: A Simple Feature-Branch Git Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-review-where-software-quality-actually-happens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Review: Where Software Quality Actually Happens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-integration-and-continuous-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Integration and Continuous Delivery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuous Integration and Continuous Delivery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-a-modern-cicd-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: A Modern CI/CD Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-vs-buy-vs-saas-the-acquisition-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build vs Buy vs SaaS: The Acquisition Decision
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build vs Buy vs SaaS: The Acquisition Decision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-build-vs-buy-vs-saas-decision-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Build vs Buy vs SaaS Decision Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#low-code-platforms-and-the-citizen-developer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low-Code Platforms and the Citizen Developer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-debt-the-slow-tax-on-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Debt: The Slow Tax on Everything
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Debt: The Slow Tax on Everything">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-the-technical-debt-feedback-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: The Technical Debt Feedback Loop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/dmccreary/information-systems/blob/main/docs/chapters/04-appdev/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="application-development-for-is">Application Development for IS<a class="headerlink" href="#application-development-for-is" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>Covers how IS organizations build and acquire applications: SDLC, agile and waterfall, requirements engineering, low-code/no-code, build-vs-buy-vs-SaaS, and CI/CD.</p>
+<p><strong>Role in the course:</strong> Walk students through how applications get built, bought, or rented in practice — the methodologies, the lifecycle, and the make-or-buy decision.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 25 concepts from the learning graph:</p>
+<ol>
+<li>SDLC</li>
+<li>Waterfall Model</li>
+<li>Agile Methodology</li>
+<li>Scrum Framework</li>
+<li>Kanban Method</li>
+<li>Extreme Programming</li>
+<li>Requirements Elicitation</li>
+<li>Functional Requirement</li>
+<li>Non-Functional Requirement</li>
+<li>User Story</li>
+<li>Acceptance Criteria</li>
+<li>Sprint</li>
+<li>Sprint Planning</li>
+<li>Sprint Review</li>
+<li>Sprint Retrospective</li>
+<li>Daily Standup</li>
+<li>Continuous Integration</li>
+<li>Continuous Delivery</li>
+<li>Version Control</li>
+<li>Git Workflow</li>
+<li>Code Review</li>
+<li>Build vs Buy vs SaaS</li>
+<li>Low-Code Platform</li>
+<li>Citizen Developer</li>
+<li>Technical Debt</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-foundations/">Chapter 1: Foundations of Information Systems</a></li>
+<li><a href="../02-role-of-is/">Chapter 2: The Role of IS in Organizations</a></li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome back</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Iris the hummingbird waves hello">
+Welcome to Chapter 4. We have spent three chapters establishing what an information system is, how it earns its keep, and how its parts fit together. Now we get to the part that, for many of you, is why you signed up: how applications actually get built. By the end of this chapter you will be able to read a job description that says "agile development experience" and know what the words mean, walk into a sprint planning meeting and not panic, defend a build-vs-buy recommendation in front of a CFO, and recognize the early symptoms of technical debt before they metastasize into a rewrite. That last skill alone is worth the price of admission.</p>
+</div>
+<h2 id="the-lifecycle-why-we-need-a-method">The Lifecycle: Why We Need a Method<a class="headerlink" href="#the-lifecycle-why-we-need-a-method" title="Permanent link">&para;</a></h2>
+<p>Software does not, despite years of evidence to the contrary, build itself. Somebody has to decide what to build, figure out what it should do, design it, write the code, test it, deploy it, and keep it running until either the system is retired or the universe ends, whichever comes first. The collected name for that arc is the <strong>Software Development Life Cycle</strong>, almost always abbreviated <strong>SDLC</strong>.</p>
+<p>The SDLC is best thought of not as a single recipe but as the <em>list of activities every method has to handle somehow</em>. Every project, no matter the methodology, has to do at least: planning, requirements analysis, design, implementation (the writing-code part), testing, deployment, and maintenance. Methodologies differ in how they sequence those activities, how often they revisit them, and how much ceremony they wrap around each one — but no method gets to skip any of them. A team that claims to have skipped requirements has merely skipped <em>writing them down</em>; the requirements still exist, hiding in someone's head, ready to ambush the project at the worst possible moment.</p>
+<p>The reason we need an SDLC at all — rather than just letting smart people improvise — is that software projects fail in patterned ways. They fail because requirements were misunderstood. They fail because the design assumed something the code did not deliver. They fail because testing was treated as a final-week activity rather than a parallel one. They fail because deployment was treated as somebody else's problem. A method imposes structure on the activities most likely to be skipped under deadline pressure, and that structure is the difference between <em>most</em> IS projects shipping and <em>very few</em> IS projects shipping.</p>
+<h2 id="waterfall-the-original-method">Waterfall: The Original Method<a class="headerlink" href="#waterfall-the-original-method" title="Permanent link">&para;</a></h2>
+<p>The oldest formal SDLC method, and still the easiest to draw on a whiteboard, is the <strong>Waterfall Model</strong>. Waterfall treats software development as a sequence of distinct phases, each one completed and signed off before the next one begins. The classic phase list is <em>Requirements → Design → Implementation → Verification → Maintenance</em>, and the visual metaphor is water flowing down a series of ledges — once you have left a phase, you do not (in the strict version of the model) climb back up to it.</p>
+<p>Waterfall has been the punching bag of every agile keynote for twenty years, which is unfair, because waterfall actually works in the conditions it was designed for: projects where the requirements are genuinely well understood up front, where the cost of changing direction mid-project is enormous, and where the deliverable has to be certified or audited as a whole before it ships. Building a flight control system, a regulated medical device, or the software for a satellite that you cannot send a developer up to patch — these are not contexts that benefit from sprint retrospectives. They benefit from <em>getting the requirements right and not deviating</em>.</p>
+<p>Where waterfall famously breaks is in business application development, because business requirements are <em>not</em> well understood up front. They are discovered, often by showing the users something half-built and watching them say, "Oh, we did not realize we wanted that until we saw it." A pure waterfall project against shifting business requirements becomes a slow-motion negotiation about which version of the truth was signed off in week four, and the team that <em>should</em> have been building software ends up litigating documents instead.</p>
+<h4 id="diagram-the-waterfall-model">Diagram: The Waterfall Model<a class="headerlink" href="#diagram-the-waterfall-model" title="Permanent link">&para;</a></h4>
+<details>
+<summary>The Waterfall Model</summary>
+<p>Type: static-infographic
+<strong>sim-id:</strong> waterfall-model<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>A p5.js infographic showing the classic five-phase waterfall in a stair-step descending pattern from top-left to bottom-right: Requirements, Design, Implementation, Verification, Maintenance. Each phase is rendered as a labeled rectangle on its own ledge, with a curved arrow connecting it to the next ledge below — visually evoking water cascading down. A small dotted "feedback" arrow runs from each downstream phase back to its predecessor, drawn in a muted color to signal that backward movement is possible but expensive.</p>
+<p>Color palette: blue gradient from sky-blue (Requirements) to deep navy (Maintenance), with a subtle wave pattern under each ledge. White label text. The two "discovery moments" where requirements typically change in real projects (mid-Design and mid-Verification) are marked with small warning icons.</p>
+<p>Interactivity: hovering each phase reveals (a) typical activities in that phase, (b) typical artifacts produced, and (c) the most common reason projects stall there. A toggle switches between "pure waterfall" (no feedback arrows) and "modified waterfall" (feedback arrows visible) to illustrate how organizations actually use the model in practice.</p>
+<p>Layout: full canvas width, height ~480px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with <code>canvas.parent(document.querySelector('main'));</code>.</p>
+<p>Learning objective (Bloom: Understanding): Students can describe each waterfall phase, identify its primary risk, and articulate the conditions under which waterfall is an appropriate method.</p>
+<p>Implementation: p5.js, deployed at <code>/information-systems/sims/waterfall-model/</code>.</p>
+</details>
+<h2 id="agile-the-counter-reformation">Agile: The Counter-Reformation<a class="headerlink" href="#agile-the-counter-reformation" title="Permanent link">&para;</a></h2>
+<p>In 2001, seventeen software practitioners holed up in a Utah ski resort and produced the <strong>Agile Manifesto</strong>, a four-line creed that has since launched approximately eleven thousand consulting careers and one or two genuinely better software projects. The manifesto values: individuals and interactions over processes and tools; working software over comprehensive documentation; customer collaboration over contract negotiation; and responding to change over following a plan. The values on the right still have value — they just rank lower than the ones on the left.</p>
+<p><strong>Agile methodology</strong>, then, is less a single process than a family of methods that share that ranking. Agile methods break the work into short cycles (typically one to four weeks), produce working software at the end of each cycle, invite the customer to look at it, adjust based on what they say, and repeat. The bet is that <em>iteration with feedback</em> discovers the right system faster than <em>planning followed by execution</em>.</p>
+<p>Agile is not the absence of discipline; it is a different <em>kind</em> of discipline. Agile teams plan constantly — they just plan in shorter horizons. They document constantly — they just document the things that need to be remembered, not every thought ever spoken. They meet constantly — they just keep the meetings short and outcome-oriented. The footgun lurking in agile adoption is the team that hears "agile" and concludes it means "we have permission to skip the parts of the SDLC that we found tedious." That team has not adopted agile; it has adopted <em>unstructured chaos with stand-ups</em>.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Waterfall</th>
+<th>Agile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cycle length</td>
+<td>One long project (months to years)</td>
+<td>Short iterations (1–4 weeks)</td>
+</tr>
+<tr>
+<td>Requirements stability</td>
+<td>Assumed stable, signed off up front</td>
+<td>Assumed to evolve; discovered through iteration</td>
+</tr>
+<tr>
+<td>Customer involvement</td>
+<td>Heavy at start, light during build</td>
+<td>Continuous throughout the project</td>
+</tr>
+<tr>
+<td>Working software</td>
+<td>Late — after verification phase</td>
+<td>Every iteration</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Comprehensive, contractually significant</td>
+<td>Minimum useful — favored when load-bearing</td>
+</tr>
+<tr>
+<td>Best fit</td>
+<td>Regulated, safety-critical, well-understood</td>
+<td>Business apps, evolving requirements, internal tools</td>
+</tr>
+<tr>
+<td>Failure mode</td>
+<td>Build the wrong thing, perfectly</td>
+<td>Drift forever without shipping a coherent whole</td>
+</tr>
+</tbody>
+</table>
+<p>Both columns have failure modes. The right method is the one whose failure mode the organization can survive.</p>
+<h2 id="scrum-the-most-popular-agile-framework">Scrum: The Most Popular Agile Framework<a class="headerlink" href="#scrum-the-most-popular-agile-framework" title="Permanent link">&para;</a></h2>
+<p>Of the agile family, the most widely deployed framework is <strong>Scrum</strong>, which packages agile values into a small set of roles, events, and artifacts that a team can adopt without reinventing them. The <strong>Scrum Framework</strong> defines three roles (Product Owner, Scrum Master, Development Team), a fixed-length iteration called a <strong>Sprint</strong>, and a handful of recurring events that keep the work flowing.</p>
+<p>A <strong>Sprint</strong> is a time-boxed iteration — typically two weeks, sometimes one or four — at the end of which the team produces a <em>potentially shippable increment</em> of working software. The fixed length matters: sprints establish a heartbeat the rest of the organization can plan against. If marketing knows that something visible ships every two weeks, marketing stops asking the dev team for a status report every Tuesday.</p>
+<p>Each sprint is bookended and punctuated by four events:</p>
+<ul>
+<li><strong>Sprint Planning</strong> kicks off the sprint. The team decides which items from the product backlog they will commit to delivering in the sprint, breaks them into tasks, and agrees on the <em>sprint goal</em> — a one-sentence statement of what the sprint is for. Good planning meetings end with both a list and a goal; bad ones end with only a list.</li>
+<li><strong>Daily Standup</strong> (also called the <em>daily scrum</em>) is a fifteen-minute synchronization meeting held every working day of the sprint. The classic format has each team member answer three questions: What did I do yesterday? What will I do today? What is in my way? The standup is <em>not</em> a status report to management — it is a coordination meeting among the team, and the moment it turns into status theater is the moment it stops working.</li>
+<li><strong>Sprint Review</strong> happens at the end of the sprint. The team demos the working increment to stakeholders and collects feedback. The review is <em>the</em> opportunity for the customer to course-correct before another two weeks goes by.</li>
+<li><strong>Sprint Retrospective</strong> also happens at the end of the sprint, separately from the review, and is for the team only. The team asks: <em>What went well? What did not? What will we change next sprint?</em> Retrospectives are the engine of continuous improvement; teams that skip them tend to repeat the same mistakes for years.</li>
+</ul>
+<p>There is a quiet superpower in this structure. Each event creates a feedback loop on a different timescale: standups close the loop daily, reviews close it bi-weekly, retrospectives close it on the team's own process bi-weekly. A team running all four well is essentially three nested learning systems running simultaneously. That is the leverage point that explains why so many organizations have adopted Scrum despite the ceremony cost.</p>
+<h4 id="diagram-the-scrum-sprint-cycle">Diagram: The Scrum Sprint Cycle<a class="headerlink" href="#diagram-the-scrum-sprint-cycle" title="Permanent link">&para;</a></h4>
+<details>
+<summary>The Scrum Sprint Cycle</summary>
+<p>Type: interactive-infographic
+<strong>sim-id:</strong> scrum-sprint-cycle<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>A p5.js circular diagram showing the Scrum sprint cycle. The outer ring depicts the sprint as a closed loop, with sprint planning at the top (12 o'clock), the development work spanning the right side, sprint review at the bottom (6 o'clock), and sprint retrospective just past it. The inner ring shows the daily standup repeating at each "day" tick around the loop. The product backlog feeds into sprint planning from the left; the potentially shippable increment exits from sprint review on the right.</p>
+<p>Color palette: warm orange-to-amber for sprint events, soft green for development work, slate-gray for backlog and increment artifacts. Mascot-emerald accent on the retrospective to highlight it as the learning moment.</p>
+<p>Interactivity: a "play" button advances a marker around the cycle, pausing at each event to display (a) participants, (b) duration, (c) primary output, and (d) the most common dysfunction associated with that event (e.g., "Standup turns into status theater"). A speed slider controls the animation. A toggle lets the user switch between 1-week, 2-week, and 4-week sprint cadences, which redistributes the day ticks accordingly.</p>
+<p>Layout: square aspect ratio, full canvas width, height ~520px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with <code>canvas.parent(document.querySelector('main'));</code>.</p>
+<p>Learning objective (Bloom: Applying): Students can identify each Scrum event by its participants, output, and timebox, and explain how the events compose into nested feedback loops.</p>
+<p>Implementation: p5.js, deployed at <code>/information-systems/sims/scrum-sprint-cycle/</code>.</p>
+</details>
+<h2 id="kanban-flow-without-the-sprints">Kanban: Flow Without the Sprints<a class="headerlink" href="#kanban-flow-without-the-sprints" title="Permanent link">&para;</a></h2>
+<p>Where Scrum imposes a fixed-length heartbeat, the <strong>Kanban Method</strong> does the opposite: it lets work flow continuously, but limits how much work is allowed to be in progress at any one time. Kanban originated as a manufacturing technique at Toyota and was adapted to knowledge work by David Anderson in the late 2000s. The visual centerpiece is the <em>Kanban board</em> — columns representing the stages of work (Backlog, In Progress, Review, Done, etc.) with cards representing work items moving left to right.</p>
+<p>The two ideas that make Kanban distinctive are the <strong>work-in-progress (WIP) limit</strong> and the focus on <em>flow</em>. Each column has a maximum number of cards allowed in it; if the column is full, no new card can move in until an existing one moves out. This sounds restrictive, but it is the structural fix to a footgun that haunts knowledge work: without WIP limits, individuals start more work than they can finish, context-switching costs explode, and everything finishes late simultaneously. Constraining WIP forces the team to finish things before starting new ones — and the throughput goes up, not down.</p>
+<p>Kanban is the right choice when work arrives unpredictably (support, maintenance, ops), when "the sprint" feels like an artificial constraint, or when the team is pulling from a continuous queue rather than batching. Many teams blend Scrum and Kanban into "Scrumban" — keeping the planning ceremonies of Scrum while using a Kanban board for the day-to-day flow. The methodology police will not arrest you.</p>
+<h2 id="extreme-programming-the-engineering-practices">Extreme Programming: The Engineering Practices<a class="headerlink" href="#extreme-programming-the-engineering-practices" title="Permanent link">&para;</a></h2>
+<p>If Scrum and Kanban are about <em>how the team organizes its work</em>, <strong>Extreme Programming</strong> (XP) is about <em>how the team writes the code</em>. XP, developed by Kent Beck in the late 1990s, is a set of disciplined engineering practices that take agile values seriously down to the keyboard level. The signature practices are:</p>
+<ul>
+<li><strong>Pair programming</strong> — two developers at one workstation, one driving and one navigating, switching frequently. It feels expensive in headcount and turns out to be cheap in defects.</li>
+<li><strong>Test-driven development (TDD)</strong> — write the failing test first, then write just enough code to pass it, then refactor. The discipline forces you to design the interface before the implementation.</li>
+<li><strong>Continuous integration</strong> — every change merges to the main branch many times a day, with automated tests verifying nothing broke. (We will return to CI in detail shortly.)</li>
+<li><strong>Refactoring</strong> — continuously improving the design of existing code without changing its behavior, so the code stays habitable.</li>
+<li><strong>Small releases</strong> — get something real to users early, then iterate.</li>
+<li><strong>Collective ownership</strong> — anyone on the team can change any part of the code, with the test suite as the safety net.</li>
+</ul>
+<p>XP fell out of fashion as a <em>named</em> methodology around the time Scrum became fashionable, but its practices became the assumed engineering substrate of professional software development. When a job posting today requires "TDD experience" or "comfort with pair programming," that is XP showing through the rebranded marketing.</p>
+<h2 id="requirements-what-to-build-not-just-how">Requirements: What to Build, Not Just How<a class="headerlink" href="#requirements-what-to-build-not-just-how" title="Permanent link">&para;</a></h2>
+<p>The most expensive defect in any IS project is a <strong>requirements defect</strong> — a misunderstanding about what the system was supposed to do that survived all the way into production. Requirements defects cost roughly <em>100x more</em> to fix in production than they would have cost to catch during requirements analysis. That number is one of the most empirically robust findings in software engineering and the single best argument for taking requirements seriously.</p>
+<p><strong>Requirements Elicitation</strong> is the disciplined activity of discovering what a system needs to do. The word "elicitation" is precise — you do not just <em>collect</em> requirements as if they were sitting in a folder waiting for you; you <em>elicit</em> them, drawing them out of stakeholders who often do not know what they want until they see what they do not want. The standard elicitation toolkit includes interviews, observation (watching users do their actual job, which is shockingly different from how they describe their job), workshops, document analysis, prototyping, and surveys.</p>
+<p>Once elicited, requirements are typically classified along two axes — what the system does, and how well it does it.</p>
+<p>A <strong>Functional Requirement</strong> specifies <em>what the system must do</em>. "The system shall allow a customer to reset their password using a one-time email link." "The system shall calculate sales tax based on the shipping address." "The system shall flag any insurance claim over $50,000 for human review." Functional requirements are the actions, behaviors, and rules. They tend to be the requirements that show up first in conversations because they are the easiest to talk about.</p>
+<p>A <strong>Non-Functional Requirement</strong> specifies <em>how well the system must do its functional requirements</em> — the qualities of the system rather than the features. Performance ("the page must load in under 2 seconds at the 95th percentile"), availability ("99.95% uptime during business hours"), security ("all data at rest must be encrypted with AES-256"), scalability, accessibility, maintainability, regulatory compliance — these are non-functional requirements, sometimes called "quality attributes" or "the <em>-ilities</em>." Non-functional requirements are easy to under-specify and brutal when violated; nobody complains about a feature, but everybody complains when the page is slow.</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Functional requirement</th>
+<th>Non-functional requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Answers</td>
+<td><em>What does the system do?</em></td>
+<td><em>How well does it do it?</em></td>
+</tr>
+<tr>
+<td>Example</td>
+<td>"User can reset password by email."</td>
+<td>"Password reset email arrives within 30 seconds."</td>
+</tr>
+<tr>
+<td>Failure mode</td>
+<td>Feature missing or broken</td>
+<td>Feature works but unusable in practice</td>
+</tr>
+<tr>
+<td>Verified by</td>
+<td>Acceptance tests, user-acceptance testing</td>
+<td>Performance tests, load tests, security audits</td>
+</tr>
+<tr>
+<td>Often discovered</td>
+<td>In the first interview</td>
+<td>After the system goes live and users complain</td>
+</tr>
+</tbody>
+</table>
+<p>In agile teams, functional requirements typically live as <strong>user stories</strong> — short, structured statements of need written from the user's perspective. The canonical template is:</p>
+<blockquote>
+<p><em>As a [type of user], I want [some capability], so that [some benefit].</em></p>
+</blockquote>
+<p>For example: <em>"As a returning customer, I want to save my shipping address, so that I do not have to retype it every time."</em> The format is small and humble on purpose. It is not a specification; it is a <em>placeholder for a conversation</em>. The story exists to remind everyone that there is a real user with a real reason for wanting the capability, and to invite the team to talk about it before building it.</p>
+<p>Each user story carries its own list of <strong>Acceptance Criteria</strong> — the specific, testable conditions the story must satisfy to be considered "done." Acceptance criteria are often written in the <em>Given–When–Then</em> form borrowed from behavior-driven development:</p>
+<ul>
+<li><em>Given</em> a customer with a saved shipping address,</li>
+<li><em>When</em> they begin checkout,</li>
+<li><em>Then</em> the saved address is pre-filled and editable.</li>
+</ul>
+<p>Good acceptance criteria are unambiguous, testable, and bounded — they tell the developer when to stop and the tester what to verify. Stories without acceptance criteria are an invitation for the team and the product owner to disagree productively about whether the story is done. (Spoiler: nobody finds that productive.)</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Pro move</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Iris shares a tip">
+When you write a user story, the <em>"so that…"</em> clause is the part that earns its keep. Anyone can write <em>"As a user, I want a button"</em>; the question is <em>what does pressing the button buy the user?</em> If you cannot finish the <em>"so that…"</em> clause without sounding silly, you do not have a story — you have a feature request that wandered in from the parking lot. Send it back until somebody can articulate the benefit, and you will spare the team a week of building the wrong button.</p>
+</div>
+<h2 id="version-control-and-the-git-workflow">Version Control and the Git Workflow<a class="headerlink" href="#version-control-and-the-git-workflow" title="Permanent link">&para;</a></h2>
+<p>We have spent the methodology section talking about how teams <em>plan</em> to write code. Now let us talk about how they actually <em>handle</em> the code once it exists. The single most important tool any modern development team uses — more important than any IDE, framework, or methodology — is a <strong>version control</strong> system.</p>
+<p>Version control is the practice (and the software) of tracking every change made to a codebase, attributing each change to its author, recording when it was made and why, and allowing the team to recover any prior state of the code on demand. Without version control, every developer is one accidental keystroke away from a catastrophic data loss, and every disagreement about "who broke the build" devolves into archaeology by accusation. With version control, the codebase has a memory, and the memory is reliable.</p>
+<p>The dominant version control system in the industry is <strong>Git</strong>, originally written by Linus Torvalds in 2005 to manage the Linux kernel and now the de facto standard for nearly every software project on the planet. Git's distinctive feature is that it is <em>distributed</em>: every developer has a complete copy of the entire history, and synchronization happens explicitly through <code>push</code> and <code>pull</code> operations against shared remotes (most often hosted on GitHub, GitLab, or Bitbucket).</p>
+<p>A <strong>Git Workflow</strong> is the team-level convention for how branches, commits, and merges are organized. Several common workflows are worth knowing by name:</p>
+<ul>
+<li><strong>Trunk-based development</strong> keeps a single long-lived branch (<code>main</code>) and asks every developer to merge small changes into it many times a day, behind feature flags if necessary. It pairs naturally with continuous integration.</li>
+<li><strong>GitHub Flow</strong> keeps <code>main</code> deployable, with feature branches that are short-lived and merged via pull request. Simple, popular, and works well for web applications.</li>
+<li><strong>GitFlow</strong> (a specific older convention with capitalization) maintains long-lived <code>develop</code> and <code>main</code> branches plus feature, release, and hotfix branches. Heavier; well-suited to versioned products with parallel releases.</li>
+</ul>
+<p>The choice of Git workflow is a real engineering decision, not a stylistic one. A team that picks a heavyweight workflow for a lightweight problem ends up doing branch ceremony instead of shipping; a team that picks a lightweight workflow for a heavyweight problem (multiple supported releases, regulated compliance) ends up patching production from a panic.</p>
+<h4 id="diagram-a-simple-feature-branch-git-workflow">Diagram: A Simple Feature-Branch Git Workflow<a class="headerlink" href="#diagram-a-simple-feature-branch-git-workflow" title="Permanent link">&para;</a></h4>
+<details>
+<summary>A Simple Feature-Branch Git Workflow</summary>
+<p>Type: interactive-infographic
+<strong>sim-id:</strong> git-feature-branch-workflow<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Specified</p>
+<p>A vis-network diagram visualizing a feature-branch Git workflow as a directed graph of commit nodes. The <code>main</code> branch runs horizontally across the middle of the canvas at y=480. Feature branches diverge upward and downward from <code>main</code>, advance through several commit nodes, and merge back via pull-request nodes. To work around the vis-network horizontal-edge label rendering bug, branch lines use a slight y-offset (e.g., 480 to 490) so labels render correctly on initial load.</p>
+<p>Color palette: <code>main</code> branch in mascot-emerald, feature branches in shades of teal and amber, pull-request merge commits in a contrasting coral. Failed CI checks marked with a red badge; passed checks with a green checkmark.</p>
+<p>Interactivity: hovering a commit shows the commit message, author, and CI status; hovering a pull-request node shows the PR title, the reviewer, and the merge-status. A "play" control walks through a typical feature lifecycle: branch creation, three commits, push, PR opened, code review comments, fix-up commits, CI passing, PR approved, merge to <code>main</code>, deployment trigger fired.</p>
+<p>Layout: hierarchical with custom positioning to preserve the linear timeline metaphor. Canvas resizes on window resize, height ~480px.</p>
+<p>Learning objective (Bloom: Applying): Students can trace a feature from branch creation through merge, and identify where code review and CI checks fit into the timeline.</p>
+<p>Implementation: vis-network, deployed at <code>/information-systems/sims/git-feature-branch-workflow/</code>.</p>
+</details>
+<h2 id="code-review-where-software-quality-actually-happens">Code Review: Where Software Quality Actually Happens<a class="headerlink" href="#code-review-where-software-quality-actually-happens" title="Permanent link">&para;</a></h2>
+<p>Once a developer has written a change on a branch, modern teams almost always require it to go through <strong>Code Review</strong> before it merges to the main branch. Code review is the practice of having one or more peers read the proposed change, comment on it, and explicitly approve it before it is integrated.</p>
+<p>The naive view of code review is that it exists to catch bugs. It does catch bugs — but that is not its highest-value function. Code review is, in order of importance: a <em>knowledge-sharing</em> mechanism (the reviewer learns the code; the author learns the reviewer's mental model); a <em>coaching</em> mechanism (juniors get feedback from seniors, and seniors get sanity-checked by juniors); a <em>consistency</em> mechanism (the codebase converges on shared conventions); and <em>only then</em> a defect-detection mechanism. A team that treats code review purely as a bug filter is leaving most of the value on the table.</p>
+<p>Code review is also one of the highest-leverage points in the entire SDLC. A reviewer who catches a poor design decision at the pull-request stage saves a multiple of the cost of catching it after the change has shipped, propagated through subsequent features, and accumulated dependents. The investment in the review pays back not in this sprint but across the next year of development on top of the change. This is exactly the kind of leverage point where systems thinking pays off — small, well-placed feedback now prevents large, distant cost later.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Pause here — this is a leverage point</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Iris is thinking">
+The teams with the best long-run velocity are not the ones that skip code review to "go faster." They are the ones that review <em>quickly</em> and <em>thoroughly</em> — usually within hours, with substantive comments. The thing that destroys velocity is the review queue that no one tends to: PRs sit for days, branches drift from <code>main</code>, merge conflicts pile up, and the team's morale leaks out through the gaps. If you remember nothing else from this section, remember this: <em>a code review queue is a system, and systems need owners.</em> Whoever owns the queue is performing one of the highest-leverage jobs in the organization.</p>
+</div>
+<h2 id="continuous-integration-and-continuous-delivery">Continuous Integration and Continuous Delivery<a class="headerlink" href="#continuous-integration-and-continuous-delivery" title="Permanent link">&para;</a></h2>
+<p>Once your team has version control, branches, and code review, the next step is automating what happens when changes land. That is the territory of <strong>Continuous Integration</strong> (CI) and <strong>Continuous Delivery</strong> (CD), the two practices that together define modern release engineering.</p>
+<p><strong>Continuous Integration</strong> is the practice of merging every developer's changes into a shared main branch frequently — many times per day per developer, in the strict version — with each merge automatically triggering a build and a comprehensive automated test run. The bet is that <em>integrating early and often</em> surfaces conflicts when they are small and cheap to fix, instead of letting them pile up into a "merge week" of misery. CI is supported by a CI server (Jenkins, GitHub Actions, GitLab CI, CircleCI, and friends) that watches the repository, builds the code on every push, runs the test suite, and reports red or green within minutes.</p>
+<p>The cultural rule that makes CI work is: <em>if the build is red, fixing it is the team's top priority.</em> A red main branch means nobody else can safely merge until it is green again. Teams that tolerate a chronically red main branch are not really practicing CI; they are practicing optimistic merging with a CI server attached.</p>
+<p><strong>Continuous Delivery</strong> extends CI by automating the <em>deployment</em> pipeline as well, so that any green build is in principle deployable to production at the push of a button (or, in the more aggressive variant called <em>continuous deployment</em>, deployed automatically without a button at all). The pipeline typically chains together build, unit tests, integration tests, static analysis, security scans, deployment to a staging environment, and finally deployment to production — each stage gating the next. The point is not just speed; it is <em>confidence</em>. A team that can deploy on demand can also <em>roll back</em> on demand, and the ability to roll back changes the kinds of risks the team is willing to take.</p>
+<p>Together, CI/CD turns deployment from a quarterly trauma into a daily routine. Organizations that adopt CI/CD seriously report dramatically lower change-failure rates and dramatically faster time-to-recover when something does break. The DORA research (DevOps Research and Assessment, now part of Google) has established this so consistently that "deployment frequency" and "mean time to recover" are now standard organizational performance metrics. CI/CD is one of the few practices where the data is unusually clear: do this, ship more, break less.</p>
+<h4 id="diagram-a-modern-cicd-pipeline">Diagram: A Modern CI/CD Pipeline<a class="headerlink" href="#diagram-a-modern-cicd-pipeline" title="Permanent link">&para;</a></h4>
+<details>
+<summary>A Modern CI/CD Pipeline</summary>
+<p>Type: interactive-infographic
+<strong>sim-id:</strong> cicd-pipeline<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>A horizontal pipeline diagram in p5.js showing the canonical CI/CD stages from left to right: Commit, Build, Unit Tests, Integration Tests, Static Analysis, Security Scan, Deploy to Staging, Smoke Tests, Deploy to Production. Each stage is a labeled rounded rectangle, with arrows connecting them and small badges showing pass/fail status. A "developer commits" icon enters from the far left; a "users" icon receives the deploy on the far right.</p>
+<p>Color palette: stages in a teal-to-emerald gradient when passing, switching to coral when failing. The currently-running stage has a pulsing border in mascot-magenta.</p>
+<p>Interactivity: a "trigger commit" button starts a simulated run that walks down the pipeline. A controls panel lets the user inject failures at any stage to see how the pipeline halts and reports. A side panel shows the artifacts produced at each stage (binaries, test reports, scan reports, deployment manifests). A toggle switches between "continuous delivery" (manual approval gate before production) and "continuous deployment" (no gate).</p>
+<p>Layout: full canvas width, height ~420px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with <code>canvas.parent(document.querySelector('main'));</code>.</p>
+<p>Learning objective (Bloom: Analyzing): Students can trace a commit through a CI/CD pipeline, identify the gates where failures halt deployment, and distinguish continuous delivery from continuous deployment.</p>
+<p>Implementation: p5.js, deployed at <code>/information-systems/sims/cicd-pipeline/</code>.</p>
+</details>
+<h2 id="build-vs-buy-vs-saas-the-acquisition-decision">Build vs Buy vs SaaS: The Acquisition Decision<a class="headerlink" href="#build-vs-buy-vs-saas-the-acquisition-decision" title="Permanent link">&para;</a></h2>
+<p>We have spent the chapter so far assuming the organization is <em>building</em> the application. That assumption is, in modern IS, the minority case. Most application capabilities an organization needs already exist — somebody has built them, and the only question is whether the organization should pay to use that work or pay to redo it. That question is the <strong>Build vs Buy vs SaaS</strong> decision, and it is the most consequential decision an IS organization makes about any given capability.</p>
+<p>The three options are deceptively simple to state:</p>
+<ul>
+<li><strong>Build</strong> means the organization writes the application itself, owning the code, the operations, and the roadmap. Maximum control, maximum cost, maximum responsibility.</li>
+<li><strong>Buy</strong> means the organization licenses a packaged software product, installs and operates it on its own infrastructure, and customizes it as needed. Less control over the roadmap, lower marginal cost than build, ongoing operational responsibility.</li>
+<li><strong>SaaS</strong> (Software as a Service) means the organization subscribes to a vendor-hosted, vendor-operated application accessed over the internet. Lowest control, lowest operational burden, recurring subscription cost forever, vendor owns the roadmap and the data center.</li>
+</ul>
+<p>The decision is not actually about cost in the simple sense; it is about <em>where the organization wants to spend its scarce engineering attention</em>. Building a CRM from scratch is feasible — and almost always a bad idea, because there are forty mature CRMs and your engineers' time is better spent on the things that make your organization distinctive.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Build</th>
+<th>Buy (on-prem package)</th>
+<th>SaaS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Control over features</td>
+<td>Total</td>
+<td>High (with customization cost)</td>
+<td>Low — vendor controls roadmap</td>
+</tr>
+<tr>
+<td>Time to value</td>
+<td>Slowest</td>
+<td>Medium</td>
+<td>Fastest</td>
+</tr>
+<tr>
+<td>Up-front cost</td>
+<td>Highest (engineering)</td>
+<td>High (license + implementation)</td>
+<td>Low (subscription)</td>
+</tr>
+<tr>
+<td>Ongoing cost</td>
+<td>Maintenance + ops</td>
+<td>Maintenance + ops + license</td>
+<td>Subscription forever</td>
+</tr>
+<tr>
+<td>Operational burden</td>
+<td>All on you</td>
+<td>Mostly on you</td>
+<td>Mostly on vendor</td>
+</tr>
+<tr>
+<td>Data location</td>
+<td>You decide</td>
+<td>You decide</td>
+<td>Vendor decides (usually)</td>
+</tr>
+<tr>
+<td>Lock-in shape</td>
+<td>Internal complexity</td>
+<td>Vendor + your customizations</td>
+<td>Vendor + your data + integrations</td>
+</tr>
+<tr>
+<td>Best when</td>
+<td>Capability is a true differentiator</td>
+<td>Highly regulated, data sensitivity</td>
+<td>Commodity capability, fast TTV</td>
+</tr>
+</tbody>
+</table>
+<p>A useful heuristic: <strong>build only the capabilities that are differentiators for your organization; buy or SaaS the commodity capabilities.</strong> Email is not a differentiator for almost anyone (use Microsoft 365 or Google Workspace). Payroll is not a differentiator for almost anyone (use ADP or Workday). The customer-facing recommendation engine of Netflix? <em>That</em> is a differentiator. They build.</p>
+<p>The footgun in this decision space is <strong>over-customization of SaaS or packaged software</strong>. The vendor's roadmap will keep moving, and every customization you make creates a hook that the vendor's next upgrade can rip out. Organizations that customize aggressively often discover, two upgrades later, that they cannot upgrade without redoing six figures of integration work — and so they freeze on an old version, lose vendor support, and drift into the worst-of-both-worlds: paying for SaaS but operating like an on-prem fossil. The structural fix is to <em>configure within supported extension points</em> and resist the temptation to hack around the product's intended model. If the product cannot do what you need within its supported extension points, you are buying the wrong product.</p>
+<h4 id="diagram-build-vs-buy-vs-saas-decision-flow">Diagram: Build vs Buy vs SaaS Decision Flow<a class="headerlink" href="#diagram-build-vs-buy-vs-saas-decision-flow" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Build vs Buy vs SaaS Decision Flow</summary>
+<p>Type: interactive-infographic
+<strong>sim-id:</strong> build-buy-saas-decision<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Specified</p>
+<p>A vis-network decision-tree diagram laid out top-to-bottom. The root question at the top is "Is this capability a strategic differentiator?" Branches lead to follow-up questions: "Does a mature SaaS product cover 80%+ of the requirements?", "Is data sovereignty or regulation a constraint?", "Is the capability core to ongoing competitive advantage?", "Will the capability change frequently?" Leaf nodes recommend Build, Buy, or SaaS, each with a brief rationale.</p>
+<p>Color palette: question nodes in slate-gray, decision branches in teal/amber, terminal Build leaves in mascot-emerald, Buy leaves in deep blue, SaaS leaves in coral. To work around the vis-network horizontal-edge label rendering bug, edges use a slight y-offset (e.g., 480 to 490) where labels are present.</p>
+<p>Interactivity: clicking any node opens a side panel showing (a) representative real-world examples for that path (e.g., "Example: Netflix recommendation engine → Build"), (b) the most common failure mode of choosing this path inappropriately (e.g., "Building commodity capabilities you should have bought"), and (c) the typical cost-curve shape over five years.</p>
+<p>Layout: hierarchical, top-down. Canvas resizes on window resize, height ~600px.</p>
+<p>Learning objective (Bloom: Evaluating): Given a capability description, students can walk the decision tree, justify their recommendation, and name the failure mode of the alternatives.</p>
+<p>Implementation: vis-network, deployed at <code>/information-systems/sims/build-buy-saas-decision/</code>.</p>
+</details>
+<h2 id="low-code-platforms-and-the-citizen-developer">Low-Code Platforms and the Citizen Developer<a class="headerlink" href="#low-code-platforms-and-the-citizen-developer" title="Permanent link">&para;</a></h2>
+<p>A relatively recent fourth option blurs the lines among the previous three. A <strong>Low-Code Platform</strong> is a development environment in which applications are built primarily through visual configuration — drag-and-drop UI builders, point-and-click data models, declarative workflow designers — with traditional code used only for the parts that escape what the platform can express visually. Vendors like Microsoft Power Platform, Salesforce Lightning, ServiceNow, OutSystems, Mendix, and Appian dominate this space; the no-code subset of the same idea (Airtable, Zapier, Glide) targets even less technical users.</p>
+<p>The strategic appeal of low-code is straightforward. Most internal applications an organization needs — request forms, approval workflows, light dashboards, simple integrations — are well within the expressive range of a low-code platform, and can be built in days by people without classical software-engineering backgrounds. That dramatically expands the pool of people who can deliver IS capabilities, which leads us to the second concept.</p>
+<p>A <strong>Citizen Developer</strong> is a non-IT employee who builds applications using low-code or no-code tools to solve their own department's problems. The marketing manager who builds a campaign-tracking app in Power Apps. The HR business partner who automates an onboarding checklist in ServiceNow. The accounting analyst who builds a reconciliation workflow in Airtable. None of them have "developer" in their job title; all of them are, in this sense, developers.</p>
+<p>The citizen-developer phenomenon is a genuine leverage point — it expands organizational throughput on small applications by orders of magnitude. It also brings a predictable set of unintended consequences:</p>
+<ul>
+<li><strong>Shadow IT.</strong> Citizen-developed apps are often built outside IS oversight, on unsanctioned platforms, with informal data sourcing — recreating the very governance problems IS spent decades cleaning up.</li>
+<li><strong>Single points of failure.</strong> The campaign-tracking app the marketing department now depends on was built by Janet, who is leaving in two weeks, and nobody else can read it.</li>
+<li><strong>Security and compliance gaps.</strong> A citizen developer who has not been trained on data classification can blithely move sensitive data into a SaaS platform that is not approved for that data class.</li>
+<li><strong>Integration sprawl.</strong> When every department spins up its own apps with its own data, the organization's data fragments along departmental lines just as the data warehouse team is trying to unify it.</li>
+</ul>
+<p>The structural fix is <em>not</em> to ban citizen development — that battle is already lost, and trying to ban it is the fastest way to drive it underground. The fix is to provide a <em>fusion model</em>: IS supplies a sanctioned low-code platform, classifies data clearly, publishes templates and reusable components, and partners with citizen developers to professionalize the apps that become load-bearing. Done well, this turns a governance problem back into a leverage point. Done badly, it produces a citizen-developer-shaped landmine field.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Heads up</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Iris warns you">
+The "fusion model" looks easy on a slide and is hard in practice. The footgun is that sanctioned low-code platforms can lull IS into thinking governance is solved when it has only been <em>outsourced to a vendor's permission system</em>. Always ask, for any low-code platform: <em>Who can see whose data? What data classes are allowed here? What happens to the apps if the citizen developer leaves? Is there a code-review equivalent for high-impact apps?</em> If those questions do not have crisp answers, you have shadow IT in a polo shirt.</p>
+</div>
+<h2 id="technical-debt-the-slow-tax-on-everything">Technical Debt: The Slow Tax on Everything<a class="headerlink" href="#technical-debt-the-slow-tax-on-everything" title="Permanent link">&para;</a></h2>
+<p>We close the chapter with the concept that ties all the others together. <strong>Technical Debt</strong> is the accumulated cost of past engineering decisions that prioritized short-term delivery over long-term maintainability. The metaphor, coined by Ward Cunningham, is exact: like financial debt, technical debt lets you ship faster <em>now</em> in exchange for paying <em>interest</em> later, in the form of slower future development, more bugs, longer onboarding for new engineers, and harder integration with anything new.</p>
+<p>Technical debt comes in flavors. <em>Deliberate debt</em> is debt you took on knowingly — "we will hard-code this for the demo and refactor in the next sprint." Deliberate debt is fine <em>if</em> you actually pay it back; the trouble is the next sprint gets its own deadlines. <em>Inadvertent debt</em> is debt you accumulated without realizing it — choices that looked fine at the time but turned into problems as the system grew. <em>Bit-rot debt</em> accrues simply because the world changed around code that did not — frameworks deprecate, security standards advance, dependencies go unmaintained.</p>
+<p>Technical debt is the place where systems thinking shows up most painfully, because it is a <em>reinforcing feedback loop</em>:</p>
+<ul>
+<li>High technical debt slows new development.</li>
+<li>Slowing development creates schedule pressure.</li>
+<li>Schedule pressure tempts the team to take more shortcuts.</li>
+<li>More shortcuts add to technical debt.</li>
+<li>Repeat until rewrite.</li>
+</ul>
+<p>The leverage points for breaking the loop are well-known but politically hard. The team needs <em>protected capacity for paying down debt</em> — typically expressed as a fixed percentage of each sprint dedicated to refactoring, dependency upgrades, and infrastructure improvements. The team needs <em>visibility into debt as a first-class artifact</em> — tracked, prioritized, and discussed at the same level as features. Engineering leadership needs to <em>say no to debt-creating shortcuts</em> under deadline pressure, which means they need executive cover to do so. None of these are technical interventions; all of them are organizational ones. That is the systems-thinking insight: the highest-leverage interventions in software development are usually not in the code.</p>
+<h4 id="diagram-the-technical-debt-feedback-loop">Diagram: The Technical Debt Feedback Loop<a class="headerlink" href="#diagram-the-technical-debt-feedback-loop" title="Permanent link">&para;</a></h4>
+<details>
+<summary>The Technical Debt Feedback Loop</summary>
+<p>Type: interactive-infographic
+<strong>sim-id:</strong> tech-debt-feedback-loop<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Specified</p>
+<p>A causal-loop diagram in vis-network showing five nodes arranged in a circle: Technical Debt, Development Velocity, Schedule Pressure, Shortcut Rate, and Defect Rate. Edges between nodes carry polarity labels (+/-) indicating whether one variable increases or decreases another. The loop forms a clear reinforcing cycle: Technical Debt (+) → reduces Development Velocity (-) → which increases Schedule Pressure (+) → which increases Shortcut Rate (+) → which increases Technical Debt (+). A second loop shows Technical Debt → Defect Rate → Schedule Pressure feeding the same dynamic. Edges drawn with slight y-offset (480 to 490) to ensure label rendering on horizontal segments.</p>
+<p>Color palette: feedback edges in coral for reinforcing relationships, mascot-emerald for any balancing relationships introduced by the "leverage point" toggle. Node fill follows the standard book palette.</p>
+<p>Interactivity: a "leverage point" toggle introduces three dampening interventions — Protected Refactor Capacity, Debt Visibility, Engineering Leadership Cover — each adding a balancing edge that reduces the relevant flow. Watching the toggle turn the doom loop into a controlled system is the pedagogical payoff. A side panel explains each intervention.</p>
+<p>Layout: circular, height ~520px. Canvas resizes on window resize.</p>
+<p>Learning objective (Bloom: Analyzing): Students can identify a reinforcing feedback loop, articulate why it produces compounding cost, and name three structural interventions that break it.</p>
+<p>Implementation: vis-network, deployed at <code>/information-systems/sims/tech-debt-feedback-loop/</code>.</p>
+</details>
+<h2 id="putting-it-all-together">Putting It All Together<a class="headerlink" href="#putting-it-all-together" title="Permanent link">&para;</a></h2>
+<p>Application development for IS is a stack of decisions, each one easy to underestimate:</p>
+<ul>
+<li>An <strong>SDLC</strong> of some shape is unavoidable; the question is which one fits your project.</li>
+<li><strong>Waterfall</strong> still wins where requirements are stable and stakes are high; <strong>agile methodology</strong>, expressed most often as <strong>Scrum</strong> (with <strong>sprints</strong>, <strong>sprint planning</strong>, <strong>sprint reviews</strong>, <strong>sprint retrospectives</strong>, and <strong>daily standups</strong>), or as <strong>Kanban</strong>, wins where requirements evolve. <strong>Extreme Programming</strong> supplies the engineering practices on top of either.</li>
+<li>Good software starts with <strong>requirements elicitation</strong>, distinguishes <strong>functional requirements</strong> from <strong>non-functional requirements</strong>, expresses them as <strong>user stories</strong> with <strong>acceptance criteria</strong>, and refuses to start coding until those are at least sketched.</li>
+<li>Underneath the methodology lives the engineering substrate: <strong>version control</strong> (almost always Git) with a sane <strong>Git workflow</strong>, mandatory <strong>code review</strong>, <strong>continuous integration</strong> that keeps the main branch green, and <strong>continuous delivery</strong> that makes deployment a routine rather than a trauma.</li>
+<li>Above the methodology lives the acquisition decision: <strong>build vs buy vs SaaS</strong>, with <strong>low-code platforms</strong> and <strong>citizen developers</strong> offering a fourth path that has its own governance challenges.</li>
+<li>And under all of it, like silt accumulating in a riverbed, runs <strong>technical debt</strong> — the system-level feedback loop that determines whether your team is gaining or losing leverage on its own codebase year over year.</li>
+</ul>
+<p>A graduate of this chapter walking into their first software project should be able to ask, in order: <em>What method are we using and why? What are the requirements, and how were they elicited? Where do they live? How is the code organized, reviewed, and shipped? Are we building, buying, or subscribing? And how much technical debt are we carrying right now?</em> If the team has good answers to all six, you are in a healthy project. If they have bad answers to any of them, you have just identified your first contribution.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Nicely done</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
+You just learned the working vocabulary of modern application development — the same vocabulary that, ten years ago, took new hires their entire first year on the job to absorb. From here on out, when somebody mentions a "sprint retrospective" you will hear <em>team-level feedback loop</em>, when somebody complains about "merge week" you will hear <em>they have not adopted CI</em>, when somebody pitches "let's build it ourselves" you will hear <em>prove it is a differentiator</em>, and when somebody says "we will fix it in the next release" you will hear <em>technical debt accumulating with interest</em>. Onward to Chapter 5, where we take everything we just learned about building applications and ask the harder question of what data those applications should be built on top of.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../03-architecture/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3. Information Systems Architecture">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                3. Information Systems Architecture
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05-bpm/" class="md-footer__link md-footer__link--next" aria-label="Next: 5. Business Process Management">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                5. Business Process Management
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dmccreary/information-systems" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

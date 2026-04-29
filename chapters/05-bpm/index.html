@@ -1,0 +1,2297 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="How IS organizations model, redesign, automate, and continuously improve the business processes that information systems support — from BPMN diagrams to RPA bots to process mining.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/information-systems/chapters/05-bpm/">
+      
+      
+        <link rel="prev" href="../04-appdev/">
+      
+      
+        <link rel="next" href="../06-data-foundations/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Business Process Management - Information Systems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#business-process-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Information Systems" class="md-header__button md-logo" aria-label="Information Systems" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Information Systems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Business Process Management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/information-systems" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Information Systems" class="md-nav__button md-logo" aria-label="Information Systems" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Information Systems
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/information-systems" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Description
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Chapters
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Foundations of Information Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-role-of-is/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. The Role of IS in Organizations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Information Systems Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-appdev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4. Application Development for IS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    5. Business Process Management
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    5. Business Process Management
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-processes-and-why-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Processes, and Why Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-modeling-drawing-the-thing-before-you-touch-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Modeling: Drawing the Thing Before You Touch It
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bpmn-notation-the-lingua-franca" class="md-nav__link">
+    <span class="md-ellipsis">
+      BPMN Notation: The Lingua Franca
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BPMN Notation: The Lingua Franca">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pool-and-lane-who-does-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pool and Lane: Who Does What
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-activity-the-actual-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Activity: The Actual Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway-the-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gateway: The Decisions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-event-the-things-that-happen-to-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Event: The Things That Happen To You
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process Event: The Things That Happen To You">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-anatomy-of-a-bpmn-order-to-cash-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Anatomy of a BPMN Order-to-Cash Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#as-is-and-to-be-the-two-diagrams-every-project-needs" class="md-nav__link">
+    <span class="md-ellipsis">
+      As-Is and To-Be: The Two Diagrams Every Project Needs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-reengineering-when-improvement-is-not-enough" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Reengineering: When Improvement Is Not Enough
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lean-eliminate-the-waste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lean: Eliminate the Waste
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#six-sigma-and-dmaic-reduce-the-variation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Six Sigma and DMAIC: Reduce the Variation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value-stream-mapping-seeing-the-whole-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Value Stream Mapping: Seeing the Whole Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Value Stream Mapping: Seeing the Whole Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-a-value-stream-map-of-an-invoice-approval-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: A Value Stream Map of an Invoice-Approval Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-automation-the-engine-underneath" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Automation: The Engine Underneath
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robotic-process-automation-when-integration-costs-more-than-a-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Robotic Process Automation: When Integration Costs More Than a Bot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Robotic Process Automation: When Integration Costs More Than a Bot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-as-is-vs-to-be-manual-rpa-and-workflow-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: As-Is vs To-Be — Manual, RPA, and Workflow Automation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-mining-listening-to-the-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Mining: Listening to the Process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-business-rules-engine-pulling-the-logic-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Business Rules Engine: Pulling the Logic Out
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-improvement-the-engine-that-doesnt-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Improvement: The Engine That Doesn't Stop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-data-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6. Data Management Foundations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-modern-databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7. Modern Databases and Lakehouses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-data-governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8. Data Governance and Quality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-bi-and-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9. Business Intelligence and Analytics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-sad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10. Systems Analysis and Design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11. Networks and Telecommunications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12. Cloud Computing and Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-enterprise-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13. Enterprise Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    14. Security of Information Assets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-privacy-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    15. Privacy, Compliance, and Regulation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-project-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    16. IS Project Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-itsm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    17. IT Service Management and Operations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-hci-and-emerging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    18. HCI and Emerging Topics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-ai-in-is/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    19. AI in Information Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-responsible-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20. Responsible and Ethical Use of AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-ai-law/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    21. AI Law, Regulation, and Compliance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-ai-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    22. AI and Information Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23-ai-productivity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    23. AI Productivity Impact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24-knowledge-graphs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    24. Knowledge Graphs and the EKG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25-ens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    25. The Enterprise Nervous System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Learning Graph
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MicroSims
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-processes-and-why-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Processes, and Why Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-modeling-drawing-the-thing-before-you-touch-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Modeling: Drawing the Thing Before You Touch It
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bpmn-notation-the-lingua-franca" class="md-nav__link">
+    <span class="md-ellipsis">
+      BPMN Notation: The Lingua Franca
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BPMN Notation: The Lingua Franca">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pool-and-lane-who-does-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pool and Lane: Who Does What
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-activity-the-actual-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Activity: The Actual Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway-the-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gateway: The Decisions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-event-the-things-that-happen-to-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Event: The Things That Happen To You
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process Event: The Things That Happen To You">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-anatomy-of-a-bpmn-order-to-cash-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Anatomy of a BPMN Order-to-Cash Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#as-is-and-to-be-the-two-diagrams-every-project-needs" class="md-nav__link">
+    <span class="md-ellipsis">
+      As-Is and To-Be: The Two Diagrams Every Project Needs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-reengineering-when-improvement-is-not-enough" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Reengineering: When Improvement Is Not Enough
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lean-eliminate-the-waste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lean: Eliminate the Waste
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#six-sigma-and-dmaic-reduce-the-variation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Six Sigma and DMAIC: Reduce the Variation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value-stream-mapping-seeing-the-whole-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Value Stream Mapping: Seeing the Whole Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Value Stream Mapping: Seeing the Whole Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-a-value-stream-map-of-an-invoice-approval-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: A Value Stream Map of an Invoice-Approval Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-automation-the-engine-underneath" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Automation: The Engine Underneath
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robotic-process-automation-when-integration-costs-more-than-a-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Robotic Process Automation: When Integration Costs More Than a Bot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Robotic Process Automation: When Integration Costs More Than a Bot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-as-is-vs-to-be-manual-rpa-and-workflow-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: As-Is vs To-Be — Manual, RPA, and Workflow Automation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-mining-listening-to-the-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Mining: Listening to the Process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-business-rules-engine-pulling-the-logic-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Business Rules Engine: Pulling the Logic Out
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-improvement-the-engine-that-doesnt-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Improvement: The Engine That Doesn't Stop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/dmccreary/information-systems/blob/main/docs/chapters/05-bpm/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="business-process-management">Business Process Management<a class="headerlink" href="#business-process-management" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>Treats the organization as a system of processes that IS supports and improves: BPMN modeling, re-engineering, workflow automation, RPA, and continuous improvement (Lean, Six Sigma).</p>
+<p><strong>Role in the course:</strong> Show that IS work is process work: before you can automate or analyze, you must model the process the system serves.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 19 concepts from the learning graph:</p>
+<ol>
+<li>Process Modeling</li>
+<li>BPMN Notation</li>
+<li>Pool and Lane</li>
+<li>Process Activity</li>
+<li>Gateway</li>
+<li>Process Event</li>
+<li>As-Is Process</li>
+<li>To-Be Process</li>
+<li>Process Reengineering</li>
+<li>Lean Methodology</li>
+<li>Six Sigma</li>
+<li>DMAIC</li>
+<li>Workflow Automation</li>
+<li>Robotic Process Automation</li>
+<li>RPA Tools</li>
+<li>Process Mining</li>
+<li>Continuous Improvement</li>
+<li>Value Stream Mapping</li>
+<li>Business Rules Engine</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-foundations/">Chapter 1: Foundations of Information Systems</a></li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome back</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Iris the hummingbird waves hello">
+Welcome to Chapter 5. So far we have talked about what information systems <em>are</em> and how they get <em>built</em>. This chapter is about what they actually <em>do</em>: support and improve the processes by which an organization gets work done. By the end you will be able to read a BPMN diagram the way you read a recipe, tell the difference between a workflow engine and an RPA bot without squinting, defend a Lean recommendation against a Six Sigma purist, and — perhaps most importantly — recognize the moment when "let's automate this" is the worst possible answer to a problem that needed redesigning instead. The skill of seeing an organization as a network of processes is one of the highest-leverage skills in IS. Let's collect it.</p>
+</div>
+<h2 id="why-processes-and-why-now">Why Processes, and Why Now<a class="headerlink" href="#why-processes-and-why-now" title="Permanent link">&para;</a></h2>
+<p>Every organization, whether it knows it or not, is a collection of <strong>processes</strong> — repeatable sequences of activities that turn inputs into outputs that someone, somewhere, actually wants. The marketing department runs a lead-qualification process. The finance department runs a month-end close process. Even the cafeteria runs a sandwich-assembly process, and if you have ever watched the line back up because somebody could not decide between Swiss and provolone, you have witnessed a process bottleneck in real time.</p>
+<p>The reason processes matter to information systems is structural: an information system without a clearly understood process is an information system serving nobody in particular. You cannot design a database schema without knowing what events the schema must record. You cannot build an application without knowing what the user is trying to accomplish. You cannot automate something you cannot describe. <em>The process is the thing the system is for.</em> Skipping process analysis to get to "the technology" is one of the most reliable ways to ship a beautiful system that nobody uses.</p>
+<p>There is also a long historical reason. The discipline of <strong>Business Process Management</strong> (BPM) emerged in the 1990s out of the convergence of three older traditions: industrial engineering (which had been studying factory processes since Frederick Taylor), total quality management (which spread from Toyota into Western manufacturing in the 1980s), and the early enterprise software wave (which made it suddenly possible to instrument and automate office work the way factories had been instrumented for decades). BPM is what you get when you take the rigor of factory process improvement and apply it to white-collar work. It is older than this textbook, and frankly, older than most of the textbooks you will encounter in IS.</p>
+<h2 id="process-modeling-drawing-the-thing-before-you-touch-it">Process Modeling: Drawing the Thing Before You Touch It<a class="headerlink" href="#process-modeling-drawing-the-thing-before-you-touch-it" title="Permanent link">&para;</a></h2>
+<p><strong>Process Modeling</strong> is the disciplined activity of representing a business process as a formal diagram, with explicit notation for the steps, the decisions, the actors, the inputs, and the outputs. The model is not the process — the process keeps happening whether or not anyone draws it — but the model is the artifact the team can argue about, mark up, share with auditors, and feed into a workflow engine. A process that has never been modeled is a process that lives entirely in the heads of the people who do it, and that is a fragile place for a process to live.</p>
+<p>Process modeling buys an organization three things at once. First, <em>shared understanding</em>: the moment you draw a process for a room of people who all run pieces of it, you discover they disagreed about what the process actually was. (This is annoying, but it is the entire point.) Second, <em>defect surfacing</em>: latent problems — duplicate work, missing handoffs, decisions made by nobody — become visible when you put them on a wall. Third, <em>automation readiness</em>: a clean model is the first step toward automating, monitoring, or instrumenting the process with software.</p>
+<p>The footgun in process modeling is <em>over-modeling</em>. A team that produces a sixty-page BPMN specification before it has redesigned anything has not modeled a process; it has produced expensive wallpaper. The model is a means; the improved process is the end. A useful process model is one detailed enough to support the <em>next</em> decision and no more.</p>
+<h2 id="bpmn-notation-the-lingua-franca">BPMN Notation: The Lingua Franca<a class="headerlink" href="#bpmn-notation-the-lingua-franca" title="Permanent link">&para;</a></h2>
+<p>The dominant notation for process modeling is <strong>BPMN</strong> — Business Process Model and Notation — currently at version 2.0, governed by the Object Management Group (OMG). BPMN exists for the same reason musical notation exists: so that a process drawn by an analyst in Stuttgart can be read by an analyst in São Paulo without translation. Before BPMN there were dozens of competing process-diagram dialects (flowcharts, IDEF0, EPCs, ad-hoc whiteboard scribble), none of them universally understood. BPMN became the standard the way QWERTY became the keyboard layout: not because it was perfect, but because it was good enough and everyone agreed.</p>
+<p><strong>BPMN Notation</strong> consists of a small vocabulary of graphical elements with strict meanings. The four most important categories are <em>flow objects</em> (activities, gateways, events), <em>connecting objects</em> (sequence flows, message flows), <em>swimlanes</em> (pools and lanes), and <em>artifacts</em> (data objects, annotations). Most BPMN diagrams you will see in industry use perhaps fifteen of the notation's roughly hundred-plus symbols — the rest are reserved for specialists.</p>
+<p>Let's introduce the four elements you must know in order to read any BPMN diagram, in the order you should learn them.</p>
+<h3 id="pool-and-lane-who-does-what">Pool and Lane: Who Does What<a class="headerlink" href="#pool-and-lane-who-does-what" title="Permanent link">&para;</a></h3>
+<p>A <strong>Pool and Lane</strong> structure organizes the diagram by <em>actor</em>. A <em>pool</em> is a rectangular container representing a single participant in the process — typically an organization, system, or major role boundary. Within a pool, <em>lanes</em> subdivide responsibility further: usually departments, teams, or roles inside that organization. The convention is that a pool reads horizontally left-to-right, and any activity drawn inside a particular lane is performed by the actor that lane represents.</p>
+<p>The pedagogical superpower of swimlanes is that they make <em>handoffs</em> visible. Every time a sequence flow crosses from one lane to another, work has changed hands — and handoffs are where processes most often break, slow, or lose information. A diagram with five lane crossings is doing more handoffs than a diagram with two; whether that is appropriate depends on the work, but you cannot have the conversation without the diagram.</p>
+<h3 id="process-activity-the-actual-work">Process Activity: The Actual Work<a class="headerlink" href="#process-activity-the-actual-work" title="Permanent link">&para;</a></h3>
+<p>A <strong>Process Activity</strong> is a unit of work that someone (or some system) performs as part of the process. Activities are drawn as rounded rectangles with a verb-phrase label: <em>Receive Order</em>, <em>Validate Credit</em>, <em>Pick Items</em>, <em>Ship Package</em>. Two flavors matter early:</p>
+<ul>
+<li>A <em>task</em> is an atomic activity — work that is not further decomposed in this diagram. "Approve invoice" might be a task in the AP-clerk lane.</li>
+<li>A <em>sub-process</em> is an activity that itself expands into a smaller BPMN diagram. "Onboard new employee" might be a sub-process containing twenty smaller activities elsewhere.</li>
+</ul>
+<p>The discipline of activity labeling matters more than students typically expect. <em>Verb + noun</em> labels ("Validate Credit", "Generate Invoice") survive contact with users. <em>Vague labels</em> ("Process") survive nothing. If you find yourself naming an activity "Process the Thing", you have not finished modeling.</p>
+<h3 id="gateway-the-decisions">Gateway: The Decisions<a class="headerlink" href="#gateway-the-decisions" title="Permanent link">&para;</a></h3>
+<p>A <strong>Gateway</strong> is a diamond-shaped element that controls how sequence flows split or merge. Gateways are how a BPMN diagram represents <em>decisions</em> and <em>parallelism</em>. The gateway types you will see most are:</p>
+<ul>
+<li><strong>Exclusive (XOR) gateway</strong> — exactly one outgoing path is taken, based on a condition. Drawn as a plain diamond or a diamond with an "X". <em>"Is the order over $10,000? If yes, route to manager review; if no, auto-approve."</em></li>
+<li><strong>Parallel (AND) gateway</strong> — all outgoing paths are taken simultaneously. Drawn as a diamond with a "+". Used when work can proceed in parallel: "Notify shipping AND notify accounting."</li>
+<li><strong>Inclusive (OR) gateway</strong> — one or more outgoing paths are taken, based on conditions. Drawn as a diamond with an "O". Used when multiple conditions can be true at once.</li>
+<li><strong>Event-based gateway</strong> — the next path is chosen by which event happens first (e.g., customer responds, or 48 hours elapses).</li>
+</ul>
+<p>The footgun with gateways is using the wrong type. An exclusive gateway when work should run in parallel forces the team into needless serialization. A parallel gateway where conditions are mutually exclusive creates phantom branches that the merge gateway then has to wait for forever. Picking the gateway is picking the <em>logic</em>; get the gateway wrong and the diagram lies.</p>
+<h3 id="process-event-the-things-that-happen-to-you">Process Event: The Things That Happen To You<a class="headerlink" href="#process-event-the-things-that-happen-to-you" title="Permanent link">&para;</a></h3>
+<p>A <strong>Process Event</strong> is something that happens during the process, drawn as a circle. There are three positions and several types:</p>
+<ul>
+<li>A <em>start event</em> (thin-bordered circle) marks where the process begins — typically a triggering condition like "customer submits order" or "month ends".</li>
+<li>An <em>intermediate event</em> (double-bordered circle) marks something that happens during the process — a message arrives, a timer fires, an error is raised.</li>
+<li>An <em>end event</em> (thick-bordered circle) marks where the process terminates — successful completion, escalation, cancellation.</li>
+</ul>
+<p>Events are the parts of a process the actors don't <em>do</em> — they're the parts that <em>happen to</em> the actors. A timer firing, a message arriving, an exception being raised. Many BPMN beginners under-use events because tasks are easier to think about, but a process diagram with no events is usually a process that has not modeled how it begins, how it ends, or what to do when something goes wrong.</p>
+<table>
+<thead>
+<tr>
+<th>BPMN element type</th>
+<th>Shape</th>
+<th>Represents</th>
+<th>Common pitfall</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pool</td>
+<td>Outer rectangle</td>
+<td>One participant (org, system)</td>
+<td>Mixing two orgs in one pool</td>
+</tr>
+<tr>
+<td>Lane</td>
+<td>Horizontal strip in a pool</td>
+<td>Role/team/department</td>
+<td>Lanes that don't match real responsibility</td>
+</tr>
+<tr>
+<td>Activity (task)</td>
+<td>Rounded rectangle</td>
+<td>Unit of work performed</td>
+<td>Vague verb-noun labels</td>
+</tr>
+<tr>
+<td>Gateway</td>
+<td>Diamond</td>
+<td>Decision or parallelism</td>
+<td>Wrong gateway type for the logic</td>
+</tr>
+<tr>
+<td>Event</td>
+<td>Circle (single/double/thick)</td>
+<td>Trigger, occurrence, or termination</td>
+<td>Forgetting end events</td>
+</tr>
+<tr>
+<td>Sequence flow</td>
+<td>Solid arrow</td>
+<td>Order of work within a pool</td>
+<td>Crossing pool boundaries (use msg flow)</td>
+</tr>
+<tr>
+<td>Message flow</td>
+<td>Dashed arrow</td>
+<td>Communication between pools</td>
+<td>Drawn as a sequence flow by mistake</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-anatomy-of-a-bpmn-order-to-cash-process">Diagram: Anatomy of a BPMN Order-to-Cash Process<a class="headerlink" href="#diagram-anatomy-of-a-bpmn-order-to-cash-process" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Anatomy of a BPMN Order-to-Cash Process</summary>
+<p>Type: interactive-infographic
+<strong>sim-id:</strong> bpmn-order-to-cash<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Specified</p>
+<p>A vis-network BPMN diagram showing a simplified order-to-cash process inside a single Customer-Facing-Company pool with three lanes: Sales, Credit, and Fulfillment. The process begins with a start event labeled "Order received" in the Sales lane, flows through a "Validate order" task, then crosses into the Credit lane via an exclusive gateway labeled "Order &gt; $10,000?". The yes path runs a "Manager credit review" task; the no path runs an "Auto-approve credit" task. Both paths re-merge at a converging exclusive gateway, then cross into the Fulfillment lane via a parallel gateway that triggers two simultaneous tasks: "Pick and pack" and "Generate invoice". A converging parallel gateway joins them, followed by a "Ship order" task and an end event labeled "Order shipped". A second pool labeled "Customer" sits below, with a message flow connecting the Customer to the start event ("places order") and another message flow back from "Order shipped" ("delivery confirmation"). To work around the vis-network horizontal-edge label rendering bug, sequence flows use a slight y-offset (e.g., 480 to 490) so labels render on initial load.</p>
+<p>Color palette: pool boundaries in slate-gray, lanes in alternating soft-blue tints, activity rounded rectangles in mascot-emerald with white text, exclusive gateways in amber with the "X" marker, parallel gateways in coral with the "+" marker, events in mascot-magenta gradients. Sequence flows in dark teal; message flows dashed in muted gray.</p>
+<p>Interactivity: hovering each element reveals (a) the BPMN element type, (b) its formal definition, and (c) a concrete real-world example. A "trace execution" button animates a token traveling through the diagram following one of two paths (large order vs. small order), pausing briefly at each gateway to show the routing decision. A toggle highlights every "lane crossing" — the visible handoffs in the process — to reinforce the systems-thinking lesson that handoffs are where processes break.</p>
+<p>Layout: hierarchical, left-to-right, full canvas width, height ~560px. Canvas resizes on window resize.</p>
+<p>Learning objective (Bloom: Applying): Students can read a BPMN diagram, name each element type by its shape, identify lane handoffs, and trace a token through both paths of an exclusive gateway.</p>
+<p>Implementation: vis-network, deployed at <code>/information-systems/sims/bpmn-order-to-cash/</code>.</p>
+</details>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Iris's Tip</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Iris shares a tip">
+When you read someone else's BPMN diagram, count the lane crossings before you read anything else. Each crossing is a handoff — a place where work leaves one person's hands and enters another's, where context can be lost, where forms can sit in queues, where finger-pointing can begin. Diagrams with many crossings are not always wrong, but they are always <em>worth interrogating</em>. A pro will look at a five-lane diagram and ask, "Could this be a three-lane diagram?" — because every lane you can dissolve is an organizational seam you no longer have to maintain.</p>
+</div>
+<h2 id="as-is-and-to-be-the-two-diagrams-every-project-needs">As-Is and To-Be: The Two Diagrams Every Project Needs<a class="headerlink" href="#as-is-and-to-be-the-two-diagrams-every-project-needs" title="Permanent link">&para;</a></h2>
+<p>Once a team has BPMN in its pocket, the most useful single move in process work is to draw two diagrams of the same process: the <strong>As-Is Process</strong> and the <strong>To-Be Process</strong>.</p>
+<p>The <strong>As-Is Process</strong> is the process <em>as it actually is today</em>, warts and all. Not the way the policy manual describes it, not the way the executive sponsor thinks it works, but the way it actually runs in the field on a Tuesday afternoon when the nice manager is on vacation. Drawing the as-is is humbling work. The team always discovers undocumented steps ("oh, Karen always emails the file to herself first, that's just how we do it"), redundant approvals, decisions that were originally added to handle a 2014 audit and now serve no purpose, and at least one workaround for a bug in a system nobody on the call has the password to anymore.</p>
+<p>The <strong>To-Be Process</strong> is the process <em>as it should be after improvement</em>: simpler, faster, less error-prone, better instrumented, sometimes radically different in shape. The to-be is not a wish list — it is a designed alternative that the team has thought through, validated against constraints, and committed to as the target state.</p>
+<p>The reason to draw <em>both</em> — instead of just leaping to the to-be — is that the as-is is where the real lessons live. The as-is reveals which steps exist for legitimate compliance reasons (those have to survive into the to-be) versus which exist only because nobody has questioned them in eight years (those can be deleted). The as-is also surfaces the political reality of the change: every redundant approval has somebody whose self-image is wrapped up in performing it.</p>
+<table>
+<thead>
+<tr>
+<th>As-Is Process</th>
+<th>To-Be Process</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Captures <em>what is actually happening</em></td>
+<td>Captures <em>what should happen after change</em></td>
+</tr>
+<tr>
+<td>Often messy, with workarounds</td>
+<td>Often simpler, with workarounds removed</td>
+</tr>
+<tr>
+<td>Built from interviews and observation</td>
+<td>Built from analysis, design, and tradeoff</td>
+</tr>
+<tr>
+<td>Reveals legitimate vs vestigial steps</td>
+<td>Targets a measurable improvement</td>
+</tr>
+<tr>
+<td>Politically uncomfortable to draw</td>
+<td>Politically uncomfortable to <em>defend</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="process-reengineering-when-improvement-is-not-enough">Process Reengineering: When Improvement Is Not Enough<a class="headerlink" href="#process-reengineering-when-improvement-is-not-enough" title="Permanent link">&para;</a></h2>
+<p>Sometimes the gap between the as-is and the to-be is small — a few redundant steps removed, a handoff streamlined. Sometimes the gap is enormous, and what the organization needs is not improvement but a clean-sheet redesign. That is the territory of <strong>Process Reengineering</strong>, often capitalized as Business Process Reengineering (BPR), the radical-redesign movement that swept through corporate America after Michael Hammer's 1990 <em>Harvard Business Review</em> article "Reengineering Work: Don't Automate, Obliterate."</p>
+<p>Hammer's central insight has aged well: the worst thing you can do with a broken process is <em>automate it faster</em>. Automating a bad process produces a bad process that runs more efficiently — which is, on a long enough timeline, worse than the original. Reengineering asks the deeper question: <em>if we were starting from scratch today, with the technology we have now, would we design this process at all?</em> Sometimes the answer is no. Sometimes a fifteen-step approval workflow gets reengineered into a one-step workflow plus an exception path, because fourteen of the steps existed only to compensate for limitations of a 1980s mainframe.</p>
+<p>Reengineering is high-risk and high-reward. The successful cases of the 1990s — Ford's accounts payable, IBM Credit's quote-to-cash, Mutual Benefit Life's policy issuance — produced 5x to 10x improvements in cycle time. The unsuccessful cases — and there were many — produced expensive consulting bills, layoffs, and demoralized survivors who learned that "reengineering" was a word their leadership used when they wanted to fire people. The footgun is <em>reengineering as a euphemism</em>; the structural fix is to be honest about goals (efficiency? compliance? customer experience? cost?), to involve the people who actually run the process, and to manage the human side of the change as carefully as the technical side.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Pause here</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Iris is thinking">
+There is a hierarchy of leverage in process work that every IS professional should internalize. From lowest to highest leverage: <em>automate</em> the existing steps, <em>streamline</em> the existing steps (eliminate sub-steps within a task), <em>eliminate</em> entire steps that no longer earn their keep, and <em>reengineer</em> the process so the steps themselves are different. Most of the time, the highest-impact move is several rungs above the one the team instinctively reaches for. When somebody says "let's automate this" — pause and ask whether eliminating it would be even better. The cheapest, fastest, most reliable step is the one you don't have to do.</p>
+</div>
+<h2 id="lean-eliminate-the-waste">Lean: Eliminate the Waste<a class="headerlink" href="#lean-eliminate-the-waste" title="Permanent link">&para;</a></h2>
+<p>Process improvement has two dominant intellectual traditions. The first is <strong>Lean Methodology</strong>, born at Toyota in the post-war decades and codified in the West by Womack, Jones, and Roos in <em>The Machine That Changed the World</em> (1990). Lean's central concept is <em>waste</em> — anything in a process that consumes resources without adding value the customer would pay for. Lean's job is to <em>see</em> waste and <em>eliminate</em> it.</p>
+<p>Lean classically catalogs eight wastes (the original seven Toyota wastes plus an eighth added later for knowledge work):</p>
+<ul>
+<li><strong>Defects</strong> — work that has to be redone because it was wrong the first time.</li>
+<li><strong>Overproduction</strong> — making more than is needed, sooner than it is needed.</li>
+<li><strong>Waiting</strong> — work sitting in a queue, waiting for the next step or the next person.</li>
+<li><strong>Non-utilized talent</strong> — people doing work below their skill level (the eighth waste).</li>
+<li><strong>Transportation</strong> — moving things (or files, or tickets) between locations unnecessarily.</li>
+<li><strong>Inventory</strong> — work-in-progress piling up between steps.</li>
+<li><strong>Motion</strong> — people moving around, or clicking around a UI, more than necessary.</li>
+<li><strong>Extra processing</strong> — doing more to a thing than the customer requires.</li>
+</ul>
+<p>The mnemonic <em>DOWNTIME</em> (Defects, Overproduction, Waiting, Non-utilized talent, Transportation, Inventory, Motion, Extra processing) is the standard memory aid; if you remember nothing else from Lean, remember DOWNTIME and you can spot waste in any process you walk into.</p>
+<p>Lean's deepest contribution to process work is its <em>cultural</em> posture: continuous, distributed, ground-up improvement, owned by the people who do the work. The Japanese term <em>kaizen</em> — small, ongoing, employee-driven improvements — captures the philosophy. Lean is not primarily about big projects; it is about a thousand tiny improvements compounding over years. That is also why it is so easy to fail at: most organizations do not have the patience, the cultural humility, or the management courage to let frontline workers rewrite their own work.</p>
+<h2 id="six-sigma-and-dmaic-reduce-the-variation">Six Sigma and DMAIC: Reduce the Variation<a class="headerlink" href="#six-sigma-and-dmaic-reduce-the-variation" title="Permanent link">&para;</a></h2>
+<p>The second great process-improvement tradition is <strong>Six Sigma</strong>, developed at Motorola in the 1980s, popularized at GE under Jack Welch in the 1990s, and built around statistical process control. Where Lean focuses on <em>eliminating waste</em>, Six Sigma focuses on <em>reducing variation</em>. The "Six Sigma" name refers to a defect rate of 3.4 defects per million opportunities — six standard deviations from the mean — which is a lot of decimal places, but the underlying idea is simple: a process that produces consistent output is more valuable than one that produces good-on-average output with bad surprises.</p>
+<p>Six Sigma's signature methodology for improving an existing process is <strong>DMAIC</strong> (pronounced "duh-MAY-ik"), a five-phase cycle:</p>
+<ol>
+<li><strong>Define</strong> — clarify the problem, the customer, and the goals. Charter the project, name the deliverable, agree on what "improvement" will mean numerically.</li>
+<li><strong>Measure</strong> — instrument the as-is process. Establish baselines for the metrics you intend to move. You cannot improve what you have not measured.</li>
+<li><strong>Analyze</strong> — find the root causes of the defects or variation. Tools include Pareto charts, fishbone diagrams, hypothesis tests, and statistical process control.</li>
+<li><strong>Improve</strong> — design and implement the change. Pilot it, validate it against the baseline, and confirm the improvement is real (not just regression to the mean).</li>
+<li><strong>Control</strong> — institutionalize the improvement. Update procedures, train staff, instrument ongoing monitoring, and set up alarms so the process doesn't drift back to the old behavior.</li>
+</ol>
+<p>Six Sigma also famously borrowed martial-arts ranks for its practitioners — Yellow Belt, Green Belt, Black Belt, Master Black Belt — which lent it a corporate-cult flavor that aged less gracefully than its statistical methods. The methods themselves are entirely sound and broadly applicable; the cultural packaging was a product of its time. (You can keep the DMAIC and skip the belts.)</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Lean</th>
+<th>Six Sigma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary target</td>
+<td>Waste</td>
+<td>Variation and defects</td>
+</tr>
+<tr>
+<td>Cultural posture</td>
+<td>Bottom-up, continuous, kaizen</td>
+<td>Top-down, project-based, statistical</td>
+</tr>
+<tr>
+<td>Signature tools</td>
+<td>Value stream mapping, 5S, kanban</td>
+<td>DMAIC, control charts, fishbone</td>
+</tr>
+<tr>
+<td>Data intensity</td>
+<td>Light to moderate</td>
+<td>Heavy — statistical analysis required</td>
+</tr>
+<tr>
+<td>Best fit</td>
+<td>Repeatable office/factory work</td>
+<td>High-volume processes with measurable defects</td>
+</tr>
+<tr>
+<td>Common combination</td>
+<td>"Lean Six Sigma" — both at once</td>
+<td>"Lean Six Sigma" — both at once</td>
+</tr>
+</tbody>
+</table>
+<p>In practice, the two traditions are usually combined into <strong>Lean Six Sigma</strong>, a hybrid that uses Lean tools for waste elimination and Six Sigma tools for variation reduction. Most modern process-improvement programs draw from both toolboxes without much fuss about lineage.</p>
+<h2 id="value-stream-mapping-seeing-the-whole-flow">Value Stream Mapping: Seeing the Whole Flow<a class="headerlink" href="#value-stream-mapping-seeing-the-whole-flow" title="Permanent link">&para;</a></h2>
+<p>The most useful single Lean tool, and the one most worth mastering, is <strong>Value Stream Mapping</strong> (VSM). A value stream map is a specialized process diagram that shows the <em>entire flow</em> of value — from raw input to delivered output — annotated with the time spent at each step (process time) and, crucially, the time spent <em>between</em> steps (wait time). The result is usually shocking: in most office processes, work spends 2-5% of its lifecycle being worked on and 95-98% sitting in a queue waiting to be worked on. Once you have seen this on a wall, you cannot unsee it.</p>
+<p>Value stream mapping is what a Lean practitioner does <em>first</em>, before reaching for any other tool, because it makes the whole flow visible. The discipline forces the team to walk the actual process — physically or virtually — and document what <em>really</em> happens, not what the documentation says happens. (Lean people sometimes call this <em>gemba</em> — going to the real place where the work happens. It is the antidote to designing improvements from a conference room.)</p>
+<p>The standard VSM symbology shows process boxes (with cycle time, change-over time, uptime), inventory triangles (with quantities), information flows (manual vs electronic), customer demand, supplier relationships, and a <em>timeline at the bottom</em> that distinguishes value-added time (the time work is actually being transformed) from non-value-added time (everything else). The eye-watering ratio between those two is the headline finding of nearly every VSM project.</p>
+<h4 id="diagram-a-value-stream-map-of-an-invoice-approval-process">Diagram: A Value Stream Map of an Invoice-Approval Process<a class="headerlink" href="#diagram-a-value-stream-map-of-an-invoice-approval-process" title="Permanent link">&para;</a></h4>
+<details>
+<summary>A Value Stream Map of an Invoice-Approval Process</summary>
+<p>Type: interactive-infographic
+<strong>sim-id:</strong> value-stream-map-invoice-approval<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>A p5.js value stream map showing an invoice-approval process from end to end: invoice received → AP-clerk data entry → manager approval → director approval (over $10K) → AP-clerk payment scheduling → payment issued. Each process box is rendered as a labeled rectangle with three sub-fields (cycle time, change-over time, uptime). Between each pair of process boxes is an inventory triangle showing the typical queue depth (e.g., "23 invoices waiting"). At the bottom of the canvas runs a time ladder: the upper rung shows non-value-added time (the wait time at each queue), the lower rung shows value-added time (the actual processing time). A summary box on the right reports total lead time, total value-added time, and the value-added ratio (typically 2-4%). Information flows (manual vs electronic) are shown above the process boxes with appropriate arrow styles.</p>
+<p>Color palette: process boxes in mascot-emerald, inventory triangles in coral (red triangles to evoke "stop, pile-up here"), value-added time in green on the timeline, non-value-added time in red. Information flow arrows in slate-gray (manual = jagged line, electronic = lightning bolt).</p>
+<p>Interactivity: hovering each process box shows the activity description and the real-world cycle time. A "to-be" toggle redraws the map after Lean improvements (e.g., eliminating the duplicate-approval step, batching reviews, auto-approving small invoices) and shows the updated value-added ratio. The dramatic before/after comparison — typically a jump from 3% to 25% value-added ratio — is the pedagogical payoff. A "wait time" slider lets students stress-test the model under different queue conditions to see how lead time explodes when WIP is unbounded.</p>
+<p>Layout: full canvas width, height ~520px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with <code>canvas.parent(document.querySelector('main'));</code>.</p>
+<p>Learning objective (Bloom: Analyzing): Students can read a value stream map, compute a value-added ratio, identify the largest sources of waste, and propose a sequence of Lean interventions that improves the ratio.</p>
+<p>Implementation: p5.js, deployed at <code>/information-systems/sims/value-stream-map-invoice-approval/</code>.</p>
+</details>
+<h2 id="workflow-automation-the-engine-underneath">Workflow Automation: The Engine Underneath<a class="headerlink" href="#workflow-automation-the-engine-underneath" title="Permanent link">&para;</a></h2>
+<p>Once a process is modeled and improved, the next step in many cases is <strong>Workflow Automation</strong>: software that executes the process directly, routing work between human actors, triggering system actions, enforcing rules, and recording every step in a way that auditors can replay. A workflow automation engine takes a process model — increasingly, the BPMN diagram itself — and <em>runs it as code</em>. Cases enter the engine, the engine routes them to the right person or system at the right time, the engine logs what happened, and the engine raises exceptions when work stalls.</p>
+<p>The strategic value of workflow automation is twofold. First, <em>consistency</em>: the workflow engine performs the routing exactly the same way every time, so the process behaves predictably regardless of which staff are working that day. Second, <em>visibility</em>: because every step is logged in a structured way, the organization can see at any moment how many cases are in which step, which steps are slow, and where bottlenecks have formed. The same instrumentation that makes the process auditable also makes it improvable.</p>
+<p>Modern workflow platforms — Camunda, IBM Process Server, Pega, Appian, ServiceNow Workflow, Microsoft Power Automate, Salesforce Flow — all share roughly the same architecture: a process designer (often graphical, often BPMN-based), a process engine (the runtime), a task list (where humans pick up work), an admin console (for monitoring and intervention), and an integration layer (for talking to other systems). What distinguishes them is the depth of integration with their host platform, the sophistication of their rules engines, and the ergonomics of their designers.</p>
+<p>The footgun in workflow automation is the same one that haunts process work generally: <em>automating a bad process locks the bad process in</em>. Once the workflow engine is running the process, the cost of changing the process goes up, because changing the diagram now means redeploying production software. Teams that automate before they reengineer end up with a beautifully instrumented version of exactly the process they should have replaced.</p>
+<h2 id="robotic-process-automation-when-integration-costs-more-than-a-bot">Robotic Process Automation: When Integration Costs More Than a Bot<a class="headerlink" href="#robotic-process-automation-when-integration-costs-more-than-a-bot" title="Permanent link">&para;</a></h2>
+<p>Sometimes the systems in a process are simply not integrate-able by normal means. The system of record is a thirty-year-old mainframe with a 3270 terminal interface. The vendor portal has no API. The acquired company runs a legacy Windows application with no programmable interface. In all three cases, the proper engineering solution is API integration — and the proper engineering solution is unavailable, unaffordable, or scheduled for retirement next year. Enter the bots.</p>
+<p><strong>Robotic Process Automation</strong> (RPA) is a category of software that automates business processes by <em>mimicking the actions of a human user</em> at the user-interface level: opening applications, reading screens, filling fields, clicking buttons, copying values from one system to another. An RPA "bot" is essentially a script that drives the GUI the way a human would, except 24/7 and without coffee breaks.</p>
+<p>RPA's appeal is straightforward. It can automate work <em>across systems that were never designed to be integrated</em>, without modifying any of those systems, without waiting for an API roadmap, and without involving the IS team that owns each underlying application. For routine, high-volume, rule-based, screens-based work — claims processing, invoice routing, account reconciliation, employee onboarding — RPA can deliver automation in weeks where a proper API integration would take quarters.</p>
+<p>RPA's footgun is its core mechanism. Because the bot interacts with the <em>user interface</em>, every UI change in any of the underlying systems can break the bot — silently, with no error visible to anyone except the queue of work backing up behind the silently-failing bot. This is a textbook footgun: silent (the bot does not throw an error you would notice), easy to trigger (any vendor patch can move a button), and damaging in delayed and invisible ways (work piles up downstream until somebody asks why the queue is so long). The structural fix is <em>not</em> "more careful UI selectors"; it is honesty about the tradeoff. RPA is the right answer when the alternative is "no automation at all, ever." When proper API integration is achievable on a reasonable timeline, RPA is usually the wrong answer dressed in a tuxedo.</p>
+<p><strong>RPA Tools</strong> that dominate the market include UiPath, Automation Anywhere, Blue Prism, Microsoft Power Automate Desktop, and (increasingly) AI-augmented platforms that combine traditional RPA with computer vision and large-language-model reasoning. The general shape of an RPA tool is: a recorder (which captures a human performing the task), a designer (which lets you edit the recorded script visually), an orchestrator (which schedules and supervises bots in production), and an analytics layer (which reports on bot health and savings).</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Workflow Automation</th>
+<th>Robotic Process Automation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Integrates via</td>
+<td>APIs, queues, native connectors</td>
+<td>The user interface (screen scraping)</td>
+</tr>
+<tr>
+<td>Modifies underlying apps</td>
+<td>Often (deeper integration)</td>
+<td>Never — that's the point</td>
+</tr>
+<tr>
+<td>Brittleness</td>
+<td>Low — APIs are versioned</td>
+<td>High — UI changes break bots silently</td>
+</tr>
+<tr>
+<td>Time to first automation</td>
+<td>Weeks to months</td>
+<td>Days to weeks</td>
+</tr>
+<tr>
+<td>Right answer when</td>
+<td>Apps have APIs and you control them</td>
+<td>Apps have no APIs, no roadmap, no choice</td>
+</tr>
+<tr>
+<td>Footgun</td>
+<td>Locks in a bad process</td>
+<td>Bot fails silently after a UI patch</td>
+</tr>
+<tr>
+<td>Long-term posture</td>
+<td>Strategic — the durable foundation</td>
+<td>Tactical — bridge to proper integration</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-as-is-vs-to-be-manual-rpa-and-workflow-automation">Diagram: As-Is vs To-Be — Manual, RPA, and Workflow Automation<a class="headerlink" href="#diagram-as-is-vs-to-be-manual-rpa-and-workflow-automation" title="Permanent link">&para;</a></h4>
+<details>
+<summary>As-Is vs To-Be — Manual, RPA, and Workflow Automation</summary>
+<p>Type: interactive-infographic
+<strong>sim-id:</strong> as-is-to-be-automation-comparison<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>A p5.js side-by-side comparison diagram showing three versions of the same employee-onboarding process. Panel 1 (As-Is, Manual): five lanes — HR clerk, IT, Facilities, Manager, Payroll — each performing manual handoffs by email; total cycle time labeled at the top (e.g., "9 days"). Panel 2 (To-Be with RPA): same lane structure, but two RPA bot icons replace the HR-clerk's repetitive data-entry steps and the IT account-creation steps; cycle time labeled (e.g., "3 days"); a small caution icon notes "fragile to UI changes". Panel 3 (To-Be with Workflow Automation): collapsed to three lanes (HR, Manager, Payroll) with a workflow-engine icon orchestrating system-to-system integration via APIs; cycle time labeled (e.g., "1 day"); a small "strategic foundation" badge.</p>
+<p>Color palette: manual-only lanes in slate-gray, RPA bot icons in coral with caution-stripe borders, workflow-automation engine in mascot-emerald, integration arrows in teal. Cycle-time bar at the top of each panel scales proportionally so students can see the time difference visually.</p>
+<p>Interactivity: hovering each step in any panel shows duration and actor. A "show waste" toggle highlights the eight Lean wastes wherever they occur in the as-is panel (especially Waiting and Motion). A "switch panel" tab lets the student bring any of the three panels into a primary focused view. A side panel shows total cycle time, value-added ratio, and number of human handoffs for the panel currently in focus.</p>
+<p>Layout: three vertical stacked panels, full canvas width, height ~640px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with <code>canvas.parent(document.querySelector('main'));</code>.</p>
+<p>Learning objective (Bloom: Evaluating): Students can compare a manual, RPA-automated, and workflow-automated version of the same process; quantify the cycle-time and handoff differences; and articulate the tradeoffs of each approach.</p>
+<p>Implementation: p5.js, deployed at <code>/information-systems/sims/as-is-to-be-automation-comparison/</code>.</p>
+</details>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Heads up</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Iris warns you">
+There is a special circle of IS purgatory reserved for organizations that have <em>both</em> an enthusiastic RPA program <em>and</em> a long backlog of API integrations the bots are working around. Each successful bot deployment lowers the perceived urgency of fixing the underlying integration, the integration backlog grows, and a few years later the company has 300 bots, no one remembers what each of them does, every vendor UI update is a fire drill, and the original integration backlog is still untouched. The structural fix is to track every RPA deployment with a paired ticket: <em>"Replace this bot with a proper API integration when X system is upgraded."</em> Without that paired ticket, RPA is not a bridge to anywhere — it is the destination, and the destination is a maintenance nightmare.</p>
+</div>
+<h2 id="process-mining-listening-to-the-process">Process Mining: Listening to the Process<a class="headerlink" href="#process-mining-listening-to-the-process" title="Permanent link">&para;</a></h2>
+<p>For decades, process modeling required a human analyst to interview people and construct the as-is diagram by hand. The diagram that emerged was, inevitably, an idealized version of reality — a composite of how everyone <em>thought</em> the process worked, with the inconvenient bits sanded off. Then, around 2010, a Dutch computer scientist named Wil van der Aalst pointed out that nearly every modern enterprise system already records a <em>log</em> of every transaction it processes — and that those logs, if interpreted correctly, are a literal record of how the process <em>actually</em> runs. The discipline that emerged from that observation is <strong>Process Mining</strong>.</p>
+<p>Process mining is the application of data-mining techniques to event logs from enterprise systems (SAP, Oracle, Salesforce, ServiceNow) to <em>automatically reconstruct</em> the as-is process diagram from the data. Tools like Celonis, UiPath Process Mining, IBM Process Mining, and Microsoft Process Insights ingest the event log, identify the case ID, the activity, and the timestamp on each event, and produce — within minutes — a process map that reflects what <em>actually happens</em>, including all the variants, exceptions, and shortcuts that nobody mentioned in the interviews.</p>
+<p>The first time an organization runs process mining on a real process, the experience is disorienting. The "single, well-understood process" turns out to have 47 distinct variants. The 12-step process documentation turns out to describe a path that only 8% of cases actually take; the remaining 92% are a long tail of exceptions, rework loops, and undocumented shortcuts. The "fast" process executives believed in turns out to have a small number of cases that take 30 days because of a vendor integration nobody knew was failing.</p>
+<p>This is process modeling's superpower update for the data era. Where the analyst-built as-is is an <em>opinion</em>, the mined as-is is a <em>measurement</em>. The two should agree; when they don't, the data wins. Process mining also enables continuous monitoring — once the mining model is in place, the organization can watch the process in something like real time, alert on emerging deviation, and quantify the impact of every improvement intervention.</p>
+<h2 id="the-business-rules-engine-pulling-the-logic-out">The Business Rules Engine: Pulling the Logic Out<a class="headerlink" href="#the-business-rules-engine-pulling-the-logic-out" title="Permanent link">&para;</a></h2>
+<p>A subtle but powerful piece of the BPM toolbox is the <strong>Business Rules Engine</strong> (BRE). A business rule is a declarative statement of business logic: <em>"Auto-approve any expense under $50."</em> <em>"Charge sales tax based on shipping ZIP code."</em> <em>"Reject loan applications where credit score is below 580 unless the applicant has co-signer documentation on file."</em> Historically, business rules lived hard-coded inside application code — buried in stored procedures, sprinkled through user-interface validation, written into RPA bot scripts. Every rule change required a developer, a code review, a deployment, and a release window.</p>
+<p>A business rules engine is a piece of software that <em>externalizes</em> the rules from the application code into a separate, declarative artifact (often a decision table, a rules language, or a DMN — Decision Model and Notation — diagram, which is BPMN's sibling standard) that business analysts can edit directly. The application or workflow engine <em>queries</em> the BRE at runtime ("here's an expense report; what's the decision?") and the BRE returns the answer based on the current rule set. Vendors include FICO Blaze Advisor, IBM ODM, Drools (open-source), Camunda DMN, and the rules engines embedded in larger BPM platforms.</p>
+<p>The strategic payoff is that policy changes — which are constant in finance, healthcare, insurance, and government — become <em>configuration changes</em> rather than <em>code changes</em>. A new tax rate, a new compliance check, a new approval threshold can be edited and deployed without a software release. The footgun, of course, is that the rule set itself becomes a software artifact in disguise: thousands of rules can become a tangle that nobody can reason about, and the people editing them often do not have the test discipline of professional developers. The structural fix is to treat the rule set with the same engineering rigor as code — version control, peer review, automated tests, staged rollout — even when the editors are non-developers.</p>
+<h2 id="continuous-improvement-the-engine-that-doesnt-stop">Continuous Improvement: The Engine That Doesn't Stop<a class="headerlink" href="#continuous-improvement-the-engine-that-doesnt-stop" title="Permanent link">&para;</a></h2>
+<p>We close on the cultural concept that ties all of the previous tools together: <strong>Continuous Improvement</strong>. The Japanese word <em>kaizen</em> — a compound of <em>kai</em> (change) and <em>zen</em> (good) — captures it: change for the better, ongoing, owned by everyone, never finished. Continuous improvement is not a project, a phase, a one-time initiative, or a six-month engagement. It is a disciplined organizational habit of <em>always looking for the next small improvement and acting on it</em>.</p>
+<p>The engineering of continuous improvement has three load-bearing structural elements. <em>Measurement</em> — without baseline metrics, you can't tell whether a change is an improvement or a regression. <em>Visibility</em> — improvement opportunities have to be surfaced where leadership and front-line staff can both see them, often via process mining dashboards or simple kanban-style improvement boards. <em>Capacity</em> — staff must have <em>time</em> to work on improvements, distinct from their delivery commitments. The organizations that fail at continuous improvement are almost always the ones that asked for it on top of an already-100%-loaded delivery commitment, which is the corporate equivalent of asking someone to mow the lawn while they are running a marathon.</p>
+<p>The systems-thinking insight beneath continuous improvement is that processes do not stay improved on their own. Every process has <em>drift</em> — staff turnover changes who knows what, regulations change the rules, vendor systems change their behavior, the business changes the goals. Without an active improvement loop, every improved process gradually decays back toward its prior state, often within a year or two of the project that improved it. The continuous-improvement loop is a <em>balancing feedback</em> that fights the drift. Without it, the doom loop wins. With it, processes can actually get better year over year, which is one of the most underrated competitive advantages an organization can develop.</p>
+<h2 id="putting-it-all-together">Putting It All Together<a class="headerlink" href="#putting-it-all-together" title="Permanent link">&para;</a></h2>
+<p>Business process management is the discipline of treating the organization as a system of processes that can be modeled, redesigned, automated, instrumented, and continuously improved.</p>
+<ul>
+<li><strong>Process modeling</strong> is the foundational activity; <strong>BPMN notation</strong> is its lingua franca; <strong>pools, lanes, activities, gateways, and events</strong> are the elements you must master to read or write a diagram.</li>
+<li>The <strong>as-is process</strong> captures reality; the <strong>to-be process</strong> captures the target; <strong>process reengineering</strong> is what you do when the gap is large enough to require a clean-sheet redesign rather than incremental improvement.</li>
+<li><strong>Lean methodology</strong> eliminates waste (DOWNTIME); <strong>Six Sigma</strong> reduces variation; <strong>DMAIC</strong> is Six Sigma's five-phase improvement cycle; the two traditions combine into Lean Six Sigma in most modern programs. <strong>Value stream mapping</strong> is the most useful single tool from the Lean side, because it makes wait time visible.</li>
+<li><strong>Workflow automation</strong> runs the process as code, executing the BPMN diagram directly and instrumenting it for analysis. <strong>Robotic process automation</strong> mimics human users at the UI level — fast to deploy, brittle to maintain, useful when proper integration is unavailable. <strong>RPA tools</strong> like UiPath, Automation Anywhere, and Blue Prism dominate the category.</li>
+<li><strong>Process mining</strong> reconstructs the actual as-is from event logs, replacing analyst opinion with measurement. The <strong>business rules engine</strong> externalizes business logic from code, making policy changes configurable rather than deployable. <strong>Continuous improvement</strong> is the cultural and structural commitment that keeps all of this from slowly decaying back to its starting state.</li>
+</ul>
+<p>A graduate of this chapter walking into their first process-improvement engagement should be able to ask, in order: <em>What process are we improving? Have we modeled the as-is honestly? Have we mined the event logs to validate the model? What's the to-be? Are we eliminating, streamlining, or just automating? If we're automating, is it workflow automation or RPA, and have we acknowledged the tradeoffs? Where do the business rules live, and who can change them? And how will the organization keep improving this process after we leave?</em> That is a more sophisticated set of questions than most consultants ask in their first decade of work. You can ask all of them after a single chapter.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Nicely done</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
+You just learned the working vocabulary of business process management — BPMN swimlanes, gateways, events, the as-is/to-be discipline, Lean's eight wastes, Six Sigma's DMAIC, value stream mapping, the workflow-versus-RPA tradeoff, process mining, business rules engines, and the continuous-improvement loop. Next time somebody pitches "let's just automate this," you will hear <em>they have not modeled the process yet</em>. Next time somebody describes a six-month consulting engagement to "reengineer" something, you will hear <em>what's the as-is, what's the to-be, and who owns the change?</em> Next time somebody is excited about their new RPA bot, you will hear <em>what happens when the vendor patches the UI?</em> And next time a process actually gets better and stays better, you will recognize it as the rare and valuable thing it is. Onward to Chapter 6, where we step back from processes and ask the deeper question of how data — the substance every process is shoveling around — should be modeled, stored, and trusted.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../04-appdev/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 4. Application Development for IS">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                4. Application Development for IS
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../06-data-foundations/" class="md-footer__link md-footer__link--next" aria-label="Next: 6. Data Management Foundations">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                6. Data Management Foundations
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dmccreary/information-systems" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

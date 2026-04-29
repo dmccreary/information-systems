@@ -1,0 +1,10 @@
+{
+  "title": "Information Systems",
+  "description": "An ABET CAC-aligned intelligent textbook covering the foundations of information systems — application development, data management, IS project management, networks and telecommunications for business, security of information assets, the role of IS in organizations, the modern integration of AI throughout the IS function, and the rise of Enterprise Knowledge Graphs and the Enterprise Nervous System.",
+  "creator": "Dan McCreary",
+  "date": "2026-04-28",
+  "version": "1.0",
+  "format": "Learning Graph JSON v1.0",
+  "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+  "license": "CC BY-NC-SA 4.0 DEED"
+}

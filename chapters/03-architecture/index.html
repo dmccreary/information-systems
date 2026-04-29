@@ -1,0 +1,2309 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Surveys the architectures that hold modern information systems together — three-tier and n-tier, enterprise architecture frameworks, integration patterns, SOA, microservices, and the API economy.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/information-systems/chapters/03-architecture/">
+      
+      
+        <link rel="prev" href="../02-role-of-is/">
+      
+      
+        <link rel="next" href="../04-appdev/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Information Systems Architecture - Information Systems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#information-systems-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Information Systems" class="md-header__button md-logo" aria-label="Information Systems" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Information Systems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Information Systems Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/information-systems" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Information Systems" class="md-nav__button md-logo" aria-label="Information Systems" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Information Systems
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/information-systems" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Description
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Chapters
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Foundations of Information Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-role-of-is/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. The Role of IS in Organizations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    3. Information Systems Architecture
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Information Systems Architecture
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-architecture-is-the-conversation-above-the-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Architecture Is the Conversation Above the Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-tier-architecture-the-floor-plan-you-already-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three-Tier Architecture: The Floor Plan You Already Know
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three-Tier Architecture: The Floor Plan You Already Know">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-three-tier-architecture-with-request-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Three-Tier Architecture with Request Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-three-tiers-arent-enough-n-tier" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Three Tiers Aren't Enough: N-Tier
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enterprise-architecture-the-view-from-orbit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enterprise Architecture: The View From Orbit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-togaf-framework-a-process-for-architectural-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      The TOGAF Framework: A Process for Architectural Change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-zachman-framework-a-schema-for-architectural-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Zachman Framework: A Schema for Architectural Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-architecture-vs-solution-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference Architecture vs. Solution Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-patterns-how-systems-talk-to-each-other" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Patterns: How Systems Talk to Each Other
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-enterprise-service-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Enterprise Service Bus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-api-gateway-the-front-door-to-your-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      The API Gateway: The Front Door to Your Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The API Gateway: The Front Door to Your Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-api-gateway-request-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: API Gateway Request Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-oriented-architecture-soa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service-Oriented Architecture (SOA)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monolithic-vs-microservices-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monolithic vs. Microservices Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-driven-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event-Driven Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-api-economy-five-concepts-you-need-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      The API Economy: Five Concepts You Need to Know
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The API Economy: Five Concepts You Need to Know">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rest-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      REST APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphql-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      GraphQL APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Webhooks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openapi-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenAPI Specification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Versioning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-appdev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4. Application Development for IS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-bpm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5. Business Process Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-data-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6. Data Management Foundations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-modern-databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7. Modern Databases and Lakehouses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-data-governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8. Data Governance and Quality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-bi-and-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9. Business Intelligence and Analytics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-sad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10. Systems Analysis and Design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11. Networks and Telecommunications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12. Cloud Computing and Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-enterprise-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13. Enterprise Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    14. Security of Information Assets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-privacy-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    15. Privacy, Compliance, and Regulation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-project-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    16. IS Project Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-itsm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    17. IT Service Management and Operations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-hci-and-emerging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    18. HCI and Emerging Topics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-ai-in-is/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    19. AI in Information Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-responsible-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20. Responsible and Ethical Use of AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-ai-law/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    21. AI Law, Regulation, and Compliance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-ai-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    22. AI and Information Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23-ai-productivity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    23. AI Productivity Impact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24-knowledge-graphs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    24. Knowledge Graphs and the EKG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25-ens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    25. The Enterprise Nervous System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Learning Graph
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MicroSims
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-architecture-is-the-conversation-above-the-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Architecture Is the Conversation Above the Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-tier-architecture-the-floor-plan-you-already-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three-Tier Architecture: The Floor Plan You Already Know
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three-Tier Architecture: The Floor Plan You Already Know">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-three-tier-architecture-with-request-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Three-Tier Architecture with Request Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-three-tiers-arent-enough-n-tier" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Three Tiers Aren't Enough: N-Tier
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enterprise-architecture-the-view-from-orbit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enterprise Architecture: The View From Orbit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-togaf-framework-a-process-for-architectural-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      The TOGAF Framework: A Process for Architectural Change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-zachman-framework-a-schema-for-architectural-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Zachman Framework: A Schema for Architectural Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-architecture-vs-solution-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference Architecture vs. Solution Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-patterns-how-systems-talk-to-each-other" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Patterns: How Systems Talk to Each Other
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-enterprise-service-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Enterprise Service Bus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-api-gateway-the-front-door-to-your-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      The API Gateway: The Front Door to Your Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The API Gateway: The Front Door to Your Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-api-gateway-request-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: API Gateway Request Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-oriented-architecture-soa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service-Oriented Architecture (SOA)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monolithic-vs-microservices-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monolithic vs. Microservices Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-driven-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event-Driven Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-api-economy-five-concepts-you-need-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      The API Economy: Five Concepts You Need to Know
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The API Economy: Five Concepts You Need to Know">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rest-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      REST APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphql-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      GraphQL APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Webhooks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openapi-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenAPI Specification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Versioning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/dmccreary/information-systems/blob/main/docs/chapters/03-architecture/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="information-systems-architecture">Information Systems Architecture<a class="headerlink" href="#information-systems-architecture" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>Surveys the architectures that hold modern information systems together: three-tier and n-tier, enterprise architecture frameworks (TOGAF, Zachman), integration patterns, SOA, microservices, and the API economy.</p>
+<p><strong>Role in the course:</strong> Give students an architectural mental model so that every later technical chapter (data, cloud, security, AI) lands in the right architectural slot.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 23 concepts from the learning graph:</p>
+<ol>
+<li>Application Portfolio</li>
+<li>Three-Tier Architecture</li>
+<li>N-Tier Architecture</li>
+<li>Presentation Tier</li>
+<li>Application Tier</li>
+<li>Data Tier</li>
+<li>Enterprise Architecture</li>
+<li>TOGAF Framework</li>
+<li>Zachman Framework</li>
+<li>Reference Architecture</li>
+<li>Solution Architecture</li>
+<li>Integration Pattern</li>
+<li>Enterprise Service Bus</li>
+<li>API Gateway</li>
+<li>Service-Oriented Architecture</li>
+<li>Microservices Architecture</li>
+<li>Monolithic Architecture</li>
+<li>Event-Driven Architecture</li>
+<li>REST API</li>
+<li>GraphQL API</li>
+<li>Webhooks</li>
+<li>OpenAPI Specification</li>
+<li>API Versioning</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-foundations/">Chapter 1: Foundations of Information Systems</a></li>
+<li><a href="../02-role-of-is/">Chapter 2: The Role of IS in Organizations</a></li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome back</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Iris the hummingbird waves hello">
+Welcome to Chapter 3. In Chapter 1 we defined what information systems <em>are</em>; in Chapter 2 we figured out who runs them and why anyone pays for them. Now we get to the genuinely fun part: the <em>architecture</em> — the structural blueprints that decide whether an organization's IS portfolio behaves like a well-designed city or a pile of houses with the plumbing on the outside. By the end of this chapter you will be able to look at any enterprise system and locate it on a small set of architectural maps. That skill is what separates "person who uses the systems" from "person who can change them."</p>
+</div>
+<h2 id="why-architecture-is-the-conversation-above-the-code">Why Architecture Is the Conversation Above the Code<a class="headerlink" href="#why-architecture-is-the-conversation-above-the-code" title="Permanent link">&para;</a></h2>
+<p>A working organization runs dozens — sometimes hundreds — of applications. The CRM. The ERP. The HRIS. The data warehouse. The marketing automation tool. Three different ticketing systems that nobody can quite remember why they have. The collection of those applications is called the <strong>application portfolio</strong>, and managing it is one of the central jobs of any modern IS organization.</p>
+<p>The application portfolio is not just a list. It is a structured inventory: each application has an owner, a business capability it supports, a lifecycle stage (introduce, grow, sustain, retire), an integration footprint, and a cost. A healthy portfolio gets pruned the way a healthy garden does, on a regular cycle. An unhealthy portfolio just keeps growing — every new initiative buys another tool, nothing ever retires, and within five years the integration map looks like a bowl of spaghetti that has been left out overnight.</p>
+<p>Architecture is the discipline that keeps the portfolio coherent. Without architectural thinking, every project optimizes for itself, every team picks its favorite stack, and every shortcut that "just makes this one feature ship faster" turns into a permanent constraint on everyone who comes after. Architecture asks the questions that no individual project will ever ask on its own: <em>How does this fit with what we already have? What standards should we follow? What can be reused? What problem are we genuinely creating for the team three doors down?</em></p>
+<p>This chapter walks down the ladder of architectural abstraction, from the top-of-the-skyscraper view (enterprise architecture frameworks) to the floor plan of a single building (three-tier and n-tier) to the plumbing and wiring (integration patterns and APIs). Each level matters; each level uses different vocabulary; and you will be expected to move between them fluently.</p>
+<h2 id="the-three-tier-architecture-the-floor-plan-you-already-know">The Three-Tier Architecture: The Floor Plan You Already Know<a class="headerlink" href="#the-three-tier-architecture-the-floor-plan-you-already-know" title="Permanent link">&para;</a></h2>
+<p>Almost every business application built since about 1995 has the same fundamental shape, called the <strong>three-tier architecture</strong>. The shape is so universal that you may have used it without ever giving it a name. It separates an application into three logical layers, each with a clearly bounded responsibility.</p>
+<p>The <strong>presentation tier</strong> is the layer the user actually touches. It is the web page in the browser, the mobile app on the phone, the desktop client on the laptop. Its job is to render information and accept input — and that is <em>all</em> its job. A well-built presentation tier contains as little business logic as possible; it is the storefront window, not the warehouse.</p>
+<p>The <strong>application tier</strong> (sometimes called the <em>business logic tier</em> or the <em>middle tier</em>) is where the actual rules of the business live. <em>Is this loan applicant eligible? Does this discount stack with that promotion? Should this support ticket auto-route to the security team?</em> Every consequential decision the system makes happens here. The application tier orchestrates the workflow, validates the inputs, enforces the policies, and decides which pieces of data to fetch or update.</p>
+<p>The <strong>data tier</strong> is where the persistent state lives — the databases, the data warehouses, the document stores, the file systems. Its job is to durably remember things and to answer queries about them. The data tier does not know or care whether the request came from a web browser, a mobile app, or a batch job; it just stores and retrieves data accurately.</p>
+<p>Why split an application this way? Because the three layers change at different rates and for different reasons. The presentation tier changes when users want a new screen or a different device. The application tier changes when the business rules change. The data tier changes when the data model evolves — and it changes the slowest, because changing it well is hardest. Splitting these concerns means a UI redesign does not require touching the database, and a rule change does not require redeploying the mobile app.</p>
+<p>Before we look at the diagram below, here is the key thing to absorb: the three tiers are <em>logical</em>, not necessarily physical. You can run all three on the same laptop during development and deploy them to three separate clusters in production. The architecture is about <em>separation of responsibilities</em>, not about how many servers you bought.</p>
+<h4 id="diagram-three-tier-architecture-with-request-flow">Diagram: Three-Tier Architecture with Request Flow<a class="headerlink" href="#diagram-three-tier-architecture-with-request-flow" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Three-Tier Architecture with Request Flow</summary>
+<p>Type: interactive-infographic
+<strong>sim-id:</strong> three-tier-architecture<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>A vertical three-layer diagram drawn in p5.js, drawn responsively to fill the available iframe width. From top to bottom, the three layers are labeled <strong>Presentation Tier</strong>, <strong>Application Tier</strong>, and <strong>Data Tier</strong>. Each layer is rendered as a rounded rectangle running the full canvas width, with a clear label and a representative icon (browser/phone for presentation, gears for application, cylinder for data).</p>
+<p>Color palette (light mode): Presentation = soft sky blue, Application = medium teal, Data = warm gold. Each layer has a 1px darker border and dark text. Layer separators are dashed gray lines.</p>
+<p>Interactivity: when the user clicks the <strong>Trace a Request</strong> button, an animated dot travels from the presentation tier down through the application tier to the data tier (request path), pauses, and then travels back up (response path). At each stop, a small callout shows what that tier does for this request: e.g., presentation = "User clicks 'Apply for Loan'", application = "Validate inputs, run eligibility rules", data = "Fetch credit history, write application record."</p>
+<p>A toggle switches between three example requests — view a product page, submit a loan application, generate a monthly report — so the same architecture is shown handling different workloads.</p>
+<p>Layout: layers stacked vertically, full width; callout panel appears to the side at desktop widths and below at narrow widths. Canvas resizes on window resize. The setup() function calls updateCanvasSize() as its first step. Canvas parented with <code>canvas.parent(document.querySelector('main'));</code>.</p>
+<p>Learning objective (Bloom: Understanding): Students can identify which tier owns a given responsibility (rendering a chart, validating a discount rule, storing a customer record).</p>
+<p>Implementation: p5.js, single <code>main.html</code>, accompanying <code>index.md</code> doc, deployed at <code>/sims/three-tier-architecture/</code>.</p>
+</details>
+<h2 id="when-three-tiers-arent-enough-n-tier">When Three Tiers Aren't Enough: N-Tier<a class="headerlink" href="#when-three-tiers-arent-enough-n-tier" title="Permanent link">&para;</a></h2>
+<p>The three-tier model is a beautiful starting point, but real systems quickly need more layers. The general form is called the <strong>n-tier architecture</strong> — the same idea, generalized to any number of logical tiers, each with a focused responsibility.</p>
+<p>In a typical enterprise application you might find: a presentation tier; a <em>web tier</em> that handles HTTP routing, sessions, and authentication; an application tier for business logic; a <em>services tier</em> that exposes shared capabilities (notification, search, identity); a <em>caching tier</em> (Redis, Memcached) that absorbs read traffic; a <em>data access tier</em> that mediates between the application and the data stores; and finally the data tier itself. That is seven tiers, not three.</p>
+<p>The reason organizations add tiers is the same reason cities add zones: specialization scales better than mixing everything together. A dedicated caching tier can be tuned by people who know caching. A dedicated identity tier centralizes a security-critical concern. A dedicated services tier lets the rest of the application share capabilities without each team rebuilding them.</p>
+<p>The cost is operational complexity. Every tier is another component to deploy, monitor, secure, and pay for. There is a real tradeoff here — we will return to it shortly when we discuss monoliths versus microservices, because microservices push the n-tier impulse to its logical extreme.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Pause here — this one matters</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Iris is thinking">
+The single most useful question to ask about <em>any</em> application is: "Which tier is this code running in, and why?" Code that pretends it does not have a tier — like business logic stuffed into a database trigger, or a database query embedded in the HTML template — is code that will fight every future change. Architecture is fundamentally about putting code where it belongs, so that the next person who needs to change it can find it without weeping.</p>
+</div>
+<h2 id="enterprise-architecture-the-view-from-orbit">Enterprise Architecture: The View From Orbit<a class="headerlink" href="#enterprise-architecture-the-view-from-orbit" title="Permanent link">&para;</a></h2>
+<p>Three-tier and n-tier describe a <em>single</em> application's structure. Step way back and you face a much bigger question: how should <em>all</em> your organization's applications, data stores, integrations, and technology platforms fit together as one coherent whole? That is the domain of <strong>enterprise architecture (EA)</strong>.</p>
+<p>Enterprise architecture is the discipline of describing, governing, and evolving the entire IS landscape of an organization in a way that supports the business strategy. EA produces a set of artifacts — current-state diagrams, target-state diagrams, transition roadmaps, standards, principles — that let leadership make portfolio-level decisions instead of project-level ones. We met the <strong>Enterprise Architect</strong> role in Chapter 2; EA is the body of knowledge that role draws on.</p>
+<p>Enterprise architecture is usually decomposed into four interrelated views:</p>
+<ul>
+<li><strong>Business architecture</strong> — capabilities, processes, organizational units, value streams.</li>
+<li><strong>Data architecture</strong> — the major data domains, their owners, and how they flow.</li>
+<li><strong>Application architecture</strong> — the application portfolio and how systems integrate.</li>
+<li><strong>Technology architecture</strong> — the platforms, networks, and infrastructure underneath.</li>
+</ul>
+<p>Two frameworks dominate the EA conversation: <strong>TOGAF</strong> and <strong>Zachman</strong>. They are not competitors so much as complements — Zachman gives you the vocabulary to describe what exists, while TOGAF gives you the process to evolve it.</p>
+<h2 id="the-togaf-framework-a-process-for-architectural-change">The TOGAF Framework: A Process for Architectural Change<a class="headerlink" href="#the-togaf-framework-a-process-for-architectural-change" title="Permanent link">&para;</a></h2>
+<p>The <strong>TOGAF Framework</strong> (The Open Group Architecture Framework) is the most widely adopted enterprise architecture framework in the world. It is published and maintained by The Open Group and is currently in version 10. The bulk of TOGAF is a step-by-step process called the <strong>Architecture Development Method (ADM)</strong> — eight phases plus a preliminary phase, arranged as a cycle:</p>
+<ol>
+<li><strong>Preliminary</strong> — establish the architecture capability itself.</li>
+<li><strong>Architecture Vision</strong> — define scope, stakeholders, and high-level goals.</li>
+<li><strong>Business Architecture</strong> — describe the business in capability and process terms.</li>
+<li><strong>Information Systems Architectures</strong> — data and application architecture.</li>
+<li><strong>Technology Architecture</strong> — platforms and infrastructure.</li>
+<li><strong>Opportunities and Solutions</strong> — identify projects and roadmap.</li>
+<li><strong>Migration Planning</strong> — sequence the projects.</li>
+<li><strong>Implementation Governance</strong> — make sure the actual build matches the architecture.</li>
+<li><strong>Architecture Change Management</strong> — handle changes after deployment.</li>
+</ol>
+<p>TOGAF is methodical, comprehensive, and — done badly — soul-crushingly heavyweight. The classical TOGAF failure mode is to treat the ADM as a literal waterfall, produce 400 pages of diagrams, and ship nothing. Done well, TOGAF is tailored ruthlessly to the organization's actual decision-making cadence — using only the artifacts that real stakeholders will actually read.</p>
+<h2 id="the-zachman-framework-a-schema-for-architectural-description">The Zachman Framework: A Schema for Architectural Description<a class="headerlink" href="#the-zachman-framework-a-schema-for-architectural-description" title="Permanent link">&para;</a></h2>
+<p>The <strong>Zachman Framework</strong>, created by John Zachman at IBM in 1987, takes a different angle. Zachman is not a process; it is a <em>taxonomy</em> — a 6-by-6 grid that classifies architectural artifacts by <em>what</em> they describe and <em>whose viewpoint</em> they describe it from.</p>
+<p>The columns are six interrogatives: <strong>What</strong> (data), <strong>How</strong> (function), <strong>Where</strong> (network), <strong>Who</strong> (people), <strong>When</strong> (time), and <strong>Why</strong> (motivation). The rows are six perspectives: Executive (scope), Business Management (concept), Architect (logic), Engineer (physics), Technician (component), and Enterprise (operations).</p>
+<p>Each cell of the resulting grid represents a specific kind of architectural artifact. The "What/Architect" cell is the logical data model. The "How/Engineer" cell is the application design. The "Where/Technician" cell is the network deployment diagram. Zachman's genius is that the grid forces completeness: if a cell is empty, your architecture has a documented blind spot.</p>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Type</th>
+<th>Strength</th>
+<th>When to use it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TOGAF</td>
+<td>Process</td>
+<td>Step-by-step method to <em>evolve</em> the architecture</td>
+<td>When you need a roadmap from current to target</td>
+</tr>
+<tr>
+<td>Zachman</td>
+<td>Taxonomy</td>
+<td>Comprehensive <em>schema</em> to classify what already exists</td>
+<td>When you need a complete inventory of artifacts</td>
+</tr>
+</tbody>
+</table>
+<p>Working enterprise architects often use both — Zachman to organize what is, TOGAF to plan what comes next.</p>
+<h2 id="reference-architecture-vs-solution-architecture">Reference Architecture vs. Solution Architecture<a class="headerlink" href="#reference-architecture-vs-solution-architecture" title="Permanent link">&para;</a></h2>
+<p>Enterprise architecture produces two flavors of architectural document, and confusing them is one of the great recurring mix-ups in our field.</p>
+<p>A <strong>reference architecture</strong> is a <em>generalized</em>, vendor-neutral, organization-tailored blueprint that describes how a class of system <em>should</em> be built. "Our reference architecture for customer-facing web applications uses an API gateway, stateless application services, a relational database for transactional data, and a separate analytics store." A reference architecture is the recipe — abstract, reusable, and specifically <em>not</em> about any one project.</p>
+<p>A <strong>solution architecture</strong> is the <em>specific</em> design for a <em>specific</em> project. "The new loyalty portal will use the customer-facing reference architecture, with Kong as the API gateway, three Spring Boot services running on EKS, PostgreSQL on RDS, and Snowflake for analytics, integrated with the existing identity provider via OIDC." A solution architecture is what gets built; the reference architecture is what it conforms to.</p>
+<p>The two work as a system. Reference architectures provide <em>consistency</em> across the portfolio (every project in this category looks roughly like this). Solution architectures provide <em>adaptation</em> to each project's specific constraints. Skip the reference architecture and every project reinvents the wheel; skip the solution architecture and you cannot actually build anything.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Pro move</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Iris shares a tip">
+When you join a new IS team, ask whether the organization has any published <em>reference architectures</em> for its common application categories. The answer tells you a lot. A team with three good reference architectures is a team that has thought about reuse on purpose. A team with none is a team where every project is a snowflake — and where your first valuable contribution might be quietly drafting one.</p>
+</div>
+<h2 id="integration-patterns-how-systems-talk-to-each-other">Integration Patterns: How Systems Talk to Each Other<a class="headerlink" href="#integration-patterns-how-systems-talk-to-each-other" title="Permanent link">&para;</a></h2>
+<p>So far we have talked about how a single application is structured. The harder question — and the one that consumes most of an enterprise architect's working life — is how <em>multiple</em> applications talk to each other. The CRM has to know what the ERP knows. The data warehouse has to pull from both. The identity provider has to authenticate users for all of them. <em>Integration</em> is the connective tissue that makes the application portfolio behave like a system instead of an archipelago.</p>
+<p>An <strong>integration pattern</strong> is a reusable, named solution to a recurring integration problem. The catalog of integration patterns is large (Gregor Hohpe and Bobby Woolf's classic book identifies 65 of them), but the ones you will meet most often fall into a small handful of categories:</p>
+<ul>
+<li><strong>File transfer</strong> — application A drops a file in a known location, application B picks it up. Old, simple, still very common in finance and healthcare.</li>
+<li><strong>Shared database</strong> — two applications read and write the same database. Tempting, brittle, almost always a mistake at scale.</li>
+<li><strong>Remote procedure call (RPC)</strong> — application A calls a function exposed by application B over the network, including REST and GraphQL APIs we will meet shortly.</li>
+<li><strong>Messaging</strong> — application A puts a message on a queue or topic, application B consumes it asynchronously. Decouples sender from receiver in time.</li>
+<li><strong>Event streaming</strong> — applications publish a continuous stream of events that any number of consumers can process independently. The modern darling, often built on Kafka.</li>
+<li><strong>Webhooks</strong> — application A pushes an HTTP request to a URL that application B has registered. The web's lightweight version of "call me when something happens."</li>
+</ul>
+<p>Each pattern makes different tradeoffs on coupling, latency, reliability, and complexity. There is no universally best pattern; there is only the right pattern for the specific integration problem you have.</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Coupling style</th>
+<th>Typical latency</th>
+<th>Strengths</th>
+<th>Typical pitfalls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File transfer</td>
+<td>Loose, batch</td>
+<td>Hours</td>
+<td>Simple, debuggable</td>
+<td>Stale data, brittle file formats</td>
+</tr>
+<tr>
+<td>Shared database</td>
+<td>Very tight</td>
+<td>Real-time</td>
+<td>Fast, no integration code</td>
+<td>Both apps locked to one schema</td>
+</tr>
+<tr>
+<td>RPC (REST/GraphQL)</td>
+<td>Tight, synchronous</td>
+<td>Milliseconds</td>
+<td>Easy to reason about, request-response</td>
+<td>Calling app blocked when callee is down</td>
+</tr>
+<tr>
+<td>Messaging</td>
+<td>Loose, asynchronous</td>
+<td>Sub-second</td>
+<td>Decoupling, durability, retry</td>
+<td>Operational complexity, message ordering</td>
+</tr>
+<tr>
+<td>Event streaming</td>
+<td>Very loose</td>
+<td>Sub-second</td>
+<td>Fan-out, replay, scale</td>
+<td>Schema evolution, consumer-side complexity</td>
+</tr>
+<tr>
+<td>Webhooks</td>
+<td>Loose, push</td>
+<td>Sub-second</td>
+<td>Simple to set up, no polling needed</td>
+<td>Delivery guarantees, endpoint security</td>
+</tr>
+</tbody>
+</table>
+<p>The architecture choice that ties many of these patterns together — and that gave the 2000s their characteristic flavor of integration — is the Enterprise Service Bus.</p>
+<h2 id="the-enterprise-service-bus">The Enterprise Service Bus<a class="headerlink" href="#the-enterprise-service-bus" title="Permanent link">&para;</a></h2>
+<p>In the early-to-mid 2000s, organizations needed a way to wire dozens of legacy applications together without writing a custom integration between every possible pair. (With <em>n</em> applications, that is <em>n(n-1)/2</em> point-to-point integrations — for fifteen apps, 105 connections — and it does not end well.) The dominant answer was the <strong>enterprise service bus (ESB)</strong> — a central piece of middleware that all applications connect to, which routes, transforms, and orchestrates messages among them.</p>
+<p>An ESB typically offered: protocol bridging (SOAP to JMS to FTP), message transformation (XML to flat file to JSON), content-based routing, orchestration of multi-step flows, and centralized monitoring. Vendors like IBM, Oracle, TIBCO, MuleSoft, and webMethods built large businesses on ESB products.</p>
+<p>The ESB era taught the industry several durable lessons. First, <em>centralizing integration in one piece of middleware</em> trades many small problems for one large one — the ESB itself becomes a critical bottleneck and a knowledge silo. Second, <em>putting business logic into the ESB</em> (a common temptation) creates a parallel universe of code that nobody outside the integration team can find or change. Third, <em>vendor lock-in around an ESB</em> is unusually painful to escape.</p>
+<p>Modern enterprise integration tends to favor lighter-weight, more decentralized patterns — API gateways at the edge, event streaming in the middle, point-to-point APIs for service-to-service calls — but ESBs remain widely deployed in established organizations, and you will absolutely see them in the wild.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Heads up</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Iris warns you">
+The ESB era hides a classic footgun: it is <em>silently</em> easy for the integration team to absorb business logic that does not belong to it. A finance team requests "just a small data transformation" inside the ESB; six years later the rules for revenue recognition partially live there, nobody outside the integration group remembers, and replacing the ESB becomes a years-long project. The structural fix is a hard rule: the ESB transforms and routes; the ESB does not <em>decide</em>. Decisions live in business systems, where their owners can find them.</p>
+</div>
+<h2 id="the-api-gateway-the-front-door-to-your-services">The API Gateway: The Front Door to Your Services<a class="headerlink" href="#the-api-gateway-the-front-door-to-your-services" title="Permanent link">&para;</a></h2>
+<p>If the ESB is the great hub of the 2000s, the <strong>API gateway</strong> is its more focused successor. An API gateway is a piece of infrastructure that sits between external clients and an organization's backend services, enforcing a consistent set of cross-cutting concerns: authentication, rate limiting, request routing, response caching, logging, and protocol translation.</p>
+<p>Where the ESB tried to do everything for everyone, the API gateway does a small set of things very well, and pushes business logic firmly back into the services it fronts. A typical request flows like this: client sends an HTTP request to <code>api.example.com/orders/42</code>; the gateway authenticates the caller, checks the rate limit, decides which internal service handles <code>/orders</code>, forwards the request, applies any response transformations, and returns the result. Every backend service does <em>not</em> have to reimplement authentication or rate limiting; the gateway handles it once.</p>
+<p>API gateways are the standard pattern for any organization that exposes APIs to mobile apps, partner systems, or third-party developers. They are also a key enabler of microservices — without something like a gateway, every microservice would have to handle cross-cutting concerns on its own, and that way lies madness.</p>
+<h4 id="diagram-api-gateway-request-flow">Diagram: API Gateway Request Flow<a class="headerlink" href="#diagram-api-gateway-request-flow" title="Permanent link">&para;</a></h4>
+<details>
+<summary>API Gateway Request Flow</summary>
+<p>Type: interactive-infographic
+<strong>sim-id:</strong> api-gateway-flow<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Specified</p>
+<p>A vis-network diagram showing a left-to-right flow: a <strong>Client</strong> node (mobile phone or browser icon) on the left, an <strong>API Gateway</strong> node in the middle, and three backend service nodes on the right (<strong>Orders Service</strong>, <strong>Inventory Service</strong>, <strong>Customer Service</strong>). Each backend service has its own database node attached below it. Edges connect client to gateway and gateway to each backend. All edges use a slight y-offset (e.g., 480 → 490) to avoid the vis-network horizontal-edge label rendering bug.</p>
+<p>Color palette: Client = sky blue, API Gateway = teal, Orders = lime green, Inventory = gold, Customer = warm coral. Databases are slate gray cylinders.</p>
+<p>Interactivity: clicking the <strong>Send Request</strong> button animates a request token from the client to the gateway, where a side panel highlights the cross-cutting concerns the gateway applies in sequence (authenticate → rate limit → route → log). The token then continues to the appropriate backend service (chosen via a dropdown — orders, inventory, or customer). The response animates back along the same path, and the panel updates to show response-side concerns (caching, transformation, logging).</p>
+<p>A toggle reveals what the diagram looks like <em>without</em> a gateway — every backend service exposed directly, each one having to reimplement authentication, rate limiting, and logging. The clutter is the point.</p>
+<p>Layout: horizontal flow, full canvas width, height ~480px. Canvas resizes on window resize.</p>
+<p>Learning objective (Bloom: Analyzing): Students can articulate which cross-cutting concerns belong in the gateway and which belong in the backend service.</p>
+<p>Implementation: vis-network, deployed at <code>/sims/api-gateway-flow/</code>.</p>
+</details>
+<h2 id="service-oriented-architecture-soa">Service-Oriented Architecture (SOA)<a class="headerlink" href="#service-oriented-architecture-soa" title="Permanent link">&para;</a></h2>
+<p>The architectural style that the ESB and API gateway grew up serving is called <strong>service-oriented architecture (SOA)</strong> — an approach to building enterprise systems in which business capabilities are exposed as reusable, network-accessible <em>services</em>, each with a published contract, that can be composed into larger applications.</p>
+<p>The core SOA principles, distilled to a postcard: services are autonomous, share contracts not implementations, can be discovered, and are reused across multiple consumers. A "Customer Service" exposed by SOA is not a screen in one application; it is a contract that any application — order entry, billing, marketing, analytics — can call to read or update customer information. Build the service once; reuse it ten times.</p>
+<p>Classical SOA, peaking around 2005-2010, was usually implemented with SOAP web services, WS-* security and transaction standards, an enterprise service bus, and a centralized service registry. The approach delivered real value when done well, and produced spectacular failures when the governance overhead exceeded the reuse benefit. Many organizations still operate large SOA estates today.</p>
+<p>The contemporary descendant of SOA — leaner, more decentralized, more aligned with cloud-native deployment — is microservices.</p>
+<h2 id="monolithic-vs-microservices-architecture">Monolithic vs. Microservices Architecture<a class="headerlink" href="#monolithic-vs-microservices-architecture" title="Permanent link">&para;</a></h2>
+<p>The biggest architectural debate of the past fifteen years is between <strong>monolithic architecture</strong> and <strong>microservices architecture</strong>. Both styles can produce excellent systems; both can produce disasters. The question is which tradeoffs fit your team and your problem.</p>
+<p>A <strong>monolithic architecture</strong> packages an application as a single deployable unit. One codebase, one build, one deployment, one process (or one cluster of identical processes). The classic Rails or Django or Spring application is a monolith. So is the original Stack Overflow. So is, mostly, the system at your local credit union.</p>
+<p>A <strong>microservices architecture</strong> decomposes the same application into a collection of small, independently deployable services that communicate over the network — typically via APIs or messaging. Each service owns its own data store, has its own deployment pipeline, and can be developed by a small team that ships independently of the others.</p>
+<p>The case for microservices is real: independent deployment lets large organizations parallelize work; small services are easier to understand in isolation; technology choices can vary by service; failures can be contained to one service rather than crashing the whole application.</p>
+<p>The case against microservices is also real, and is the one most students do not hear early enough: every microservice is another deployment to operate, monitor, secure, and pay for. Network calls fail in ways in-process method calls do not. Distributed transactions are genuinely hard. Data consistency across services requires designs that monoliths get for free. Microservices trade <em>build complexity</em> for <em>operational complexity</em>, and operational complexity scales with the number of services in a way that surprises people.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Monolithic Architecture</th>
+<th>Microservices Architecture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deployment unit</td>
+<td>One application, one deploy</td>
+<td>Many small services, deployed independently</td>
+</tr>
+<tr>
+<td>Codebase</td>
+<td>Single repository (typically)</td>
+<td>Many repositories, often per-service</td>
+</tr>
+<tr>
+<td>Data model</td>
+<td>One shared database</td>
+<td>One database per service (in the strict version)</td>
+</tr>
+<tr>
+<td>Communication</td>
+<td>In-process method calls</td>
+<td>Network calls (REST, gRPC, messaging)</td>
+</tr>
+<tr>
+<td>Team structure</td>
+<td>Cross-functional, often one team</td>
+<td>One team per service (Conway's Law in action)</td>
+</tr>
+<tr>
+<td>Deployment risk</td>
+<td>Whole-app blast radius</td>
+<td>Per-service blast radius</td>
+</tr>
+<tr>
+<td>Operational footprint</td>
+<td>One process to monitor</td>
+<td>Many processes to monitor, trace, and secure</td>
+</tr>
+<tr>
+<td>Best fit</td>
+<td>Small-to-medium apps, small teams</td>
+<td>Large orgs, many independent teams, mature ops</td>
+</tr>
+</tbody>
+</table>
+<p>The unintended consequence to watch for is <strong>premature microservices</strong>: a small team adopts microservices because the conference talks said to, and immediately spends 70% of its energy on infrastructure (service discovery, distributed tracing, network reliability, schema management) that produces no business value. The pragmatic rule of thumb is <strong>"start with a well-modularized monolith and extract services only when you can name the specific pain a split would solve."</strong> The monolith is not a phase to be ashamed of; it is often the right answer.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">You're doing fine</p>
+<p><img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Iris encourages you">
+The monolith-versus-microservices debate looks scary on first contact because both sides have very loud advocates. The good news is the underlying decision is just engineering. Ask three questions: <em>How big is the team? How frequently do parts of the system need to change independently? How much operational maturity do we already have?</em> Big team plus high change-rate independence plus mature ops points toward microservices. Anything less, and a clean monolith will outperform a mediocre microservices estate every time. You already have the framework.</p>
+</div>
+<h2 id="event-driven-architecture">Event-Driven Architecture<a class="headerlink" href="#event-driven-architecture" title="Permanent link">&para;</a></h2>
+<p>Running parallel to the monolith-versus-microservices debate is an orthogonal style called <strong>event-driven architecture (EDA)</strong>. In an event-driven system, components communicate by <em>publishing events</em> — immutable records that something happened — and <em>subscribing</em> to events they care about. Order placed. Payment received. Shipment dispatched. Customer email changed. Each event is a fact, broadcast to whoever wants to know, with no assumption about who that audience will eventually be.</p>
+<p>EDA's distinctive property is <em>temporal decoupling</em>: the publisher does not wait for the subscriber, and does not even know who the subscribers are. New consumers can be added later — an analytics pipeline, a notification service, a fraud detector — without changing the publisher. This is enormously valuable when the system needs to grow over time without coordinated releases.</p>
+<p>The downsides are also distinctive. Reasoning about a system whose flow of control is "every action emits events that other actions react to" is harder than reasoning about a sequential request-response flow. Debugging a problem requires reconstructing the chain of events that produced it. Schema evolution — what happens when the shape of an event changes — needs careful versioning. EDA rewards mature engineering teams and punishes teams who adopt it before they are ready.</p>
+<p>Event-driven architecture and microservices are often deployed together, because microservices need a lightweight, asynchronous way to communicate without re-creating the tight coupling of synchronous calls. The combination is powerful and operationally demanding.</p>
+<h2 id="the-api-economy-five-concepts-you-need-to-know">The API Economy: Five Concepts You Need to Know<a class="headerlink" href="#the-api-economy-five-concepts-you-need-to-know" title="Permanent link">&para;</a></h2>
+<p>Most modern integration happens through <strong>APIs (Application Programming Interfaces)</strong> — published contracts that let one piece of software call another. Whether your team is building monoliths or microservices, customer-facing apps or internal services, the language of APIs is now load-bearing. Five concepts you must be able to discuss confidently are REST, GraphQL, webhooks, the OpenAPI Specification, and API versioning.</p>
+<h3 id="rest-apis">REST APIs<a class="headerlink" href="#rest-apis" title="Permanent link">&para;</a></h3>
+<p>A <strong>REST API</strong> (Representational State Transfer) is a style of HTTP API in which <em>resources</em> (customer, order, invoice) have URLs, and standard HTTP verbs (GET, POST, PUT, PATCH, DELETE) operate on them. <code>GET /customers/42</code> retrieves customer 42; <code>POST /customers</code> creates a new one; <code>PUT /customers/42</code> replaces it. REST is the default style of API for most web and mobile applications today; it is simple, cacheable, and works well with the existing web infrastructure.</p>
+<p>The genius of REST is also its limitation: every endpoint returns a fixed shape. If a mobile screen needs only the customer's name and email but the <code>/customers/42</code> endpoint returns thirty fields, the mobile app downloads (and the server serializes) twenty-eight fields nobody wanted. If the same screen needs customer plus their last three orders, the mobile app makes two round trips. These problems are mild for most APIs and fatal for some.</p>
+<h3 id="graphql-apis">GraphQL APIs<a class="headerlink" href="#graphql-apis" title="Permanent link">&para;</a></h3>
+<p>A <strong>GraphQL API</strong> addresses both problems by letting the <em>client</em> describe exactly which fields and relationships it wants, in a single request. Instead of <code>GET /customers/42</code>, the client sends a query that says "give me customer 42's name, email, and last three orders' totals" — and the server returns <em>exactly</em> those fields, in one response. GraphQL was created at Facebook in 2012 and is now widely used, especially for client-heavy applications where round trips and over-fetching are real costs.</p>
+<p>GraphQL's tradeoffs are real too. The query language is more powerful than REST and therefore harder to cache and easier to misuse (a malicious or careless client can request a query that takes the server twenty seconds to satisfy). GraphQL servers need careful query-cost analysis and depth limits. The simplicity REST gets for free, GraphQL has to engineer.</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>REST</th>
+<th>GraphQL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shape of response</td>
+<td>Fixed by the server</td>
+<td>Chosen by the client</td>
+</tr>
+<tr>
+<td>Round trips</td>
+<td>Often multiple per screen</td>
+<td>Often one per screen</td>
+</tr>
+<tr>
+<td>Caching</td>
+<td>Easy (HTTP-level)</td>
+<td>Harder (responses vary by query)</td>
+</tr>
+<tr>
+<td>Tooling maturity</td>
+<td>Vast and mature</td>
+<td>Strong and growing</td>
+</tr>
+<tr>
+<td>Best fit</td>
+<td>Public APIs, simple CRUD, microservice-to-microservice</td>
+<td>Client-heavy apps, mobile, varied UIs</td>
+</tr>
+<tr>
+<td>Risk</td>
+<td>Over-fetching, under-fetching</td>
+<td>Expensive queries, harder rate limiting</td>
+</tr>
+</tbody>
+</table>
+<h3 id="webhooks">Webhooks<a class="headerlink" href="#webhooks" title="Permanent link">&para;</a></h3>
+<p>While REST and GraphQL are <em>pull</em> APIs (the client asks the server for data), <strong>webhooks</strong> are <em>push</em>. A webhook is a URL that one system registers with another, saying, in effect, "when this event happens, please make an HTTP POST to this URL with the event payload." Stripe uses webhooks to notify your application when a payment succeeds. GitHub uses webhooks to notify your CI system when a pull request is opened. Webhooks are the lightweight, real-time backbone of much modern SaaS integration.</p>
+<p>Webhooks come with their own set of concerns: the receiver has to be publicly reachable, has to verify that the request really came from the sender (typically via a shared secret signature), has to handle retries (because the network sometimes drops the request), and has to be idempotent (because the sender may deliver the same event twice). Webhook security and idempotency are unglamorous, easy to get wrong, and consequential when they break.</p>
+<h3 id="openapi-specification">OpenAPI Specification<a class="headerlink" href="#openapi-specification" title="Permanent link">&para;</a></h3>
+<p>The <strong>OpenAPI Specification (OAS)</strong>, formerly known as Swagger, is the de facto standard for <em>describing</em> REST APIs in machine-readable form. An OpenAPI document — written in YAML or JSON — declares every endpoint, every input parameter, every response shape, every authentication scheme, and every error code an API supports.</p>
+<p>Why does this matter? Because once an API has an OpenAPI document, an enormous toolchain unlocks for free: client libraries can be auto-generated in a dozen languages; interactive documentation renders automatically; mock servers spin up from the spec; contract tests catch breaking changes before deployment. OpenAPI is one of the highest-leverage standards in our field — small effort to write, large benefits to operate. Mature API teams write the spec <em>first</em> and the implementation second; the spec becomes the contract that everything else conforms to.</p>
+<h3 id="api-versioning">API Versioning<a class="headerlink" href="#api-versioning" title="Permanent link">&para;</a></h3>
+<p>The last concept is the one that quietly causes the most production incidents: <strong>API versioning</strong>. APIs evolve. Fields get added, renamed, deprecated, removed. Behavior changes. If consumers of an API depend on its current shape and the API silently changes underneath them, things break — sometimes loudly, often silently and with delayed damage. API versioning is the discipline of evolving an API in a way that does not break existing consumers without warning.</p>
+<p>Three common strategies are used in practice:</p>
+<ul>
+<li><strong>URL versioning</strong> — put the version in the path: <code>/v1/customers/42</code>, <code>/v2/customers/42</code>. Simple, visible, easy to route. The most common style.</li>
+<li><strong>Header versioning</strong> — clients send a header (like <code>Accept-Version: 2</code>) to choose. Cleaner URLs, harder to discover.</li>
+<li><strong>Query parameter versioning</strong> — <code>/customers/42?api-version=2</code>. Easy but gets tangled with other query parameters.</li>
+</ul>
+<p>Whichever scheme you pick, the deeper rule is: <strong>breaking changes require a new version; non-breaking additions can stay in the existing version.</strong> Adding an optional field is not breaking. Removing a required field is. Changing the type of a field is. Renaming an endpoint is. Mature API teams publish a deprecation policy (e.g., "v1 is supported for 24 months after v2 ships") and stick to it.</p>
+<p>The unintended-consequence pattern to know: <strong>silent breaking changes</strong>. A team "fixes a bug" in an API response by changing a field's format from string to number, ships the change without bumping the version, and three downstream systems start producing wrong data — but only on Tuesdays, when the affected code path runs. The structural fix is contract testing in CI: every breaking change to the API surface fails the build before it ships.</p>
+<h2 id="putting-it-all-together">Putting It All Together<a class="headerlink" href="#putting-it-all-together" title="Permanent link">&para;</a></h2>
+<p>Architecture connects strategy to code. Here is the one-paragraph synthesis of the twenty-three concepts in this chapter:</p>
+<blockquote>
+<p>An organization's <strong>application portfolio</strong> is structured by an <strong>enterprise architecture</strong> — described using frameworks like <strong>TOGAF</strong> and <strong>Zachman</strong>, captured in <strong>reference architectures</strong> that constrain individual <strong>solution architectures</strong>. Within each application, the classic <strong>three-tier architecture</strong> (presentation tier, application tier, data tier) generalizes to <strong>n-tier</strong> as systems grow. Across applications, <strong>integration patterns</strong> like file transfer, RPC, messaging, and event streaming connect the portfolio — historically through an <strong>enterprise service bus</strong>, increasingly through <strong>API gateways</strong>. Architectural styles range from <strong>monolithic architecture</strong> through <strong>service-oriented architecture</strong> and <strong>microservices architecture</strong> to <strong>event-driven architecture</strong>, each with explicit tradeoffs in coupling, deployment, and operational complexity. Modern integration speaks five API dialects you must know fluently: <strong>REST</strong>, <strong>GraphQL</strong>, <strong>webhooks</strong>, the <strong>OpenAPI Specification</strong> that describes them, and <strong>API versioning</strong> that lets them evolve without breaking the systems that depend on them.</p>
+</blockquote>
+<p>If that paragraph reads like a map of the field, that is because it is one. Every later technical chapter — data, networks, cloud, security, AI — slots into this architectural geography. You now have somewhere to put what comes next.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Nicely done</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Iris celebrates">
+You just absorbed the architectural vocabulary that most working IS pros pick up across their first decade. From here on, when somebody says "let's just put it in the ESB" you will hear <em>we are about to leak business logic into integration middleware</em>; when somebody says "we should microservices-ify this" you will hear <em>operational complexity tax incoming, can we name the pain we are paying it for?</em>; and when somebody hands you an API without an OpenAPI spec you will hear <em>we are about to spend the rest of the quarter writing client code by hand</em>. Onward to Chapter 4, where we put this architectural map to work as we look at how applications get built on top of it.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../02-role-of-is/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2. The Role of IS in Organizations">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                2. The Role of IS in Organizations
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-appdev/" class="md-footer__link md-footer__link--next" aria-label="Next: 4. Application Development for IS">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                4. Application Development for IS
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dmccreary/information-systems" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
