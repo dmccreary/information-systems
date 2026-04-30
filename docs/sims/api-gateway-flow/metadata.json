@@ -1,21 +1,73 @@
 {
   "title": "API Gateway Request Flow",
-  "description": "API Gateway Request Flow",
-  "creator": "Dementia Education Project",
-  "date": "2026-04-29",
+  "description": "An interactive vis-network diagram showing how an API gateway sits between clients and backend microservices, absorbing the cross-cutting concerns of authentication, rate limiting, routing, and logging.",
+  "creator": "Dan McCreary",
   "subject": [
-    "dementia"
+    "Information Systems",
+    "Software Architecture",
+    "Microservices",
+    "API Gateway"
   ],
+  "date": "2026-04-29",
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "api-gateway-flow",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "API Gateway Pattern",
+  "learningObjectives": [
+    "Identify the four cross-cutting concerns an API gateway typically owns",
+    "Articulate which concerns belong in the gateway vs the service",
+    "Predict the consequences of skipping the gateway pattern",
+    "Trace a request through the gateway and back"
+  ],
+  "duration": "5-10 minutes",
+  "prerequisites": [
+    "Familiarity with HTTP and web services"
+  ],
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "vis-network 9.1",
+  "responsive": "Width-responsive",
+  "dependencies": [
+    "vis-network 9.1.9"
+  ],
+  "accessibility": {
+    "screenReaderSupport": false,
+    "keyboardNavigation": false,
+    "highContrast": true
+  },
+  "controls": [
+    { "type": "select", "description": "Target backend service" },
+    { "type": "button", "description": "Send Request animation" },
+    { "type": "button", "description": "Toggle architecture without gateway" },
+    { "type": "click", "description": "Click nodes for details" }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [
+    "Three backend services (Orders, Inventory, Customer), each with its own database"
+  ],
+  "limitations": [
+    "Single gateway, no high-availability detail",
+    "Does not depict service mesh or sidecar variants"
+  ],
+  "visualizationType": [ "diagram", "network" ],
+  "bloomsTaxonomy": [ "Understand", "Analyze" ],
+  "bloomLevel": "Analyze",
+  "bloomVerb": "analyze",
+  "completion_status": "implemented",
   "chapter_number": 3,
   "chapter_title": "Information Systems Architecture",
-  "chapter_dir": "03-architecture"
+  "chapter_dir": "03-architecture",
+  "pedagogical": {
+    "pattern": "interactive-trace",
+    "bloomAlignment": [ "understand", "analyze" ],
+    "bloomVerbs": [ "trace", "identify", "compare" ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [ "elaborative" ],
+    "interactionStyle": "explore"
+  }
 }

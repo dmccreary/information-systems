@@ -1,54 +1,52 @@
 ---
-title: A Modern CI/CD Pipeline
-description: A Modern CI/CD Pipeline
-status: scaffold
+title: CI/CD Pipeline
+description: An interactive p5.js animation of a modern CI/CD pipeline with nine stages, a failure-injection control, and a toggle between continuous delivery (manual gate) and continuous deployment (no gate).
+image: /sims/cicd-pipeline/cicd-pipeline.png
+og:image: /sims/cicd-pipeline/cicd-pipeline.png
+twitter:image: /sims/cicd-pipeline/cicd-pipeline.png
+status: implemented
 library: p5.js
-bloom_level: TBD
+bloom_level: Analyze
+social:
+   cards: false
 ---
 
-# A Modern CI/CD Pipeline
+# CI/CD Pipeline
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="542px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the CI/CD MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** p5.js
+A nine-stage CI/CD pipeline: Commit → Build → Unit → Integration → Static Analysis → Security Scan → Deploy Staging → Smoke → Deploy Prod. Trigger a commit and watch the run. Inject a failure at any stage to see the pipeline halt. Toggle between **Continuous Delivery** (a manual approval gate before production) and **Continuous Deployment** (no gate).
 
-## Preview
+## Embedding This MicroSim
 
-<iframe src="main.html" width="100%" height="600"></iframe>
-
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
-
-## Specification
-
-The full specification below is extracted from
-[Chapter 4: Application Development for IS](../../chapters/04-appdev/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** cicd-pipeline<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-A horizontal pipeline diagram in p5.js showing the canonical CI/CD stages from left to right: Commit, Build, Unit Tests, Integration Tests, Static Analysis, Security Scan, Deploy to Staging, Smoke Tests, Deploy to Production. Each stage is a labeled rounded rectangle, with arrows connecting them and small badges showing pass/fail status. A "developer commits" icon enters from the far left; a "users" icon receives the deploy on the far right.
-
-Color palette: stages in a teal-to-emerald gradient when passing, switching to coral when failing. The currently-running stage has a pulsing border in mascot-magenta.
-
-Interactivity: a "trigger commit" button starts a simulated run that walks down the pipeline. A controls panel lets the user inject failures at any stage to see how the pipeline halts and reports. A side panel shows the artifacts produced at each stage (binaries, test reports, scan reports, deployment manifests). A toggle switches between "continuous delivery" (manual approval gate before production) and "continuous deployment" (no gate).
-
-Layout: full canvas width, height ~420px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.
-
-Learning objective (Bloom: Analyzing): Students can trace a commit through a CI/CD pipeline, identify the gates where failures halt deployment, and distinguish continuous delivery from continuous deployment.
-
-Implementation: p5.js, deployed at `/information-systems/sims/cicd-pipeline/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/cicd-pipeline/main.html"
+        height="542px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Trace a commit through the canonical CI/CD stages
+2. Identify the artifacts produced at each stage
+3. Distinguish continuous delivery from continuous deployment
+4. Predict the consequences of a failure at any stage
+
+### Suggested Activities
+
+1. **Failure Drill (10 min)** — Inject a failure at three different stages; compare artifacts produced
+2. **Mode Compare (10 min)** — In one paragraph, defend or challenge the manual production gate
+
+## References
+
+- Humble, J. & Farley, D. (2010). *Continuous Delivery*.
 
 ## Related Resources
 

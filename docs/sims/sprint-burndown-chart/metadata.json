@@ -1,21 +1,95 @@
 {
-  "title": "A Sprint Burndown Chart (Ideal vs Actual)",
-  "description": "A Sprint Burndown Chart (Ideal vs Actual)",
-  "creator": "Dementia Education Project",
-  "date": "2026-04-29",
+  "title": "Sprint Burndown Chart (Ideal vs Actual)",
+  "description": "An interactive Chart.js sprint burndown showing the ideal linear burndown vs a real-world actual burndown — including a Day 3-4 plateau (blocker), a Day 5 breakthrough, a Day 7 scope-creep tick upward, and a missed sprint goal at Day 10. A second chart shows team velocity over the last six sprints with a trendline, and a toggle overlays a velocity-based forecast for the next sprint.",
+  "creator": "Dan McCreary",
   "subject": [
-    "dementia"
+    "Information Systems",
+    "Project Management",
+    "Agile",
+    "Scrum"
   ],
+  "date": "2026-04-29",
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "sprint-burndown-chart",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "Sprint Burndown / Velocity Forecasting",
+  "learningObjectives": [
+    "Read a burndown chart and distinguish ideal from actual progress",
+    "Identify scope-change events, blockers, and breakthroughs from the chart's shape",
+    "Calculate average team velocity from sprint history",
+    "Forecast a realistic next-sprint commitment using velocity rather than aspiration"
+  ],
+  "duration": "5-10 minutes",
+  "prerequisites": [
+    "Basic familiarity with Scrum sprints and story points"
+  ],
   "library": "Chart.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "Chart.js 4.4",
+  "responsive": "Width-responsive",
+  "dependencies": [
+    "Chart.js 4.4.1"
+  ],
+  "accessibility": {
+    "screenReaderSupport": false,
+    "keyboardNavigation": false,
+    "highContrast": true
+  },
+  "controls": [
+    {
+      "type": "hover",
+      "description": "Hover data points to see what happened that day"
+    },
+    {
+      "type": "button",
+      "description": "Toggle a velocity-based forecast overlay"
+    }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [
+    "10-day sprint with 50 story-point commitment",
+    "Velocity history of six prior sprints used for forecasting"
+  ],
+  "limitations": [
+    "Not draggable — users cannot edit actual data points",
+    "Single fixed scenario; forecast is a simple linear projection"
+  ],
+  "visualizationType": [
+    "chart",
+    "line-chart",
+    "bar-chart"
+  ],
+  "bloomsTaxonomy": [
+    "Understand",
+    "Analyze"
+  ],
+  "bloomLevel": "Analyze",
+  "bloomVerb": "analyze",
+  "completion_status": "implemented",
   "chapter_number": 16,
-  "chapter_title": "'IS Project Management'",
-  "chapter_dir": "16-project-management"
+  "chapter_title": "IS Project Management",
+  "chapter_dir": "16-project-management",
+  "pedagogical": {
+    "pattern": "annotated-data-visualization",
+    "bloomAlignment": [
+      "understand",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "read",
+      "identify",
+      "calculate",
+      "forecast"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "elaborative"
+    ],
+    "interactionStyle": "explore"
+  }
 }

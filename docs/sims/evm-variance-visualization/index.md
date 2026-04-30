@@ -1,55 +1,86 @@
 ---
 title: EVM Cost and Schedule Variance Visualization
-description: EVM Cost and Schedule Variance Visualization
-status: scaffold
+description: An interactive Chart.js visualization of Earned Value Management — PV, EV, AC curves with live-computed CV, SV, CPI, SPI, and EAC at any month, across three project-health scenarios.
+image: /sims/evm-variance-visualization/evm-variance-visualization.png
+og:image: /sims/evm-variance-visualization/evm-variance-visualization.png
+twitter:image: /sims/evm-variance-visualization/evm-variance-visualization.png
+status: implemented
 library: Chart.js
-bloom_level: TBD
+bloom_level: Apply
+social:
+   cards: false
 ---
 
 # EVM Cost and Schedule Variance Visualization
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="722px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the EVM Variance MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** Chart.js
+**Earned Value Management** (EVM) is the closest thing project managers have to a vital-signs monitor. From three numbers — Planned Value, Earned Value, and Actual Cost — five derived metrics fall out, and from those metrics you can diagnose whether a project is *behind, over, both,* or *neither*.
 
-## Preview
+This MicroSim plots all three curves over a 12-month project and lets you slide a cursor along the timeline. The side panel **computes CV, SV, CPI, SPI, and EAC live** as you move the cursor, color-coding each metric green or magenta depending on whether it's healthy.
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+Three preset **scenarios** let you see how the metrics behave under different project-health states:
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+- **Behind Schedule, Under Budget** — the most common pattern: cheap and slow
+- **Ahead of Schedule, Under Budget** — the rarest and best
+- **On Schedule, Over Budget** — fast and expensive
 
-## Specification
+### How to Use
 
-The full specification below is extracted from
-[Chapter 16: 'IS Project Management'](../../chapters/16-project-management/index.md).
+1. **Pick a scenario** with the buttons at the top
+2. **Slide the cursor** to any month; metrics update instantly
+3. **Watch the EAC** — when CPI < 1, EAC blows past BAC and goes red
 
-```text
-Type: interactive-infographic
-**sim-id:** evm-variance-visualization<br/>
-**Library:** Chart.js<br/>
-**Status:** Specified
+### The Five Metrics at a Glance
 
-A Chart.js multi-line chart with three curves over a 12-month project timeline: Planned Value (PV) in slate-gray, Earned Value (EV) in mascot-emerald, and Actual Cost (AC) in mascot-magenta. The vertical gap between EV and PV at any date is the schedule variance (highlighted as a coral band when EV is below PV). The vertical gap between AC and EV is the cost variance (highlighted as a red band when AC is above EV). A side panel computes and displays CV, SV, CPI, SPI, and EAC for the date currently selected by a draggable cursor.
+| Metric | Formula | Healthy when |
+|---|---|---|
+| **CV** Cost Variance | EV − AC | ≥ 0 |
+| **SV** Schedule Variance | EV − PV | ≥ 0 |
+| **CPI** Cost Performance Index | EV ÷ AC | ≥ 1.0 |
+| **SPI** Schedule Performance Index | EV ÷ PV | ≥ 1.0 |
+| **EAC** Estimate at Completion | BAC ÷ CPI | ≤ BAC |
 
-Color palette: PV in slate-gray, EV in mascot-emerald, AC in mascot-magenta, schedule-variance band in coral, cost-variance band in red, EAC forecast line in dashed amber.
+## Embedding This MicroSim
 
-Interactivity: students can drag the cursor along the timeline to see the metrics at any date. Three preset scenarios — "ahead and under budget", "behind but under budget", "on schedule but over budget" — let students see how the four metrics differ across project health states. A challenge mode asks students to predict EAC and CPI from the chart before revealing the answer.
-
-Layout: full canvas width, height ~520px. Canvas resizes on window resize.
-
-Learning objective (Bloom: Applying): Students can compute CV, SV, CPI, SPI, and EAC from PV, EV, and AC; interpret each metric; and diagnose project health from the EVM chart.
-
-Implementation: Chart.js, deployed at `/information-systems/sims/evm-variance-visualization/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/evm-variance-visualization/main.html"
+        height="722px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Compute CV, SV, CPI, SPI, and EAC from PV, EV, and AC
+2. Interpret what each metric says about project health
+3. Diagnose project status from the visual relationship of the three curves
+4. Forecast final cost (EAC) given current performance trend
+
+### Suggested Activities
+
+1. **Three-Curve Reading (5 min)** — Show one scenario without the metrics panel. Have students sketch where they think CPI and SPI sit before revealing.
+2. **Scenario Diagnosis (10 min)** — For each of the three preset scenarios, write a one-sentence executive summary of project health.
+3. **EAC Forecast (10 min)** — At month 6 of the "Behind, Under" scenario, will the project finish under or over budget? Justify with the numbers.
+4. **Status Report Drill (15 min)** — Pick any month + scenario. Write a 100-word status update for a steering committee.
+
+### Assessment
+
+- Compute all five metrics given a stated PV, EV, AC
+- Match a project narrative ("we're cheap but late") to its EVM signature
+- Explain to a non-technical stakeholder why CPI < 1 is a worse sign than SV < 0
+
+## References
+
+- PMI (2021). *A Guide to the Project Management Body of Knowledge (PMBOK Guide)*, 7th ed.
+- Fleming, Q. & Koppelman, J. (2010). *Earned Value Project Management*, 4th ed.
 
 ## Related Resources
 
-- [Chapter 16: 'IS Project Management'](../../chapters/16-project-management/index.md)
+- [Chapter 16: IS Project Management](../../chapters/16-project-management/index.md)

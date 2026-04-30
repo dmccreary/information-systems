@@ -1,57 +1,49 @@
 ---
-title: The ERP Implementation Timeline with Cutover
-description: The ERP Implementation Timeline with Cutover
-status: scaffold
+title: ERP Implementation Timeline with Cutover
+description: A 24-month ERP implementation timeline showing the seven phases, an expanded 96-hour cutover window, and a Big Bang vs Phased rollout toggle.
+image: /sims/erp-implementation-timeline/erp-implementation-timeline.png
+og:image: /sims/erp-implementation-timeline/erp-implementation-timeline.png
+twitter:image: /sims/erp-implementation-timeline/erp-implementation-timeline.png
+status: implemented
 library: p5.js
-bloom_level: TBD
+bloom_level: Analyze
+social:
+   cards: false
 ---
 
-# The ERP Implementation Timeline with Cutover
+# ERP Implementation Timeline with Cutover
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="702px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the ERP Timeline MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** p5.js
+A representative 24-month ERP implementation broken into seven phases, with the 96-hour **cutover window** expanded into nine hour-by-hour activities. Toggle between **Big Bang** (single go-live at month 22) and **Phased** (three regional waves) rollout strategies. Click **What If: Skip Testing** to see the cutover failures that result.
 
-## Preview
+## Embedding This MicroSim
 
-<iframe src="main.html" width="100%" height="600"></iframe>
-
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
-
-## Specification
-
-The full specification below is extracted from
-[Chapter 13: 'Enterprise Systems'](../../chapters/13-enterprise-systems/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** erp-implementation-timeline<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-A p5.js horizontal Gantt-style timeline showing a representative 24-month ERP implementation broken into the seven phases (Strategy/Selection, Discovery/Design, Build/Configure, Test, Train, Cutover, Hypercare). Each phase is a colored bar of proportional length. Overlaid on the timeline is the *cutover plan* itself, expanded as a 96-hour window in the middle of the cutover phase: a vertical zoom showing the hour-by-hour activities (freeze legacy systems → final extract → data migration → reconciliation → smoke tests → go/no-go decision → user enablement → first transactions → hypercare standby).
-
-Below the main timeline, a parallel "rollout strategy" lane lets students switch between Big Bang (single cutover bar at month 22) and Phased (three smaller cutover bars at months 14, 18, and 24, each covering a region or business unit). A "show interim integration" toggle in phased mode draws temporary integration arrows between the on-old-system and on-new-system populations.
-
-Color palette: phase bars in mascot-emerald with darker shades for the more risk-bearing phases; cutover window in coral with amber for the go/no-go decision point; hypercare in soft-blue with a "support hotline" icon. Interim-integration arrows in dashed slate-gray.
-
-Interactivity: hovering each phase shows typical duration, deliverables, and the most common failure modes. A "what if we skip testing" button compresses the timeline and shows in red the cutover failures that result. A "post-ERP review" marker appears at month 30 (six months after go-live) showing what the post-implementation audit typically covers.
-
-Layout: full canvas width, height ~620px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.
-
-Learning objective (Bloom: Analyzing): Students can describe the phases of an ERP implementation, identify the cutover window, contrast big-bang and phased rollout strategies on the same timeline, and explain why testing and hypercare are non-negotiable.
-
-Implementation: p5.js, deployed at `/information-systems/sims/erp-implementation-timeline/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/erp-implementation-timeline/main.html"
+        height="702px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Describe the seven phases of an ERP implementation
+2. Identify the activities inside the cutover window
+3. Contrast Big Bang and Phased rollout strategies
+4. Explain why testing and hypercare are non-negotiable
+
+## References
+
+- Davenport, T. (2000). *Mission Critical: Realizing the Promise of Enterprise Systems*.
+- O'Leary, D. (2000). *Enterprise Resource Planning Systems*.
 
 ## Related Resources
 
-- [Chapter 13: 'Enterprise Systems'](../../chapters/13-enterprise-systems/index.md)
+- [Chapter 13: Enterprise Systems](../../chapters/13-enterprise-systems/index.md)

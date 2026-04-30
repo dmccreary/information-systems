@@ -1,21 +1,53 @@
 {
-  "title": "A Modern Enterprise Network — LAN, WAN, VPN, SD-WAN, Cloud",
-  "description": "A Modern Enterprise Network — LAN, WAN, VPN, SD-WAN, Cloud",
-  "creator": "Dementia Education Project",
+  "title": "Modern Enterprise Network Topology",
+  "description": "Interactive enterprise network topology with three sites, SD-WAN, dual-homed MPLS+broadband, LTE failover, AWS Direct Connect, SaaS, and remote VPN. Trace packets and simulate a link failure.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Networks", "Telecommunications", "SD-WAN" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "enterprise-network-topology",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "Enterprise Networks",
+  "learningObjectives": [
+    "Identify each network category in a real-world topology",
+    "Trace traffic from a user to four different destinations",
+    "Explain what SD-WAN does when a primary link fails"
+  ],
+  "duration": "10-15 minutes",
+  "prerequisites": [ "Basic networking concepts (LAN/WAN, IP)" ],
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "vis-network 9.1",
+  "responsive": "Width-responsive",
+  "dependencies": [ "vis-network 9.1.9" ],
+  "accessibility": { "screenReaderSupport": false, "keyboardNavigation": false, "highContrast": true },
+  "controls": [
+    { "type": "select", "description": "Trace packet to a destination" },
+    { "type": "button", "description": "Fail MPLS circuit (SD-WAN failover)" },
+    { "type": "click", "description": "Click nodes for details" }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [ "Mid-size enterprise; three sites; one cloud provider" ],
+  "limitations": [ "Does not model encryption, BGP routing, or DDoS scenarios" ],
+  "visualizationType": [ "topology", "diagram", "network" ],
+  "bloomsTaxonomy": [ "Remember", "Understand" ],
+  "bloomLevel": "Understand",
+  "bloomVerb": "identify",
+  "completion_status": "implemented",
   "chapter_number": 11,
-  "chapter_title": "'Networks and Telecommunications for Business'",
-  "chapter_dir": "11-networks"
+  "chapter_title": "Networks and Telecommunications for Business",
+  "chapter_dir": "11-networks",
+  "pedagogical": {
+    "pattern": "interactive-diagram",
+    "bloomAlignment": [ "remember", "understand" ],
+    "bloomVerbs": [ "identify", "trace", "explain" ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [ "elaborative" ],
+    "interactionStyle": "explore"
+  }
 }

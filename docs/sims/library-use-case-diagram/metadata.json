@@ -1,21 +1,53 @@
 {
-  "title": "Use Case Diagram for a Small Library System",
-  "description": "Use Case Diagram for a Small Library System",
-  "creator": "Dementia Education Project",
+  "title": "Library System Use Case Diagram",
+  "description": "Interactive UML use-case diagram for a small library with three actors, nine use cases, and toggleable «include» and «extend» relationships.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Systems Analysis and Design", "UML" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "library-use-case-diagram",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "UML Use Case Diagrams",
+  "learningObjectives": [
+    "Read a use-case diagram and identify actors and use cases",
+    "Distinguish «include» from «extend» relationships",
+    "Produce a use-case template for any ellipse",
+    "Identify cross-cutting concerns as common include targets"
+  ],
+  "duration": "10-15 minutes",
+  "prerequisites": [ "Basic UML familiarity" ],
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "vis-network 9.1",
+  "responsive": "Width-responsive",
+  "dependencies": [ "vis-network 9.1.9" ],
+  "accessibility": { "screenReaderSupport": false, "keyboardNavigation": false, "highContrast": true },
+  "controls": [
+    { "type": "click", "description": "Click actors or use cases" },
+    { "type": "button", "description": "Toggle include/extend arrows" }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [ "Small-library scope; not academic library or research database" ],
+  "limitations": [ "Does not depict generalization between actors" ],
+  "visualizationType": [ "uml", "diagram", "use-case" ],
+  "bloomsTaxonomy": [ "Understand", "Apply" ],
+  "bloomLevel": "Apply",
+  "bloomVerb": "produce",
+  "completion_status": "implemented",
   "chapter_number": 10,
-  "chapter_title": "'Systems Analysis and Design'",
-  "chapter_dir": "10-sad"
+  "chapter_title": "Systems Analysis and Design",
+  "chapter_dir": "10-sad",
+  "pedagogical": {
+    "pattern": "interactive-diagram",
+    "bloomAlignment": [ "understand", "apply" ],
+    "bloomVerbs": [ "identify", "distinguish", "produce" ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [ "elaborative" ],
+    "interactionStyle": "explore"
+  }
 }

@@ -1,55 +1,61 @@
 ---
-title: State Diagram for "Loan Application Status"
-description: State Diagram for "Loan Application Status"
-status: scaffold
+title: Loan Application State Diagram
+description: An interactive UML state machine for a loan application lifecycle, with a play-through demo and a toggle that highlights invalid (forbidden) transitions.
+image: /sims/loan-application-state-diagram/loan-application-state-diagram.png
+og:image: /sims/loan-application-state-diagram/loan-application-state-diagram.png
+twitter:image: /sims/loan-application-state-diagram/loan-application-state-diagram.png
+status: implemented
 library: vis-network
-bloom_level: TBD
+bloom_level: Analyze
+social:
+   cards: false
 ---
 
-# State Diagram for "Loan Application Status"
+# Loan Application State Diagram
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="722px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the State Diagram MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** vis-network
+A loan application is a textbook example of an **object with a meaningful lifecycle**. It moves through a fixed set of states — Draft, Submitted, Under Review, Conditionally Approved, Awaiting Documents, Approved, Denied, Funded, Closed, Withdrawn — and only a small subset of transitions is legal between them. Toggling **Show Invalid Transitions** makes the state diagram's role as a business-rule guardrail visible.
 
-## Preview
+### How to Use
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+1. Click **Play Example Application** to walk one application from Draft to Closed
+2. **Click any state** for the business operations legal in that state
+3. **Toggle Invalid Transitions** to see the forbidden moves the state machine prevents
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+## Embedding This MicroSim
 
-## Specification
-
-The full specification below is extracted from
-[Chapter 10: 'Systems Analysis and Design'](../../chapters/10-sad/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** loan-application-state-diagram<br/>
-**Library:** vis-network<br/>
-**Status:** Specified
-
-A vis-network state diagram showing the lifecycle of a loan application. States, drawn as rounded rectangles: *Draft*, *Submitted*, *Under Review*, *Awaiting Documents*, *Approved*, *Conditionally Approved*, *Denied*, *Withdrawn*, *Funded*, *Closed*. The initial pseudostate (black dot) connects to *Draft* via a transition labeled `applicantStarts`. From Draft to Submitted via `applicantSubmits`. Submitted to Under Review via `analystAssigned`. Under Review branches to Approved (`creditCheckPasses`), Conditionally Approved (`needsAdditionalInfo`), or Denied (`creditCheckFails`). Conditionally Approved transitions to Awaiting Documents via `requestDocs`, then back to Under Review via `docsReceived`. From any non-terminal state, a transition to Withdrawn via `applicantWithdraws`. Approved transitions to Funded via `disburseFunds`, then to Closed via `paidOff` or `defaulted`. Denied and Withdrawn lead to a final state (bullseye). Self-transitions are shown on Under Review for `analystAddsNote` (no state change, but logged). To work around vis-network's horizontal-edge label rendering bug, transitions use a slight y-offset (480 to 490) where labels are present.
-
-Color palette: states in slate-gray with mascot-emerald accents on terminal-success states (Funded, Closed via paidOff), coral on terminal-failure states (Denied, Withdrawn, Closed via defaulted), amber on intermediate-attention states (Awaiting Documents). Transition arrows in dark teal with event labels in white-bordered text boxes for legibility.
-
-Interactivity: a "play" simulation walks an example application through the states, pausing at each transition to display the event, the guard condition, the action triggered, and which database fields change. A "show invalid transitions" toggle highlights all the transitions that are *not* allowed (e.g., Funded directly to Draft) — making the state diagram's role as a business-rule guardrail explicit. Clicking a state opens a side panel showing what business operations are legal in that state.
-
-Layout: hierarchical, top-down, height ~600px. Canvas resizes on window resize.
-
-Learning objective (Bloom: Analyzing): Students can read a state diagram, list the legal transitions out of any state, and explain why a state diagram is the appropriate tool for an object with a meaningful lifecycle.
-
-Implementation: vis-network, deployed at `/information-systems/sims/loan-application-state-diagram/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/loan-application-state-diagram/main.html"
+        height="722px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Read a UML state diagram and identify states, transitions, and events
+2. List legal transitions out of any state
+3. Explain why a state diagram is the right tool for an object with a lifecycle
+4. Recognize how a state machine acts as a business-rule guardrail
+
+### Suggested Activities
+
+1. **State Walk (5 min)** — Click each state; recite legal operations
+2. **Forbidden Move (10 min)** — Toggle invalid transitions; explain why each one is forbidden
+3. **Add a State (15 min)** — Propose adding "Auto-Underwritten." Where would it fit, and what transitions would change?
+
+## References
+
+- OMG. *UML 2.5 Specification*, State Machines.
+- Harel, D. (1987). *Statecharts: A Visual Formalism*.
 
 ## Related Resources
 
-- [Chapter 10: 'Systems Analysis and Design'](../../chapters/10-sad/index.md)
+- [Chapter 10: Systems Analysis and Design](../../chapters/10-sad/index.md)

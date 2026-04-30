@@ -1,21 +1,96 @@
 {
-  "title": "A Small Project's Gantt Chart with the Critical Path Highlighted",
-  "description": "A Small Project's Gantt Chart with the Critical Path Highlighted",
-  "creator": "Dementia Education Project",
-  "date": "2026-04-29",
+  "title": "Gantt Chart with Critical Path Highlighted",
+  "description": "Interactive vis-timeline Gantt chart of a 12-week CRM rollout with critical path highlighted in magenta, non-critical tasks in emerald, and slack visualized as a faint coral region. Tasks are draggable, and the project finish status updates live.",
+  "creator": "Dan McCreary",
   "subject": [
-    "dementia"
+    "Information Systems",
+    "Project Management",
+    "Critical Path Method"
   ],
+  "date": "2026-04-29",
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "gantt-with-critical-path",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "Critical Path Method (CPM)",
+  "learningObjectives": [
+    "Read a Gantt chart and identify task durations and dependencies",
+    "Distinguish critical-path tasks from non-critical tasks",
+    "Predict the schedule effect of moving any task",
+    "Explain why slack matters and where to find resources to compress the critical path"
+  ],
+  "duration": "10-15 minutes",
+  "prerequisites": [
+    "Familiarity with project schedules"
+  ],
   "library": "vis-timeline",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "vis-timeline 7.7",
+  "responsive": "Width-responsive",
+  "dependencies": [
+    "vis-timeline 7.7.3"
+  ],
+  "accessibility": {
+    "screenReaderSupport": false,
+    "keyboardNavigation": false,
+    "highContrast": true
+  },
+  "controls": [
+    {
+      "type": "drag",
+      "description": "Drag task bars to reschedule"
+    },
+    {
+      "type": "button",
+      "description": "Toggle slack visualization"
+    },
+    {
+      "type": "button",
+      "description": "Reset schedule"
+    }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [
+    "12-week CRM rollout, 12 tasks",
+    "Critical path is fixed for color coding (does not recompute on drag)"
+  ],
+  "limitations": [
+    "Dragging individual tasks does not recompute the critical path",
+    "Dependencies are illustrated through swim lanes rather than arrows"
+  ],
+  "visualizationType": [
+    "gantt-chart",
+    "timeline"
+  ],
+  "bloomsTaxonomy": [
+    "Understand",
+    "Analyze"
+  ],
+  "bloomLevel": "Analyze",
+  "bloomVerb": "analyze",
+  "completion_status": "implemented",
   "chapter_number": 16,
-  "chapter_title": "'IS Project Management'",
-  "chapter_dir": "16-project-management"
+  "chapter_title": "IS Project Management",
+  "chapter_dir": "16-project-management",
+  "pedagogical": {
+    "pattern": "interactive-diagram",
+    "bloomAlignment": [
+      "understand",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "identify",
+      "distinguish",
+      "predict"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "elaborative"
+    ],
+    "interactionStyle": "manipulate"
+  }
 }

@@ -1,55 +1,37 @@
 ---
-title: An Enterprise Journey Map for a Claims Process
-description: An Enterprise Journey Map for a Claims Process
-status: scaffold
+title: Insurance Claims Journey Map
+description: An interactive journey map for an insurance claims process across five stages, with two contrasting personas, an emotion curve, pain points, opportunities, and an underlying-systems overlay.
+image: /sims/journey-map-claims-process/journey-map-claims-process.png
+og:image: /sims/journey-map-claims-process/journey-map-claims-process.png
+twitter:image: /sims/journey-map-claims-process/journey-map-claims-process.png
+status: implemented
 library: p5.js
-bloom_level: TBD
+bloom_level: Analyze
+social:
+   cards: false
 ---
 
-# An Enterprise Journey Map for a Claims Process
+# Insurance Claims Journey Map
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="682px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Claims Journey MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** p5.js
+A customer journey map across five stages (Incident → Settle) showing actions, touchpoints, thoughts, an **emotion curve**, and pain/opportunity chips. Switch persona to see how the same journey looks for **Maria** (mobile-first parent) vs **Frank** (retiree without a smartphone) — the emotion curve shifts dramatically. Toggle **Show Systems** to overlay the underlying IS systems at each touchpoint.
 
-## Preview
+## Lesson Plan
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+### Learning Objectives
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+By the end of this activity, students will be able to:
 
-## Specification
-
-The full specification below is extracted from
-[Chapter 18: 'Human-Computer Interaction and Emerging Topics'](../../chapters/18-hci-and-emerging/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** journey-map-claims-process<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-A p5.js journey-map visualization showing a customer's end-to-end experience filing an insurance claim. The horizontal axis is divided into five stages: Incident, Report, Assess, Repair, Settle. Five horizontal swim-rows display: (1) the customer's *actions* at each stage, (2) the *touchpoints* used (phone, mobile app, web portal, email, in-person), (3) the customer's *thoughts* (rendered as speech bubbles), (4) an *emotional curve* drawn as a continuous line plot with smiley/frowney face markers at peaks and troughs, and (5) *pain points and opportunities* as colored chips below each stage.
-
-Color palette: stage headers in mascot-emerald with white text, touchpoint icons in slate-blue, the emotional curve in coral with high points in green and low points in magenta, opportunity chips in mascot-emerald and pain-point chips in coral.
-
-Interactivity: hovering a stage highlights all five rows for that stage and dims the others. A "switch persona" toggle lets students view the same journey for two contrasting personas (Maria the busy parent vs. Frank the retiree without smartphone) and observe how the emotional curve and pain points shift dramatically. A "show systems" toggle overlays which back-end IS systems are involved at each touchpoint, revealing the integration seams that produce the wait times the customer is feeling.
-
-Layout: full canvas width, height ~600px. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.
-
-Learning objective (Bloom: Analyzing): Students can read a journey map, identify the lowest emotional points, link those points to underlying system gaps, and propose interventions targeted at the highest-pain stages.
-
-Implementation: p5.js, deployed at `/information-systems/sims/journey-map-claims-process/`.
-```
+1. Read a journey map and identify the lowest emotional points
+2. Link emotional troughs to underlying system gaps
+3. Propose interventions at the highest-pain stages
+4. Compare how the same journey differs across personas
 
 ## Related Resources
 
-- [Chapter 18: 'Human-Computer Interaction and Emerging Topics'](../../chapters/18-hci-and-emerging/index.md)
+- [Chapter 18: HCI and Emerging Topics](../../chapters/18-hci-and-emerging/index.md)

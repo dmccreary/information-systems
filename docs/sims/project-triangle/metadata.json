@@ -1,21 +1,30 @@
 {
-  "title": "The Project Triangle (Scope, Time, Cost — and Quality in the Middle)",
-  "description": "The Project Triangle (Scope, Time, Cost — and Quality in the Middle)",
-  "creator": "Dementia Education Project",
+  "title": "Project Triangle",
+  "description": "Interactive scope/time/cost project triangle with locks, quality indicator, and three preset scenarios.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Project Management" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "project-triangle",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "controls": [
+    { "type": "slider", "description": "Scope/Time/Cost" },
+    { "type": "checkbox", "description": "Lock each side" },
+    { "type": "select", "description": "Real-world preset" }
+  ],
+  "modelType": "Educational Visualization",
+  "visualizationType": [ "diagram", "framework" ],
+  "bloomsTaxonomy": [ "Apply", "Evaluate" ],
+  "bloomLevel": "Evaluate",
+  "bloomVerb": "evaluate",
+  "completion_status": "implemented",
   "chapter_number": 16,
-  "chapter_title": "'IS Project Management'",
+  "chapter_title": "IS Project Management",
   "chapter_dir": "16-project-management"
 }

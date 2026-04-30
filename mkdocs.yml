@@ -50,6 +50,11 @@ theme:
     - search.highlight
     - search.share
 
+# Exclude image-prompt markdown files from the build
+exclude_docs: |
+  img/cover-image-description.md
+  img/mascot/image-prompts.md
+
 # Plugins
 plugins:
   - search
@@ -94,78 +99,103 @@ nav:
       - List of Chapters: chapters/index.md
       - 1. Foundations of Information Systems:
           - Content: chapters/01-foundations/index.md
+          - Quiz: chapters/01-foundations/quiz.md
           - References: chapters/01-foundations/references.md
       - 2. The Role of IS in Organizations:
           - Content: chapters/02-role-of-is/index.md
+          - Quiz: chapters/02-role-of-is/quiz.md
           - References: chapters/02-role-of-is/references.md
       - 3. Information Systems Architecture:
           - Content: chapters/03-architecture/index.md
+          - Quiz: chapters/03-architecture/quiz.md
           - References: chapters/03-architecture/references.md
       - 4. Application Development for IS:
           - Content: chapters/04-appdev/index.md
+          - Quiz: chapters/04-appdev/quiz.md
           - References: chapters/04-appdev/references.md
       - 5. Business Process Management:
           - Content: chapters/05-bpm/index.md
+          - Quiz: chapters/05-bpm/quiz.md
           - References: chapters/05-bpm/references.md
       - 6. Data Management Foundations:
           - Content: chapters/06-data-foundations/index.md
+          - Quiz: chapters/06-data-foundations/quiz.md
           - References: chapters/06-data-foundations/references.md
       - 7. Modern Databases and Lakehouses:
           - Content: chapters/07-modern-databases/index.md
+          - Quiz: chapters/07-modern-databases/quiz.md
           - References: chapters/07-modern-databases/references.md
       - 8. Data Governance and Quality:
           - Content: chapters/08-data-governance/index.md
+          - Quiz: chapters/08-data-governance/quiz.md
           - References: chapters/08-data-governance/references.md
       - 9. Business Intelligence and Analytics:
           - Content: chapters/09-bi-and-analytics/index.md
+          - Quiz: chapters/09-bi-and-analytics/quiz.md
           - References: chapters/09-bi-and-analytics/references.md
       - 10. Systems Analysis and Design:
           - Content: chapters/10-sad/index.md
+          - Quiz: chapters/10-sad/quiz.md
           - References: chapters/10-sad/references.md
       - 11. Networks and Telecommunications:
           - Content: chapters/11-networks/index.md
+          - Quiz: chapters/11-networks/quiz.md
           - References: chapters/11-networks/references.md
       - 12. Cloud Computing and Infrastructure:
           - Content: chapters/12-cloud/index.md
+          - Quiz: chapters/12-cloud/quiz.md
           - References: chapters/12-cloud/references.md
       - 13. Enterprise Systems:
           - Content: chapters/13-enterprise-systems/index.md
+          - Quiz: chapters/13-enterprise-systems/quiz.md
           - References: chapters/13-enterprise-systems/references.md
       - 14. Security of Information Assets:
           - Content: chapters/14-security/index.md
+          - Quiz: chapters/14-security/quiz.md
           - References: chapters/14-security/references.md
       - 15. Privacy, Compliance, and Regulation:
           - Content: chapters/15-privacy-compliance/index.md
+          - Quiz: chapters/15-privacy-compliance/quiz.md
           - References: chapters/15-privacy-compliance/references.md
       - 16. IS Project Management:
           - Content: chapters/16-project-management/index.md
+          - Quiz: chapters/16-project-management/quiz.md
           - References: chapters/16-project-management/references.md
       - 17. IT Service Management and Operations:
           - Content: chapters/17-itsm/index.md
+          - Quiz: chapters/17-itsm/quiz.md
           - References: chapters/17-itsm/references.md
       - 18. HCI and Emerging Topics:
           - Content: chapters/18-hci-and-emerging/index.md
+          - Quiz: chapters/18-hci-and-emerging/quiz.md
           - References: chapters/18-hci-and-emerging/references.md
       - 19. AI in Information Systems:
           - Content: chapters/19-ai-in-is/index.md
+          - Quiz: chapters/19-ai-in-is/quiz.md
           - References: chapters/19-ai-in-is/references.md
       - 20. Responsible and Ethical Use of AI:
           - Content: chapters/20-responsible-ai/index.md
+          - Quiz: chapters/20-responsible-ai/quiz.md
           - References: chapters/20-responsible-ai/references.md
       - 21. AI Law, Regulation, and Compliance:
           - Content: chapters/21-ai-law/index.md
+          - Quiz: chapters/21-ai-law/quiz.md
           - References: chapters/21-ai-law/references.md
       - 22. AI and Information Security:
           - Content: chapters/22-ai-security/index.md
+          - Quiz: chapters/22-ai-security/quiz.md
           - References: chapters/22-ai-security/references.md
       - 23. AI Productivity Impact:
           - Content: chapters/23-ai-productivity/index.md
+          - Quiz: chapters/23-ai-productivity/quiz.md
           - References: chapters/23-ai-productivity/references.md
       - 24. Knowledge Graphs and the EKG:
           - Content: chapters/24-knowledge-graphs/index.md
+          - Quiz: chapters/24-knowledge-graphs/quiz.md
           - References: chapters/24-knowledge-graphs/references.md
       - 25. The Enterprise Nervous System:
           - Content: chapters/25-ens/index.md
+          - Quiz: chapters/25-ens/quiz.md
           - References: chapters/25-ens/references.md
   
   - MicroSims:
@@ -224,10 +254,12 @@ nav:
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
     - FAQ Quality Report: learning-graph/faq-quality-report.md
+    - Quiz Generation Report: learning-graph/quiz-generation-report.md
     - Mascot Rendering Test: learning-graph/mascot-render-test.md
 
   - FAQ: faq.md
   - Glossary: glossary.md
   - References: references.md
+  - Instructor's Guide: instructors-guide/index.md
   - License: license.md
   - Contact: contact.md

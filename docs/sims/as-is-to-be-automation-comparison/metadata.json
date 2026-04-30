@@ -1,20 +1,28 @@
 {
-  "title": "As-Is vs To-Be — Manual, RPA, and Workflow Automation",
-  "description": "As-Is vs To-Be — Manual, RPA, and Workflow Automation",
-  "creator": "Dementia Education Project",
+  "title": "As-Is vs To-Be Automation Comparison",
+  "description": "Three-panel comparison of manual, RPA, and workflow-automation onboarding processes with stats and Lean-waste highlights.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "BPM", "Automation", "RPA" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "as-is-to-be-automation-comparison",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "controls": [
+    { "type": "button", "description": "Switch panel" },
+    { "type": "button", "description": "Toggle Lean wastes" }
+  ],
+  "modelType": "Educational Visualization",
+  "visualizationType": [ "diagram", "comparison" ],
+  "bloomsTaxonomy": [ "Analyze", "Evaluate" ],
+  "bloomLevel": "Evaluate",
+  "bloomVerb": "compare",
+  "completion_status": "implemented",
   "chapter_number": 5,
   "chapter_title": "Business Process Management",
   "chapter_dir": "05-bpm"

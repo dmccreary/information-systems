@@ -1,21 +1,29 @@
 {
-  "title": "Container vs. Virtual Machine Architecture",
-  "description": "Container vs. Virtual Machine Architecture",
-  "creator": "Dementia Education Project",
+  "title": "Container vs Virtual Machine Architecture",
+  "description": "Side-by-side architecture comparison of VMs and containers with scale-up animation and shared-kernel highlight.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Cloud Computing", "Containers" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "container-vs-vm-architecture",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "controls": [
+    { "type": "button", "description": "Scale up both panels" },
+    { "type": "button", "description": "Highlight shared kernel" }
+  ],
+  "modelType": "Educational Visualization",
+  "visualizationType": [ "diagram", "comparison" ],
+  "bloomsTaxonomy": [ "Understand", "Analyze" ],
+  "bloomLevel": "Analyze",
+  "bloomVerb": "compare",
+  "completion_status": "implemented",
   "chapter_number": 12,
-  "chapter_title": "'Cloud Computing and Infrastructure'",
+  "chapter_title": "Cloud Computing and Infrastructure",
   "chapter_dir": "12-cloud"
 }

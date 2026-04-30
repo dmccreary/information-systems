@@ -1,21 +1,53 @@
 {
-  "title": "Bandwidth, Latency, and Throughput at a Glance",
-  "description": "Bandwidth, Latency, and Throughput at a Glance",
-  "creator": "Dementia Education Project",
+  "title": "Bandwidth, Latency, and Throughput",
+  "description": "Animated p5.js pipe-and-packets visualization of bandwidth, latency, throughput, and packet loss, with five real-world presets and a TCP-collapse toggle.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Networks" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "bandwidth-latency-throughput",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "Network Performance",
+  "learningObjectives": [
+    "Define bandwidth, latency, throughput",
+    "Predict why high-bandwidth long-latency links underperform",
+    "Identify when adding bandwidth helps and when it does not"
+  ],
+  "duration": "10 minutes",
+  "prerequisites": [ "None" ],
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "accessibility": { "screenReaderSupport": true, "keyboardNavigation": false, "highContrast": true },
+  "controls": [
+    { "type": "slider", "description": "Bandwidth, latency, packet loss" },
+    { "type": "checkbox", "description": "TCP collapse mode" },
+    { "type": "select", "description": "Real-world presets" }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [ "Simplified packet model; not a packet-accurate simulator" ],
+  "limitations": [ "TCP collapse uses an approximate Mathis-style formula" ],
+  "visualizationType": [ "animation", "diagram" ],
+  "bloomsTaxonomy": [ "Understand", "Analyze" ],
+  "bloomLevel": "Analyze",
+  "bloomVerb": "predict",
+  "completion_status": "implemented",
   "chapter_number": 11,
-  "chapter_title": "'Networks and Telecommunications for Business'",
-  "chapter_dir": "11-networks"
+  "chapter_title": "Networks and Telecommunications for Business",
+  "chapter_dir": "11-networks",
+  "pedagogical": {
+    "pattern": "interactive-animation",
+    "bloomAlignment": [ "understand", "analyze" ],
+    "bloomVerbs": [ "predict", "identify", "compare" ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [ "elaborative" ],
+    "interactionStyle": "manipulate"
+  }
 }

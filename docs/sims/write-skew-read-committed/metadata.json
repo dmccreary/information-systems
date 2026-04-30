@@ -1,21 +1,29 @@
 {
-  "title": "Write Skew Under Read Committed Isolation",
-  "description": "Write Skew Under Read Committed Isolation",
-  "creator": "Dementia Education Project",
+  "title": "Write Skew Under Read Committed",
+  "description": "Step-through of two concurrent transactions causing write-skew under Read Committed, with Serializable replay.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Database", "Transactions" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "write-skew-read-committed",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "controls": [
+    { "type": "select", "description": "Isolation level" },
+    { "type": "button", "description": "Step / reset" }
+  ],
+  "modelType": "Educational Visualization",
+  "visualizationType": [ "diagram", "step-through" ],
+  "bloomsTaxonomy": [ "Understand", "Analyze" ],
+  "bloomLevel": "Analyze",
+  "bloomVerb": "trace",
+  "completion_status": "implemented",
   "chapter_number": 6,
-  "chapter_title": "'Data Management Foundations: Modeling, SQL, and Transactions'",
+  "chapter_title": "Data Management Foundations",
   "chapter_dir": "06-data-foundations"
 }

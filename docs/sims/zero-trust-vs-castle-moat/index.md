@@ -1,55 +1,60 @@
 ---
-title: Zero Trust Architecture vs Castle-and-Moat
-description: Zero Trust Architecture vs Castle-and-Moat
-status: scaffold
+title: Zero Trust vs Castle-and-Moat
+description: A side-by-side comparison of perimeter security (castle-and-moat) vs zero trust, with simulations of compromised credentials and unhealthy devices to show the blast-radius difference.
+image: /sims/zero-trust-vs-castle-moat/zero-trust-vs-castle-moat.png
+og:image: /sims/zero-trust-vs-castle-moat/zero-trust-vs-castle-moat.png
+twitter:image: /sims/zero-trust-vs-castle-moat/zero-trust-vs-castle-moat.png
+status: implemented
 library: vis-network
-bloom_level: TBD
+bloom_level: Analyze
+social:
+   cards: false
 ---
 
-# Zero Trust Architecture vs Castle-and-Moat
+# Zero Trust vs Castle-and-Moat
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="722px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Zero Trust MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** vis-network
+A side-by-side comparison of the two dominant network-security paradigms:
 
-## Preview
+- **Castle-and-Moat** (left) — a perimeter firewall protects a flat internal network. Once past the moat, the attacker has broad lateral access.
+- **Zero Trust** (right) — no implicit perimeter. Every request is authenticated, authorized, and posture-checked at a Policy Enforcement Point.
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+Click **Simulate Compromised Credential** to see the difference in blast radius. Click **Simulate Unhealthy Device** to see Zero Trust revoke access mid-session — something Castle-and-Moat fundamentally cannot do.
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+## Embedding This MicroSim
 
-## Specification
-
-The full specification below is extracted from
-[Chapter 14: 'Security of Information Assets'](../../chapters/14-security/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** zero-trust-vs-castle-moat<br/>
-**Library:** vis-network<br/>
-**Status:** Specified
-
-A vis-network side-by-side architectural comparison. Left panel (Castle-and-Moat): a thick perimeter firewall surrounds a flat internal network containing app servers, databases, and file shares; once a user/device crosses the perimeter via VPN, they have broad access to everything inside. Right panel (Zero Trust): no implicit perimeter; every user, device, and service connects through a *policy enforcement point* that consults an identity provider, a device-posture service, and a policy engine on every request; each app/db is a separately protected resource, and a compromised laptop or stolen credential can only reach exactly what the policy currently permits.
-
-Color palette: castle perimeter in slate-gray with a stone-wall texture, internal network in soft-blue, zero-trust policy engines in mascot-emerald, identity provider in mascot-magenta, denied paths in muted red. An animated "attacker" token can be dropped into either panel; in the castle panel it spreads laterally to multiple resources; in the zero-trust panel it gets stopped at the first policy enforcement point past the breached endpoint.
-
-Interactivity: hover any node for a definition; toggle the "compromised credential" simulation to watch the difference in blast radius; toggle a "device unhealthy" condition to see the zero-trust policy engine refuse access mid-session. A side panel quantifies blast radius (number of reachable resources) for each scenario.
-
-Layout: side-by-side panels, full canvas width, height ~580px. Sequence flows use slight y-offsets to work around the vis-network horizontal-edge-label rendering bug.
-
-Learning objective (Bloom: Analyzing): Students can articulate the structural difference between perimeter-based and zero-trust security, and predict the blast radius of a credential compromise under each model.
-
-Implementation: vis-network, deployed at `/information-systems/sims/zero-trust-vs-castle-moat/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/zero-trust-vs-castle-moat/main.html"
+        height="722px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Articulate the structural difference between perimeter and zero-trust security
+2. Predict the blast radius of a credential compromise under each model
+3. Identify the three components of Zero Trust (identity, device posture, policy)
+4. Explain why Zero Trust requires per-request authorization
+
+### Suggested Activities
+
+1. **Blast-Radius Drill (10 min)** — Run both simulations; quantify reachable resources for each
+2. **Architecture Mapping (15 min)** — For your school or workplace, identify which paradigm dominates today
+3. **Migration Sketch (15 min)** — Sketch a 90-day plan to start moving one application toward Zero Trust
+
+## References
+
+- NIST SP 800-207, *Zero Trust Architecture* (2020).
+- Forrester. *No More Chewy Centers* (2010).
 
 ## Related Resources
 
-- [Chapter 14: 'Security of Information Assets'](../../chapters/14-security/index.md)
+- [Chapter 14: Security of Information Assets](../../chapters/14-security/index.md)

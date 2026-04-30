@@ -1,21 +1,29 @@
 {
-  "title": "Normalization Journey from 1NF to 3NF",
-  "description": "Normalization Journey from 1NF to 3NF",
-  "creator": "Dementia Education Project",
+  "title": "Normalization Journey 1NF to 3NF",
+  "description": "Four-step walk-through of database normalization from denormalized through 1NF, 2NF, and 3NF.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Database", "Normalization" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "normalization-journey-1nf-to-3nf",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "controls": [
+    { "type": "button", "description": "Step navigation" },
+    { "type": "button", "description": "Show update anomaly cost" }
+  ],
+  "modelType": "Educational Visualization",
+  "visualizationType": [ "diagram", "step-through" ],
+  "bloomsTaxonomy": [ "Understand", "Apply" ],
+  "bloomLevel": "Apply",
+  "bloomVerb": "apply",
+  "completion_status": "implemented",
   "chapter_number": 6,
-  "chapter_title": "'Data Management Foundations: Modeling, SQL, and Transactions'",
+  "chapter_title": "Data Management Foundations",
   "chapter_dir": "06-data-foundations"
 }

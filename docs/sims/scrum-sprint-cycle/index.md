@@ -1,54 +1,35 @@
 ---
 title: The Scrum Sprint Cycle
-description: The Scrum Sprint Cycle
-status: scaffold
+description: An animated circular Scrum sprint diagram with daily standup ticks, sprint planning, review, retrospective events, and dysfunction warnings for each event.
+image: /sims/scrum-sprint-cycle/scrum-sprint-cycle.png
+og:image: /sims/scrum-sprint-cycle/scrum-sprint-cycle.png
+twitter:image: /sims/scrum-sprint-cycle/scrum-sprint-cycle.png
+status: implemented
 library: p5.js
-bloom_level: TBD
+bloom_level: Apply
+social:
+   cards: false
 ---
 
 # The Scrum Sprint Cycle
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="602px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Scrum Cycle MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** p5.js
+A circular Scrum sprint diagram. The outer ring shows the four events; the inner ticks are daily standups. Backlog flows in from the left; potentially-shippable increment flows out to the right. Switch sprint length (1, 2, 4 weeks) and watch the daily ticks redistribute.
 
-## Preview
+## Lesson Plan
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+### Learning Objectives
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+By the end of this activity, students will be able to:
 
-## Specification
-
-The full specification below is extracted from
-[Chapter 4: Application Development for IS](../../chapters/04-appdev/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** scrum-sprint-cycle<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-A p5.js circular diagram showing the Scrum sprint cycle. The outer ring depicts the sprint as a closed loop, with sprint planning at the top (12 o'clock), the development work spanning the right side, sprint review at the bottom (6 o'clock), and sprint retrospective just past it. The inner ring shows the daily standup repeating at each "day" tick around the loop. The product backlog feeds into sprint planning from the left; the potentially shippable increment exits from sprint review on the right.
-
-Color palette: warm orange-to-amber for sprint events, soft green for development work, slate-gray for backlog and increment artifacts. Mascot-emerald accent on the retrospective to highlight it as the learning moment.
-
-Interactivity: a "play" button advances a marker around the cycle, pausing at each event to display (a) participants, (b) duration, (c) primary output, and (d) the most common dysfunction associated with that event (e.g., "Standup turns into status theater"). A speed slider controls the animation. A toggle lets the user switch between 1-week, 2-week, and 4-week sprint cadences, which redistributes the day ticks accordingly.
-
-Layout: square aspect ratio, full canvas width, height ~520px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.
-
-Learning objective (Bloom: Applying): Students can identify each Scrum event by its participants, output, and timebox, and explain how the events compose into nested feedback loops.
-
-Implementation: p5.js, deployed at `/information-systems/sims/scrum-sprint-cycle/`.
-```
+1. Identify each Scrum event by participants, timebox, and output
+2. Describe how the events compose into nested feedback loops
+3. Recognize the most common dysfunction for each event
 
 ## Related Resources
 

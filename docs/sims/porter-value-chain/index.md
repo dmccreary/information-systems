@@ -1,54 +1,37 @@
 ---
 title: Porter Value Chain with IS Overlay
-description: Porter Value Chain with IS Overlay
-status: scaffold
+description: An interactive Porter value chain showing the five primary and four support activities, with example IS systems and metrics that change with the selected industry (manufacturing, retail bank, hospital).
+image: /sims/porter-value-chain/porter-value-chain.png
+og:image: /sims/porter-value-chain/porter-value-chain.png
+twitter:image: /sims/porter-value-chain/porter-value-chain.png
+status: implemented
 library: p5.js
-bloom_level: TBD
+bloom_level: Apply
+social:
+   cards: false
 ---
 
 # Porter Value Chain with IS Overlay
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="602px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Value Chain MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** p5.js
+Porter's value chain — five primary activities and four support activities — but each segment carries an **IS overlay**: which information systems live there and which metric they're expected to move. Switch between three industry presets (Manufacturing, Retail Bank, Hospital) to see how the IS systems and metrics shift while the chain structure stays the same.
 
-## Preview
+The Technology Development support activity is highlighted in green to flag where IS lives natively.
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+## Lesson Plan
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+### Learning Objectives
 
-## Specification
+By the end of this activity, students will be able to:
 
-The full specification below is extracted from
-[Chapter 2: The Role of IS in Organizations](../../chapters/02-role-of-is/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** porter-value-chain<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-A horizontal arrow-shaped value chain diagram drawn in p5.js, drawn responsively to fill the available iframe width. The arrow body is divided left-to-right into five **primary activity** segments labeled (in order): Inbound Logistics, Operations, Outbound Logistics, Marketing and Sales, Service. Above the arrow body sits a stacked bar of four **support activity** segments labeled: Firm Infrastructure, Human Resource Management, Technology Development, Procurement. The whole shape resembles a chevron pointing right with a roof.
-
-Color palette (light mode): primary activities use a graduated teal-to-emerald-green ramp (left to right). Support activities use a soft slate-gray with one accent (Technology Development) highlighted in a brighter green to emphasize where IS lives natively. Each segment has a 1px darker border and white label text centered.
-
-Interactivity: when the user hovers over (or taps) any segment, a callout panel appears below the chain showing (a) the activity name, (b) one or two example IS systems that operate there (e.g., for Operations: "ERP, MES, predictive maintenance"), and (c) one example metric IS would move (e.g., "throughput per shift" or "first-call resolution"). A small toggle lets the user switch between three industry presets — manufacturing, retail bank, hospital — so the example systems and metrics change to fit the industry while the value-chain structure stays the same.
-
-Layout: the value chain spans the full canvas width; the callout panel sits below at narrow widths and to the right at wide widths. Canvas resizes on window resize. The setup() function calls updateCanvasSize() as its first step. Canvas parented with `canvas.parent(document.querySelector('main'));`.
-
-Learning objective (Bloom: Applying): Given a real organization, students can place an IS investment proposal into the correct value-chain segment and articulate the metric it should move.
-
-Implementation: p5.js, single `main.html`, accompanying `index.md` doc, deployed at `/sims/porter-value-chain/`.
-```
+1. Place an IS investment proposal into the correct value-chain segment
+2. Articulate the metric the proposal should move
+3. Compare how the same chain looks across three industries
 
 ## Related Resources
 

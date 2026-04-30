@@ -1,21 +1,53 @@
 {
-  "title": "A Cross-Border Data Flow Decision Tree",
-  "description": "A Cross-Border Data Flow Decision Tree",
-  "creator": "Dementia Education Project",
+  "title": "Cross-Border Data Transfer Decision Tree",
+  "description": "An interactive vis-network decision tree for cross-border personal-data transfers under GDPR — adequacy, BCRs, SCCs, Transfer Impact Assessments (Schrems II), supplementary measures, and Article 49 derogations.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Privacy", "GDPR", "Compliance" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "cross-border-transfer-decision",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "Cross-Border Data Transfers",
+  "learningObjectives": [
+    "Walk the cross-border transfer decision tree for a realistic scenario",
+    "Identify when a Transfer Impact Assessment is required",
+    "Distinguish adequacy from BCRs from SCCs from derogations",
+    "Articulate the impact of Schrems II"
+  ],
+  "duration": "10-15 minutes",
+  "prerequisites": [ "Basic familiarity with GDPR principles" ],
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "vis-network 9.1",
+  "responsive": "Width-responsive",
+  "dependencies": [ "vis-network 9.1.9" ],
+  "accessibility": { "screenReaderSupport": false, "keyboardNavigation": false, "highContrast": true },
+  "controls": [
+    { "type": "select", "description": "Scenario picker" },
+    { "type": "click", "description": "Click nodes for legal basis" }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [ "GDPR-only perspective; UK GDPR analogous" ],
+  "limitations": [ "Does not cover sectoral derogations or BCR-Processor variants" ],
+  "visualizationType": [ "decision-tree", "diagram" ],
+  "bloomsTaxonomy": [ "Apply", "Analyze" ],
+  "bloomLevel": "Apply",
+  "bloomVerb": "apply",
+  "completion_status": "implemented",
   "chapter_number": 15,
-  "chapter_title": "'Privacy, Compliance, and Regulation'",
-  "chapter_dir": "15-privacy-compliance"
+  "chapter_title": "Privacy, Compliance, and Regulation",
+  "chapter_dir": "15-privacy-compliance",
+  "pedagogical": {
+    "pattern": "decision-tree",
+    "bloomAlignment": [ "apply", "analyze" ],
+    "bloomVerbs": [ "apply", "identify", "justify" ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [ "elaborative" ],
+    "interactionStyle": "explore"
+  }
 }

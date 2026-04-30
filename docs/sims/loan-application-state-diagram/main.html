@@ -3,105 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>State Diagram for "Loan Application Status"</title>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Loan Application State Diagram</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 12px; font-family: 'Segoe UI', Arial, sans-serif; background: #fff; color: #212529; }
+        h2 { margin: 0 0 6px 0; color: #1a3a6c; font-size: 16px; }
+        .controls { display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0; align-items: center; font-size: 12px; }
+        button { background: #1a3a6c; color: white; border: none; padding: 7px 12px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600; }
+        button:hover { background: #2e5285; }
+        .layout { display: grid; grid-template-columns: 1fr 280px; gap: 10px; height: 580px; }
+        @media (max-width: 700px) { .layout { grid-template-columns: 1fr; height: auto; } #network { height: 380px !important; } }
+        #network { border: 1px solid #ced4da; border-radius: 4px; background: #fafbfc; height: 100%; }
+        #side-panel { border: 1px solid #ced4da; border-radius: 4px; background: #fafbfc; padding: 10px; overflow-y: auto; height: 100%; font-size: 12px; }
+        #panel-title { font-size: 13px; font-weight: bold; color: #1a3a6c; margin-bottom: 6px; }
+        #panel-body p { margin: 4px 0; }
     </style>
 </head>
 <body>
-    <div id="container">
-        <h1>State Diagram for "Loan Application Status"</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> loan-application-state-diagram</p>
-            <p><strong>Library:</strong> vis-network</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> TBD</p>
+    <h2>UML State Diagram — Loan Application Lifecycle</h2>
+    <div class="controls">
+        <button id="play">Play Example Application</button>
+        <button id="toggle-invalid">Show Invalid Transitions</button>
+        <span style="color:#666;">Click any state for legal operations.</span>
+    </div>
+    <div class="layout">
+        <div id="network"></div>
+        <div id="side-panel">
+            <div id="panel-title"></div>
+            <div id="panel-body"></div>
         </div>
     </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: interactive-infographic
-    **sim-id:** loan-application-state-diagram<br/>
-    **Library:** vis-network<br/>
-    **Status:** Specified
-    
-    A vis-network state diagram showing the lifecycle of a loan application. States, drawn as rounded rectangles: *Draft*, *Submitted*, *Under Review*, *Awaiting Documents*, *Approved*, *Conditionally Approved*, *Denied*, *Withdrawn*, *Funded*, *Closed*. The initial pseudostate (black dot) connects to *Draft* via a transition labeled `applicantStarts`. From Draft to Submitted via `applicantSubmits`. Submitted to Under Review via `analystAssigned`. Under Review branches to Approved (`creditCheckPasses`), Conditionally Approved (`needsAdditionalInfo`), or Denied (`creditCheckFails`). Conditionally Approved transitions to Awaiting Documents via `requestDocs`, then back to Under Review via `docsReceived`. From any non-terminal state, a transition to Withdrawn via `applicantWithdraws`. Approved transitions to Funded via `disburseFunds`, then to Closed via `paidOff` or `defaulted`. Denied and Withdrawn lead to a final state (bullseye). Self-transitions are shown on Under Review for `analystAddsNote` (no state change, but logged). To work around vis-network's horizontal-edge label rendering bug, transitions use a slight y-offset (480 to 490) where labels are present.
-    
-    Color palette: states in slate-gray with mascot-emerald accents on terminal-success states (Funded, Closed via paidOff), coral on terminal-failure states (Denied, Withdrawn, Closed via defaulted), amber on intermediate-attention states (Awaiting Documents). Transition arrows in dark teal with event labels in white-bordered text boxes for legibility.
-    
-    Interactivity: a "play" simulation walks an example application through the states, pausing at each transition to display the event, the guard condition, the action triggered, and which database fields change. A "show invalid transitions" toggle highlights all the transitions that are *not* allowed (e.g., Funded directly to Draft) — making the state diagram's role as a business-rule guardrail explicit. Clicking a state opens a side panel showing what business operations are legal in that state.
-    
-    Layout: hierarchical, top-down, height ~600px. Canvas resizes on window resize.
-    
-    Learning objective (Bloom: Analyzing): Students can read a state diagram, list the legal transitions out of any state, and explain why a state diagram is the appropriate tool for an object with a meaningful lifecycle.
-    
-    Implementation: vis-network, deployed at `/information-systems/sims/loan-application-state-diagram/`.
-    -->
+    <script src="loan-application-state-diagram.js"></script>
 </body>
 </html>

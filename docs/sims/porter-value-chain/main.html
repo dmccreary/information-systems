@@ -3,105 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porter Value Chain with IS Overlay</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Porter Value Chain</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
+    <style>body{margin:0;padding:0;font-family:Arial,sans-serif;}</style>
+    <script src="porter-value-chain.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>Porter Value Chain with IS Overlay</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> porter-value-chain</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> TBD</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: interactive-infographic
-    **sim-id:** porter-value-chain<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    A horizontal arrow-shaped value chain diagram drawn in p5.js, drawn responsively to fill the available iframe width. The arrow body is divided left-to-right into five **primary activity** segments labeled (in order): Inbound Logistics, Operations, Outbound Logistics, Marketing and Sales, Service. Above the arrow body sits a stacked bar of four **support activity** segments labeled: Firm Infrastructure, Human Resource Management, Technology Development, Procurement. The whole shape resembles a chevron pointing right with a roof.
-    
-    Color palette (light mode): primary activities use a graduated teal-to-emerald-green ramp (left to right). Support activities use a soft slate-gray with one accent (Technology Development) highlighted in a brighter green to emphasize where IS lives natively. Each segment has a 1px darker border and white label text centered.
-    
-    Interactivity: when the user hovers over (or taps) any segment, a callout panel appears below the chain showing (a) the activity name, (b) one or two example IS systems that operate there (e.g., for Operations: "ERP, MES, predictive maintenance"), and (c) one example metric IS would move (e.g., "throughput per shift" or "first-call resolution"). A small toggle lets the user switch between three industry presets — manufacturing, retail bank, hospital — so the example systems and metrics change to fit the industry while the value-chain structure stays the same.
-    
-    Layout: the value chain spans the full canvas width; the callout panel sits below at narrow widths and to the right at wide widths. Canvas resizes on window resize. The setup() function calls updateCanvasSize() as its first step. Canvas parented with `canvas.parent(document.querySelector('main'));`.
-    
-    Learning objective (Bloom: Applying): Given a real organization, students can place an IS investment proposal into the correct value-chain segment and articulate the metric it should move.
-    
-    Implementation: p5.js, single `main.html`, accompanying `index.md` doc, deployed at `/sims/porter-value-chain/`.
-    -->
+    <main></main>
+    <br/><a href=".">Back to Documentation</a>
 </body>
 </html>

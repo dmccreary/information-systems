@@ -1,21 +1,54 @@
 {
-  "title": "Zero Trust Architecture vs Castle-and-Moat",
-  "description": "Zero Trust Architecture vs Castle-and-Moat",
-  "creator": "Dementia Education Project",
+  "title": "Zero Trust vs Castle-and-Moat",
+  "description": "Side-by-side comparison of perimeter and zero-trust security with compromised-credential and unhealthy-device simulations to show blast-radius differences.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Security", "Zero Trust" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "zero-trust-vs-castle-moat",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "Zero Trust Architecture",
+  "learningObjectives": [
+    "Articulate the structural difference between perimeter and zero-trust security",
+    "Predict the blast radius of credential compromise under each model",
+    "Identify the three components of Zero Trust",
+    "Explain why Zero Trust requires per-request authorization"
+  ],
+  "duration": "10-15 minutes",
+  "prerequisites": [ "Basic networking and security concepts" ],
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "vis-network 9.1",
+  "responsive": "Width-responsive",
+  "dependencies": [ "vis-network 9.1.9" ],
+  "accessibility": { "screenReaderSupport": false, "keyboardNavigation": false, "highContrast": true },
+  "controls": [
+    { "type": "button", "description": "Simulate compromised credential" },
+    { "type": "button", "description": "Simulate unhealthy device" },
+    { "type": "button", "description": "Reset" }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [ "Simplified two-architecture comparison" ],
+  "limitations": [ "Does not depict micro-segmentation, SASE, or continuous trust scoring details" ],
+  "visualizationType": [ "diagram", "comparison", "network" ],
+  "bloomsTaxonomy": [ "Understand", "Analyze" ],
+  "bloomLevel": "Analyze",
+  "bloomVerb": "compare",
+  "completion_status": "implemented",
   "chapter_number": 14,
-  "chapter_title": "'Security of Information Assets'",
-  "chapter_dir": "14-security"
+  "chapter_title": "Security of Information Assets",
+  "chapter_dir": "14-security",
+  "pedagogical": {
+    "pattern": "side-by-side-simulation",
+    "bloomAlignment": [ "understand", "analyze" ],
+    "bloomVerbs": [ "compare", "predict", "articulate" ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [ "elaborative" ],
+    "interactionStyle": "explore"
+  }
 }

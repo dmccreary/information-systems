@@ -1,21 +1,54 @@
 {
-  "title": "State Diagram for \"Loan Application Status\"",
-  "description": "State Diagram for \"Loan Application Status\"",
-  "creator": "Dementia Education Project",
+  "title": "Loan Application State Diagram",
+  "description": "Interactive UML state machine for a loan application lifecycle with play-through, click-for-legal-operations, and a toggle for forbidden transitions.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Systems Analysis and Design", "UML", "State Machines" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "loan-application-state-diagram",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "UML State Diagrams",
+  "learningObjectives": [
+    "Read a state diagram and identify states and transitions",
+    "List legal transitions out of any state",
+    "Explain why a state diagram fits an object with a lifecycle",
+    "Recognize state machines as business-rule guardrails"
+  ],
+  "duration": "10-15 minutes",
+  "prerequisites": [ "Basic UML familiarity" ],
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "vis-network 9.1",
+  "responsive": "Width-responsive",
+  "dependencies": [ "vis-network 9.1.9" ],
+  "accessibility": { "screenReaderSupport": false, "keyboardNavigation": false, "highContrast": true },
+  "controls": [
+    { "type": "button", "description": "Play example application" },
+    { "type": "button", "description": "Toggle invalid transitions" },
+    { "type": "click", "description": "Click for legal operations per state" }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [ "Simplified consumer loan; no payment-plan modifications" ],
+  "limitations": [ "No nested states or concurrent regions" ],
+  "visualizationType": [ "uml", "state-machine", "diagram" ],
+  "bloomsTaxonomy": [ "Understand", "Analyze" ],
+  "bloomLevel": "Analyze",
+  "bloomVerb": "analyze",
+  "completion_status": "implemented",
   "chapter_number": 10,
-  "chapter_title": "'Systems Analysis and Design'",
-  "chapter_dir": "10-sad"
+  "chapter_title": "Systems Analysis and Design",
+  "chapter_dir": "10-sad",
+  "pedagogical": {
+    "pattern": "interactive-state-machine",
+    "bloomAlignment": [ "understand", "analyze" ],
+    "bloomVerbs": [ "identify", "list", "explain" ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [ "elaborative" ],
+    "interactionStyle": "explore"
+  }
 }

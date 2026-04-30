@@ -1,55 +1,72 @@
 ---
-title: The Enterprise Systems Landscape with ERP at the Center
-description: The Enterprise Systems Landscape with ERP at the Center
-status: scaffold
+title: Enterprise Systems Landscape with ERP at the Center
+description: An interactive hub-and-spoke diagram of the enterprise systems landscape with ERP as the system of record, surrounded by CRM, SCM, HRIS, Payroll, Procurement, and BI satellites.
+image: /sims/enterprise-systems-landscape/enterprise-systems-landscape.png
+og:image: /sims/enterprise-systems-landscape/enterprise-systems-landscape.png
+twitter:image: /sims/enterprise-systems-landscape/enterprise-systems-landscape.png
+status: implemented
 library: vis-network
-bloom_level: TBD
+bloom_level: Understand
+social:
+   cards: false
 ---
 
-# The Enterprise Systems Landscape with ERP at the Center
+# Enterprise Systems Landscape
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="722px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Enterprise Systems MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** vis-network
+A typical mid-to-large enterprise runs an **ERP** as the *system of record* surrounded by satellite systems for the functions ERP doesn't do natively (CRM, SCM, HRIS, Payroll, Procurement, BI). Each integration has its own pattern — real-time API, nightly batch, or event stream.
 
-## Preview
+The MicroSim renders this landscape as a hub-and-spoke graph. Two toggles reveal the structure that makes integration *visibly* hard:
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+- **Show Best-of-Breed Edges** — adds the cross-satellite integrations you inherit when you pick best-in-class vendors for every function. Watch how many extra magenta arrows appear; this is why integration burden grows roughly O(n²).
+- **Show Master Data Flow** — highlights the customer/vendor/item/employee master records flowing outward from ERP. Master-data drift is a different problem from integration breakage.
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+### How to Use
 
-## Specification
+1. **Click any node** for the system's category, vendors, and ERP integration pattern
+2. **Toggle Best-of-Breed Edges** to see the integration burden
+3. **Toggle Master Data Flow** to see what flows outward from ERP
 
-The full specification below is extracted from
-[Chapter 13: 'Enterprise Systems'](../../chapters/13-enterprise-systems/index.md).
+## Embedding This MicroSim
 
-```text
-Type: interactive-infographic
-**sim-id:** enterprise-systems-landscape<br/>
-**Library:** vis-network<br/>
-**Status:** Specified
-
-A vis-network hub-and-spoke diagram with the ERP system as a central node (large mascot-emerald circle labeled "ERP — system of record") surrounded by satellite enterprise systems: CRM (sales, marketing, service), SCM (planning, logistics, warehouse), HRIS (core HR, talent), Payroll, Procurement (source-to-pay), Industry-Cloud overlays, and BI/Reporting. Each satellite is connected to ERP by a labeled integration arrow that names the type of integration (real-time API, nightly batch, event stream, master-data sync) and the direction of the dominant data flow. Edges between satellites (e.g., CRM ↔ Procurement when a customer has a referral relationship to a supplier) show the secondary integration burden that grows with best-of-breed strategies.
-
-Color palette: ERP node in mascot-emerald with white text, satellites in alternating soft-blue and coral, integration edges in teal (real-time) vs. amber (batch) vs. dashed slate (event-driven). To work around the vis-network horizontal-edge label rendering bug, satellite nodes use a slight y-offset (e.g., 480 to 490) so labels render on initial load.
-
-Interactivity: hovering each satellite reveals (a) the system category, (b) representative vendors, and (c) the typical integration pattern with ERP. A "best of breed vs suite" toggle adds or removes satellite edges to show the integration-burden difference between the two strategies — students see visibly how many extra arrows appear when each function is a separate vendor product. A "show master data flow" highlight draws the customer, vendor, item, and employee master records flowing from ERP outward.
-
-Layout: hub-and-spoke, full canvas width, height ~560px. Canvas resizes on window resize.
-
-Learning objective (Bloom: Understanding): Students can name the major enterprise system categories, identify ERP as the typical system-of-record hub, and articulate why integration complexity grows non-linearly with the number of separate systems.
-
-Implementation: vis-network, deployed at `/information-systems/sims/enterprise-systems-landscape/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/enterprise-systems-landscape/main.html"
+        height="722px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Name the major enterprise system categories (ERP, CRM, SCM, HRIS, Payroll, Procurement, BI)
+2. Identify ERP as the typical system-of-record hub
+3. Articulate why integration complexity grows non-linearly with the number of separate systems
+4. Distinguish real-time API integrations from batch and event-stream patterns
+
+### Suggested Activities
+
+1. **Vendor Match (5 min)** — Click each satellite; quiz students on which vendors fit each category
+2. **Integration Burden (10 min)** — Toggle Best-of-Breed Edges; count the new arrows; estimate the integration team size needed
+3. **Master Data Drill (10 min)** — In small groups, pick one master record (customer, vendor, item, employee); diagram what happens if two systems disagree on its value
+
+### Assessment
+
+- Match each satellite to its system category and at least one vendor
+- Explain the difference between real-time, batch, and event-stream integration patterns
+- Defend or challenge the "ERP at the center" architecture for a small startup
+
+## References
+
+- Davenport, T. (1998). *Putting the Enterprise into the Enterprise System*, HBR.
+- Gartner (2023). *Magic Quadrant for Cloud ERP*.
 
 ## Related Resources
 
-- [Chapter 13: 'Enterprise Systems'](../../chapters/13-enterprise-systems/index.md)
+- [Chapter 13: Enterprise Systems](../../chapters/13-enterprise-systems/index.md)

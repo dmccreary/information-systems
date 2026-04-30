@@ -1,55 +1,55 @@
 ---
-title: Shared Responsibility Across IaaS, PaaS, SaaS, and FaaS
-description: Shared Responsibility Across IaaS, PaaS, SaaS, and FaaS
-status: scaffold
+title: Cloud Shared Responsibility Stack
+description: An interactive visualization of customer-vs-provider responsibility across On-Premises, IaaS, PaaS, SaaS, and FaaS, with hover details and a billing-view toggle.
+image: /sims/cloud-shared-responsibility-stack/cloud-shared-responsibility-stack.png
+og:image: /sims/cloud-shared-responsibility-stack/cloud-shared-responsibility-stack.png
+twitter:image: /sims/cloud-shared-responsibility-stack/cloud-shared-responsibility-stack.png
+status: implemented
 library: p5.js
-bloom_level: TBD
+bloom_level: Analyze
+social:
+   cards: false
 ---
 
-# Shared Responsibility Across IaaS, PaaS, SaaS, and FaaS
+# Cloud Shared Responsibility Stack
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="662px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Shared Responsibility MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** p5.js
+The canonical **shared responsibility** chart for cloud computing, but interactive. Five service models (On-Prem, IaaS, PaaS, SaaS, FaaS) × eight layers (Networking → Data). Green = your responsibility; gray = the provider's. Hover any cell to see what the layer means and a concrete task at that layer.
 
-## Preview
+Toggle **Show Billing View** to see a related but distinct dimension: who you actually pay line-item for vs. who has costs baked into a flat per-seat or per-call price.
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+## Embedding This MicroSim
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
-
-## Specification
-
-The full specification below is extracted from
-[Chapter 12: 'Cloud Computing and Infrastructure'](../../chapters/12-cloud/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** cloud-shared-responsibility-stack<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-A p5.js stacked-bar visualization of the cloud responsibility split. Five vertical columns: On-Premises, IaaS, PaaS, SaaS, FaaS. Each column is divided into eight horizontal layers from bottom to top: Networking, Storage, Servers, Virtualization, OS, Runtime, Application, Data. Each layer is colored mascot-emerald when the customer owns it and slate-gray when the provider owns it. The On-Premises column is entirely emerald (you own it all). IaaS turns the bottom four layers gray. PaaS turns the bottom six gray, leaving only Application and Data emerald. SaaS turns everything gray except the very top "Data" layer. FaaS leaves only "Application" (function code) and "Data" emerald.
-
-Color palette: customer-managed layers in mascot-emerald, provider-managed layers in slate-gray with a subtle gradient, FaaS column highlighted with a coral border to indicate the "rent a moment" pattern. Labels in clear sans-serif white text on each band.
-
-Interactivity: hovering each cell shows (a) what that layer means in plain English, (b) a concrete example of a task at that layer (e.g., "patch the OS kernel"), and (c) which party performs that task in that model. A toggle switches between "responsibility" and "billing" views — the billing view shows what you pay for in each model, often counter-intuitively (e.g., in SaaS you don't pay for storage line-item, but it's baked into seat licensing).
-
-Layout: full canvas width, height ~580px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.
-
-Learning objective (Bloom: Analyzing): Students can identify, for any given operational task, which party (customer or provider) is responsible for it under each of the five models, and articulate the tradeoff each model makes.
-
-Implementation: p5.js, deployed at `/information-systems/sims/cloud-shared-responsibility-stack/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/cloud-shared-responsibility-stack/main.html"
+        height="662px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Identify which party is responsible for each operational task under each model
+2. Compare the tradeoff each model makes (effort vs control)
+3. Distinguish responsibility from billing
+4. Match a real workload to the appropriate service model
+
+### Suggested Activities
+
+1. **Task Sort (10 min)** — For 10 tasks (patch kernel, classify data, replace switch, etc.), name the responsible party in each model
+2. **Architecture Drill (15 min)** — Pick three workloads; recommend a model for each and defend
+
+## References
+
+- AWS Shared Responsibility Model — official documentation.
 
 ## Related Resources
 
-- [Chapter 12: 'Cloud Computing and Infrastructure'](../../chapters/12-cloud/index.md)
+- [Chapter 12: Cloud Computing and Infrastructure](../../chapters/12-cloud/index.md)

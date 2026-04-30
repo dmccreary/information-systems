@@ -1,21 +1,30 @@
 {
-  "title": "An Enterprise Journey Map for a Claims Process",
-  "description": "An Enterprise Journey Map for a Claims Process",
-  "creator": "Dementia Education Project",
+  "title": "Insurance Claims Journey Map",
+  "description": "Interactive journey map across five claims stages, two contrasting personas, an emotion curve, pain/opportunity chips, and a systems overlay.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "HCI", "Customer Experience" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "journey-map-claims-process",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "controls": [
+    { "type": "button", "description": "Switch persona" },
+    { "type": "button", "description": "Show systems overlay" },
+    { "type": "hover", "description": "Hover stages to focus" }
+  ],
+  "modelType": "Educational Visualization",
+  "visualizationType": [ "journey-map", "diagram" ],
+  "bloomsTaxonomy": [ "Understand", "Analyze" ],
+  "bloomLevel": "Analyze",
+  "bloomVerb": "analyze",
+  "completion_status": "implemented",
   "chapter_number": 18,
-  "chapter_title": "'Human-Computer Interaction and Emerging Topics'",
+  "chapter_title": "HCI and Emerging Topics",
   "chapter_dir": "18-hci-and-emerging"
 }

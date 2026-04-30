@@ -1,21 +1,29 @@
 {
-  "title": "TLS Handshake and the Chain of Trust",
-  "description": "TLS Handshake and the Chain of Trust",
-  "creator": "Dementia Education Project",
+  "title": "TLS Handshake and Chain of Trust",
+  "description": "Step-through TLS 1.3 handshake with certificate chain panel and MITM/expired failure modes.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Security", "Cryptography" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "tls-handshake-chain-of-trust",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "controls": [
+    { "type": "button", "description": "Step navigation" },
+    { "type": "button", "description": "Try MITM, force expired, attacker view" }
+  ],
+  "modelType": "Educational Visualization",
+  "visualizationType": [ "sequence-diagram", "animation" ],
+  "bloomsTaxonomy": [ "Remember", "Understand" ],
+  "bloomLevel": "Understand",
+  "bloomVerb": "describe",
+  "completion_status": "implemented",
   "chapter_number": 14,
-  "chapter_title": "'Security of Information Assets'",
+  "chapter_title": "Security of Information Assets",
   "chapter_dir": "14-security"
 }

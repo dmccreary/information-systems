@@ -1,54 +1,62 @@
 ---
-title: The Technical Debt Feedback Loop
-description: The Technical Debt Feedback Loop
-status: scaffold
+title: Technical Debt Feedback Loop
+description: An interactive causal-loop diagram showing the reinforcing feedback that turns technical debt into a doom loop, with three leverage-point interventions that turn it into a controllable system.
+image: /sims/tech-debt-feedback-loop/tech-debt-feedback-loop.png
+og:image: /sims/tech-debt-feedback-loop/tech-debt-feedback-loop.png
+twitter:image: /sims/tech-debt-feedback-loop/tech-debt-feedback-loop.png
+status: implemented
 library: vis-network
-bloom_level: TBD
+bloom_level: Analyze
+social:
+   cards: false
 ---
 
-# The Technical Debt Feedback Loop
+# Technical Debt Feedback Loop
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="722px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Tech Debt Feedback MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** vis-network
+A **causal-loop diagram** that makes the *reinforcing* dynamic of technical debt visible. Five variables — Technical Debt, Development Velocity, Schedule Pressure, Shortcut Rate, Defect Rate — feed back into each other, and the more debt you have, the more debt you accumulate.
 
-## Preview
+Click **Add Leverage Points** to introduce three structural interventions:
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+- **Protected Refactor Capacity** (cuts the shortcut path)
+- **Debt Visibility** (cuts the debt-accumulation path)
+- **Engineering Leadership Cover** (cuts the schedule-pressure path)
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+The visual transition from doom loop to controllable system is the lesson.
 
-## Specification
+## Embedding This MicroSim
 
-The full specification below is extracted from
-[Chapter 4: Application Development for IS](../../chapters/04-appdev/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** tech-debt-feedback-loop<br/>
-**Library:** vis-network<br/>
-**Status:** Specified
-
-A causal-loop diagram in vis-network showing five nodes arranged in a circle: Technical Debt, Development Velocity, Schedule Pressure, Shortcut Rate, and Defect Rate. Edges between nodes carry polarity labels (+/-) indicating whether one variable increases or decreases another. The loop forms a clear reinforcing cycle: Technical Debt (+) → reduces Development Velocity (-) → which increases Schedule Pressure (+) → which increases Shortcut Rate (+) → which increases Technical Debt (+). A second loop shows Technical Debt → Defect Rate → Schedule Pressure feeding the same dynamic. Edges drawn with slight y-offset (480 to 490) to ensure label rendering on horizontal segments.
-
-Color palette: feedback edges in coral for reinforcing relationships, mascot-emerald for any balancing relationships introduced by the "leverage point" toggle. Node fill follows the standard book palette.
-
-Interactivity: a "leverage point" toggle introduces three dampening interventions — Protected Refactor Capacity, Debt Visibility, Engineering Leadership Cover — each adding a balancing edge that reduces the relevant flow. Watching the toggle turn the doom loop into a controlled system is the pedagogical payoff. A side panel explains each intervention.
-
-Layout: circular, height ~520px. Canvas resizes on window resize.
-
-Learning objective (Bloom: Analyzing): Students can identify a reinforcing feedback loop, articulate why it produces compounding cost, and name three structural interventions that break it.
-
-Implementation: vis-network, deployed at `/information-systems/sims/tech-debt-feedback-loop/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/tech-debt-feedback-loop/main.html"
+        height="722px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Identify a reinforcing feedback loop in a system diagram
+2. Articulate why a reinforcing loop produces compounding cost over time
+3. Name three structural interventions that break the loop
+4. Apply the same loop pattern to other domains (operational debt, customer-support debt, security debt)
+
+### Suggested Activities
+
+1. **Read the Loop (5 min)** — Trace each arrow; recite the polarity in your own words
+2. **Apply the Pattern (15 min)** — Build a similar loop diagram for *security debt* or *operational debt*
+3. **Defend a Leverage Point (10 min)** — In one paragraph, explain why "protected refactor capacity" is more powerful than "telling engineers to write better code"
+
+## References
+
+- Cunningham, W. (1992). *The WyCash Portfolio Management System* (origin of "tech debt").
+- Meadows, D. (2008). *Thinking in Systems: A Primer*.
 
 ## Related Resources
 

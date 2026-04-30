@@ -1,21 +1,94 @@
 {
   "title": "EVM Cost and Schedule Variance Visualization",
-  "description": "EVM Cost and Schedule Variance Visualization",
-  "creator": "Dementia Education Project",
-  "date": "2026-04-29",
+  "description": "Interactive Chart.js visualization of Earned Value Management. Plots PV, EV, and AC curves over a 12-month project and computes CV, SV, CPI, SPI, and EAC live as a cursor slides along the timeline. Three preset scenarios compare healthy and unhealthy project states.",
+  "creator": "Dan McCreary",
   "subject": [
-    "dementia"
+    "Information Systems",
+    "Project Management",
+    "Earned Value Management"
   ],
+  "date": "2026-04-29",
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "evm-variance-visualization",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "Earned Value Management",
+  "learningObjectives": [
+    "Compute CV, SV, CPI, SPI, and EAC from PV, EV, and AC",
+    "Interpret what each metric says about project health",
+    "Diagnose project status from the visual relationship of the three curves",
+    "Forecast final cost (EAC) given current performance trend"
+  ],
+  "duration": "10-15 minutes",
+  "prerequisites": [
+    "Familiarity with project schedules and budgets"
+  ],
   "library": "Chart.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "Chart.js 4.4",
+  "responsive": "Width-responsive",
+  "dependencies": [
+    "Chart.js 4.4.1"
+  ],
+  "accessibility": {
+    "screenReaderSupport": false,
+    "keyboardNavigation": true,
+    "highContrast": true
+  },
+  "controls": [
+    {
+      "type": "buttons",
+      "description": "Three scenario presets"
+    },
+    {
+      "type": "slider",
+      "description": "Cursor month slider"
+    }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [
+    "BAC = $1.2M, 12-month project",
+    "Linear interpolation between monthly data points"
+  ],
+  "limitations": [
+    "Three fixed scenarios; no user-supplied project data",
+    "EAC uses simple BAC/CPI formula (no risk-adjusted variants)"
+  ],
+  "visualizationType": [
+    "chart",
+    "line-chart",
+    "dashboard"
+  ],
+  "bloomsTaxonomy": [
+    "Apply",
+    "Analyze"
+  ],
+  "bloomLevel": "Apply",
+  "bloomVerb": "compute",
+  "completion_status": "implemented",
   "chapter_number": 16,
-  "chapter_title": "'IS Project Management'",
-  "chapter_dir": "16-project-management"
+  "chapter_title": "IS Project Management",
+  "chapter_dir": "16-project-management",
+  "pedagogical": {
+    "pattern": "live-calculator",
+    "bloomAlignment": [
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "compute",
+      "interpret",
+      "diagnose"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "elaborative",
+      "diagnostic"
+    ],
+    "interactionStyle": "explore"
+  }
 }

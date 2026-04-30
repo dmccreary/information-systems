@@ -1,55 +1,57 @@
 ---
-title: Bandwidth, Latency, and Throughput at a Glance
-description: Bandwidth, Latency, and Throughput at a Glance
-status: scaffold
+title: Bandwidth, Latency, and Throughput
+description: An interactive p5.js visualization of the relationship between bandwidth, latency, and throughput, with sliders, packet loss, and a TCP-collapse toggle to show why fat long-haul pipes underperform.
+image: /sims/bandwidth-latency-throughput/bandwidth-latency-throughput.png
+og:image: /sims/bandwidth-latency-throughput/bandwidth-latency-throughput.png
+twitter:image: /sims/bandwidth-latency-throughput/bandwidth-latency-throughput.png
+status: implemented
 library: p5.js
-bloom_level: TBD
+bloom_level: Analyze
+social:
+   cards: false
 ---
 
-# Bandwidth, Latency, and Throughput at a Glance
+# Bandwidth, Latency, and Throughput
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="602px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Networking MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** p5.js
+A pipe-and-packets metaphor for the three networking quantities students confuse the most. The **width** of the pipe is bandwidth. The **length** is latency. The **packets-arrived-per-second** counter is throughput — the only quantity users actually feel.
 
-## Preview
+Slide the controls and watch throughput change. Pick a preset (LAN → Trans-Pacific → Satellite) to see why "more bandwidth" stops helping past a certain latency. Flip the **TCP collapse** toggle to see how throughput tanks on long, lossy paths even when bandwidth is high.
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+## Embedding This MicroSim
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
-
-## Specification
-
-The full specification below is extracted from
-[Chapter 11: 'Networks and Telecommunications for Business'](../../chapters/11-networks/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** bandwidth-latency-throughput<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-A p5.js animation showing a horizontal "highway" between two nodes labeled Sender and Receiver. The pipe has an adjustable width (representing bandwidth) and an adjustable length (representing latency). Tiny packet rectangles travel left-to-right along the pipe, queuing at the entrance when the sender tries to push more than fits. A throughput meter on the right side measures actual packets-arrived-per-second. Three sliders let the student vary bandwidth (1 Mbps to 10 Gbps), one-way latency (1 ms to 300 ms), and packet loss (0% to 5%). A "TCP behavior" toggle shows how throughput collapses on long, lossy paths even when bandwidth is high.
-
-Color palette: pipe walls in slate-gray, packets in mascot-emerald, queued packets in coral when they back up, throughput meter in mascot-magenta. Latency drawn as visible distance traveled.
-
-Interactivity: students drag the sliders and see throughput change in real time. A preset menu provides representative scenarios: "LAN", "Same-region cloud", "Coast-to-coast", "Trans-Pacific", "Satellite link." Each preset locks bandwidth and latency to realistic values and lets the student observe the resulting throughput.
-
-Layout: full canvas width, height ~480px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.
-
-Learning objective (Bloom: Analyzing): Students can predict why a high-bandwidth long-latency link delivers less throughput than its bandwidth would suggest, and identify the conditions under which adding bandwidth does and does not help.
-
-Implementation: p5.js, deployed at `/information-systems/sims/bandwidth-latency-throughput/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/bandwidth-latency-throughput/main.html"
+        height="602px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Define bandwidth, latency, and throughput in plain English
+2. Predict why a high-bandwidth long-latency link delivers less throughput than its bandwidth would suggest
+3. Identify the conditions under which adding bandwidth helps and the conditions under which it does not
+4. Match real-world links (LAN, cloud, coast-to-coast, trans-Pacific, satellite) to their characteristic numbers
+
+### Suggested Activities
+
+1. **Three Definitions (5 min)** — Have students define each term in their own words before touching the sliders
+2. **Preset Walk (10 min)** — Run all five presets; record the resulting throughput
+3. **Adding Bandwidth (10 min)** — On the satellite preset, double the bandwidth. Does throughput double? Why not?
+
+## References
+
+- Tanenbaum, A. (2011). *Computer Networks*, 5th ed.
+- Mathis, M. et al. (1997). *The macroscopic behavior of the TCP congestion avoidance algorithm*.
 
 ## Related Resources
 
-- [Chapter 11: 'Networks and Telecommunications for Business'](../../chapters/11-networks/index.md)
+- [Chapter 11: Networks and Telecommunications for Business](../../chapters/11-networks/index.md)

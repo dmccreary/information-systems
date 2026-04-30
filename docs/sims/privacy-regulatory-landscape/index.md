@@ -1,55 +1,57 @@
 ---
-title: The Regulatory Landscape Map
-description: The Regulatory Landscape Map
-status: scaffold
+title: Privacy & Compliance Regulatory Landscape
+description: An interactive 2D map of the major privacy and compliance regimes (GDPR, CCPA/CPRA, HIPAA, SOX, PCI-DSS, PIPL, LGPD, PIPEDA), with hover details and a filter that highlights which apply to a given data type.
+image: /sims/privacy-regulatory-landscape/privacy-regulatory-landscape.png
+og:image: /sims/privacy-regulatory-landscape/privacy-regulatory-landscape.png
+twitter:image: /sims/privacy-regulatory-landscape/privacy-regulatory-landscape.png
+status: implemented
 library: vis-network
-bloom_level: TBD
+bloom_level: Analyze
+social:
+   cards: false
 ---
 
-# The Regulatory Landscape Map
+# Privacy & Compliance Regulatory Landscape
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="722px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Regulatory Landscape MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** vis-network
+A 2D map of the major privacy and compliance regimes plotted on two axes: **geographic scope** (single state → global) and **sector scope** (cross-sector → sector-specific). Edges connect regulations with shared rights (e.g., access, deletion) or modeling lineage (LGPD and PIPL are GDPR-modeled).
 
-## Preview
+Use the filter to see which regulations apply to a given **data type** (health, finance, card, generic personal). Click any node for the year of force, regulator, max penalty, and a one-line summary of what it actually demands.
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+## Embedding This MicroSim
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
-
-## Specification
-
-The full specification below is extracted from
-[Chapter 15: 'Privacy, Compliance, and Regulation'](../../chapters/15-privacy-compliance/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** privacy-regulatory-landscape<br/>
-**Library:** vis-network<br/>
-**Status:** Specified
-
-A vis-network 2D map laying out the major privacy and compliance regimes on two axes: the horizontal axis is *geographic scope* (single state, national, multi-national, global), the vertical axis is *sector scope* (cross-sector / general, finance-only, healthcare-only, payments-only). Each regulation is rendered as a labeled node placed at its intersection: GDPR in the upper-right (multi-national, cross-sector), CCPA/CPRA in the lower-left (single-state, cross-sector), HIPAA in the upper-middle (national, healthcare), SOX in the upper-middle (national, finance), PCI-DSS spanning the right side (global, payments). Edges connect regulations that share data subject rights, breach notification requirements, or enforcement patterns.
-
-Color palette: GDPR in mascot-emerald, CCPA/CPRA in coral, HIPAA in mascot-magenta, SOX in slate-blue, PCI-DSS in amber. Background quadrant tints distinguish geographic regions.
-
-Interactivity: hovering each regulation reveals a popup with (a) the year of force, (b) the regulator, (c) the maximum penalty, and (d) a one-line plain-English summary of what it actually demands. A "filter by data type" dropdown highlights which regulations apply when a given data type (health, finance, card, generic personal) is in play. A "what applies to me?" walk-through asks the student five questions and lights up the regulations that would apply.
-
-Layout: full canvas width, height ~560px. Canvas resizes on window resize.
-
-Learning objective (Bloom: Analyzing): Students can place each regulation on a sector/geography map, identify which regulations co-apply to a given system, and read the matrix to scope a compliance program.
-
-Implementation: vis-network, deployed at `/information-systems/sims/privacy-regulatory-landscape/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/privacy-regulatory-landscape/main.html"
+        height="722px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Place each major privacy/compliance regulation on a sector × geography map
+2. Identify which regulations co-apply to a given system or data type
+3. Read the matrix to scope a compliance program for a hypothetical company
+4. Compare maximum penalties across regimes
+
+### Suggested Activities
+
+1. **Map Walk (5 min)** — Click each node; recite year, regulator, max penalty
+2. **Co-Application Drill (10 min)** — For a US healthcare startup serving EU customers, list every applicable regulation
+3. **Penalty Reflection (5 min)** — Order the eight regulations by maximum penalty; what does this say about regulatory priorities?
+
+## References
+
+- IAPP (annual). *Global Privacy Law Tracker*.
+- Bygrave, L. (2014). *Data Privacy Law: An International Perspective*.
 
 ## Related Resources
 
-- [Chapter 15: 'Privacy, Compliance, and Regulation'](../../chapters/15-privacy-compliance/index.md)
+- [Chapter 15: Privacy, Compliance, and Regulation](../../chapters/15-privacy-compliance/index.md)

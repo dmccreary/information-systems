@@ -1,54 +1,59 @@
 ---
-title: A Simple Feature-Branch Git Workflow
-description: A Simple Feature-Branch Git Workflow
-status: scaffold
+title: Feature-Branch Git Workflow
+description: An interactive vis-network visualization of a feature-branch Git workflow — branch creation, commits, pull request, code review, fix-up commits, CI, approval, merge, and deployment.
+image: /sims/git-feature-branch-workflow/git-feature-branch-workflow.png
+og:image: /sims/git-feature-branch-workflow/git-feature-branch-workflow.png
+twitter:image: /sims/git-feature-branch-workflow/git-feature-branch-workflow.png
+status: implemented
 library: vis-network
-bloom_level: TBD
+bloom_level: Apply
+social:
+   cards: false
 ---
 
-# A Simple Feature-Branch Git Workflow
+# Feature-Branch Git Workflow
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="722px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Git Workflow MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** vis-network
+A typical feature-branch workflow as a graph of commits and review events: branch off `main`, push three commits (one of which fails CI), open a pull request, address review comments with a fix-up commit, get approval, merge, deploy. The diagram makes the *whole* lifecycle visible — including the parts that don't appear in `git log`.
 
-## Preview
+### How to Use
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+1. Click **Play Feature Lifecycle** to walk through every step in order
+2. **Click any node** to see its commit message, author, and CI status
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+## Embedding This MicroSim
 
-## Specification
-
-The full specification below is extracted from
-[Chapter 4: Application Development for IS](../../chapters/04-appdev/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** git-feature-branch-workflow<br/>
-**Library:** vis-network<br/>
-**Status:** Specified
-
-A vis-network diagram visualizing a feature-branch Git workflow as a directed graph of commit nodes. The `main` branch runs horizontally across the middle of the canvas at y=480. Feature branches diverge upward and downward from `main`, advance through several commit nodes, and merge back via pull-request nodes. To work around the vis-network horizontal-edge label rendering bug, branch lines use a slight y-offset (e.g., 480 to 490) so labels render correctly on initial load.
-
-Color palette: `main` branch in mascot-emerald, feature branches in shades of teal and amber, pull-request merge commits in a contrasting coral. Failed CI checks marked with a red badge; passed checks with a green checkmark.
-
-Interactivity: hovering a commit shows the commit message, author, and CI status; hovering a pull-request node shows the PR title, the reviewer, and the merge-status. A "play" control walks through a typical feature lifecycle: branch creation, three commits, push, PR opened, code review comments, fix-up commits, CI passing, PR approved, merge to `main`, deployment trigger fired.
-
-Layout: hierarchical with custom positioning to preserve the linear timeline metaphor. Canvas resizes on window resize, height ~480px.
-
-Learning objective (Bloom: Applying): Students can trace a feature from branch creation through merge, and identify where code review and CI checks fit into the timeline.
-
-Implementation: vis-network, deployed at `/information-systems/sims/git-feature-branch-workflow/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/git-feature-branch-workflow/main.html"
+        height="722px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Trace a feature from branch creation through deployment
+2. Identify where code review and CI checks fit in the timeline
+3. Distinguish a regular commit from a merge commit and a deployment
+4. Explain why fix-up commits are normal and expected, not signs of bad work
+
+### Suggested Activities
+
+1. **Lifecycle Walk (5 min)** — Play the lifecycle; pause at each step and explain
+2. **CI Failure Drill (10 min)** — Locate the failing commit; describe what the developer does next
+3. **Review Comment Practice (10 min)** — Write the kind of review comment that would prompt the F5 fix-up commit
+
+## References
+
+- Atlassian. *Git Tutorials — Feature Branch Workflow*.
+- Pro Git Book, ch. 3 (Branching).
 
 ## Related Resources
 

@@ -1,55 +1,84 @@
 ---
-title: A Small Project's Gantt Chart with the Critical Path Highlighted
-description: A Small Project's Gantt Chart with the Critical Path Highlighted
-status: scaffold
+title: Gantt Chart with Critical Path Highlighted
+description: An interactive 12-week Gantt chart for a CRM rollout with the critical path highlighted in magenta, non-critical tasks in emerald, and a toggle to visualize slack.
+image: /sims/gantt-with-critical-path/gantt-with-critical-path.png
+og:image: /sims/gantt-with-critical-path/gantt-with-critical-path.png
+twitter:image: /sims/gantt-with-critical-path/gantt-with-critical-path.png
+status: implemented
 library: vis-timeline
-bloom_level: TBD
+bloom_level: Analyze
+social:
+   cards: false
 ---
 
-# A Small Project's Gantt Chart with the Critical Path Highlighted
+# Gantt Chart with Critical Path Highlighted
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="722px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Gantt MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** vis-timeline
+This MicroSim shows a small **CRM rollout project** as a 12-week Gantt chart with twelve tasks across twelve swim lanes. The **critical path** — the chain of tasks where any delay slips the entire Go-Live — is rendered in **mascot-magenta**. Tasks with slack (the freedom to slip without slipping the project) are rendered in **mascot-emerald**, and the slack itself can be revealed as a faint coral trailing region.
 
-## Preview
+### How to Use
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+1. **Drag any task bar** to a new start date to see whether the move pushes the project finish
+2. Click **Show Slack on Non-Critical Tasks** to reveal each task's free time
+3. Click **Reset Schedule** to undo your changes
+4. Watch the status message: green when the project still finishes on day 84, magenta when it slips
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+### Critical Path
 
-## Specification
+The eight critical-path tasks (in order):
 
-The full specification below is extracted from
-[Chapter 16: 'IS Project Management'](../../chapters/16-project-management/index.md).
+1. Charter Signed (milestone)
+2. Requirements Gathering (2 weeks)
+3. Vendor Selection (2 weeks)
+4. Configuration (3 weeks)
+5. Data Migration Build (2 weeks)
+6. UAT (2 weeks)
+7. Cutover (1 week)
+8. Go-Live (milestone)
 
-```text
-Type: interactive-infographic
-**sim-id:** gantt-with-critical-path<br/>
-**Library:** vis-timeline<br/>
-**Status:** Specified
+The three off-critical-path tasks — Test Environment Setup, Training Materials, and Training Delivery — each have slack, meaning they can slip a few days without affecting Go-Live.
 
-A vis-timeline Gantt chart showing a 12-week IS project (a small CRM rollout) with twelve tasks: Charter Signed (milestone), Requirements Gathering, Vendor Selection, Data Mapping, Test Environment Setup, Configuration, Data Migration Build, User Acceptance Test, Training Materials, Training Delivery, Cutover, Go-Live (milestone). Dependencies shown as arrows; the critical path (Charter → Requirements → Vendor Selection → Configuration → Data Migration → UAT → Cutover → Go-Live) is rendered in a thick mascot-magenta line. Off-critical-path tasks (Test Environment Setup, Training Materials, Training Delivery) are rendered in mascot-emerald with their slack visualized as a faint trailing rectangle.
+## Embedding This MicroSim
 
-Color palette: critical-path bars in mascot-magenta, non-critical bars in mascot-emerald, milestones as gold diamonds, slack regions in faint coral, dependency arrows in slate-gray.
-
-Interactivity: students can drag any task to a new start date and the schedule updates, showing whether the move pushes the project finish (a red flash if it does, green if it doesn't). A "compress schedule" challenge asks students to find the cheapest 2-week compression by adding resources to critical-path tasks. A toggle highlights the slack on every non-critical task to make the concept of "free time" visible.
-
-Layout: full canvas width, height ~560px. Canvas resizes on window resize.
-
-Learning objective (Bloom: Analyzing): Students can read a Gantt chart, identify the critical path, distinguish critical from non-critical tasks, and predict the schedule effect of moving any task.
-
-Implementation: vis-timeline, deployed at `/information-systems/sims/gantt-with-critical-path/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/gantt-with-critical-path/main.html"
+        height="722px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Read a Gantt chart and identify task durations and dependencies
+2. Distinguish critical-path tasks from non-critical tasks by their effect on project finish
+3. Predict the schedule effect of moving any task by a given number of days
+4. Explain why "slack" matters and where to find resources to compress the critical path
+
+### Suggested Activities
+
+1. **Critical Path ID (5 min)** — Without dragging, students should identify which 8 of the 12 tasks lie on the critical path
+2. **Schedule Slip Drill (10 min)** — Drag Configuration to start one week late; record what happens to Go-Live
+3. **Compression Challenge (15 min)** — Students propose how to compress the schedule by 2 weeks. Where do they add resources, and why?
+4. **Slack Reading (10 min)** — Toggle slack on. For each non-critical task, write the maximum number of days it could slip without becoming critical
+
+### Assessment
+
+- Identify the critical path in a fresh Gantt chart drawn on the board
+- Given a task's slack value, predict whether moving it by N days affects the project finish
+- Explain *why* compressing a non-critical task does not shorten the project
+
+## References
+
+- PMI (2021). *PMBOK Guide*, 7th ed., Schedule Management.
+- Kelley, J. & Walker, M. (1959). *Critical-Path Planning and Scheduling*.
 
 ## Related Resources
 
-- [Chapter 16: 'IS Project Management'](../../chapters/16-project-management/index.md)
+- [Chapter 16: IS Project Management](../../chapters/16-project-management/index.md)

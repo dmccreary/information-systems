@@ -1,55 +1,57 @@
 ---
-title: A Small Business ERD — Customer, Order, Product, Supplier
-description: A Small Business ERD — Customer, Order, Product, Supplier
-status: scaffold
+title: Small Business ERD
+description: An interactive entity-relationship diagram for a small e-commerce business with Customer, Order, OrderLine, Product, and Supplier entities, plus a normal-forms watch-out toggle.
+image: /sims/small-business-erd/small-business-erd.png
+og:image: /sims/small-business-erd/small-business-erd.png
+twitter:image: /sims/small-business-erd/small-business-erd.png
+status: implemented
 library: vis-network
-bloom_level: TBD
+bloom_level: Apply
+social:
+   cards: false
 ---
 
-# A Small Business ERD — Customer, Order, Product, Supplier
+# Small Business ERD
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="722px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the ERD MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** vis-network
+A canonical small-e-commerce ERD with five entities: **Customer**, **Order**, **OrderLine** (the join table), **Product**, and **Supplier**. The diagram demonstrates the *most common pattern in business databases*: the many-to-many relationship between Order and Product resolved via an OrderLine join entity.
 
-## Preview
+Click any entity to see what it represents, why each attribute exists, and a sample row. Click any relationship line for the plain-English cardinality. Toggle **Show Normal-Form Watch-Outs** to surface common 1NF/2NF/3NF traps.
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+## Embedding This MicroSim
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
-
-## Specification
-
-The full specification below is extracted from
-[Chapter 6: 'Data Management Foundations: Modeling, SQL, and Transactions'](../../chapters/06-data-foundations/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** small-business-erd<br/>
-**Library:** vis-network<br/>
-**Status:** Specified
-
-A vis-network entity-relationship diagram (Crow's Foot notation) showing four entities for a small e-commerce business: Customer, Order, Product, and Supplier. Each entity is rendered as a labeled box with two compartments: the upper compartment holds the entity name; the lower compartment lists the primary attributes (Customer: customer_id (PK), email, first_name, last_name, created_at; Order: order_id (PK), customer_id (FK), order_date, status, total; Product: product_id (PK), supplier_id (FK), name, price, in_stock; Supplier: supplier_id (PK), name, contact_email, country). Relationships connect the entities with Crow's Foot markers: Customer 1-to-many Order ("places"), Order many-to-many Product through an OrderLine join entity ("contains"), Supplier 1-to-many Product ("supplies"). The OrderLine join table is shown as a fifth box with order_id, product_id, quantity, unit_price.
-
-Color palette: entity boxes in mascot-emerald with white text for the entity name and pale-emerald for the attribute compartment, primary-key attributes underlined and in mascot-magenta, foreign-key attributes italicized in coral. Relationship lines in dark teal, with Crow's Foot markers rendered crisply.
-
-Interactivity: hovering an entity reveals (a) a plain-language description of what the entity represents in the business, (b) the rationale for each attribute, and (c) sample row values. Hovering a relationship line reveals its cardinality in plain English ("each Customer places zero or more Orders; each Order is placed by exactly one Customer"). A "show normal forms" toggle highlights which attributes would violate 1NF, 2NF, and 3NF if added carelessly. To work around the vis-network horizontal-edge label rendering bug, relationship lines use a slight y-offset so labels render correctly on initial load.
-
-Layout: hierarchical with manual positioning, full canvas width, height ~560px. Canvas resizes on window resize.
-
-Learning objective (Bloom: Applying): Students can read a Crow's Foot ERD, name each entity's primary key and foreign keys, identify cardinalities in plain English, and recognize where a join entity is required for a many-to-many relationship.
-
-Implementation: vis-network, deployed at `/information-systems/sims/small-business-erd/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/small-business-erd/main.html"
+        height="722px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Read a Crow's Foot ERD and identify primary keys and foreign keys
+2. State each cardinality in plain English
+3. Recognize where a join entity is required for a many-to-many relationship
+4. Identify common 1NF, 2NF, and 3NF violations
+
+### Suggested Activities
+
+1. **Cardinality Drill (10 min)** — For each line, state the cardinality both directions
+2. **Normal-Form Audit (15 min)** — Toggle watch-outs; propose a fix for each
+3. **Add an Entity (15 min)** — Add a `Shipment` entity. Where does it connect, and what FKs does it need?
+
+## References
+
+- Codd, E. F. (1970). *A Relational Model of Data for Large Shared Data Banks*.
+- Date, C. J. (2003). *An Introduction to Database Systems*, 8th ed.
 
 ## Related Resources
 
-- [Chapter 6: 'Data Management Foundations: Modeling, SQL, and Transactions'](../../chapters/06-data-foundations/index.md)
+- [Chapter 6: Data Management Foundations](../../chapters/06-data-foundations/index.md)

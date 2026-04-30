@@ -1,55 +1,69 @@
 ---
-title: A Modern Enterprise Network — LAN, WAN, VPN, SD-WAN, Cloud
-description: A Modern Enterprise Network — LAN, WAN, VPN, SD-WAN, Cloud
-status: scaffold
+title: Modern Enterprise Network Topology
+description: An interactive enterprise network topology with three sites (HQ, Branch, Plant), SD-WAN, MPLS, broadband, LTE failover, AWS Direct Connect, SaaS, and a VPN tunnel. Trace packets and simulate a link failure.
+image: /sims/enterprise-network-topology/enterprise-network-topology.png
+og:image: /sims/enterprise-network-topology/enterprise-network-topology.png
+twitter:image: /sims/enterprise-network-topology/enterprise-network-topology.png
+status: implemented
 library: vis-network
-bloom_level: TBD
+bloom_level: Understand
+social:
+   cards: false
 ---
 
-# A Modern Enterprise Network — LAN, WAN, VPN, SD-WAN, Cloud
+# Modern Enterprise Network Topology
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="722px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Network Topology MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** vis-network
+A typical mid-size enterprise network: three sites (Headquarters, Branch, Manufacturing Plant), each with their own LAN and SD-WAN edge appliance, connected through a WAN cloud to the public Internet, an AWS region (via Direct Connect), and a Salesforce SaaS. A remote worker reaches HQ over a VPN tunnel.
 
-## Preview
+This MicroSim lets you trace a packet from a HQ user to four very different destinations and watch how the path changes. You can also **fail the HQ MPLS circuit** to see SD-WAN automatically reroute to broadband.
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+### How to Use
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+1. **Click any node** to see its category, typical bandwidth, latency, and cost
+2. **Pick a trace** to animate a packet from origin to destination
+3. **Fail the MPLS circuit** to see SD-WAN failover in action
 
-## Specification
+## Embedding This MicroSim
 
-The full specification below is extracted from
-[Chapter 11: 'Networks and Telecommunications for Business'](../../chapters/11-networks/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** enterprise-network-topology<br/>
-**Library:** vis-network<br/>
-**Status:** Specified
-
-A vis-network topology diagram showing a typical mid-size enterprise network. On the left: three sites — Headquarters (large), Branch Office (medium), and a Manufacturing Plant (medium) — each rendered as a rounded container with internal LAN icons (switch, wireless access points, user laptops). Each site has an SD-WAN appliance at its edge. The HQ has two WAN connections (MPLS + broadband internet); the branch has two broadband internet connections; the plant has one broadband + one LTE failover. Lines from each site cross the WAN cloud in the middle of the diagram. Beyond the WAN cloud sit three destinations: the public Internet (with a sample customer device), a "Cloud Provider" container labeled AWS with a Direct Connect circuit drawn as a thick private line from HQ, and a SaaS icon (Salesforce). A remote worker icon at the bottom shows a VPN tunnel (dashed encrypted line) crossing the public internet and entering HQ.
-
-Color palette: LAN regions in soft mascot-emerald, WAN cloud in slate-gray, public internet in pale yellow, cloud provider in mascot-magenta tints, SD-WAN appliances in coral, VPN tunnel in dashed teal. Direct Connect circuit drawn thicker than the public-internet links.
-
-Interactivity: hovering each element reveals (a) what category it is (LAN/WAN/VPN/SD-WAN/Direct Connect), (b) typical bandwidth, (c) typical latency, (d) typical monthly cost order-of-magnitude. A "trace a packet" button animates a packet from a HQ user to (a) the public website, (b) Salesforce SaaS, (c) AWS via Direct Connect, (d) a remote VPN user — showing the path each one takes. A "fail a link" button lets the student knock out the MPLS circuit at HQ and watch SD-WAN reroute traffic over broadband automatically.
-
-Layout: hierarchical, left-to-right, full canvas width, height ~600px. Edge labels use a slight y-offset to work around the vis-network horizontal-edge label rendering bug. Canvas resizes on window resize.
-
-Learning objective (Bloom: Understanding): Students can identify each network category in a real-world enterprise topology, trace traffic from a user to four different destinations, and explain what SD-WAN does when a primary link fails.
-
-Implementation: vis-network, deployed at `/information-systems/sims/enterprise-network-topology/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/enterprise-network-topology/main.html"
+        height="722px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Identify each network category (LAN, WAN, VPN, SD-WAN, Direct Connect) in a real-world topology
+2. Trace traffic from a user to four different destinations
+3. Explain what SD-WAN does when a primary link fails
+4. Compare bandwidth, latency, and cost across LAN, WAN, internet, and Direct Connect
+
+### Suggested Activities
+
+1. **Category Quiz (5 min)** — Click each node; quiz students on its category before revealing
+2. **Trace Comparison (10 min)** — Run all four traces; rank them by latency
+3. **Fail-and-Recover (10 min)** — Fail the MPLS link; describe what happens to user experience and to cost
+
+### Assessment
+
+- Match an enterprise component to its network category
+- Order four destinations by typical latency
+- Explain the role of SD-WAN in three sentences
+
+## References
+
+- Tanenbaum, A. (2011). *Computer Networks*, 5th ed.
+- Cisco. *SD-WAN Architecture Reference Guide*.
 
 ## Related Resources
 
-- [Chapter 11: 'Networks and Telecommunications for Business'](../../chapters/11-networks/index.md)
+- [Chapter 11: Networks and Telecommunications for Business](../../chapters/11-networks/index.md)

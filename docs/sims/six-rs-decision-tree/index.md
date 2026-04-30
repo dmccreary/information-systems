@@ -1,57 +1,60 @@
 ---
-title: The Six Rs Decision Tree
-description: The Six Rs Decision Tree
-status: scaffold
+title: Six Rs Cloud Migration Decision Tree
+description: An interactive decision tree for choosing one of the Six Rs (Retire, Repurchase, Refactor, Replatform, Rehost, Retain) for a cloud migration workload, with worked examples.
+image: /sims/six-rs-decision-tree/six-rs-decision-tree.png
+og:image: /sims/six-rs-decision-tree/six-rs-decision-tree.png
+twitter:image: /sims/six-rs-decision-tree/six-rs-decision-tree.png
+status: implemented
 library: vis-network
-bloom_level: TBD
+bloom_level: Apply
+social:
+   cards: false
 ---
 
-# The Six Rs Decision Tree
+# Six Rs Cloud Migration Decision Tree
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="722px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Six Rs MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** vis-network
+When you've got a portfolio of legacy applications and a migration deadline, you need a way to *triage* — and the **Six Rs** (Retire, Repurchase, Refactor, Replatform, Rehost, Retain) is the framework most cloud teams use. This decision tree walks through five questions that lead to one of the six recommendations.
 
-## Preview
+### How to Use
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+1. Click **Trace Example: HR Portal** for a worked walkthrough
+2. **Click any leaf** to see what the strategy means, its typical timeline, and a real-world example
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+## Embedding This MicroSim
 
-## Specification
-
-The full specification below is extracted from
-[Chapter 12: 'Cloud Computing and Infrastructure'](../../chapters/12-cloud/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** six-rs-decision-tree<br/>
-**Library:** vis-network<br/>
-**Status:** Specified
-
-A vis-network decision tree starting from a single root node "Workload to migrate". The first branching question is "Still used?" — a No branch leads to a "Retire" leaf node in slate-gray. The Yes branch leads to "SaaS equivalent available?" — Yes leads to "Repurchase" in mascot-magenta. The No branch leads to "Strategic, long-lived application?" — Yes leads to "Refactor" in mascot-emerald. No leads to "Cloud benefit worth minor effort?" — Yes leads to "Replatform" in coral, and No leads to "Migration deadline pressure?" — Yes leads to "Rehost / Lift and Shift" in amber, and No leads to "Retain / Revisit" in slate-gray.
-
-To work around the vis-network horizontal-edge label rendering bug, edge labels use a slight y-offset (480 to 490) so labels render correctly on initial load. Edge labels are short ("Yes", "No"). Each leaf node contains the R name, the typical effort level, and an icon.
-
-Color palette: decision nodes in deep teal, leaf nodes color-coded by effort (slate-gray for Retain/Retire, mascot-emerald for high-value paths, coral for medium, amber for quick-and-dirty). Edge arrows in dark teal.
-
-Interactivity: clicking any node highlights the path from root to that node. Hovering each leaf shows (a) what the strategy means, (b) typical timeline, and (c) a real-world example. A "trace example" button lets students step through a worked example workload (e.g., "company's homegrown HR portal") to see which R the tree recommends and why.
-
-Layout: hierarchical, top-to-bottom, full canvas width, height ~620px. Canvas resizes on window resize.
-
-Learning objective (Bloom: Applying): Students can apply the Six Rs decision tree to an unfamiliar workload, choose the appropriate R, and defend the choice against the alternatives.
-
-Implementation: vis-network, deployed at `/information-systems/sims/six-rs-decision-tree/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/six-rs-decision-tree/main.html"
+        height="722px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Apply the Six Rs decision tree to an unfamiliar workload
+2. Choose the appropriate R and defend the choice
+3. Estimate the timeline implications of each strategy
+4. Identify when *Retain* is a better short-term choice than any of the others
+
+### Suggested Activities
+
+1. **Portfolio Triage (15 min)** — Given 8 sample applications, walk each through the tree
+2. **Defend Your Choice (10 min)** — For your chosen R on one workload, write a one-paragraph rationale
+3. **Replatform vs Refactor (10 min)** — When does Replatform stop being enough? Where's the threshold?
+
+## References
+
+- AWS. *6 Strategies for Migrating Applications to the Cloud*.
+- Gartner. *Five Ways to Migrate Applications to the Cloud*.
 
 ## Related Resources
 
-- [Chapter 12: 'Cloud Computing and Infrastructure'](../../chapters/12-cloud/index.md)
+- [Chapter 12: Cloud Computing and Infrastructure](../../chapters/12-cloud/index.md)

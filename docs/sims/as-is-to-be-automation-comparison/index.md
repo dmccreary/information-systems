@@ -1,54 +1,54 @@
 ---
-title: As-Is vs To-Be — Manual, RPA, and Workflow Automation
-description: As-Is vs To-Be — Manual, RPA, and Workflow Automation
-status: scaffold
+title: As-Is vs To-Be Automation Comparison
+description: A side-by-side comparison of manual, RPA, and workflow-automation versions of the same employee onboarding process, with cycle-time bars, handoff counts, and Lean-waste highlights.
+image: /sims/as-is-to-be-automation-comparison/as-is-to-be-automation-comparison.png
+og:image: /sims/as-is-to-be-automation-comparison/as-is-to-be-automation-comparison.png
+twitter:image: /sims/as-is-to-be-automation-comparison/as-is-to-be-automation-comparison.png
+status: implemented
 library: p5.js
-bloom_level: TBD
+bloom_level: Evaluate
+social:
+   cards: false
 ---
 
-# As-Is vs To-Be — Manual, RPA, and Workflow Automation
+# As-Is vs To-Be Automation Comparison
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="722px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Automation Comparison MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** p5.js
+The same employee-onboarding process modeled three ways: **Manual** (9 days, lots of handoffs), **RPA** (3 days, bots replace data entry), and **Workflow Automation** (1 day, API orchestration). Switch panels to compare cycle time, handoff count, and value-added ratio. Toggle **Show 8 Wastes** to highlight the Lean wastes that disappear with each generation of automation.
 
-## Preview
+## Embedding This MicroSim
 
-<iframe src="main.html" width="100%" height="600"></iframe>
-
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
-
-## Specification
-
-The full specification below is extracted from
-[Chapter 5: Business Process Management](../../chapters/05-bpm/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** as-is-to-be-automation-comparison<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-A p5.js side-by-side comparison diagram showing three versions of the same employee-onboarding process. Panel 1 (As-Is, Manual): five lanes — HR clerk, IT, Facilities, Manager, Payroll — each performing manual handoffs by email; total cycle time labeled at the top (e.g., "9 days"). Panel 2 (To-Be with RPA): same lane structure, but two RPA bot icons replace the HR-clerk's repetitive data-entry steps and the IT account-creation steps; cycle time labeled (e.g., "3 days"); a small caution icon notes "fragile to UI changes". Panel 3 (To-Be with Workflow Automation): collapsed to three lanes (HR, Manager, Payroll) with a workflow-engine icon orchestrating system-to-system integration via APIs; cycle time labeled (e.g., "1 day"); a small "strategic foundation" badge.
-
-Color palette: manual-only lanes in slate-gray, RPA bot icons in coral with caution-stripe borders, workflow-automation engine in mascot-emerald, integration arrows in teal. Cycle-time bar at the top of each panel scales proportionally so students can see the time difference visually.
-
-Interactivity: hovering each step in any panel shows duration and actor. A "show waste" toggle highlights the eight Lean wastes wherever they occur in the as-is panel (especially Waiting and Motion). A "switch panel" tab lets the student bring any of the three panels into a primary focused view. A side panel shows total cycle time, value-added ratio, and number of human handoffs for the panel currently in focus.
-
-Layout: three vertical stacked panels, full canvas width, height ~640px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.
-
-Learning objective (Bloom: Evaluating): Students can compare a manual, RPA-automated, and workflow-automated version of the same process; quantify the cycle-time and handoff differences; and articulate the tradeoffs of each approach.
-
-Implementation: p5.js, deployed at `/information-systems/sims/as-is-to-be-automation-comparison/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/as-is-to-be-automation-comparison/main.html"
+        height="722px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Compare manual, RPA, and workflow-automation versions of the same process
+2. Quantify cycle-time and handoff differences
+3. Articulate the tradeoffs of each approach (RPA = quick + fragile; Workflow = slower + strategic)
+4. Identify Lean wastes in a manual process
+
+### Suggested Activities
+
+1. **Three-Panel Walk (10 min)** — Walk through each panel; record stats
+2. **Tradeoff Essay (15 min)** — Defend RPA-first or Workflow-first as a starting strategy for a small company
+3. **Waste Hunt (10 min)** — In the manual panel, find every instance of Waiting and Motion
+
+## References
+
+- van der Aalst, W. (2018). *Robotic Process Automation*.
+- Lean Enterprise Institute. *Lean Lexicon*.
 
 ## Related Resources
 

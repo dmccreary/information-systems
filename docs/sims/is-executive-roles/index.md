@@ -1,54 +1,59 @@
 ---
-title: Executive IS Roles and Reporting Relationships
-description: Executive IS Roles and Reporting Relationships
-status: scaffold
+title: IS Executive Roles and Reporting Relationships
+description: An interactive org chart of the four IS C-suite roles (CIO, CTO, CDO, CISO) plus supporting professional roles, with a toggle that compares two reporting structures and their separation-of-duties tradeoffs.
+image: /sims/is-executive-roles/is-executive-roles.png
+og:image: /sims/is-executive-roles/is-executive-roles.png
+twitter:image: /sims/is-executive-roles/is-executive-roles.png
+status: implemented
 library: vis-network
-bloom_level: TBD
+bloom_level: Analyze
+social:
+   cards: false
 ---
 
-# Executive IS Roles and Reporting Relationships
+# IS Executive Roles and Reporting Relationships
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="722px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the IS Executive Roles MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** vis-network
+The four most common IS C-suite roles — **CIO, CTO, CDO, CISO** — plus the Audit Committee and three supporting professional roles. The toggle compares the two dominant reporting structures for the CISO:
 
-## Preview
+- **CISO → CIO (operational)** — best day-to-day integration, weaker separation of duties
+- **CISO → Audit Committee (independent)** — stronger separation, weaker operational integration
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+Click any role for its primary accountability, two day-in-the-life activities, and the most common career path into the role.
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+## Embedding This MicroSim
 
-## Specification
-
-The full specification below is extracted from
-[Chapter 2: The Role of IS in Organizations](../../chapters/02-role-of-is/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** is-executive-roles<br/>
-**Library:** vis-network<br/>
-**Status:** Specified
-
-A vis-network organizational diagram showing nine nodes: the **CEO** at the top, the **Audit Committee** to the side at the same level, and below them the four IS executive roles (**CIO**, **CTO**, **CDO**, **CISO**) plus three supporting professional roles (**Enterprise Architect**, **Business Analyst**, **Data Steward**). Edges represent reporting lines, drawn with a slight y-offset (e.g., 480 → 490) to avoid the vis-network horizontal-edge rendering bug.
-
-Color palette: CEO = navy, Audit Committee = burgundy (signaling independence), CIO = teal, CTO = lime green, CDO = gold, CISO = warm coral, EA / BA / Data Steward = lavender. Each node has an icon: CEO = `mdi-crown`, CIO = `mdi-briefcase`, CTO = `mdi-chip`, CDO = `mdi-database-cog`, CISO = `mdi-shield-lock`, EA = `mdi-sitemap`, BA = `mdi-clipboard-text`, Data Steward = `mdi-database-check`.
-
-Interactivity: clicking a node opens a side panel showing (a) the role's primary accountability in one sentence, (b) two example day-in-the-life activities, and (c) the most common career path into that role. A toggle at the top of the diagram switches between two structural patterns: "CISO reports to CIO" versus "CISO reports independently to the audit committee." The reporting edges animate to the new configuration when toggled, illustrating the separation-of-duties tradeoff visually.
-
-Layout: hierarchical, top-down. Canvas resizes on window resize, height ~520px.
-
-Learning objective (Bloom: Analyzing): Students can compare two reporting structures and articulate which separation-of-duties risk each one mitigates or creates.
-
-Implementation: vis-network, deployed at `/sims/is-executive-roles/`.
+```html
+<iframe src="https://dmccreary.github.io/information-systems/sims/is-executive-roles/main.html"
+        height="722px" width="100%" scrolling="no"></iframe>
 ```
+
+## Lesson Plan
+
+### Learning Objectives
+
+By the end of this activity, students will be able to:
+
+1. Name each IS executive role and one accountability for each
+2. Compare the two CISO reporting structures
+3. Articulate which separation-of-duties risk each structure mitigates or creates
+4. Map a real-world job posting to one of the eight roles
+
+### Suggested Activities
+
+1. **Role Match (5 min)** — Click each role; quiz students on accountability vs day-in-the-life
+2. **Reporting Tradeoff (15 min)** — Toggle between the two structures; write a one-paragraph recommendation for a regulated industry
+3. **Career Path Mapping (10 min)** — For each role, identify a job title that's two steps away on the path
+
+## References
+
+- ISACA. *Reporting Lines for the CISO: A Comparative Study*.
+- Weill, P. & Ross, J. *IT Savvy* (2009).
 
 ## Related Resources
 

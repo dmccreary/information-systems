@@ -1,21 +1,54 @@
 {
-  "title": "The Enterprise Systems Landscape with ERP at the Center",
-  "description": "The Enterprise Systems Landscape with ERP at the Center",
-  "creator": "Dementia Education Project",
+  "title": "Enterprise Systems Landscape",
+  "description": "Interactive hub-and-spoke landscape of enterprise systems with ERP as the system of record, surrounded by CRM, SCM, HRIS, Payroll, Procurement, and BI satellites with integration patterns and a best-of-breed toggle.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Enterprise Systems", "ERP", "Integration" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "enterprise-systems-landscape",
+  "gradeLevel": "Undergraduate",
+  "subjectArea": "Information Systems",
+  "topic": "Enterprise Systems Landscape",
+  "learningObjectives": [
+    "Name the major enterprise system categories",
+    "Identify ERP as the system-of-record hub",
+    "Articulate why integration complexity grows with the number of systems",
+    "Distinguish real-time, batch, and event-stream integration patterns"
+  ],
+  "duration": "10 minutes",
+  "prerequisites": [ "Basic familiarity with enterprise software" ],
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "vis-network 9.1",
+  "responsive": "Width-responsive",
+  "dependencies": [ "vis-network 9.1.9" ],
+  "accessibility": { "screenReaderSupport": false, "keyboardNavigation": false, "highContrast": true },
+  "controls": [
+    { "type": "button", "description": "Toggle best-of-breed edges" },
+    { "type": "button", "description": "Toggle master data flow" },
+    { "type": "click", "description": "Click for vendor and integration details" }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [ "ERP at the center is the dominant pattern; alternatives exist" ],
+  "limitations": [ "Does not show vertical-specific systems (MES, EHR, LIMS)" ],
+  "visualizationType": [ "hub-and-spoke", "diagram", "network" ],
+  "bloomsTaxonomy": [ "Remember", "Understand" ],
+  "bloomLevel": "Understand",
+  "bloomVerb": "identify",
+  "completion_status": "implemented",
   "chapter_number": 13,
-  "chapter_title": "'Enterprise Systems'",
-  "chapter_dir": "13-enterprise-systems"
+  "chapter_title": "Enterprise Systems",
+  "chapter_dir": "13-enterprise-systems",
+  "pedagogical": {
+    "pattern": "interactive-diagram",
+    "bloomAlignment": [ "remember", "understand" ],
+    "bloomVerbs": [ "identify", "name", "compare" ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [ "elaborative" ],
+    "interactionStyle": "explore"
+  }
 }

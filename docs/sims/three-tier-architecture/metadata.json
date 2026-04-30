@@ -1,20 +1,28 @@
 {
-  "title": "Three-Tier Architecture with Request Flow",
-  "description": "Three-Tier Architecture with Request Flow",
-  "creator": "Dementia Education Project",
+  "title": "Three-Tier Architecture",
+  "description": "Animated three-tier architecture with request/response trace and three example workloads.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Software Architecture" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "three-tier-architecture",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "controls": [
+    { "type": "button", "description": "Trace a request" },
+    { "type": "select", "description": "Workload type" }
+  ],
+  "modelType": "Educational Visualization",
+  "visualizationType": [ "diagram", "animation" ],
+  "bloomsTaxonomy": [ "Remember", "Understand" ],
+  "bloomLevel": "Understand",
+  "bloomVerb": "identify",
+  "completion_status": "implemented",
   "chapter_number": 3,
   "chapter_title": "Information Systems Architecture",
   "chapter_dir": "03-architecture"

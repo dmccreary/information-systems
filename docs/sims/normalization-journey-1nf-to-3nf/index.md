@@ -1,55 +1,38 @@
 ---
-title: Normalization Journey from 1NF to 3NF
-description: Normalization Journey from 1NF to 3NF
-status: scaffold
+title: Normalization Journey 1NF to 3NF
+description: A four-step walk-through of database normalization from a denormalized table through 1NF, 2NF, and 3NF, with the violation, anomaly, and structural fix at each step.
+image: /sims/normalization-journey-1nf-to-3nf/normalization-journey-1nf-to-3nf.png
+og:image: /sims/normalization-journey-1nf-to-3nf/normalization-journey-1nf-to-3nf.png
+twitter:image: /sims/normalization-journey-1nf-to-3nf/normalization-journey-1nf-to-3nf.png
+status: implemented
 library: p5.js
-bloom_level: TBD
+bloom_level: Apply
+social:
+   cards: false
 ---
 
-# Normalization Journey from 1NF to 3NF
+# Normalization Journey 1NF to 3NF
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="722px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Normalization MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** p5.js
+A four-step walk-through of normalization. Start with a denormalized Order Report. Step into **1NF** (split multivalued column into OrderLine), then **2NF** (extract Product), then **3NF** (extract Salesperson). At each step you see the violated rule, the update anomaly it creates, and the structural fix.
 
-## Preview
+Click **Show Update Anomaly Cost** to see how many rows must change for a simple rename in the violating schema vs the normalized schema.
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+## Lesson Plan
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+### Learning Objectives
 
-## Specification
+By the end of this activity, students will be able to:
 
-The full specification below is extracted from
-[Chapter 6: 'Data Management Foundations: Modeling, SQL, and Transactions'](../../chapters/06-data-foundations/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** normalization-journey-1nf-to-3nf<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-A p5.js step-through diagram showing a single denormalized table (an Order Report with columns customer_name, customer_email, product_list, order_total, salesperson, salesperson_region) and walking it through three transformations: 1NF (split the product_list into a separate OrderLine table, one row per product), 2NF (extract product_name and price into a Product table referenced by product_id), and 3NF (extract salesperson_region into a Salesperson table referenced by salesperson_id). Each step is rendered as a side-by-side before/after panel with the violating columns highlighted in coral and the corrected schema highlighted in mascot-emerald.
-
-Color palette: violation columns in coral with a pulsing red border, corrected columns in mascot-emerald, foreign-key arrows in dark teal. Update-anomaly icons (a small cracked-pencil symbol) appear over violating columns to telegraph the underlying problem.
-
-Interactivity: a "Next step" button advances through the four states (denormalized → 1NF → 2NF → 3NF). At each step, a side panel explains in plain English (a) what rule was violated, (b) the update anomaly the violation creates, and (c) the structural fix. A "show update" button animates a hypothetical change (e.g., renaming a product, moving a salesperson to a new region) and shows how many rows must be updated in the violating schema versus the corrected schema — usually a dramatic ratio (50 vs 1).
-
-Layout: side-by-side panels stacked vertically across four steps, full canvas width, height ~640px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.
-
-Learning objective (Bloom: Applying): Students can take a denormalized table, identify 1NF, 2NF, and 3NF violations, propose the structural fix for each, and quantify the update-anomaly cost of leaving the violation in place.
-
-Implementation: p5.js, deployed at `/information-systems/sims/normalization-journey-1nf-to-3nf/`.
-```
+1. Identify 1NF, 2NF, and 3NF violations in a given table
+2. Propose the structural fix for each violation
+3. Quantify the update-anomaly cost of leaving a violation in place
 
 ## Related Resources
 
-- [Chapter 6: 'Data Management Foundations: Modeling, SQL, and Transactions'](../../chapters/06-data-foundations/index.md)
+- [Chapter 6: Data Management Foundations](../../chapters/06-data-foundations/index.md)

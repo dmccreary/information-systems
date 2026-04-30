@@ -1,55 +1,36 @@
 ---
-title: The Project Triangle (Scope, Time, Cost — and Quality in the Middle)
-description: The Project Triangle (Scope, Time, Cost — and Quality in the Middle)
-status: scaffold
+title: Project Triangle (Scope, Time, Cost)
+description: An interactive project triangle showing the scope/time/cost tradeoff with a quality indicator at the center, three locks, and three real-world preset scenarios.
+image: /sims/project-triangle/project-triangle.png
+og:image: /sims/project-triangle/project-triangle.png
+twitter:image: /sims/project-triangle/project-triangle.png
+status: implemented
 library: p5.js
-bloom_level: TBD
+bloom_level: Evaluate
+social:
+   cards: false
 ---
 
-# The Project Triangle (Scope, Time, Cost — and Quality in the Middle)
+# Project Triangle
 
-!!! warning "Scaffold"
-    This MicroSim has been scaffolded from its specification. The interactive
-    implementation has not been built yet.
+<iframe src="main.html" height="602px" width="100%" scrolling="no"></iframe>
 
-## Learning Objective
+[Run the Project Triangle MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
-TBD
+## About This MicroSim
 
-- **Bloom Level:** TBD
-- **Bloom Verb:** TBD
-- **Library:** p5.js
+The classic **iron triangle** of project management — scope, time, cost — with quality watching from the center. Lock any two sides; the third must flex. Try locking all three and watch quality collapse. Pick a preset (fixed-bid, MVP, regulatory) to see realistic constraint patterns.
 
-## Preview
+## Lesson Plan
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+### Learning Objectives
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+By the end of this activity, students will be able to:
 
-## Specification
-
-The full specification below is extracted from
-[Chapter 16: 'IS Project Management'](../../chapters/16-project-management/index.md).
-
-```text
-Type: interactive-infographic
-**sim-id:** project-triangle<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-A p5.js interactive triangle with three sides labeled Scope, Time, and Cost, and a quality indicator at the center. Three sliders below the canvas let students set the locked sides; whenever two are locked, the third one's slider moves freely, and the quality indicator in the middle visibly degrades when the student tries to lock all three. A small commentary panel narrates the tradeoff in plain language ("You locked scope and time, so cost has to rise — adding 2 more developers").
-
-Color palette: locked sides in mascot-emerald, flexing side in coral, quality indicator color-shifting from green to amber to red as it degrades.
-
-Interactivity: students can drag any vertex to expand or contract the triangle and see how the others must respond. A "real project" mode loads three preset scenarios (a fixed-bid contract, a startup MVP, a regulatory deadline project) and asks the student which side they predict will flex.
-
-Layout: full canvas width, height ~480px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.
-
-Learning objective (Bloom: Evaluating): Students can apply the project triangle to a real scenario, identify which constraints are fixed, predict which dimension must flex, and articulate the quality consequences of trying to fix all three.
-
-Implementation: p5.js, deployed at `/information-systems/sims/project-triangle/`.
-```
+1. Apply the project triangle to a real scenario
+2. Identify which constraints are fixed and which must flex
+3. Articulate the quality consequences of trying to fix all three
 
 ## Related Resources
 
-- [Chapter 16: 'IS Project Management'](../../chapters/16-project-management/index.md)
+- [Chapter 16: IS Project Management](../../chapters/16-project-management/index.md)
