@@ -1,21 +1,29 @@
 {
-  "title": "Shared Responsibility Across IaaS, PaaS, SaaS, and FaaS",
-  "description": "Shared Responsibility Across IaaS, PaaS, SaaS, and FaaS",
-  "creator": "Dementia Education Project",
+  "title": "Cloud Shared Responsibility Stack",
+  "description": "Interactive customer-vs-provider responsibility chart across On-Prem, IaaS, PaaS, SaaS, and FaaS with hover details and a billing-view toggle.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Cloud Computing" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "cloud-shared-responsibility-stack",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "controls": [
+    { "type": "hover", "description": "Hover cells for layer detail" },
+    { "type": "button", "description": "Toggle billing view" }
+  ],
+  "modelType": "Educational Visualization",
+  "visualizationType": [ "diagram", "matrix" ],
+  "bloomsTaxonomy": [ "Understand", "Analyze" ],
+  "bloomLevel": "Analyze",
+  "bloomVerb": "identify",
+  "completion_status": "implemented",
   "chapter_number": 12,
-  "chapter_title": "'Cloud Computing and Infrastructure'",
+  "chapter_title": "Cloud Computing and Infrastructure",
   "chapter_dir": "12-cloud"
 }

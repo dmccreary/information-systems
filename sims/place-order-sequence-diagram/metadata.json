@@ -1,21 +1,30 @@
 {
-  "title": "Sequence Diagram for \"Place Order\"",
-  "description": "Sequence Diagram for \"Place Order\"",
-  "creator": "Dementia Education Project",
+  "title": "Place Order Sequence Diagram",
+  "description": "UML sequence diagram for placing an order across five participants with an alt fragment for success/failure and optional timing budgets.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Systems Analysis and Design", "UML" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "place-order-sequence-diagram",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "controls": [
+    { "type": "button", "description": "Play sequence" },
+    { "type": "button", "description": "Toggle alt branch" },
+    { "type": "button", "description": "Show timing budgets" }
+  ],
+  "modelType": "Educational Visualization",
+  "visualizationType": [ "uml", "sequence-diagram" ],
+  "bloomsTaxonomy": [ "Understand", "Apply" ],
+  "bloomLevel": "Apply",
+  "bloomVerb": "trace",
+  "completion_status": "implemented",
   "chapter_number": 10,
-  "chapter_title": "'Systems Analysis and Design'",
+  "chapter_title": "Systems Analysis and Design",
   "chapter_dir": "10-sad"
 }

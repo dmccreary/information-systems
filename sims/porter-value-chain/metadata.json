@@ -1,20 +1,28 @@
 {
   "title": "Porter Value Chain with IS Overlay",
-  "description": "Porter Value Chain with IS Overlay",
-  "creator": "Dementia Education Project",
+  "description": "Interactive Porter value chain with IS systems and metrics overlay across three industries (manufacturing, bank, hospital).",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Strategy", "Value Chain" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "porter-value-chain",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "controls": [
+    { "type": "select", "description": "Industry preset" },
+    { "type": "hover", "description": "Hover for IS systems and metrics" }
+  ],
+  "modelType": "Educational Visualization",
+  "visualizationType": [ "diagram", "framework" ],
+  "bloomsTaxonomy": [ "Understand", "Apply" ],
+  "bloomLevel": "Apply",
+  "bloomVerb": "place",
+  "completion_status": "implemented",
   "chapter_number": 2,
   "chapter_title": "The Role of IS in Organizations",
   "chapter_dir": "02-role-of-is"

@@ -1,21 +1,29 @@
 {
-  "title": "The Stakeholder Power/Interest Grid",
-  "description": "The Stakeholder Power/Interest Grid",
-  "creator": "Dementia Education Project",
+  "title": "Stakeholder Power-Interest Grid",
+  "description": "Interactive 2x2 stakeholder grid with draggable dots, attitude coloring, and a what-if scenario.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Project Management", "Stakeholder Analysis" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "stakeholder-power-interest-grid",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "controls": [
+    { "type": "drag", "description": "Drag stakeholder dots" },
+    { "type": "button", "description": "What-if scenario" }
+  ],
+  "modelType": "Educational Visualization",
+  "visualizationType": [ "matrix", "diagram" ],
+  "bloomsTaxonomy": [ "Apply", "Analyze" ],
+  "bloomLevel": "Analyze",
+  "bloomVerb": "analyze",
+  "completion_status": "implemented",
   "chapter_number": 16,
-  "chapter_title": "'IS Project Management'",
+  "chapter_title": "IS Project Management",
   "chapter_dir": "16-project-management"
 }

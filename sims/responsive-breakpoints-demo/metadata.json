@@ -1,21 +1,30 @@
 {
   "title": "Mobile-First Responsive Breakpoints",
-  "description": "Mobile-First Responsive Breakpoints",
-  "creator": "Dementia Education Project",
+  "description": "Interactive viewport-resize demo of responsive breakpoints with four canonical layouts and device presets.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "HCI", "Web Development" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "responsive-breakpoints-demo",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "controls": [
+    { "type": "drag", "description": "Resize handle" },
+    { "type": "select", "description": "Device preset" },
+    { "type": "button", "description": "Show CSS media queries" }
+  ],
+  "modelType": "Educational Visualization",
+  "visualizationType": [ "interactive-demo" ],
+  "bloomsTaxonomy": [ "Remember", "Understand" ],
+  "bloomLevel": "Understand",
+  "bloomVerb": "describe",
+  "completion_status": "implemented",
   "chapter_number": 18,
-  "chapter_title": "'Human-Computer Interaction and Emerging Topics'",
+  "chapter_title": "HCI and Emerging Topics",
   "chapter_dir": "18-hci-and-emerging"
 }

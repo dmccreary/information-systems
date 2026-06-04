@@ -1,20 +1,28 @@
 {
-  "title": "The Scrum Sprint Cycle",
-  "description": "The Scrum Sprint Cycle",
-  "creator": "Dementia Education Project",
+  "title": "Scrum Sprint Cycle",
+  "description": "Animated circular diagram of the Scrum sprint cycle with events, daily standup ticks, and dysfunction warnings.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Software Development", "Scrum", "Agile" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "scrum-sprint-cycle",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "controls": [
+    { "type": "button", "description": "Play/pause" },
+    { "type": "select", "description": "Sprint cadence" }
+  ],
+  "modelType": "Educational Visualization",
+  "visualizationType": [ "diagram", "animation" ],
+  "bloomsTaxonomy": [ "Understand", "Apply" ],
+  "bloomLevel": "Apply",
+  "bloomVerb": "identify",
+  "completion_status": "implemented",
   "chapter_number": 4,
   "chapter_title": "Application Development for IS",
   "chapter_dir": "04-appdev"

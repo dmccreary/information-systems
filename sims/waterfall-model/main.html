@@ -3,105 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Waterfall Model</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Waterfall Model</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
+    <style>body{margin:0;padding:0;font-family:Arial,sans-serif;}</style>
+    <script src="waterfall-model.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>The Waterfall Model</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> waterfall-model</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> TBD</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: static-infographic
-    **sim-id:** waterfall-model<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    A p5.js infographic showing the classic five-phase waterfall in a stair-step descending pattern from top-left to bottom-right: Requirements, Design, Implementation, Verification, Maintenance. Each phase is rendered as a labeled rectangle on its own ledge, with a curved arrow connecting it to the next ledge below — visually evoking water cascading down. A small dotted "feedback" arrow runs from each downstream phase back to its predecessor, drawn in a muted color to signal that backward movement is possible but expensive.
-    
-    Color palette: blue gradient from sky-blue (Requirements) to deep navy (Maintenance), with a subtle wave pattern under each ledge. White label text. The two "discovery moments" where requirements typically change in real projects (mid-Design and mid-Verification) are marked with small warning icons.
-    
-    Interactivity: hovering each phase reveals (a) typical activities in that phase, (b) typical artifacts produced, and (c) the most common reason projects stall there. A toggle switches between "pure waterfall" (no feedback arrows) and "modified waterfall" (feedback arrows visible) to illustrate how organizations actually use the model in practice.
-    
-    Layout: full canvas width, height ~480px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.
-    
-    Learning objective (Bloom: Understanding): Students can describe each waterfall phase, identify its primary risk, and articulate the conditions under which waterfall is an appropriate method.
-    
-    Implementation: p5.js, deployed at `/information-systems/sims/waterfall-model/`.
-    -->
+    <main></main>
+    <br/><a href=".">Back to Documentation</a>
 </body>
 </html>

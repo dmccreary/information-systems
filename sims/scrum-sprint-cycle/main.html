@@ -3,105 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Scrum Sprint Cycle</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Scrum Sprint Cycle</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
+    <style>body{margin:0;padding:0;font-family:Arial,sans-serif;}</style>
+    <script src="scrum-sprint-cycle.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>The Scrum Sprint Cycle</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> scrum-sprint-cycle</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> TBD</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: interactive-infographic
-    **sim-id:** scrum-sprint-cycle<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    A p5.js circular diagram showing the Scrum sprint cycle. The outer ring depicts the sprint as a closed loop, with sprint planning at the top (12 o'clock), the development work spanning the right side, sprint review at the bottom (6 o'clock), and sprint retrospective just past it. The inner ring shows the daily standup repeating at each "day" tick around the loop. The product backlog feeds into sprint planning from the left; the potentially shippable increment exits from sprint review on the right.
-    
-    Color palette: warm orange-to-amber for sprint events, soft green for development work, slate-gray for backlog and increment artifacts. Mascot-emerald accent on the retrospective to highlight it as the learning moment.
-    
-    Interactivity: a "play" button advances a marker around the cycle, pausing at each event to display (a) participants, (b) duration, (c) primary output, and (d) the most common dysfunction associated with that event (e.g., "Standup turns into status theater"). A speed slider controls the animation. A toggle lets the user switch between 1-week, 2-week, and 4-week sprint cadences, which redistributes the day ticks accordingly.
-    
-    Layout: square aspect ratio, full canvas width, height ~520px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.
-    
-    Learning objective (Bloom: Applying): Students can identify each Scrum event by its participants, output, and timebox, and explain how the events compose into nested feedback loops.
-    
-    Implementation: p5.js, deployed at `/information-systems/sims/scrum-sprint-cycle/`.
-    -->
+    <main></main>
+    <br/><a href=".">Back to Documentation</a>
 </body>
 </html>

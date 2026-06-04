@@ -3,105 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shared Responsibility Across IaaS, PaaS, SaaS, and FaaS</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Cloud Shared Responsibility Stack</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
+    <style>body{margin:0;padding:0;font-family:Arial,sans-serif;}</style>
+    <script src="cloud-shared-responsibility-stack.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>Shared Responsibility Across IaaS, PaaS, SaaS, and FaaS</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> cloud-shared-responsibility-stack</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> TBD</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: interactive-infographic
-    **sim-id:** cloud-shared-responsibility-stack<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    A p5.js stacked-bar visualization of the cloud responsibility split. Five vertical columns: On-Premises, IaaS, PaaS, SaaS, FaaS. Each column is divided into eight horizontal layers from bottom to top: Networking, Storage, Servers, Virtualization, OS, Runtime, Application, Data. Each layer is colored mascot-emerald when the customer owns it and slate-gray when the provider owns it. The On-Premises column is entirely emerald (you own it all). IaaS turns the bottom four layers gray. PaaS turns the bottom six gray, leaving only Application and Data emerald. SaaS turns everything gray except the very top "Data" layer. FaaS leaves only "Application" (function code) and "Data" emerald.
-    
-    Color palette: customer-managed layers in mascot-emerald, provider-managed layers in slate-gray with a subtle gradient, FaaS column highlighted with a coral border to indicate the "rent a moment" pattern. Labels in clear sans-serif white text on each band.
-    
-    Interactivity: hovering each cell shows (a) what that layer means in plain English, (b) a concrete example of a task at that layer (e.g., "patch the OS kernel"), and (c) which party performs that task in that model. A toggle switches between "responsibility" and "billing" views — the billing view shows what you pay for in each model, often counter-intuitively (e.g., in SaaS you don't pay for storage line-item, but it's baked into seat licensing).
-    
-    Layout: full canvas width, height ~580px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.
-    
-    Learning objective (Bloom: Analyzing): Students can identify, for any given operational task, which party (customer or provider) is responsible for it under each of the five models, and articulate the tradeoff each model makes.
-    
-    Implementation: p5.js, deployed at `/information-systems/sims/cloud-shared-responsibility-stack/`.
-    -->
+    <main></main>
+    <br/><a href=".">Back to Documentation</a>
 </body>
 </html>

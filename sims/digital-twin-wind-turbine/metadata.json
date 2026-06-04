@@ -1,21 +1,30 @@
 {
-  "title": "A Digital Twin of a Wind Turbine",
-  "description": "A Digital Twin of a Wind Turbine",
-  "creator": "Dementia Education Project",
+  "title": "Digital Twin of a Wind Turbine",
+  "description": "Interactive digital twin demo with bidirectional data flow, wind-speed slider, predictive maintenance simulation, and data-path overlay.",
+  "creator": "Dan McCreary",
+  "subject": [ "Information Systems", "Digital Twins", "IoT" ],
   "date": "2026-04-29",
-  "subject": [
-    "dementia"
-  ],
   "type": "Interactive Simulation",
   "format": "text/html",
-  "language": "en-US",
+  "language": "en",
   "rights": "CC BY 4.0",
   "identifier": "digital-twin-wind-turbine",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "framework": "p5.js 1.11",
+  "responsive": "Width-responsive",
+  "dependencies": [ "p5.js 1.11.10" ],
+  "controls": [
+    { "type": "slider", "description": "Wind speed" },
+    { "type": "button", "description": "Predict failure" },
+    { "type": "button", "description": "Show data path" }
+  ],
+  "modelType": "Educational Visualization",
+  "visualizationType": [ "diagram", "animation", "dashboard" ],
+  "bloomsTaxonomy": [ "Remember", "Understand" ],
+  "bloomLevel": "Understand",
+  "bloomVerb": "explain",
+  "completion_status": "implemented",
   "chapter_number": 18,
-  "chapter_title": "'Human-Computer Interaction and Emerging Topics'",
+  "chapter_title": "HCI and Emerging Topics",
   "chapter_dir": "18-hci-and-emerging"
 }

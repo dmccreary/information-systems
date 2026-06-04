@@ -3,105 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Project Triangle (Scope, Time, Cost — and Quality in the Middle)</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Project Triangle</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
+    <style>body{margin:0;padding:0;font-family:Arial,sans-serif;}</style>
+    <script src="project-triangle.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>The Project Triangle (Scope, Time, Cost — and Quality in the Middle)</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> project-triangle</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> TBD</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: interactive-infographic
-    **sim-id:** project-triangle<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    A p5.js interactive triangle with three sides labeled Scope, Time, and Cost, and a quality indicator at the center. Three sliders below the canvas let students set the locked sides; whenever two are locked, the third one's slider moves freely, and the quality indicator in the middle visibly degrades when the student tries to lock all three. A small commentary panel narrates the tradeoff in plain language ("You locked scope and time, so cost has to rise — adding 2 more developers").
-    
-    Color palette: locked sides in mascot-emerald, flexing side in coral, quality indicator color-shifting from green to amber to red as it degrades.
-    
-    Interactivity: students can drag any vertex to expand or contract the triangle and see how the others must respond. A "real project" mode loads three preset scenarios (a fixed-bid contract, a startup MVP, a regulatory deadline project) and asks the student which side they predict will flex.
-    
-    Layout: full canvas width, height ~480px. Canvas resizes on window resize. setup() calls updateCanvasSize() first. Canvas parented with `canvas.parent(document.querySelector('main'));`.
-    
-    Learning objective (Bloom: Evaluating): Students can apply the project triangle to a real scenario, identify which constraints are fixed, predict which dimension must flex, and articulate the quality consequences of trying to fix all three.
-    
-    Implementation: p5.js, deployed at `/information-systems/sims/project-triangle/`.
-    -->
+    <main></main>
+    <br/><a href=".">Back to Documentation</a>
 </body>
 </html>
