@@ -84,6 +84,9 @@ extra_css:
 
 # Extra
 extra:
+  analytics:
+    provider: google
+    property: G-W3N5S22EW4
   schema: https://dmccreary.github.io/intelligent-textbooks/ns/textbook/v1
   social:
     - icon: fontawesome/brands/github
