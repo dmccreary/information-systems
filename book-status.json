@@ -1,0 +1,503 @@
+{
+  "project": {
+    "title": "Information Systems",
+    "subtitle": "Auto-scanned intelligent textbook",
+    "author": "Dan McCreary",
+    "costPerMTokens": 15,
+    "sessionBudget": {
+      "pro": 900000,
+      "max": 3500000
+    }
+  },
+  "sections": {
+    "scaffold": {
+      "status": "published",
+      "tokensTarget": 2000,
+      "tokensDone": 2000
+    },
+    "course-description": {
+      "status": "published",
+      "tokensTarget": 6117,
+      "tokensDone": 6117
+    },
+    "learning-graph": {
+      "status": "published",
+      "tokensTarget": 20000,
+      "tokensDone": 20000
+    },
+    "chapter-structure": {
+      "status": "published",
+      "tokensTarget": 15000,
+      "tokensDone": 15000
+    },
+    "chapter-content": {
+      "countLabel": "25 chapters",
+      "children": [
+        {
+          "n": 1,
+          "title": "Foundations of Information Systems",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 2,
+          "title": "The Role of IS in Organizations",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 3,
+          "title": "Information Systems Architecture",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 4,
+          "title": "Application Development for IS",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 5,
+          "title": "Business Process Management",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 6,
+          "title": "Data Management Foundations: Modeling, SQL, and Transactions",
+          "status": "published",
+          "tokens": 11117
+        },
+        {
+          "n": 7,
+          "title": "Modern Databases, Warehousing, and Lakehouses",
+          "status": "published",
+          "tokens": 13061
+        },
+        {
+          "n": 8,
+          "title": "Data Governance and Quality",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 9,
+          "title": "Business Intelligence and Analytics",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 10,
+          "title": "Systems Analysis and Design",
+          "status": "published",
+          "tokens": 12106
+        },
+        {
+          "n": 11,
+          "title": "Networks and Telecommunications for Business",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 12,
+          "title": "Cloud Computing and Infrastructure",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 13,
+          "title": "Enterprise Systems",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 14,
+          "title": "Security of Information Assets",
+          "status": "published",
+          "tokens": 10963
+        },
+        {
+          "n": 15,
+          "title": "Privacy, Compliance, and Regulation",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 16,
+          "title": "IS Project Management",
+          "status": "published",
+          "tokens": 11756
+        },
+        {
+          "n": 17,
+          "title": "IT Service Management and Operations",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 18,
+          "title": "Human-Computer Interaction and Emerging Topics",
+          "status": "published",
+          "tokens": 10018
+        },
+        {
+          "n": 19,
+          "title": "AI in Information Systems",
+          "status": "published",
+          "tokens": 10113
+        },
+        {
+          "n": 20,
+          "title": "Responsible and Ethical Use of AI",
+          "status": "published",
+          "tokens": 10208
+        },
+        {
+          "n": 21,
+          "title": "AI Law, Regulation, and Compliance",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 22,
+          "title": "AI and Information Security",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 23,
+          "title": "AI Productivity Impact on IS Operations",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 24,
+          "title": "Knowledge Graphs and the Enterprise Knowledge Graph",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 25,
+          "title": "The Enterprise Nervous System and the AI-Native Organization",
+          "status": "published",
+          "tokens": 10000
+        }
+      ]
+    },
+    "chapter-images": {
+      "status": "published",
+      "tokensTarget": 8000,
+      "tokensDone": 8000
+    },
+    "microsims": {
+      "countLabel": "44 simulations",
+      "children": [
+        {
+          "n": 1,
+          "title": "API Gateway Request Flow",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 2,
+          "title": "As-Is vs To-Be Automation Comparison",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 3,
+          "title": "Bandwidth, Latency, and Throughput",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 4,
+          "title": "BPMN Order-to-Cash Process",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 5,
+          "title": "Build vs Buy vs SaaS Decision Flow",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 6,
+          "title": "CI/CD Pipeline",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 7,
+          "title": "Cloud Shared Responsibility Stack",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 8,
+          "title": "Container vs Virtual Machine Architecture",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 9,
+          "title": "Cross-Border Data Transfer Decision Tree",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 10,
+          "title": "Digital Twin of a Wind Turbine",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 11,
+          "title": "DIKI Hierarchy Interactive Pyramid",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 12,
+          "title": "Modern Enterprise Network Topology",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 13,
+          "title": "Enterprise Systems Landscape",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 14,
+          "title": "ERP Implementation Timeline with Cutover",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 15,
+          "title": "EVM Cost and Schedule Variance Visualization",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 16,
+          "title": "Gantt Chart with Critical Path Highlighted",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 17,
+          "title": "Feature-Branch Git Workflow",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 18,
+          "title": "Graph Viewer",
+          "status": "drafted",
+          "tokens": 5000
+        },
+        {
+          "n": 19,
+          "title": "IS Executive Roles and Reporting Relationships",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 20,
+          "title": "Insurance Claims Journey Map",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 21,
+          "title": "Knowledge Triangle",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 22,
+          "title": "Library System Use Case Diagram",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 23,
+          "title": "Loan Application State Diagram",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 24,
+          "title": "Normalization Journey 1NF to 3NF",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 25,
+          "title": "Place Order Sequence Diagram",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 26,
+          "title": "Porter Value Chain with IS Overlay",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 27,
+          "title": "Porter's Five Forces Model",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 28,
+          "title": "Privacy & Compliance Regulatory Landscape",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 29,
+          "title": "Project Triangle",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 30,
+          "title": "Mobile-First Responsive Breakpoints",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 31,
+          "title": "Scrum Sprint Cycle",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 32,
+          "title": "Six-Component Model of an Information System",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 33,
+          "title": "Six Rs Cloud Migration Decision Tree",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 34,
+          "title": "Small Business ERD",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 35,
+          "title": "Sprint Burndown Chart (Ideal vs Actual)",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 36,
+          "title": "Stakeholder Power-Interest Grid",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 37,
+          "title": "STRIDE Threat Model Overlay",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 38,
+          "title": "Technical Debt Feedback Loop",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 39,
+          "title": "Three-Tier Architecture",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 40,
+          "title": "TLS Handshake and Chain of Trust",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 41,
+          "title": "Value Stream Map - Invoice Approval",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 42,
+          "title": "Waterfall Model",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 43,
+          "title": "Write Skew Under Read Committed",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 44,
+          "title": "Zero Trust vs Castle-and-Moat",
+          "status": "published",
+          "tokens": 5000
+        }
+      ]
+    },
+    "glossary": {
+      "status": "published",
+      "tokensTarget": 15000,
+      "tokensDone": 11067
+    },
+    "faq": {
+      "status": "published",
+      "tokensTarget": 12515,
+      "tokensDone": 12515
+    },
+    "quiz": {
+      "status": "published",
+      "tokensTarget": 42850,
+      "tokensDone": 42850
+    },
+    "reference": {
+      "status": "published",
+      "tokensTarget": 20000,
+      "tokensDone": 9266
+    },
+    "teachers-guide": {
+      "status": "published",
+      "tokensTarget": 15000,
+      "tokensDone": 6498
+    },
+    "book-metrics": {
+      "status": "published",
+      "tokensTarget": 2000,
+      "tokensDone": 2000
+    },
+    "publish": {
+      "status": "published",
+      "tokensTarget": 10000,
+      "tokensDone": 10000
+    },
+    "stories": {
+      "status": "not-started",
+      "tokensTarget": 30000,
+      "tokensDone": 0
+    }
+  }
+}
